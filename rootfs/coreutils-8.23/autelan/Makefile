@@ -618,8 +618,8 @@ CONFIG_HEADER = $(top_builddir)/lib/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 LIBRARIES = $(noinst_LIBRARIES)
-AM_V_AR = $(am__v_AR_@AM_V@)
-am__v_AR_ = $(am__v_AR_@AM_DEFAULT_V@)
+AM_V_AR = $(am__v_AR_$(V))
+am__v_AR_ = $(am__v_AR_$(AM_DEFAULT_VERBOSITY))
 am__v_AR_0 = @echo "  AR      " $@;
 am__v_AR_1 = 
 lib_libcoreutils_a_AR = $(AR) $(ARFLAGS)
@@ -1914,43 +1914,43 @@ src_whoami_DEPENDENCIES = $(am__DEPENDENCIES_2)
 src_yes_SOURCES = src/yes.c
 src_yes_OBJECTS = src/yes.$(OBJEXT)
 src_yes_DEPENDENCIES = $(am__DEPENDENCIES_2)
-AM_V_P = $(am__v_P_@AM_V@)
-am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
+AM_V_P = $(am__v_P_$(V))
+am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
 am__v_P_1 = :
-AM_V_GEN = $(am__v_GEN_@AM_V@)
-am__v_GEN_ = $(am__v_GEN_@AM_DEFAULT_V@)
+AM_V_GEN = $(am__v_GEN_$(V))
+am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))
 am__v_GEN_0 = @echo "  GEN     " $@;
 am__v_GEN_1 = 
-AM_V_at = $(am__v_at_@AM_V@)
-am__v_at_ = $(am__v_at_@AM_DEFAULT_V@)
+AM_V_at = $(am__v_at_$(V))
+am__v_at_ = $(am__v_at_$(AM_DEFAULT_VERBOSITY))
 am__v_at_0 = @
 am__v_at_1 = 
 DEFAULT_INCLUDES = -I. -I$(top_builddir)/lib
 depcomp = $(SHELL) $(top_srcdir)/build-aux/depcomp
 am__depfiles_maybe = depfiles
 am__mv = mv -f
-AM_V_lt = $(am__v_lt_@AM_V@)
-am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+AM_V_lt = $(am__v_lt_$(V))
+am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 am__v_lt_1 = 
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-AM_V_CC = $(am__v_CC_@AM_V@)
-am__v_CC_ = $(am__v_CC_@AM_DEFAULT_V@)
+AM_V_CC = $(am__v_CC_$(V))
+am__v_CC_ = $(am__v_CC_$(AM_DEFAULT_VERBOSITY))
 am__v_CC_0 = @echo "  CC      " $@;
 am__v_CC_1 = 
 CCLD = $(CC)
 LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-AM_V_CCLD = $(am__v_CCLD_@AM_V@)
-am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
+AM_V_CCLD = $(am__v_CCLD_$(V))
+am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
 am__yacc_c2h = sed -e s/cc$$/hh/ -e s/cpp$$/hpp/ -e s/cxx$$/hxx/ \
 		   -e s/c++$$/h++/ -e s/c$$/h/
 YACCCOMPILE = $(YACC) $(AM_YFLAGS) $(YFLAGS)
-AM_V_YACC = $(am__v_YACC_@AM_V@)
-am__v_YACC_ = $(am__v_YACC_@AM_DEFAULT_V@)
+AM_V_YACC = $(am__v_YACC_$(V))
+am__v_YACC_ = $(am__v_YACC_$(AM_DEFAULT_VERBOSITY))
 am__v_YACC_0 = @echo "  YACC    " $@;
 am__v_YACC_1 = 
 YLWRAP = $(top_srcdir)/build-aux/ylwrap
@@ -2227,32 +2227,32 @@ DIST_SOURCES = $(am__lib_libcoreutils_a_SOURCES_DIST) \
 	$(src_uname_SOURCES) src/unexpand.c src/uniq.c src/unlink.c \
 	src/uptime.c src/users.c $(src_vdir_SOURCES) src/wc.c \
 	src/who.c src/whoami.c src/yes.c
-AM_V_DVIPS = $(am__v_DVIPS_@AM_V@)
-am__v_DVIPS_ = $(am__v_DVIPS_@AM_DEFAULT_V@)
+AM_V_DVIPS = $(am__v_DVIPS_$(V))
+am__v_DVIPS_ = $(am__v_DVIPS_$(AM_DEFAULT_VERBOSITY))
 am__v_DVIPS_0 = @echo "  DVIPS   " $@;
 am__v_DVIPS_1 = 
-AM_V_MAKEINFO = $(am__v_MAKEINFO_@AM_V@)
-am__v_MAKEINFO_ = $(am__v_MAKEINFO_@AM_DEFAULT_V@)
+AM_V_MAKEINFO = $(am__v_MAKEINFO_$(V))
+am__v_MAKEINFO_ = $(am__v_MAKEINFO_$(AM_DEFAULT_VERBOSITY))
 am__v_MAKEINFO_0 = @echo "  MAKEINFO" $@;
 am__v_MAKEINFO_1 = 
-AM_V_INFOHTML = $(am__v_INFOHTML_@AM_V@)
-am__v_INFOHTML_ = $(am__v_INFOHTML_@AM_DEFAULT_V@)
+AM_V_INFOHTML = $(am__v_INFOHTML_$(V))
+am__v_INFOHTML_ = $(am__v_INFOHTML_$(AM_DEFAULT_VERBOSITY))
 am__v_INFOHTML_0 = @echo "  INFOHTML" $@;
 am__v_INFOHTML_1 = 
-AM_V_TEXI2DVI = $(am__v_TEXI2DVI_@AM_V@)
-am__v_TEXI2DVI_ = $(am__v_TEXI2DVI_@AM_DEFAULT_V@)
+AM_V_TEXI2DVI = $(am__v_TEXI2DVI_$(V))
+am__v_TEXI2DVI_ = $(am__v_TEXI2DVI_$(AM_DEFAULT_VERBOSITY))
 am__v_TEXI2DVI_0 = @echo "  TEXI2DVI" $@;
 am__v_TEXI2DVI_1 = 
-AM_V_TEXI2PDF = $(am__v_TEXI2PDF_@AM_V@)
-am__v_TEXI2PDF_ = $(am__v_TEXI2PDF_@AM_DEFAULT_V@)
+AM_V_TEXI2PDF = $(am__v_TEXI2PDF_$(V))
+am__v_TEXI2PDF_ = $(am__v_TEXI2PDF_$(AM_DEFAULT_VERBOSITY))
 am__v_TEXI2PDF_0 = @echo "  TEXI2PDF" $@;
 am__v_TEXI2PDF_1 = 
-AM_V_texinfo = $(am__v_texinfo_@AM_V@)
-am__v_texinfo_ = $(am__v_texinfo_@AM_DEFAULT_V@)
+AM_V_texinfo = $(am__v_texinfo_$(V))
+am__v_texinfo_ = $(am__v_texinfo_$(AM_DEFAULT_VERBOSITY))
 am__v_texinfo_0 = -q
 am__v_texinfo_1 = 
-AM_V_texidevnull = $(am__v_texidevnull_@AM_V@)
-am__v_texidevnull_ = $(am__v_texidevnull_@AM_DEFAULT_V@)
+AM_V_texidevnull = $(am__v_texidevnull_$(V))
+am__v_texidevnull_ = $(am__v_texidevnull_$(AM_DEFAULT_VERBOSITY))
 am__v_texidevnull_0 = > /dev/null
 am__v_texidevnull_1 = 
 INFO_DEPS = $(srcdir)/doc/coreutils.info
@@ -2567,17 +2567,17 @@ pkglibexecdir = ${libexecdir}/${PACKAGE}
 # confusion with the 'install' target.  The install rule transforms 'ginstall'
 # to install before applying any user-specified name transformations.
 transform = s/ginstall/install/; $(program_transform_name)
-ACLOCAL = ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/missing --run aclocal-1.14
+ACLOCAL = ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/missing aclocal-1.14
 ALLOCA = 
 ALLOCA_H = lib/alloca.h
-AMTAR = ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/missing --run tar
+AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 APPLE_UNIVERSAL_BUILD = 0
 AR = arm-hisiv200-linux-ar
 ARFLAGS = cru
-AUTOCONF = ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/missing --run automake-1.14
+AUTOCONF = ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/missing automake-1.14
 AWK = gawk
 BITSIZEOF_PTRDIFF_T = 
 BITSIZEOF_SIG_ATOMIC_T = 
@@ -3353,7 +3353,7 @@ HAVE_WS2TCPIP_H = 0
 HAVE_XLOCALE_H = 1
 HAVE__BOOL = 1
 HAVE__EXIT = 1
-HELP2MAN = ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/missing --run help2man
+HELP2MAN = ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/missing help2man
 HOSTENT_LIB = 
 ICONV_CONST = 
 ICONV_H = lib/iconv.h
@@ -3416,7 +3416,7 @@ LTLIBMULTITHREAD = -lpthread
 LTLIBOBJS = 
 LTLIBPTH = 
 LTLIBTHREAD = 
-MAKEINFO = ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/missing makeinfo
 MAN = 
 MKDIR_P = /bin/mkdir -p
 MSGFMT = /usr/bin/msgfmt
@@ -3699,7 +3699,7 @@ REPLACE_STRERROR = 1
 REPLACE_STRERROR_R = 1
 REPLACE_STRNCAT = 0
 REPLACE_STRNDUP = 0
-REPLACE_STRNLEN = 1
+REPLACE_STRNLEN = 0
 REPLACE_STRSIGNAL = 0
 REPLACE_STRSTR = 1
 REPLACE_STRTOD = 0
@@ -3783,8 +3783,8 @@ ac_ct_CC =
 am__include = include
 am__leading_dot = .
 am__quote = 
-am__tar = ${AMTAR} chof - "$$tardir"
-am__untar = ${AMTAR} xf -
+am__tar = $${TAR-tar} chof - "$$tardir"
+am__untar = $${TAR-tar} xf -
 
 # The user can tweak these lists at configure time.
 bin_PROGRAMS = src/chroot$(EXEEXT) src/hostid$(EXEEXT) src/nice$(EXEEXT) src/who$(EXEEXT) src/users$(EXEEXT) src/pinky$(EXEEXT) src/uptime$(EXEEXT) src/stty$(EXEEXT) src/df$(EXEEXT) src/stdbuf$(EXEEXT) src/[$(EXEEXT) src/base64$(EXEEXT) src/basename$(EXEEXT) src/cat$(EXEEXT) src/chcon$(EXEEXT) src/chgrp$(EXEEXT) src/chmod$(EXEEXT) src/chown$(EXEEXT) src/cksum$(EXEEXT) src/comm$(EXEEXT) src/cp$(EXEEXT) src/csplit$(EXEEXT) src/cut$(EXEEXT) src/date$(EXEEXT) src/dd$(EXEEXT) src/dir$(EXEEXT) src/dircolors$(EXEEXT) src/dirname$(EXEEXT) src/du$(EXEEXT) src/echo$(EXEEXT) src/env$(EXEEXT) src/expand$(EXEEXT) src/expr$(EXEEXT) src/factor$(EXEEXT) src/false$(EXEEXT) src/fmt$(EXEEXT) src/fold$(EXEEXT) src/ginstall$(EXEEXT) src/groups$(EXEEXT) src/head$(EXEEXT) src/id$(EXEEXT) src/join$(EXEEXT) src/kill$(EXEEXT) src/link$(EXEEXT) src/ln$(EXEEXT) src/logname$(EXEEXT) src/ls$(EXEEXT) src/md5sum$(EXEEXT) src/mkdir$(EXEEXT) src/mkfifo$(EXEEXT) src/mknod$(EXEEXT) src/mktemp$(EXEEXT) src/mv$(EXEEXT) src/nl$(EXEEXT) src/nproc$(EXEEXT) src/nohup$(EXEEXT) src/numfmt$(EXEEXT) src/od$(EXEEXT) src/paste$(EXEEXT) src/pathchk$(EXEEXT) src/pr$(EXEEXT) src/printenv$(EXEEXT) src/printf$(EXEEXT) src/ptx$(EXEEXT) src/pwd$(EXEEXT) src/readlink$(EXEEXT) src/realpath$(EXEEXT) src/rm$(EXEEXT) src/rmdir$(EXEEXT) src/runcon$(EXEEXT) src/seq$(EXEEXT) src/sha1sum$(EXEEXT) src/sha224sum$(EXEEXT) src/sha256sum$(EXEEXT) src/sha384sum$(EXEEXT) src/sha512sum$(EXEEXT) src/shred$(EXEEXT) src/shuf$(EXEEXT) src/sleep$(EXEEXT) src/sort$(EXEEXT) src/split$(EXEEXT) src/stat$(EXEEXT) src/sum$(EXEEXT) src/sync$(EXEEXT) src/tac$(EXEEXT) src/tail$(EXEEXT) src/tee$(EXEEXT) src/test$(EXEEXT) src/timeout$(EXEEXT) src/touch$(EXEEXT) src/tr$(EXEEXT) src/true$(EXEEXT) src/truncate$(EXEEXT) src/tsort$(EXEEXT) src/tty$(EXEEXT) src/uname$(EXEEXT) src/unexpand$(EXEEXT) src/uniq$(EXEEXT) src/unlink$(EXEEXT) src/vdir$(EXEEXT) src/wc$(EXEEXT) src/whoami$(EXEEXT) src/yes$(EXEEXT)
@@ -3801,8 +3801,8 @@ datarootdir = /home/hisisdk/histb/autelan/fakerelease/usr/share
 docdir = /home/hisisdk/histb/autelan/fakerelease/usr/share/doc/bash
 dvidir = /home/hisisdk/histb/autelan/fakerelease/usr/share/doc
 exec_prefix = ${prefix}
-gl_LIBOBJS =  lib/asnprintf.o lib/chdir-long.o lib/dup2.o lib/fchownat.o lib/fclose.o lib/fcntl.o lib/fflush.o lib/fnmatch.o lib/fpurge.o lib/freadahead.o lib/freadptr.o lib/fseek.o lib/fseeko.o lib/fseterr.o lib/fsusage.o lib/fts.o lib/futimens.o lib/getcwd.o lib/getcwd-lgpl.o lib/getopt.o lib/getopt1.o lib/getpass.o lib/isapipe.o lib/linkat.o lib/mbrlen.o lib/mbrtowc.o lib/memchr.o lib/mktime.o lib/mountlist.o lib/nanosleep.o lib/openat-proc.o lib/printf-args.o lib/printf-parse.o lib/readutmp.o lib/regex.o lib/secure_getenv.o lib/selinux-at.o lib/sig2str.o lib/strerror.o lib/strnlen.o lib/strstr.o lib/utimensat.o lib/vasnprintf.o
-gl_LTLIBOBJS =  lib/asnprintf.lo lib/chdir-long.lo lib/dup2.lo lib/fchownat.lo lib/fclose.lo lib/fcntl.lo lib/fflush.lo lib/fnmatch.lo lib/fpurge.lo lib/freadahead.lo lib/freadptr.lo lib/fseek.lo lib/fseeko.lo lib/fseterr.lo lib/fsusage.lo lib/fts.lo lib/futimens.lo lib/getcwd.lo lib/getcwd-lgpl.lo lib/getopt.lo lib/getopt1.lo lib/getpass.lo lib/isapipe.lo lib/linkat.lo lib/mbrlen.lo lib/mbrtowc.lo lib/memchr.lo lib/mktime.lo lib/mountlist.lo lib/nanosleep.lo lib/openat-proc.lo lib/printf-args.lo lib/printf-parse.lo lib/readutmp.lo lib/regex.lo lib/secure_getenv.lo lib/selinux-at.lo lib/sig2str.lo lib/strerror.lo lib/strnlen.lo lib/strstr.lo lib/utimensat.lo lib/vasnprintf.lo
+gl_LIBOBJS =  lib/asnprintf.o lib/chdir-long.o lib/dup2.o lib/fchownat.o lib/fclose.o lib/fcntl.o lib/fflush.o lib/fnmatch.o lib/fpurge.o lib/freadahead.o lib/freadptr.o lib/fseek.o lib/fseeko.o lib/fseterr.o lib/fsusage.o lib/fts.o lib/futimens.o lib/getcwd.o lib/getcwd-lgpl.o lib/getopt.o lib/getopt1.o lib/getpass.o lib/isapipe.o lib/linkat.o lib/mbrlen.o lib/mbrtowc.o lib/memchr.o lib/mktime.o lib/mountlist.o lib/nanosleep.o lib/openat-proc.o lib/printf-args.o lib/printf-parse.o lib/readutmp.o lib/regex.o lib/secure_getenv.o lib/selinux-at.o lib/sig2str.o lib/strerror.o lib/strstr.o lib/utimensat.o lib/vasnprintf.o
+gl_LTLIBOBJS =  lib/asnprintf.lo lib/chdir-long.lo lib/dup2.lo lib/fchownat.lo lib/fclose.lo lib/fcntl.lo lib/fflush.lo lib/fnmatch.lo lib/fpurge.lo lib/freadahead.lo lib/freadptr.lo lib/fseek.lo lib/fseeko.lo lib/fseterr.lo lib/fsusage.lo lib/fts.lo lib/futimens.lo lib/getcwd.lo lib/getcwd-lgpl.lo lib/getopt.lo lib/getopt1.lo lib/getpass.lo lib/isapipe.lo lib/linkat.lo lib/mbrlen.lo lib/mbrtowc.lo lib/memchr.lo lib/mktime.lo lib/mountlist.lo lib/nanosleep.lo lib/openat-proc.lo lib/printf-args.lo lib/printf-parse.lo lib/readutmp.lo lib/regex.lo lib/secure_getenv.lo lib/selinux-at.lo lib/sig2str.lo lib/strerror.lo lib/strstr.lo lib/utimensat.lo lib/vasnprintf.lo
 gltests_LIBOBJS =  ioctl.o perror.o strerror_r.o
 gltests_LTLIBOBJS =  ioctl.lo perror.lo strerror_r.lo
 gltests_WITNESS = IN_COREUTILS_GNULIB_TESTS
@@ -3822,7 +3822,7 @@ localedir = /home/hisisdk/histb/autelan/fakerelease/usr/share/local
 localstatedir = /home/hisisdk/histb/autelan/release/var
 man1_MANS = man/chroot.1 man/hostid.1 man/nice.1 man/who.1 man/users.1 man/pinky.1 man/uptime.1 man/stty.1 man/df.1 man/stdbuf.1 man/base64.1 man/basename.1 man/cat.1 man/chcon.1 man/chgrp.1 man/chmod.1 man/chown.1 man/cksum.1 man/comm.1 man/cp.1 man/csplit.1 man/cut.1 man/date.1 man/dd.1 man/dir.1 man/dircolors.1 man/dirname.1 man/du.1 man/echo.1 man/env.1 man/expand.1 man/expr.1 man/factor.1 man/false.1 man/fmt.1 man/fold.1 man/install.1 man/groups.1 man/head.1 man/id.1 man/join.1 man/kill.1 man/link.1 man/ln.1 man/logname.1 man/ls.1 man/md5sum.1 man/mkdir.1 man/mkfifo.1 man/mknod.1 man/mktemp.1 man/mv.1 man/nl.1 man/nproc.1 man/nohup.1 man/numfmt.1 man/od.1 man/paste.1 man/pathchk.1 man/pr.1 man/printenv.1 man/printf.1 man/ptx.1 man/pwd.1 man/readlink.1 man/realpath.1 man/rm.1 man/rmdir.1 man/runcon.1 man/seq.1 man/sha1sum.1 man/sha224sum.1 man/sha256sum.1 man/sha384sum.1 man/sha512sum.1 man/shred.1 man/shuf.1 man/sleep.1 man/sort.1 man/split.1 man/stat.1 man/sum.1 man/sync.1 man/tac.1 man/tail.1 man/tee.1 man/test.1 man/timeout.1 man/touch.1 man/tr.1 man/true.1 man/truncate.1 man/tsort.1 man/tty.1 man/uname.1 man/unexpand.1 man/uniq.1 man/unlink.1 man/vdir.1 man/wc.1 man/whoami.1 man/yes.1
 mandir = /home/hisisdk/histb/autelan/fakerelease/usr/share/man
-mkdir_p = /bin/mkdir -p
+mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = /home/hisisdk/histb/autelan/fakerelease/usr/share/doc
 pkglibexec_PROGRAMS = src/libstdbuf.so
@@ -8757,7 +8757,7 @@ include src/$(DEPDIR)/yes.Po
 	$(am__mv) $$depbase.Tpo $$depbase.Po
 #	$(AM_V_CC)source='$<' object='$@' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(COMPILE) -c -o $@ $<
+#	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
 
 .c.obj:
 	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
@@ -8765,2121 +8765,2121 @@ include src/$(DEPDIR)/yes.Po
 	$(am__mv) $$depbase.Tpo $$depbase.Po
 #	$(AM_V_CC)source='$<' object='$@' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 src/src_libsinglebin___a-lbracket.o: src/lbracket.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin___a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin___a-lbracket.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin___a-lbracket.Tpo -c -o src/src_libsinglebin___a-lbracket.o `test -f 'src/lbracket.c' || echo '$(srcdir)/'`src/lbracket.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin___a-lbracket.Tpo src/$(DEPDIR)/src_libsinglebin___a-lbracket.Po
 #	$(AM_V_CC)source='src/lbracket.c' object='src/src_libsinglebin___a-lbracket.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin___a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin___a-lbracket.o `test -f 'src/lbracket.c' || echo '$(srcdir)/'`src/lbracket.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin___a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin___a-lbracket.o `test -f 'src/lbracket.c' || echo '$(srcdir)/'`src/lbracket.c
 
 src/src_libsinglebin___a-lbracket.obj: src/lbracket.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin___a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin___a-lbracket.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin___a-lbracket.Tpo -c -o src/src_libsinglebin___a-lbracket.obj `if test -f 'src/lbracket.c'; then $(CYGPATH_W) 'src/lbracket.c'; else $(CYGPATH_W) '$(srcdir)/src/lbracket.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin___a-lbracket.Tpo src/$(DEPDIR)/src_libsinglebin___a-lbracket.Po
 #	$(AM_V_CC)source='src/lbracket.c' object='src/src_libsinglebin___a-lbracket.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin___a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin___a-lbracket.obj `if test -f 'src/lbracket.c'; then $(CYGPATH_W) 'src/lbracket.c'; else $(CYGPATH_W) '$(srcdir)/src/lbracket.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin___a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin___a-lbracket.obj `if test -f 'src/lbracket.c'; then $(CYGPATH_W) 'src/lbracket.c'; else $(CYGPATH_W) '$(srcdir)/src/lbracket.c'; fi`
 
 src/src_libsinglebin_arch_a-coreutils-arch.o: src/coreutils-arch.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_arch_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_arch_a-coreutils-arch.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_arch_a-coreutils-arch.Tpo -c -o src/src_libsinglebin_arch_a-coreutils-arch.o `test -f 'src/coreutils-arch.c' || echo '$(srcdir)/'`src/coreutils-arch.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_arch_a-coreutils-arch.Tpo src/$(DEPDIR)/src_libsinglebin_arch_a-coreutils-arch.Po
 #	$(AM_V_CC)source='src/coreutils-arch.c' object='src/src_libsinglebin_arch_a-coreutils-arch.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_arch_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_arch_a-coreutils-arch.o `test -f 'src/coreutils-arch.c' || echo '$(srcdir)/'`src/coreutils-arch.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_arch_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_arch_a-coreutils-arch.o `test -f 'src/coreutils-arch.c' || echo '$(srcdir)/'`src/coreutils-arch.c
 
 src/src_libsinglebin_arch_a-coreutils-arch.obj: src/coreutils-arch.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_arch_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_arch_a-coreutils-arch.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_arch_a-coreutils-arch.Tpo -c -o src/src_libsinglebin_arch_a-coreutils-arch.obj `if test -f 'src/coreutils-arch.c'; then $(CYGPATH_W) 'src/coreutils-arch.c'; else $(CYGPATH_W) '$(srcdir)/src/coreutils-arch.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_arch_a-coreutils-arch.Tpo src/$(DEPDIR)/src_libsinglebin_arch_a-coreutils-arch.Po
 #	$(AM_V_CC)source='src/coreutils-arch.c' object='src/src_libsinglebin_arch_a-coreutils-arch.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_arch_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_arch_a-coreutils-arch.obj `if test -f 'src/coreutils-arch.c'; then $(CYGPATH_W) 'src/coreutils-arch.c'; else $(CYGPATH_W) '$(srcdir)/src/coreutils-arch.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_arch_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_arch_a-coreutils-arch.obj `if test -f 'src/coreutils-arch.c'; then $(CYGPATH_W) 'src/coreutils-arch.c'; else $(CYGPATH_W) '$(srcdir)/src/coreutils-arch.c'; fi`
 
 src/src_libsinglebin_base64_a-base64.o: src/base64.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_base64_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_base64_a-base64.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_base64_a-base64.Tpo -c -o src/src_libsinglebin_base64_a-base64.o `test -f 'src/base64.c' || echo '$(srcdir)/'`src/base64.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_base64_a-base64.Tpo src/$(DEPDIR)/src_libsinglebin_base64_a-base64.Po
 #	$(AM_V_CC)source='src/base64.c' object='src/src_libsinglebin_base64_a-base64.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_base64_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_base64_a-base64.o `test -f 'src/base64.c' || echo '$(srcdir)/'`src/base64.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_base64_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_base64_a-base64.o `test -f 'src/base64.c' || echo '$(srcdir)/'`src/base64.c
 
 src/src_libsinglebin_base64_a-base64.obj: src/base64.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_base64_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_base64_a-base64.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_base64_a-base64.Tpo -c -o src/src_libsinglebin_base64_a-base64.obj `if test -f 'src/base64.c'; then $(CYGPATH_W) 'src/base64.c'; else $(CYGPATH_W) '$(srcdir)/src/base64.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_base64_a-base64.Tpo src/$(DEPDIR)/src_libsinglebin_base64_a-base64.Po
 #	$(AM_V_CC)source='src/base64.c' object='src/src_libsinglebin_base64_a-base64.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_base64_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_base64_a-base64.obj `if test -f 'src/base64.c'; then $(CYGPATH_W) 'src/base64.c'; else $(CYGPATH_W) '$(srcdir)/src/base64.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_base64_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_base64_a-base64.obj `if test -f 'src/base64.c'; then $(CYGPATH_W) 'src/base64.c'; else $(CYGPATH_W) '$(srcdir)/src/base64.c'; fi`
 
 src/src_libsinglebin_basename_a-basename.o: src/basename.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_basename_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_basename_a-basename.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_basename_a-basename.Tpo -c -o src/src_libsinglebin_basename_a-basename.o `test -f 'src/basename.c' || echo '$(srcdir)/'`src/basename.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_basename_a-basename.Tpo src/$(DEPDIR)/src_libsinglebin_basename_a-basename.Po
 #	$(AM_V_CC)source='src/basename.c' object='src/src_libsinglebin_basename_a-basename.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_basename_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_basename_a-basename.o `test -f 'src/basename.c' || echo '$(srcdir)/'`src/basename.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_basename_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_basename_a-basename.o `test -f 'src/basename.c' || echo '$(srcdir)/'`src/basename.c
 
 src/src_libsinglebin_basename_a-basename.obj: src/basename.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_basename_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_basename_a-basename.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_basename_a-basename.Tpo -c -o src/src_libsinglebin_basename_a-basename.obj `if test -f 'src/basename.c'; then $(CYGPATH_W) 'src/basename.c'; else $(CYGPATH_W) '$(srcdir)/src/basename.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_basename_a-basename.Tpo src/$(DEPDIR)/src_libsinglebin_basename_a-basename.Po
 #	$(AM_V_CC)source='src/basename.c' object='src/src_libsinglebin_basename_a-basename.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_basename_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_basename_a-basename.obj `if test -f 'src/basename.c'; then $(CYGPATH_W) 'src/basename.c'; else $(CYGPATH_W) '$(srcdir)/src/basename.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_basename_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_basename_a-basename.obj `if test -f 'src/basename.c'; then $(CYGPATH_W) 'src/basename.c'; else $(CYGPATH_W) '$(srcdir)/src/basename.c'; fi`
 
 src/src_libsinglebin_cat_a-cat.o: src/cat.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cat_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cat_a-cat.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cat_a-cat.Tpo -c -o src/src_libsinglebin_cat_a-cat.o `test -f 'src/cat.c' || echo '$(srcdir)/'`src/cat.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cat_a-cat.Tpo src/$(DEPDIR)/src_libsinglebin_cat_a-cat.Po
 #	$(AM_V_CC)source='src/cat.c' object='src/src_libsinglebin_cat_a-cat.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cat_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cat_a-cat.o `test -f 'src/cat.c' || echo '$(srcdir)/'`src/cat.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cat_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cat_a-cat.o `test -f 'src/cat.c' || echo '$(srcdir)/'`src/cat.c
 
 src/src_libsinglebin_cat_a-cat.obj: src/cat.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cat_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cat_a-cat.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cat_a-cat.Tpo -c -o src/src_libsinglebin_cat_a-cat.obj `if test -f 'src/cat.c'; then $(CYGPATH_W) 'src/cat.c'; else $(CYGPATH_W) '$(srcdir)/src/cat.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cat_a-cat.Tpo src/$(DEPDIR)/src_libsinglebin_cat_a-cat.Po
 #	$(AM_V_CC)source='src/cat.c' object='src/src_libsinglebin_cat_a-cat.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cat_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cat_a-cat.obj `if test -f 'src/cat.c'; then $(CYGPATH_W) 'src/cat.c'; else $(CYGPATH_W) '$(srcdir)/src/cat.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cat_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cat_a-cat.obj `if test -f 'src/cat.c'; then $(CYGPATH_W) 'src/cat.c'; else $(CYGPATH_W) '$(srcdir)/src/cat.c'; fi`
 
 src/src_libsinglebin_chcon_a-chcon.o: src/chcon.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chcon_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chcon_a-chcon.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chcon_a-chcon.Tpo -c -o src/src_libsinglebin_chcon_a-chcon.o `test -f 'src/chcon.c' || echo '$(srcdir)/'`src/chcon.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chcon_a-chcon.Tpo src/$(DEPDIR)/src_libsinglebin_chcon_a-chcon.Po
 #	$(AM_V_CC)source='src/chcon.c' object='src/src_libsinglebin_chcon_a-chcon.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chcon_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chcon_a-chcon.o `test -f 'src/chcon.c' || echo '$(srcdir)/'`src/chcon.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chcon_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chcon_a-chcon.o `test -f 'src/chcon.c' || echo '$(srcdir)/'`src/chcon.c
 
 src/src_libsinglebin_chcon_a-chcon.obj: src/chcon.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chcon_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chcon_a-chcon.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chcon_a-chcon.Tpo -c -o src/src_libsinglebin_chcon_a-chcon.obj `if test -f 'src/chcon.c'; then $(CYGPATH_W) 'src/chcon.c'; else $(CYGPATH_W) '$(srcdir)/src/chcon.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chcon_a-chcon.Tpo src/$(DEPDIR)/src_libsinglebin_chcon_a-chcon.Po
 #	$(AM_V_CC)source='src/chcon.c' object='src/src_libsinglebin_chcon_a-chcon.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chcon_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chcon_a-chcon.obj `if test -f 'src/chcon.c'; then $(CYGPATH_W) 'src/chcon.c'; else $(CYGPATH_W) '$(srcdir)/src/chcon.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chcon_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chcon_a-chcon.obj `if test -f 'src/chcon.c'; then $(CYGPATH_W) 'src/chcon.c'; else $(CYGPATH_W) '$(srcdir)/src/chcon.c'; fi`
 
 src/src_libsinglebin_chgrp_a-chgrp.o: src/chgrp.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chgrp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chgrp_a-chgrp.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chgrp_a-chgrp.Tpo -c -o src/src_libsinglebin_chgrp_a-chgrp.o `test -f 'src/chgrp.c' || echo '$(srcdir)/'`src/chgrp.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chgrp_a-chgrp.Tpo src/$(DEPDIR)/src_libsinglebin_chgrp_a-chgrp.Po
 #	$(AM_V_CC)source='src/chgrp.c' object='src/src_libsinglebin_chgrp_a-chgrp.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chgrp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chgrp_a-chgrp.o `test -f 'src/chgrp.c' || echo '$(srcdir)/'`src/chgrp.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chgrp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chgrp_a-chgrp.o `test -f 'src/chgrp.c' || echo '$(srcdir)/'`src/chgrp.c
 
 src/src_libsinglebin_chgrp_a-chgrp.obj: src/chgrp.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chgrp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chgrp_a-chgrp.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chgrp_a-chgrp.Tpo -c -o src/src_libsinglebin_chgrp_a-chgrp.obj `if test -f 'src/chgrp.c'; then $(CYGPATH_W) 'src/chgrp.c'; else $(CYGPATH_W) '$(srcdir)/src/chgrp.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chgrp_a-chgrp.Tpo src/$(DEPDIR)/src_libsinglebin_chgrp_a-chgrp.Po
 #	$(AM_V_CC)source='src/chgrp.c' object='src/src_libsinglebin_chgrp_a-chgrp.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chgrp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chgrp_a-chgrp.obj `if test -f 'src/chgrp.c'; then $(CYGPATH_W) 'src/chgrp.c'; else $(CYGPATH_W) '$(srcdir)/src/chgrp.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chgrp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chgrp_a-chgrp.obj `if test -f 'src/chgrp.c'; then $(CYGPATH_W) 'src/chgrp.c'; else $(CYGPATH_W) '$(srcdir)/src/chgrp.c'; fi`
 
 src/src_libsinglebin_chgrp_a-chown-core.o: src/chown-core.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chgrp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chgrp_a-chown-core.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chgrp_a-chown-core.Tpo -c -o src/src_libsinglebin_chgrp_a-chown-core.o `test -f 'src/chown-core.c' || echo '$(srcdir)/'`src/chown-core.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chgrp_a-chown-core.Tpo src/$(DEPDIR)/src_libsinglebin_chgrp_a-chown-core.Po
 #	$(AM_V_CC)source='src/chown-core.c' object='src/src_libsinglebin_chgrp_a-chown-core.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chgrp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chgrp_a-chown-core.o `test -f 'src/chown-core.c' || echo '$(srcdir)/'`src/chown-core.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chgrp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chgrp_a-chown-core.o `test -f 'src/chown-core.c' || echo '$(srcdir)/'`src/chown-core.c
 
 src/src_libsinglebin_chgrp_a-chown-core.obj: src/chown-core.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chgrp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chgrp_a-chown-core.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chgrp_a-chown-core.Tpo -c -o src/src_libsinglebin_chgrp_a-chown-core.obj `if test -f 'src/chown-core.c'; then $(CYGPATH_W) 'src/chown-core.c'; else $(CYGPATH_W) '$(srcdir)/src/chown-core.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chgrp_a-chown-core.Tpo src/$(DEPDIR)/src_libsinglebin_chgrp_a-chown-core.Po
 #	$(AM_V_CC)source='src/chown-core.c' object='src/src_libsinglebin_chgrp_a-chown-core.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chgrp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chgrp_a-chown-core.obj `if test -f 'src/chown-core.c'; then $(CYGPATH_W) 'src/chown-core.c'; else $(CYGPATH_W) '$(srcdir)/src/chown-core.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chgrp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chgrp_a-chown-core.obj `if test -f 'src/chown-core.c'; then $(CYGPATH_W) 'src/chown-core.c'; else $(CYGPATH_W) '$(srcdir)/src/chown-core.c'; fi`
 
 src/src_libsinglebin_chmod_a-chmod.o: src/chmod.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chmod_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chmod_a-chmod.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chmod_a-chmod.Tpo -c -o src/src_libsinglebin_chmod_a-chmod.o `test -f 'src/chmod.c' || echo '$(srcdir)/'`src/chmod.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chmod_a-chmod.Tpo src/$(DEPDIR)/src_libsinglebin_chmod_a-chmod.Po
 #	$(AM_V_CC)source='src/chmod.c' object='src/src_libsinglebin_chmod_a-chmod.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chmod_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chmod_a-chmod.o `test -f 'src/chmod.c' || echo '$(srcdir)/'`src/chmod.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chmod_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chmod_a-chmod.o `test -f 'src/chmod.c' || echo '$(srcdir)/'`src/chmod.c
 
 src/src_libsinglebin_chmod_a-chmod.obj: src/chmod.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chmod_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chmod_a-chmod.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chmod_a-chmod.Tpo -c -o src/src_libsinglebin_chmod_a-chmod.obj `if test -f 'src/chmod.c'; then $(CYGPATH_W) 'src/chmod.c'; else $(CYGPATH_W) '$(srcdir)/src/chmod.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chmod_a-chmod.Tpo src/$(DEPDIR)/src_libsinglebin_chmod_a-chmod.Po
 #	$(AM_V_CC)source='src/chmod.c' object='src/src_libsinglebin_chmod_a-chmod.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chmod_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chmod_a-chmod.obj `if test -f 'src/chmod.c'; then $(CYGPATH_W) 'src/chmod.c'; else $(CYGPATH_W) '$(srcdir)/src/chmod.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chmod_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chmod_a-chmod.obj `if test -f 'src/chmod.c'; then $(CYGPATH_W) 'src/chmod.c'; else $(CYGPATH_W) '$(srcdir)/src/chmod.c'; fi`
 
 src/src_libsinglebin_chown_a-chown.o: src/chown.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chown_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chown_a-chown.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chown_a-chown.Tpo -c -o src/src_libsinglebin_chown_a-chown.o `test -f 'src/chown.c' || echo '$(srcdir)/'`src/chown.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chown_a-chown.Tpo src/$(DEPDIR)/src_libsinglebin_chown_a-chown.Po
 #	$(AM_V_CC)source='src/chown.c' object='src/src_libsinglebin_chown_a-chown.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chown_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chown_a-chown.o `test -f 'src/chown.c' || echo '$(srcdir)/'`src/chown.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chown_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chown_a-chown.o `test -f 'src/chown.c' || echo '$(srcdir)/'`src/chown.c
 
 src/src_libsinglebin_chown_a-chown.obj: src/chown.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chown_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chown_a-chown.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chown_a-chown.Tpo -c -o src/src_libsinglebin_chown_a-chown.obj `if test -f 'src/chown.c'; then $(CYGPATH_W) 'src/chown.c'; else $(CYGPATH_W) '$(srcdir)/src/chown.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chown_a-chown.Tpo src/$(DEPDIR)/src_libsinglebin_chown_a-chown.Po
 #	$(AM_V_CC)source='src/chown.c' object='src/src_libsinglebin_chown_a-chown.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chown_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chown_a-chown.obj `if test -f 'src/chown.c'; then $(CYGPATH_W) 'src/chown.c'; else $(CYGPATH_W) '$(srcdir)/src/chown.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chown_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chown_a-chown.obj `if test -f 'src/chown.c'; then $(CYGPATH_W) 'src/chown.c'; else $(CYGPATH_W) '$(srcdir)/src/chown.c'; fi`
 
 src/src_libsinglebin_chown_a-chown-core.o: src/chown-core.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chown_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chown_a-chown-core.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chown_a-chown-core.Tpo -c -o src/src_libsinglebin_chown_a-chown-core.o `test -f 'src/chown-core.c' || echo '$(srcdir)/'`src/chown-core.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chown_a-chown-core.Tpo src/$(DEPDIR)/src_libsinglebin_chown_a-chown-core.Po
 #	$(AM_V_CC)source='src/chown-core.c' object='src/src_libsinglebin_chown_a-chown-core.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chown_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chown_a-chown-core.o `test -f 'src/chown-core.c' || echo '$(srcdir)/'`src/chown-core.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chown_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chown_a-chown-core.o `test -f 'src/chown-core.c' || echo '$(srcdir)/'`src/chown-core.c
 
 src/src_libsinglebin_chown_a-chown-core.obj: src/chown-core.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chown_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chown_a-chown-core.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chown_a-chown-core.Tpo -c -o src/src_libsinglebin_chown_a-chown-core.obj `if test -f 'src/chown-core.c'; then $(CYGPATH_W) 'src/chown-core.c'; else $(CYGPATH_W) '$(srcdir)/src/chown-core.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chown_a-chown-core.Tpo src/$(DEPDIR)/src_libsinglebin_chown_a-chown-core.Po
 #	$(AM_V_CC)source='src/chown-core.c' object='src/src_libsinglebin_chown_a-chown-core.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chown_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chown_a-chown-core.obj `if test -f 'src/chown-core.c'; then $(CYGPATH_W) 'src/chown-core.c'; else $(CYGPATH_W) '$(srcdir)/src/chown-core.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chown_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chown_a-chown-core.obj `if test -f 'src/chown-core.c'; then $(CYGPATH_W) 'src/chown-core.c'; else $(CYGPATH_W) '$(srcdir)/src/chown-core.c'; fi`
 
 src/src_libsinglebin_chroot_a-chroot.o: src/chroot.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chroot_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chroot_a-chroot.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chroot_a-chroot.Tpo -c -o src/src_libsinglebin_chroot_a-chroot.o `test -f 'src/chroot.c' || echo '$(srcdir)/'`src/chroot.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chroot_a-chroot.Tpo src/$(DEPDIR)/src_libsinglebin_chroot_a-chroot.Po
 #	$(AM_V_CC)source='src/chroot.c' object='src/src_libsinglebin_chroot_a-chroot.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chroot_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chroot_a-chroot.o `test -f 'src/chroot.c' || echo '$(srcdir)/'`src/chroot.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chroot_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chroot_a-chroot.o `test -f 'src/chroot.c' || echo '$(srcdir)/'`src/chroot.c
 
 src/src_libsinglebin_chroot_a-chroot.obj: src/chroot.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chroot_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_chroot_a-chroot.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_chroot_a-chroot.Tpo -c -o src/src_libsinglebin_chroot_a-chroot.obj `if test -f 'src/chroot.c'; then $(CYGPATH_W) 'src/chroot.c'; else $(CYGPATH_W) '$(srcdir)/src/chroot.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_chroot_a-chroot.Tpo src/$(DEPDIR)/src_libsinglebin_chroot_a-chroot.Po
 #	$(AM_V_CC)source='src/chroot.c' object='src/src_libsinglebin_chroot_a-chroot.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chroot_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chroot_a-chroot.obj `if test -f 'src/chroot.c'; then $(CYGPATH_W) 'src/chroot.c'; else $(CYGPATH_W) '$(srcdir)/src/chroot.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_chroot_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_chroot_a-chroot.obj `if test -f 'src/chroot.c'; then $(CYGPATH_W) 'src/chroot.c'; else $(CYGPATH_W) '$(srcdir)/src/chroot.c'; fi`
 
 src/src_libsinglebin_cksum_a-cksum.o: src/cksum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cksum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cksum_a-cksum.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cksum_a-cksum.Tpo -c -o src/src_libsinglebin_cksum_a-cksum.o `test -f 'src/cksum.c' || echo '$(srcdir)/'`src/cksum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cksum_a-cksum.Tpo src/$(DEPDIR)/src_libsinglebin_cksum_a-cksum.Po
 #	$(AM_V_CC)source='src/cksum.c' object='src/src_libsinglebin_cksum_a-cksum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cksum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cksum_a-cksum.o `test -f 'src/cksum.c' || echo '$(srcdir)/'`src/cksum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cksum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cksum_a-cksum.o `test -f 'src/cksum.c' || echo '$(srcdir)/'`src/cksum.c
 
 src/src_libsinglebin_cksum_a-cksum.obj: src/cksum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cksum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cksum_a-cksum.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cksum_a-cksum.Tpo -c -o src/src_libsinglebin_cksum_a-cksum.obj `if test -f 'src/cksum.c'; then $(CYGPATH_W) 'src/cksum.c'; else $(CYGPATH_W) '$(srcdir)/src/cksum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cksum_a-cksum.Tpo src/$(DEPDIR)/src_libsinglebin_cksum_a-cksum.Po
 #	$(AM_V_CC)source='src/cksum.c' object='src/src_libsinglebin_cksum_a-cksum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cksum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cksum_a-cksum.obj `if test -f 'src/cksum.c'; then $(CYGPATH_W) 'src/cksum.c'; else $(CYGPATH_W) '$(srcdir)/src/cksum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cksum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cksum_a-cksum.obj `if test -f 'src/cksum.c'; then $(CYGPATH_W) 'src/cksum.c'; else $(CYGPATH_W) '$(srcdir)/src/cksum.c'; fi`
 
 src/src_libsinglebin_comm_a-comm.o: src/comm.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_comm_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_comm_a-comm.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_comm_a-comm.Tpo -c -o src/src_libsinglebin_comm_a-comm.o `test -f 'src/comm.c' || echo '$(srcdir)/'`src/comm.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_comm_a-comm.Tpo src/$(DEPDIR)/src_libsinglebin_comm_a-comm.Po
 #	$(AM_V_CC)source='src/comm.c' object='src/src_libsinglebin_comm_a-comm.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_comm_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_comm_a-comm.o `test -f 'src/comm.c' || echo '$(srcdir)/'`src/comm.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_comm_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_comm_a-comm.o `test -f 'src/comm.c' || echo '$(srcdir)/'`src/comm.c
 
 src/src_libsinglebin_comm_a-comm.obj: src/comm.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_comm_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_comm_a-comm.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_comm_a-comm.Tpo -c -o src/src_libsinglebin_comm_a-comm.obj `if test -f 'src/comm.c'; then $(CYGPATH_W) 'src/comm.c'; else $(CYGPATH_W) '$(srcdir)/src/comm.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_comm_a-comm.Tpo src/$(DEPDIR)/src_libsinglebin_comm_a-comm.Po
 #	$(AM_V_CC)source='src/comm.c' object='src/src_libsinglebin_comm_a-comm.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_comm_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_comm_a-comm.obj `if test -f 'src/comm.c'; then $(CYGPATH_W) 'src/comm.c'; else $(CYGPATH_W) '$(srcdir)/src/comm.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_comm_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_comm_a-comm.obj `if test -f 'src/comm.c'; then $(CYGPATH_W) 'src/comm.c'; else $(CYGPATH_W) '$(srcdir)/src/comm.c'; fi`
 
 src/src_libsinglebin_cp_a-cp.o: src/cp.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cp_a-cp.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cp_a-cp.Tpo -c -o src/src_libsinglebin_cp_a-cp.o `test -f 'src/cp.c' || echo '$(srcdir)/'`src/cp.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cp_a-cp.Tpo src/$(DEPDIR)/src_libsinglebin_cp_a-cp.Po
 #	$(AM_V_CC)source='src/cp.c' object='src/src_libsinglebin_cp_a-cp.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-cp.o `test -f 'src/cp.c' || echo '$(srcdir)/'`src/cp.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-cp.o `test -f 'src/cp.c' || echo '$(srcdir)/'`src/cp.c
 
 src/src_libsinglebin_cp_a-cp.obj: src/cp.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cp_a-cp.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cp_a-cp.Tpo -c -o src/src_libsinglebin_cp_a-cp.obj `if test -f 'src/cp.c'; then $(CYGPATH_W) 'src/cp.c'; else $(CYGPATH_W) '$(srcdir)/src/cp.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cp_a-cp.Tpo src/$(DEPDIR)/src_libsinglebin_cp_a-cp.Po
 #	$(AM_V_CC)source='src/cp.c' object='src/src_libsinglebin_cp_a-cp.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-cp.obj `if test -f 'src/cp.c'; then $(CYGPATH_W) 'src/cp.c'; else $(CYGPATH_W) '$(srcdir)/src/cp.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-cp.obj `if test -f 'src/cp.c'; then $(CYGPATH_W) 'src/cp.c'; else $(CYGPATH_W) '$(srcdir)/src/cp.c'; fi`
 
 src/src_libsinglebin_cp_a-copy.o: src/copy.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cp_a-copy.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cp_a-copy.Tpo -c -o src/src_libsinglebin_cp_a-copy.o `test -f 'src/copy.c' || echo '$(srcdir)/'`src/copy.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cp_a-copy.Tpo src/$(DEPDIR)/src_libsinglebin_cp_a-copy.Po
 #	$(AM_V_CC)source='src/copy.c' object='src/src_libsinglebin_cp_a-copy.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-copy.o `test -f 'src/copy.c' || echo '$(srcdir)/'`src/copy.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-copy.o `test -f 'src/copy.c' || echo '$(srcdir)/'`src/copy.c
 
 src/src_libsinglebin_cp_a-copy.obj: src/copy.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cp_a-copy.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cp_a-copy.Tpo -c -o src/src_libsinglebin_cp_a-copy.obj `if test -f 'src/copy.c'; then $(CYGPATH_W) 'src/copy.c'; else $(CYGPATH_W) '$(srcdir)/src/copy.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cp_a-copy.Tpo src/$(DEPDIR)/src_libsinglebin_cp_a-copy.Po
 #	$(AM_V_CC)source='src/copy.c' object='src/src_libsinglebin_cp_a-copy.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-copy.obj `if test -f 'src/copy.c'; then $(CYGPATH_W) 'src/copy.c'; else $(CYGPATH_W) '$(srcdir)/src/copy.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-copy.obj `if test -f 'src/copy.c'; then $(CYGPATH_W) 'src/copy.c'; else $(CYGPATH_W) '$(srcdir)/src/copy.c'; fi`
 
 src/src_libsinglebin_cp_a-cp-hash.o: src/cp-hash.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cp_a-cp-hash.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cp_a-cp-hash.Tpo -c -o src/src_libsinglebin_cp_a-cp-hash.o `test -f 'src/cp-hash.c' || echo '$(srcdir)/'`src/cp-hash.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cp_a-cp-hash.Tpo src/$(DEPDIR)/src_libsinglebin_cp_a-cp-hash.Po
 #	$(AM_V_CC)source='src/cp-hash.c' object='src/src_libsinglebin_cp_a-cp-hash.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-cp-hash.o `test -f 'src/cp-hash.c' || echo '$(srcdir)/'`src/cp-hash.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-cp-hash.o `test -f 'src/cp-hash.c' || echo '$(srcdir)/'`src/cp-hash.c
 
 src/src_libsinglebin_cp_a-cp-hash.obj: src/cp-hash.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cp_a-cp-hash.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cp_a-cp-hash.Tpo -c -o src/src_libsinglebin_cp_a-cp-hash.obj `if test -f 'src/cp-hash.c'; then $(CYGPATH_W) 'src/cp-hash.c'; else $(CYGPATH_W) '$(srcdir)/src/cp-hash.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cp_a-cp-hash.Tpo src/$(DEPDIR)/src_libsinglebin_cp_a-cp-hash.Po
 #	$(AM_V_CC)source='src/cp-hash.c' object='src/src_libsinglebin_cp_a-cp-hash.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-cp-hash.obj `if test -f 'src/cp-hash.c'; then $(CYGPATH_W) 'src/cp-hash.c'; else $(CYGPATH_W) '$(srcdir)/src/cp-hash.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-cp-hash.obj `if test -f 'src/cp-hash.c'; then $(CYGPATH_W) 'src/cp-hash.c'; else $(CYGPATH_W) '$(srcdir)/src/cp-hash.c'; fi`
 
 src/src_libsinglebin_cp_a-extent-scan.o: src/extent-scan.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cp_a-extent-scan.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cp_a-extent-scan.Tpo -c -o src/src_libsinglebin_cp_a-extent-scan.o `test -f 'src/extent-scan.c' || echo '$(srcdir)/'`src/extent-scan.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cp_a-extent-scan.Tpo src/$(DEPDIR)/src_libsinglebin_cp_a-extent-scan.Po
 #	$(AM_V_CC)source='src/extent-scan.c' object='src/src_libsinglebin_cp_a-extent-scan.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-extent-scan.o `test -f 'src/extent-scan.c' || echo '$(srcdir)/'`src/extent-scan.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-extent-scan.o `test -f 'src/extent-scan.c' || echo '$(srcdir)/'`src/extent-scan.c
 
 src/src_libsinglebin_cp_a-extent-scan.obj: src/extent-scan.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cp_a-extent-scan.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cp_a-extent-scan.Tpo -c -o src/src_libsinglebin_cp_a-extent-scan.obj `if test -f 'src/extent-scan.c'; then $(CYGPATH_W) 'src/extent-scan.c'; else $(CYGPATH_W) '$(srcdir)/src/extent-scan.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cp_a-extent-scan.Tpo src/$(DEPDIR)/src_libsinglebin_cp_a-extent-scan.Po
 #	$(AM_V_CC)source='src/extent-scan.c' object='src/src_libsinglebin_cp_a-extent-scan.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-extent-scan.obj `if test -f 'src/extent-scan.c'; then $(CYGPATH_W) 'src/extent-scan.c'; else $(CYGPATH_W) '$(srcdir)/src/extent-scan.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-extent-scan.obj `if test -f 'src/extent-scan.c'; then $(CYGPATH_W) 'src/extent-scan.c'; else $(CYGPATH_W) '$(srcdir)/src/extent-scan.c'; fi`
 
 src/src_libsinglebin_cp_a-selinux.o: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cp_a-selinux.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cp_a-selinux.Tpo -c -o src/src_libsinglebin_cp_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cp_a-selinux.Tpo src/$(DEPDIR)/src_libsinglebin_cp_a-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_libsinglebin_cp_a-selinux.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 
 src/src_libsinglebin_cp_a-selinux.obj: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cp_a-selinux.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cp_a-selinux.Tpo -c -o src/src_libsinglebin_cp_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cp_a-selinux.Tpo src/$(DEPDIR)/src_libsinglebin_cp_a-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_libsinglebin_cp_a-selinux.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cp_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 
 src/src_libsinglebin_csplit_a-csplit.o: src/csplit.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_csplit_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_csplit_a-csplit.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_csplit_a-csplit.Tpo -c -o src/src_libsinglebin_csplit_a-csplit.o `test -f 'src/csplit.c' || echo '$(srcdir)/'`src/csplit.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_csplit_a-csplit.Tpo src/$(DEPDIR)/src_libsinglebin_csplit_a-csplit.Po
 #	$(AM_V_CC)source='src/csplit.c' object='src/src_libsinglebin_csplit_a-csplit.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_csplit_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_csplit_a-csplit.o `test -f 'src/csplit.c' || echo '$(srcdir)/'`src/csplit.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_csplit_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_csplit_a-csplit.o `test -f 'src/csplit.c' || echo '$(srcdir)/'`src/csplit.c
 
 src/src_libsinglebin_csplit_a-csplit.obj: src/csplit.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_csplit_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_csplit_a-csplit.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_csplit_a-csplit.Tpo -c -o src/src_libsinglebin_csplit_a-csplit.obj `if test -f 'src/csplit.c'; then $(CYGPATH_W) 'src/csplit.c'; else $(CYGPATH_W) '$(srcdir)/src/csplit.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_csplit_a-csplit.Tpo src/$(DEPDIR)/src_libsinglebin_csplit_a-csplit.Po
 #	$(AM_V_CC)source='src/csplit.c' object='src/src_libsinglebin_csplit_a-csplit.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_csplit_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_csplit_a-csplit.obj `if test -f 'src/csplit.c'; then $(CYGPATH_W) 'src/csplit.c'; else $(CYGPATH_W) '$(srcdir)/src/csplit.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_csplit_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_csplit_a-csplit.obj `if test -f 'src/csplit.c'; then $(CYGPATH_W) 'src/csplit.c'; else $(CYGPATH_W) '$(srcdir)/src/csplit.c'; fi`
 
 src/src_libsinglebin_cut_a-cut.o: src/cut.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cut_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cut_a-cut.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cut_a-cut.Tpo -c -o src/src_libsinglebin_cut_a-cut.o `test -f 'src/cut.c' || echo '$(srcdir)/'`src/cut.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cut_a-cut.Tpo src/$(DEPDIR)/src_libsinglebin_cut_a-cut.Po
 #	$(AM_V_CC)source='src/cut.c' object='src/src_libsinglebin_cut_a-cut.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cut_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cut_a-cut.o `test -f 'src/cut.c' || echo '$(srcdir)/'`src/cut.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cut_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cut_a-cut.o `test -f 'src/cut.c' || echo '$(srcdir)/'`src/cut.c
 
 src/src_libsinglebin_cut_a-cut.obj: src/cut.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cut_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_cut_a-cut.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_cut_a-cut.Tpo -c -o src/src_libsinglebin_cut_a-cut.obj `if test -f 'src/cut.c'; then $(CYGPATH_W) 'src/cut.c'; else $(CYGPATH_W) '$(srcdir)/src/cut.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_cut_a-cut.Tpo src/$(DEPDIR)/src_libsinglebin_cut_a-cut.Po
 #	$(AM_V_CC)source='src/cut.c' object='src/src_libsinglebin_cut_a-cut.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cut_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cut_a-cut.obj `if test -f 'src/cut.c'; then $(CYGPATH_W) 'src/cut.c'; else $(CYGPATH_W) '$(srcdir)/src/cut.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_cut_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_cut_a-cut.obj `if test -f 'src/cut.c'; then $(CYGPATH_W) 'src/cut.c'; else $(CYGPATH_W) '$(srcdir)/src/cut.c'; fi`
 
 src/src_libsinglebin_date_a-date.o: src/date.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_date_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_date_a-date.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_date_a-date.Tpo -c -o src/src_libsinglebin_date_a-date.o `test -f 'src/date.c' || echo '$(srcdir)/'`src/date.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_date_a-date.Tpo src/$(DEPDIR)/src_libsinglebin_date_a-date.Po
 #	$(AM_V_CC)source='src/date.c' object='src/src_libsinglebin_date_a-date.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_date_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_date_a-date.o `test -f 'src/date.c' || echo '$(srcdir)/'`src/date.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_date_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_date_a-date.o `test -f 'src/date.c' || echo '$(srcdir)/'`src/date.c
 
 src/src_libsinglebin_date_a-date.obj: src/date.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_date_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_date_a-date.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_date_a-date.Tpo -c -o src/src_libsinglebin_date_a-date.obj `if test -f 'src/date.c'; then $(CYGPATH_W) 'src/date.c'; else $(CYGPATH_W) '$(srcdir)/src/date.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_date_a-date.Tpo src/$(DEPDIR)/src_libsinglebin_date_a-date.Po
 #	$(AM_V_CC)source='src/date.c' object='src/src_libsinglebin_date_a-date.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_date_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_date_a-date.obj `if test -f 'src/date.c'; then $(CYGPATH_W) 'src/date.c'; else $(CYGPATH_W) '$(srcdir)/src/date.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_date_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_date_a-date.obj `if test -f 'src/date.c'; then $(CYGPATH_W) 'src/date.c'; else $(CYGPATH_W) '$(srcdir)/src/date.c'; fi`
 
 src/src_libsinglebin_dd_a-dd.o: src/dd.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dd_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_dd_a-dd.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_dd_a-dd.Tpo -c -o src/src_libsinglebin_dd_a-dd.o `test -f 'src/dd.c' || echo '$(srcdir)/'`src/dd.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_dd_a-dd.Tpo src/$(DEPDIR)/src_libsinglebin_dd_a-dd.Po
 #	$(AM_V_CC)source='src/dd.c' object='src/src_libsinglebin_dd_a-dd.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dd_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dd_a-dd.o `test -f 'src/dd.c' || echo '$(srcdir)/'`src/dd.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dd_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dd_a-dd.o `test -f 'src/dd.c' || echo '$(srcdir)/'`src/dd.c
 
 src/src_libsinglebin_dd_a-dd.obj: src/dd.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dd_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_dd_a-dd.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_dd_a-dd.Tpo -c -o src/src_libsinglebin_dd_a-dd.obj `if test -f 'src/dd.c'; then $(CYGPATH_W) 'src/dd.c'; else $(CYGPATH_W) '$(srcdir)/src/dd.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_dd_a-dd.Tpo src/$(DEPDIR)/src_libsinglebin_dd_a-dd.Po
 #	$(AM_V_CC)source='src/dd.c' object='src/src_libsinglebin_dd_a-dd.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dd_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dd_a-dd.obj `if test -f 'src/dd.c'; then $(CYGPATH_W) 'src/dd.c'; else $(CYGPATH_W) '$(srcdir)/src/dd.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dd_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dd_a-dd.obj `if test -f 'src/dd.c'; then $(CYGPATH_W) 'src/dd.c'; else $(CYGPATH_W) '$(srcdir)/src/dd.c'; fi`
 
 src/src_libsinglebin_df_a-df.o: src/df.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_df_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_df_a-df.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_df_a-df.Tpo -c -o src/src_libsinglebin_df_a-df.o `test -f 'src/df.c' || echo '$(srcdir)/'`src/df.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_df_a-df.Tpo src/$(DEPDIR)/src_libsinglebin_df_a-df.Po
 #	$(AM_V_CC)source='src/df.c' object='src/src_libsinglebin_df_a-df.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_df_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_df_a-df.o `test -f 'src/df.c' || echo '$(srcdir)/'`src/df.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_df_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_df_a-df.o `test -f 'src/df.c' || echo '$(srcdir)/'`src/df.c
 
 src/src_libsinglebin_df_a-df.obj: src/df.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_df_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_df_a-df.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_df_a-df.Tpo -c -o src/src_libsinglebin_df_a-df.obj `if test -f 'src/df.c'; then $(CYGPATH_W) 'src/df.c'; else $(CYGPATH_W) '$(srcdir)/src/df.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_df_a-df.Tpo src/$(DEPDIR)/src_libsinglebin_df_a-df.Po
 #	$(AM_V_CC)source='src/df.c' object='src/src_libsinglebin_df_a-df.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_df_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_df_a-df.obj `if test -f 'src/df.c'; then $(CYGPATH_W) 'src/df.c'; else $(CYGPATH_W) '$(srcdir)/src/df.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_df_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_df_a-df.obj `if test -f 'src/df.c'; then $(CYGPATH_W) 'src/df.c'; else $(CYGPATH_W) '$(srcdir)/src/df.c'; fi`
 
 src/src_libsinglebin_df_a-find-mount-point.o: src/find-mount-point.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_df_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_df_a-find-mount-point.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_df_a-find-mount-point.Tpo -c -o src/src_libsinglebin_df_a-find-mount-point.o `test -f 'src/find-mount-point.c' || echo '$(srcdir)/'`src/find-mount-point.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_df_a-find-mount-point.Tpo src/$(DEPDIR)/src_libsinglebin_df_a-find-mount-point.Po
 #	$(AM_V_CC)source='src/find-mount-point.c' object='src/src_libsinglebin_df_a-find-mount-point.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_df_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_df_a-find-mount-point.o `test -f 'src/find-mount-point.c' || echo '$(srcdir)/'`src/find-mount-point.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_df_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_df_a-find-mount-point.o `test -f 'src/find-mount-point.c' || echo '$(srcdir)/'`src/find-mount-point.c
 
 src/src_libsinglebin_df_a-find-mount-point.obj: src/find-mount-point.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_df_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_df_a-find-mount-point.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_df_a-find-mount-point.Tpo -c -o src/src_libsinglebin_df_a-find-mount-point.obj `if test -f 'src/find-mount-point.c'; then $(CYGPATH_W) 'src/find-mount-point.c'; else $(CYGPATH_W) '$(srcdir)/src/find-mount-point.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_df_a-find-mount-point.Tpo src/$(DEPDIR)/src_libsinglebin_df_a-find-mount-point.Po
 #	$(AM_V_CC)source='src/find-mount-point.c' object='src/src_libsinglebin_df_a-find-mount-point.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_df_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_df_a-find-mount-point.obj `if test -f 'src/find-mount-point.c'; then $(CYGPATH_W) 'src/find-mount-point.c'; else $(CYGPATH_W) '$(srcdir)/src/find-mount-point.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_df_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_df_a-find-mount-point.obj `if test -f 'src/find-mount-point.c'; then $(CYGPATH_W) 'src/find-mount-point.c'; else $(CYGPATH_W) '$(srcdir)/src/find-mount-point.c'; fi`
 
 src/src_libsinglebin_dir_a-coreutils-dir.o: src/coreutils-dir.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_dir_a-coreutils-dir.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_dir_a-coreutils-dir.Tpo -c -o src/src_libsinglebin_dir_a-coreutils-dir.o `test -f 'src/coreutils-dir.c' || echo '$(srcdir)/'`src/coreutils-dir.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_dir_a-coreutils-dir.Tpo src/$(DEPDIR)/src_libsinglebin_dir_a-coreutils-dir.Po
 #	$(AM_V_CC)source='src/coreutils-dir.c' object='src/src_libsinglebin_dir_a-coreutils-dir.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dir_a-coreutils-dir.o `test -f 'src/coreutils-dir.c' || echo '$(srcdir)/'`src/coreutils-dir.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dir_a-coreutils-dir.o `test -f 'src/coreutils-dir.c' || echo '$(srcdir)/'`src/coreutils-dir.c
 
 src/src_libsinglebin_dir_a-coreutils-dir.obj: src/coreutils-dir.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_dir_a-coreutils-dir.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_dir_a-coreutils-dir.Tpo -c -o src/src_libsinglebin_dir_a-coreutils-dir.obj `if test -f 'src/coreutils-dir.c'; then $(CYGPATH_W) 'src/coreutils-dir.c'; else $(CYGPATH_W) '$(srcdir)/src/coreutils-dir.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_dir_a-coreutils-dir.Tpo src/$(DEPDIR)/src_libsinglebin_dir_a-coreutils-dir.Po
 #	$(AM_V_CC)source='src/coreutils-dir.c' object='src/src_libsinglebin_dir_a-coreutils-dir.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dir_a-coreutils-dir.obj `if test -f 'src/coreutils-dir.c'; then $(CYGPATH_W) 'src/coreutils-dir.c'; else $(CYGPATH_W) '$(srcdir)/src/coreutils-dir.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dir_a-coreutils-dir.obj `if test -f 'src/coreutils-dir.c'; then $(CYGPATH_W) 'src/coreutils-dir.c'; else $(CYGPATH_W) '$(srcdir)/src/coreutils-dir.c'; fi`
 
 src/src_libsinglebin_dircolors_a-dircolors.o: src/dircolors.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dircolors_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_dircolors_a-dircolors.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_dircolors_a-dircolors.Tpo -c -o src/src_libsinglebin_dircolors_a-dircolors.o `test -f 'src/dircolors.c' || echo '$(srcdir)/'`src/dircolors.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_dircolors_a-dircolors.Tpo src/$(DEPDIR)/src_libsinglebin_dircolors_a-dircolors.Po
 #	$(AM_V_CC)source='src/dircolors.c' object='src/src_libsinglebin_dircolors_a-dircolors.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dircolors_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dircolors_a-dircolors.o `test -f 'src/dircolors.c' || echo '$(srcdir)/'`src/dircolors.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dircolors_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dircolors_a-dircolors.o `test -f 'src/dircolors.c' || echo '$(srcdir)/'`src/dircolors.c
 
 src/src_libsinglebin_dircolors_a-dircolors.obj: src/dircolors.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dircolors_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_dircolors_a-dircolors.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_dircolors_a-dircolors.Tpo -c -o src/src_libsinglebin_dircolors_a-dircolors.obj `if test -f 'src/dircolors.c'; then $(CYGPATH_W) 'src/dircolors.c'; else $(CYGPATH_W) '$(srcdir)/src/dircolors.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_dircolors_a-dircolors.Tpo src/$(DEPDIR)/src_libsinglebin_dircolors_a-dircolors.Po
 #	$(AM_V_CC)source='src/dircolors.c' object='src/src_libsinglebin_dircolors_a-dircolors.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dircolors_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dircolors_a-dircolors.obj `if test -f 'src/dircolors.c'; then $(CYGPATH_W) 'src/dircolors.c'; else $(CYGPATH_W) '$(srcdir)/src/dircolors.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dircolors_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dircolors_a-dircolors.obj `if test -f 'src/dircolors.c'; then $(CYGPATH_W) 'src/dircolors.c'; else $(CYGPATH_W) '$(srcdir)/src/dircolors.c'; fi`
 
 src/src_libsinglebin_dirname_a-dirname.o: src/dirname.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dirname_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_dirname_a-dirname.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_dirname_a-dirname.Tpo -c -o src/src_libsinglebin_dirname_a-dirname.o `test -f 'src/dirname.c' || echo '$(srcdir)/'`src/dirname.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_dirname_a-dirname.Tpo src/$(DEPDIR)/src_libsinglebin_dirname_a-dirname.Po
 #	$(AM_V_CC)source='src/dirname.c' object='src/src_libsinglebin_dirname_a-dirname.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dirname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dirname_a-dirname.o `test -f 'src/dirname.c' || echo '$(srcdir)/'`src/dirname.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dirname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dirname_a-dirname.o `test -f 'src/dirname.c' || echo '$(srcdir)/'`src/dirname.c
 
 src/src_libsinglebin_dirname_a-dirname.obj: src/dirname.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dirname_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_dirname_a-dirname.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_dirname_a-dirname.Tpo -c -o src/src_libsinglebin_dirname_a-dirname.obj `if test -f 'src/dirname.c'; then $(CYGPATH_W) 'src/dirname.c'; else $(CYGPATH_W) '$(srcdir)/src/dirname.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_dirname_a-dirname.Tpo src/$(DEPDIR)/src_libsinglebin_dirname_a-dirname.Po
 #	$(AM_V_CC)source='src/dirname.c' object='src/src_libsinglebin_dirname_a-dirname.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dirname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dirname_a-dirname.obj `if test -f 'src/dirname.c'; then $(CYGPATH_W) 'src/dirname.c'; else $(CYGPATH_W) '$(srcdir)/src/dirname.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_dirname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_dirname_a-dirname.obj `if test -f 'src/dirname.c'; then $(CYGPATH_W) 'src/dirname.c'; else $(CYGPATH_W) '$(srcdir)/src/dirname.c'; fi`
 
 src/src_libsinglebin_du_a-du.o: src/du.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_du_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_du_a-du.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_du_a-du.Tpo -c -o src/src_libsinglebin_du_a-du.o `test -f 'src/du.c' || echo '$(srcdir)/'`src/du.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_du_a-du.Tpo src/$(DEPDIR)/src_libsinglebin_du_a-du.Po
 #	$(AM_V_CC)source='src/du.c' object='src/src_libsinglebin_du_a-du.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_du_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_du_a-du.o `test -f 'src/du.c' || echo '$(srcdir)/'`src/du.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_du_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_du_a-du.o `test -f 'src/du.c' || echo '$(srcdir)/'`src/du.c
 
 src/src_libsinglebin_du_a-du.obj: src/du.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_du_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_du_a-du.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_du_a-du.Tpo -c -o src/src_libsinglebin_du_a-du.obj `if test -f 'src/du.c'; then $(CYGPATH_W) 'src/du.c'; else $(CYGPATH_W) '$(srcdir)/src/du.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_du_a-du.Tpo src/$(DEPDIR)/src_libsinglebin_du_a-du.Po
 #	$(AM_V_CC)source='src/du.c' object='src/src_libsinglebin_du_a-du.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_du_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_du_a-du.obj `if test -f 'src/du.c'; then $(CYGPATH_W) 'src/du.c'; else $(CYGPATH_W) '$(srcdir)/src/du.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_du_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_du_a-du.obj `if test -f 'src/du.c'; then $(CYGPATH_W) 'src/du.c'; else $(CYGPATH_W) '$(srcdir)/src/du.c'; fi`
 
 src/src_libsinglebin_echo_a-echo.o: src/echo.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_echo_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_echo_a-echo.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_echo_a-echo.Tpo -c -o src/src_libsinglebin_echo_a-echo.o `test -f 'src/echo.c' || echo '$(srcdir)/'`src/echo.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_echo_a-echo.Tpo src/$(DEPDIR)/src_libsinglebin_echo_a-echo.Po
 #	$(AM_V_CC)source='src/echo.c' object='src/src_libsinglebin_echo_a-echo.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_echo_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_echo_a-echo.o `test -f 'src/echo.c' || echo '$(srcdir)/'`src/echo.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_echo_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_echo_a-echo.o `test -f 'src/echo.c' || echo '$(srcdir)/'`src/echo.c
 
 src/src_libsinglebin_echo_a-echo.obj: src/echo.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_echo_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_echo_a-echo.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_echo_a-echo.Tpo -c -o src/src_libsinglebin_echo_a-echo.obj `if test -f 'src/echo.c'; then $(CYGPATH_W) 'src/echo.c'; else $(CYGPATH_W) '$(srcdir)/src/echo.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_echo_a-echo.Tpo src/$(DEPDIR)/src_libsinglebin_echo_a-echo.Po
 #	$(AM_V_CC)source='src/echo.c' object='src/src_libsinglebin_echo_a-echo.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_echo_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_echo_a-echo.obj `if test -f 'src/echo.c'; then $(CYGPATH_W) 'src/echo.c'; else $(CYGPATH_W) '$(srcdir)/src/echo.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_echo_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_echo_a-echo.obj `if test -f 'src/echo.c'; then $(CYGPATH_W) 'src/echo.c'; else $(CYGPATH_W) '$(srcdir)/src/echo.c'; fi`
 
 src/src_libsinglebin_env_a-env.o: src/env.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_env_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_env_a-env.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_env_a-env.Tpo -c -o src/src_libsinglebin_env_a-env.o `test -f 'src/env.c' || echo '$(srcdir)/'`src/env.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_env_a-env.Tpo src/$(DEPDIR)/src_libsinglebin_env_a-env.Po
 #	$(AM_V_CC)source='src/env.c' object='src/src_libsinglebin_env_a-env.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_env_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_env_a-env.o `test -f 'src/env.c' || echo '$(srcdir)/'`src/env.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_env_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_env_a-env.o `test -f 'src/env.c' || echo '$(srcdir)/'`src/env.c
 
 src/src_libsinglebin_env_a-env.obj: src/env.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_env_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_env_a-env.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_env_a-env.Tpo -c -o src/src_libsinglebin_env_a-env.obj `if test -f 'src/env.c'; then $(CYGPATH_W) 'src/env.c'; else $(CYGPATH_W) '$(srcdir)/src/env.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_env_a-env.Tpo src/$(DEPDIR)/src_libsinglebin_env_a-env.Po
 #	$(AM_V_CC)source='src/env.c' object='src/src_libsinglebin_env_a-env.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_env_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_env_a-env.obj `if test -f 'src/env.c'; then $(CYGPATH_W) 'src/env.c'; else $(CYGPATH_W) '$(srcdir)/src/env.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_env_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_env_a-env.obj `if test -f 'src/env.c'; then $(CYGPATH_W) 'src/env.c'; else $(CYGPATH_W) '$(srcdir)/src/env.c'; fi`
 
 src/src_libsinglebin_expand_a-expand.o: src/expand.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_expand_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_expand_a-expand.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_expand_a-expand.Tpo -c -o src/src_libsinglebin_expand_a-expand.o `test -f 'src/expand.c' || echo '$(srcdir)/'`src/expand.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_expand_a-expand.Tpo src/$(DEPDIR)/src_libsinglebin_expand_a-expand.Po
 #	$(AM_V_CC)source='src/expand.c' object='src/src_libsinglebin_expand_a-expand.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_expand_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_expand_a-expand.o `test -f 'src/expand.c' || echo '$(srcdir)/'`src/expand.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_expand_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_expand_a-expand.o `test -f 'src/expand.c' || echo '$(srcdir)/'`src/expand.c
 
 src/src_libsinglebin_expand_a-expand.obj: src/expand.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_expand_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_expand_a-expand.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_expand_a-expand.Tpo -c -o src/src_libsinglebin_expand_a-expand.obj `if test -f 'src/expand.c'; then $(CYGPATH_W) 'src/expand.c'; else $(CYGPATH_W) '$(srcdir)/src/expand.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_expand_a-expand.Tpo src/$(DEPDIR)/src_libsinglebin_expand_a-expand.Po
 #	$(AM_V_CC)source='src/expand.c' object='src/src_libsinglebin_expand_a-expand.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_expand_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_expand_a-expand.obj `if test -f 'src/expand.c'; then $(CYGPATH_W) 'src/expand.c'; else $(CYGPATH_W) '$(srcdir)/src/expand.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_expand_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_expand_a-expand.obj `if test -f 'src/expand.c'; then $(CYGPATH_W) 'src/expand.c'; else $(CYGPATH_W) '$(srcdir)/src/expand.c'; fi`
 
 src/src_libsinglebin_expr_a-expr.o: src/expr.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_expr_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_expr_a-expr.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_expr_a-expr.Tpo -c -o src/src_libsinglebin_expr_a-expr.o `test -f 'src/expr.c' || echo '$(srcdir)/'`src/expr.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_expr_a-expr.Tpo src/$(DEPDIR)/src_libsinglebin_expr_a-expr.Po
 #	$(AM_V_CC)source='src/expr.c' object='src/src_libsinglebin_expr_a-expr.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_expr_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_expr_a-expr.o `test -f 'src/expr.c' || echo '$(srcdir)/'`src/expr.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_expr_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_expr_a-expr.o `test -f 'src/expr.c' || echo '$(srcdir)/'`src/expr.c
 
 src/src_libsinglebin_expr_a-expr.obj: src/expr.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_expr_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_expr_a-expr.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_expr_a-expr.Tpo -c -o src/src_libsinglebin_expr_a-expr.obj `if test -f 'src/expr.c'; then $(CYGPATH_W) 'src/expr.c'; else $(CYGPATH_W) '$(srcdir)/src/expr.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_expr_a-expr.Tpo src/$(DEPDIR)/src_libsinglebin_expr_a-expr.Po
 #	$(AM_V_CC)source='src/expr.c' object='src/src_libsinglebin_expr_a-expr.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_expr_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_expr_a-expr.obj `if test -f 'src/expr.c'; then $(CYGPATH_W) 'src/expr.c'; else $(CYGPATH_W) '$(srcdir)/src/expr.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_expr_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_expr_a-expr.obj `if test -f 'src/expr.c'; then $(CYGPATH_W) 'src/expr.c'; else $(CYGPATH_W) '$(srcdir)/src/expr.c'; fi`
 
 src/src_libsinglebin_factor_a-factor.o: src/factor.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_factor_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_factor_a-factor.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_factor_a-factor.Tpo -c -o src/src_libsinglebin_factor_a-factor.o `test -f 'src/factor.c' || echo '$(srcdir)/'`src/factor.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_factor_a-factor.Tpo src/$(DEPDIR)/src_libsinglebin_factor_a-factor.Po
 #	$(AM_V_CC)source='src/factor.c' object='src/src_libsinglebin_factor_a-factor.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_factor_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_factor_a-factor.o `test -f 'src/factor.c' || echo '$(srcdir)/'`src/factor.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_factor_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_factor_a-factor.o `test -f 'src/factor.c' || echo '$(srcdir)/'`src/factor.c
 
 src/src_libsinglebin_factor_a-factor.obj: src/factor.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_factor_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_factor_a-factor.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_factor_a-factor.Tpo -c -o src/src_libsinglebin_factor_a-factor.obj `if test -f 'src/factor.c'; then $(CYGPATH_W) 'src/factor.c'; else $(CYGPATH_W) '$(srcdir)/src/factor.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_factor_a-factor.Tpo src/$(DEPDIR)/src_libsinglebin_factor_a-factor.Po
 #	$(AM_V_CC)source='src/factor.c' object='src/src_libsinglebin_factor_a-factor.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_factor_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_factor_a-factor.obj `if test -f 'src/factor.c'; then $(CYGPATH_W) 'src/factor.c'; else $(CYGPATH_W) '$(srcdir)/src/factor.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_factor_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_factor_a-factor.obj `if test -f 'src/factor.c'; then $(CYGPATH_W) 'src/factor.c'; else $(CYGPATH_W) '$(srcdir)/src/factor.c'; fi`
 
 src/src_libsinglebin_false_a-false.o: src/false.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_false_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_false_a-false.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_false_a-false.Tpo -c -o src/src_libsinglebin_false_a-false.o `test -f 'src/false.c' || echo '$(srcdir)/'`src/false.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_false_a-false.Tpo src/$(DEPDIR)/src_libsinglebin_false_a-false.Po
 #	$(AM_V_CC)source='src/false.c' object='src/src_libsinglebin_false_a-false.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_false_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_false_a-false.o `test -f 'src/false.c' || echo '$(srcdir)/'`src/false.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_false_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_false_a-false.o `test -f 'src/false.c' || echo '$(srcdir)/'`src/false.c
 
 src/src_libsinglebin_false_a-false.obj: src/false.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_false_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_false_a-false.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_false_a-false.Tpo -c -o src/src_libsinglebin_false_a-false.obj `if test -f 'src/false.c'; then $(CYGPATH_W) 'src/false.c'; else $(CYGPATH_W) '$(srcdir)/src/false.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_false_a-false.Tpo src/$(DEPDIR)/src_libsinglebin_false_a-false.Po
 #	$(AM_V_CC)source='src/false.c' object='src/src_libsinglebin_false_a-false.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_false_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_false_a-false.obj `if test -f 'src/false.c'; then $(CYGPATH_W) 'src/false.c'; else $(CYGPATH_W) '$(srcdir)/src/false.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_false_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_false_a-false.obj `if test -f 'src/false.c'; then $(CYGPATH_W) 'src/false.c'; else $(CYGPATH_W) '$(srcdir)/src/false.c'; fi`
 
 src/src_libsinglebin_fmt_a-fmt.o: src/fmt.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_fmt_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_fmt_a-fmt.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_fmt_a-fmt.Tpo -c -o src/src_libsinglebin_fmt_a-fmt.o `test -f 'src/fmt.c' || echo '$(srcdir)/'`src/fmt.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_fmt_a-fmt.Tpo src/$(DEPDIR)/src_libsinglebin_fmt_a-fmt.Po
 #	$(AM_V_CC)source='src/fmt.c' object='src/src_libsinglebin_fmt_a-fmt.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_fmt_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_fmt_a-fmt.o `test -f 'src/fmt.c' || echo '$(srcdir)/'`src/fmt.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_fmt_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_fmt_a-fmt.o `test -f 'src/fmt.c' || echo '$(srcdir)/'`src/fmt.c
 
 src/src_libsinglebin_fmt_a-fmt.obj: src/fmt.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_fmt_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_fmt_a-fmt.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_fmt_a-fmt.Tpo -c -o src/src_libsinglebin_fmt_a-fmt.obj `if test -f 'src/fmt.c'; then $(CYGPATH_W) 'src/fmt.c'; else $(CYGPATH_W) '$(srcdir)/src/fmt.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_fmt_a-fmt.Tpo src/$(DEPDIR)/src_libsinglebin_fmt_a-fmt.Po
 #	$(AM_V_CC)source='src/fmt.c' object='src/src_libsinglebin_fmt_a-fmt.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_fmt_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_fmt_a-fmt.obj `if test -f 'src/fmt.c'; then $(CYGPATH_W) 'src/fmt.c'; else $(CYGPATH_W) '$(srcdir)/src/fmt.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_fmt_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_fmt_a-fmt.obj `if test -f 'src/fmt.c'; then $(CYGPATH_W) 'src/fmt.c'; else $(CYGPATH_W) '$(srcdir)/src/fmt.c'; fi`
 
 src/src_libsinglebin_fold_a-fold.o: src/fold.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_fold_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_fold_a-fold.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_fold_a-fold.Tpo -c -o src/src_libsinglebin_fold_a-fold.o `test -f 'src/fold.c' || echo '$(srcdir)/'`src/fold.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_fold_a-fold.Tpo src/$(DEPDIR)/src_libsinglebin_fold_a-fold.Po
 #	$(AM_V_CC)source='src/fold.c' object='src/src_libsinglebin_fold_a-fold.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_fold_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_fold_a-fold.o `test -f 'src/fold.c' || echo '$(srcdir)/'`src/fold.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_fold_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_fold_a-fold.o `test -f 'src/fold.c' || echo '$(srcdir)/'`src/fold.c
 
 src/src_libsinglebin_fold_a-fold.obj: src/fold.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_fold_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_fold_a-fold.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_fold_a-fold.Tpo -c -o src/src_libsinglebin_fold_a-fold.obj `if test -f 'src/fold.c'; then $(CYGPATH_W) 'src/fold.c'; else $(CYGPATH_W) '$(srcdir)/src/fold.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_fold_a-fold.Tpo src/$(DEPDIR)/src_libsinglebin_fold_a-fold.Po
 #	$(AM_V_CC)source='src/fold.c' object='src/src_libsinglebin_fold_a-fold.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_fold_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_fold_a-fold.obj `if test -f 'src/fold.c'; then $(CYGPATH_W) 'src/fold.c'; else $(CYGPATH_W) '$(srcdir)/src/fold.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_fold_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_fold_a-fold.obj `if test -f 'src/fold.c'; then $(CYGPATH_W) 'src/fold.c'; else $(CYGPATH_W) '$(srcdir)/src/fold.c'; fi`
 
 src/src_libsinglebin_ginstall_a-install.o: src/install.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ginstall_a-install.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ginstall_a-install.Tpo -c -o src/src_libsinglebin_ginstall_a-install.o `test -f 'src/install.c' || echo '$(srcdir)/'`src/install.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ginstall_a-install.Tpo src/$(DEPDIR)/src_libsinglebin_ginstall_a-install.Po
 #	$(AM_V_CC)source='src/install.c' object='src/src_libsinglebin_ginstall_a-install.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-install.o `test -f 'src/install.c' || echo '$(srcdir)/'`src/install.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-install.o `test -f 'src/install.c' || echo '$(srcdir)/'`src/install.c
 
 src/src_libsinglebin_ginstall_a-install.obj: src/install.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ginstall_a-install.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ginstall_a-install.Tpo -c -o src/src_libsinglebin_ginstall_a-install.obj `if test -f 'src/install.c'; then $(CYGPATH_W) 'src/install.c'; else $(CYGPATH_W) '$(srcdir)/src/install.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ginstall_a-install.Tpo src/$(DEPDIR)/src_libsinglebin_ginstall_a-install.Po
 #	$(AM_V_CC)source='src/install.c' object='src/src_libsinglebin_ginstall_a-install.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-install.obj `if test -f 'src/install.c'; then $(CYGPATH_W) 'src/install.c'; else $(CYGPATH_W) '$(srcdir)/src/install.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-install.obj `if test -f 'src/install.c'; then $(CYGPATH_W) 'src/install.c'; else $(CYGPATH_W) '$(srcdir)/src/install.c'; fi`
 
 src/src_libsinglebin_ginstall_a-prog-fprintf.o: src/prog-fprintf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ginstall_a-prog-fprintf.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ginstall_a-prog-fprintf.Tpo -c -o src/src_libsinglebin_ginstall_a-prog-fprintf.o `test -f 'src/prog-fprintf.c' || echo '$(srcdir)/'`src/prog-fprintf.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ginstall_a-prog-fprintf.Tpo src/$(DEPDIR)/src_libsinglebin_ginstall_a-prog-fprintf.Po
 #	$(AM_V_CC)source='src/prog-fprintf.c' object='src/src_libsinglebin_ginstall_a-prog-fprintf.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-prog-fprintf.o `test -f 'src/prog-fprintf.c' || echo '$(srcdir)/'`src/prog-fprintf.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-prog-fprintf.o `test -f 'src/prog-fprintf.c' || echo '$(srcdir)/'`src/prog-fprintf.c
 
 src/src_libsinglebin_ginstall_a-prog-fprintf.obj: src/prog-fprintf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ginstall_a-prog-fprintf.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ginstall_a-prog-fprintf.Tpo -c -o src/src_libsinglebin_ginstall_a-prog-fprintf.obj `if test -f 'src/prog-fprintf.c'; then $(CYGPATH_W) 'src/prog-fprintf.c'; else $(CYGPATH_W) '$(srcdir)/src/prog-fprintf.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ginstall_a-prog-fprintf.Tpo src/$(DEPDIR)/src_libsinglebin_ginstall_a-prog-fprintf.Po
 #	$(AM_V_CC)source='src/prog-fprintf.c' object='src/src_libsinglebin_ginstall_a-prog-fprintf.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-prog-fprintf.obj `if test -f 'src/prog-fprintf.c'; then $(CYGPATH_W) 'src/prog-fprintf.c'; else $(CYGPATH_W) '$(srcdir)/src/prog-fprintf.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-prog-fprintf.obj `if test -f 'src/prog-fprintf.c'; then $(CYGPATH_W) 'src/prog-fprintf.c'; else $(CYGPATH_W) '$(srcdir)/src/prog-fprintf.c'; fi`
 
 src/src_libsinglebin_ginstall_a-copy.o: src/copy.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ginstall_a-copy.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ginstall_a-copy.Tpo -c -o src/src_libsinglebin_ginstall_a-copy.o `test -f 'src/copy.c' || echo '$(srcdir)/'`src/copy.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ginstall_a-copy.Tpo src/$(DEPDIR)/src_libsinglebin_ginstall_a-copy.Po
 #	$(AM_V_CC)source='src/copy.c' object='src/src_libsinglebin_ginstall_a-copy.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-copy.o `test -f 'src/copy.c' || echo '$(srcdir)/'`src/copy.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-copy.o `test -f 'src/copy.c' || echo '$(srcdir)/'`src/copy.c
 
 src/src_libsinglebin_ginstall_a-copy.obj: src/copy.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ginstall_a-copy.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ginstall_a-copy.Tpo -c -o src/src_libsinglebin_ginstall_a-copy.obj `if test -f 'src/copy.c'; then $(CYGPATH_W) 'src/copy.c'; else $(CYGPATH_W) '$(srcdir)/src/copy.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ginstall_a-copy.Tpo src/$(DEPDIR)/src_libsinglebin_ginstall_a-copy.Po
 #	$(AM_V_CC)source='src/copy.c' object='src/src_libsinglebin_ginstall_a-copy.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-copy.obj `if test -f 'src/copy.c'; then $(CYGPATH_W) 'src/copy.c'; else $(CYGPATH_W) '$(srcdir)/src/copy.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-copy.obj `if test -f 'src/copy.c'; then $(CYGPATH_W) 'src/copy.c'; else $(CYGPATH_W) '$(srcdir)/src/copy.c'; fi`
 
 src/src_libsinglebin_ginstall_a-cp-hash.o: src/cp-hash.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ginstall_a-cp-hash.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ginstall_a-cp-hash.Tpo -c -o src/src_libsinglebin_ginstall_a-cp-hash.o `test -f 'src/cp-hash.c' || echo '$(srcdir)/'`src/cp-hash.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ginstall_a-cp-hash.Tpo src/$(DEPDIR)/src_libsinglebin_ginstall_a-cp-hash.Po
 #	$(AM_V_CC)source='src/cp-hash.c' object='src/src_libsinglebin_ginstall_a-cp-hash.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-cp-hash.o `test -f 'src/cp-hash.c' || echo '$(srcdir)/'`src/cp-hash.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-cp-hash.o `test -f 'src/cp-hash.c' || echo '$(srcdir)/'`src/cp-hash.c
 
 src/src_libsinglebin_ginstall_a-cp-hash.obj: src/cp-hash.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ginstall_a-cp-hash.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ginstall_a-cp-hash.Tpo -c -o src/src_libsinglebin_ginstall_a-cp-hash.obj `if test -f 'src/cp-hash.c'; then $(CYGPATH_W) 'src/cp-hash.c'; else $(CYGPATH_W) '$(srcdir)/src/cp-hash.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ginstall_a-cp-hash.Tpo src/$(DEPDIR)/src_libsinglebin_ginstall_a-cp-hash.Po
 #	$(AM_V_CC)source='src/cp-hash.c' object='src/src_libsinglebin_ginstall_a-cp-hash.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-cp-hash.obj `if test -f 'src/cp-hash.c'; then $(CYGPATH_W) 'src/cp-hash.c'; else $(CYGPATH_W) '$(srcdir)/src/cp-hash.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-cp-hash.obj `if test -f 'src/cp-hash.c'; then $(CYGPATH_W) 'src/cp-hash.c'; else $(CYGPATH_W) '$(srcdir)/src/cp-hash.c'; fi`
 
 src/src_libsinglebin_ginstall_a-extent-scan.o: src/extent-scan.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ginstall_a-extent-scan.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ginstall_a-extent-scan.Tpo -c -o src/src_libsinglebin_ginstall_a-extent-scan.o `test -f 'src/extent-scan.c' || echo '$(srcdir)/'`src/extent-scan.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ginstall_a-extent-scan.Tpo src/$(DEPDIR)/src_libsinglebin_ginstall_a-extent-scan.Po
 #	$(AM_V_CC)source='src/extent-scan.c' object='src/src_libsinglebin_ginstall_a-extent-scan.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-extent-scan.o `test -f 'src/extent-scan.c' || echo '$(srcdir)/'`src/extent-scan.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-extent-scan.o `test -f 'src/extent-scan.c' || echo '$(srcdir)/'`src/extent-scan.c
 
 src/src_libsinglebin_ginstall_a-extent-scan.obj: src/extent-scan.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ginstall_a-extent-scan.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ginstall_a-extent-scan.Tpo -c -o src/src_libsinglebin_ginstall_a-extent-scan.obj `if test -f 'src/extent-scan.c'; then $(CYGPATH_W) 'src/extent-scan.c'; else $(CYGPATH_W) '$(srcdir)/src/extent-scan.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ginstall_a-extent-scan.Tpo src/$(DEPDIR)/src_libsinglebin_ginstall_a-extent-scan.Po
 #	$(AM_V_CC)source='src/extent-scan.c' object='src/src_libsinglebin_ginstall_a-extent-scan.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-extent-scan.obj `if test -f 'src/extent-scan.c'; then $(CYGPATH_W) 'src/extent-scan.c'; else $(CYGPATH_W) '$(srcdir)/src/extent-scan.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-extent-scan.obj `if test -f 'src/extent-scan.c'; then $(CYGPATH_W) 'src/extent-scan.c'; else $(CYGPATH_W) '$(srcdir)/src/extent-scan.c'; fi`
 
 src/src_libsinglebin_ginstall_a-selinux.o: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ginstall_a-selinux.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ginstall_a-selinux.Tpo -c -o src/src_libsinglebin_ginstall_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ginstall_a-selinux.Tpo src/$(DEPDIR)/src_libsinglebin_ginstall_a-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_libsinglebin_ginstall_a-selinux.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 
 src/src_libsinglebin_ginstall_a-selinux.obj: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ginstall_a-selinux.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ginstall_a-selinux.Tpo -c -o src/src_libsinglebin_ginstall_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ginstall_a-selinux.Tpo src/$(DEPDIR)/src_libsinglebin_ginstall_a-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_libsinglebin_ginstall_a-selinux.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_ginstall_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ginstall_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ginstall_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 
 src/src_libsinglebin_groups_a-groups.o: src/groups.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_groups_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_groups_a-groups.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_groups_a-groups.Tpo -c -o src/src_libsinglebin_groups_a-groups.o `test -f 'src/groups.c' || echo '$(srcdir)/'`src/groups.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_groups_a-groups.Tpo src/$(DEPDIR)/src_libsinglebin_groups_a-groups.Po
 #	$(AM_V_CC)source='src/groups.c' object='src/src_libsinglebin_groups_a-groups.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_groups_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_groups_a-groups.o `test -f 'src/groups.c' || echo '$(srcdir)/'`src/groups.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_groups_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_groups_a-groups.o `test -f 'src/groups.c' || echo '$(srcdir)/'`src/groups.c
 
 src/src_libsinglebin_groups_a-groups.obj: src/groups.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_groups_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_groups_a-groups.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_groups_a-groups.Tpo -c -o src/src_libsinglebin_groups_a-groups.obj `if test -f 'src/groups.c'; then $(CYGPATH_W) 'src/groups.c'; else $(CYGPATH_W) '$(srcdir)/src/groups.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_groups_a-groups.Tpo src/$(DEPDIR)/src_libsinglebin_groups_a-groups.Po
 #	$(AM_V_CC)source='src/groups.c' object='src/src_libsinglebin_groups_a-groups.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_groups_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_groups_a-groups.obj `if test -f 'src/groups.c'; then $(CYGPATH_W) 'src/groups.c'; else $(CYGPATH_W) '$(srcdir)/src/groups.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_groups_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_groups_a-groups.obj `if test -f 'src/groups.c'; then $(CYGPATH_W) 'src/groups.c'; else $(CYGPATH_W) '$(srcdir)/src/groups.c'; fi`
 
 src/src_libsinglebin_groups_a-group-list.o: src/group-list.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_groups_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_groups_a-group-list.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_groups_a-group-list.Tpo -c -o src/src_libsinglebin_groups_a-group-list.o `test -f 'src/group-list.c' || echo '$(srcdir)/'`src/group-list.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_groups_a-group-list.Tpo src/$(DEPDIR)/src_libsinglebin_groups_a-group-list.Po
 #	$(AM_V_CC)source='src/group-list.c' object='src/src_libsinglebin_groups_a-group-list.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_groups_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_groups_a-group-list.o `test -f 'src/group-list.c' || echo '$(srcdir)/'`src/group-list.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_groups_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_groups_a-group-list.o `test -f 'src/group-list.c' || echo '$(srcdir)/'`src/group-list.c
 
 src/src_libsinglebin_groups_a-group-list.obj: src/group-list.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_groups_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_groups_a-group-list.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_groups_a-group-list.Tpo -c -o src/src_libsinglebin_groups_a-group-list.obj `if test -f 'src/group-list.c'; then $(CYGPATH_W) 'src/group-list.c'; else $(CYGPATH_W) '$(srcdir)/src/group-list.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_groups_a-group-list.Tpo src/$(DEPDIR)/src_libsinglebin_groups_a-group-list.Po
 #	$(AM_V_CC)source='src/group-list.c' object='src/src_libsinglebin_groups_a-group-list.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_groups_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_groups_a-group-list.obj `if test -f 'src/group-list.c'; then $(CYGPATH_W) 'src/group-list.c'; else $(CYGPATH_W) '$(srcdir)/src/group-list.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_groups_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_groups_a-group-list.obj `if test -f 'src/group-list.c'; then $(CYGPATH_W) 'src/group-list.c'; else $(CYGPATH_W) '$(srcdir)/src/group-list.c'; fi`
 
 src/src_libsinglebin_head_a-head.o: src/head.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_head_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_head_a-head.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_head_a-head.Tpo -c -o src/src_libsinglebin_head_a-head.o `test -f 'src/head.c' || echo '$(srcdir)/'`src/head.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_head_a-head.Tpo src/$(DEPDIR)/src_libsinglebin_head_a-head.Po
 #	$(AM_V_CC)source='src/head.c' object='src/src_libsinglebin_head_a-head.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_head_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_head_a-head.o `test -f 'src/head.c' || echo '$(srcdir)/'`src/head.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_head_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_head_a-head.o `test -f 'src/head.c' || echo '$(srcdir)/'`src/head.c
 
 src/src_libsinglebin_head_a-head.obj: src/head.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_head_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_head_a-head.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_head_a-head.Tpo -c -o src/src_libsinglebin_head_a-head.obj `if test -f 'src/head.c'; then $(CYGPATH_W) 'src/head.c'; else $(CYGPATH_W) '$(srcdir)/src/head.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_head_a-head.Tpo src/$(DEPDIR)/src_libsinglebin_head_a-head.Po
 #	$(AM_V_CC)source='src/head.c' object='src/src_libsinglebin_head_a-head.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_head_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_head_a-head.obj `if test -f 'src/head.c'; then $(CYGPATH_W) 'src/head.c'; else $(CYGPATH_W) '$(srcdir)/src/head.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_head_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_head_a-head.obj `if test -f 'src/head.c'; then $(CYGPATH_W) 'src/head.c'; else $(CYGPATH_W) '$(srcdir)/src/head.c'; fi`
 
 src/src_libsinglebin_hostid_a-hostid.o: src/hostid.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_hostid_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_hostid_a-hostid.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_hostid_a-hostid.Tpo -c -o src/src_libsinglebin_hostid_a-hostid.o `test -f 'src/hostid.c' || echo '$(srcdir)/'`src/hostid.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_hostid_a-hostid.Tpo src/$(DEPDIR)/src_libsinglebin_hostid_a-hostid.Po
 #	$(AM_V_CC)source='src/hostid.c' object='src/src_libsinglebin_hostid_a-hostid.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_hostid_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_hostid_a-hostid.o `test -f 'src/hostid.c' || echo '$(srcdir)/'`src/hostid.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_hostid_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_hostid_a-hostid.o `test -f 'src/hostid.c' || echo '$(srcdir)/'`src/hostid.c
 
 src/src_libsinglebin_hostid_a-hostid.obj: src/hostid.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_hostid_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_hostid_a-hostid.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_hostid_a-hostid.Tpo -c -o src/src_libsinglebin_hostid_a-hostid.obj `if test -f 'src/hostid.c'; then $(CYGPATH_W) 'src/hostid.c'; else $(CYGPATH_W) '$(srcdir)/src/hostid.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_hostid_a-hostid.Tpo src/$(DEPDIR)/src_libsinglebin_hostid_a-hostid.Po
 #	$(AM_V_CC)source='src/hostid.c' object='src/src_libsinglebin_hostid_a-hostid.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_hostid_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_hostid_a-hostid.obj `if test -f 'src/hostid.c'; then $(CYGPATH_W) 'src/hostid.c'; else $(CYGPATH_W) '$(srcdir)/src/hostid.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_hostid_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_hostid_a-hostid.obj `if test -f 'src/hostid.c'; then $(CYGPATH_W) 'src/hostid.c'; else $(CYGPATH_W) '$(srcdir)/src/hostid.c'; fi`
 
 src/src_libsinglebin_hostname_a-hostname.o: src/hostname.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_hostname_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_hostname_a-hostname.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_hostname_a-hostname.Tpo -c -o src/src_libsinglebin_hostname_a-hostname.o `test -f 'src/hostname.c' || echo '$(srcdir)/'`src/hostname.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_hostname_a-hostname.Tpo src/$(DEPDIR)/src_libsinglebin_hostname_a-hostname.Po
 #	$(AM_V_CC)source='src/hostname.c' object='src/src_libsinglebin_hostname_a-hostname.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_hostname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_hostname_a-hostname.o `test -f 'src/hostname.c' || echo '$(srcdir)/'`src/hostname.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_hostname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_hostname_a-hostname.o `test -f 'src/hostname.c' || echo '$(srcdir)/'`src/hostname.c
 
 src/src_libsinglebin_hostname_a-hostname.obj: src/hostname.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_hostname_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_hostname_a-hostname.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_hostname_a-hostname.Tpo -c -o src/src_libsinglebin_hostname_a-hostname.obj `if test -f 'src/hostname.c'; then $(CYGPATH_W) 'src/hostname.c'; else $(CYGPATH_W) '$(srcdir)/src/hostname.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_hostname_a-hostname.Tpo src/$(DEPDIR)/src_libsinglebin_hostname_a-hostname.Po
 #	$(AM_V_CC)source='src/hostname.c' object='src/src_libsinglebin_hostname_a-hostname.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_hostname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_hostname_a-hostname.obj `if test -f 'src/hostname.c'; then $(CYGPATH_W) 'src/hostname.c'; else $(CYGPATH_W) '$(srcdir)/src/hostname.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_hostname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_hostname_a-hostname.obj `if test -f 'src/hostname.c'; then $(CYGPATH_W) 'src/hostname.c'; else $(CYGPATH_W) '$(srcdir)/src/hostname.c'; fi`
 
 src/src_libsinglebin_id_a-id.o: src/id.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_id_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_id_a-id.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_id_a-id.Tpo -c -o src/src_libsinglebin_id_a-id.o `test -f 'src/id.c' || echo '$(srcdir)/'`src/id.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_id_a-id.Tpo src/$(DEPDIR)/src_libsinglebin_id_a-id.Po
 #	$(AM_V_CC)source='src/id.c' object='src/src_libsinglebin_id_a-id.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_id_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_id_a-id.o `test -f 'src/id.c' || echo '$(srcdir)/'`src/id.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_id_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_id_a-id.o `test -f 'src/id.c' || echo '$(srcdir)/'`src/id.c
 
 src/src_libsinglebin_id_a-id.obj: src/id.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_id_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_id_a-id.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_id_a-id.Tpo -c -o src/src_libsinglebin_id_a-id.obj `if test -f 'src/id.c'; then $(CYGPATH_W) 'src/id.c'; else $(CYGPATH_W) '$(srcdir)/src/id.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_id_a-id.Tpo src/$(DEPDIR)/src_libsinglebin_id_a-id.Po
 #	$(AM_V_CC)source='src/id.c' object='src/src_libsinglebin_id_a-id.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_id_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_id_a-id.obj `if test -f 'src/id.c'; then $(CYGPATH_W) 'src/id.c'; else $(CYGPATH_W) '$(srcdir)/src/id.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_id_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_id_a-id.obj `if test -f 'src/id.c'; then $(CYGPATH_W) 'src/id.c'; else $(CYGPATH_W) '$(srcdir)/src/id.c'; fi`
 
 src/src_libsinglebin_id_a-group-list.o: src/group-list.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_id_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_id_a-group-list.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_id_a-group-list.Tpo -c -o src/src_libsinglebin_id_a-group-list.o `test -f 'src/group-list.c' || echo '$(srcdir)/'`src/group-list.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_id_a-group-list.Tpo src/$(DEPDIR)/src_libsinglebin_id_a-group-list.Po
 #	$(AM_V_CC)source='src/group-list.c' object='src/src_libsinglebin_id_a-group-list.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_id_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_id_a-group-list.o `test -f 'src/group-list.c' || echo '$(srcdir)/'`src/group-list.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_id_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_id_a-group-list.o `test -f 'src/group-list.c' || echo '$(srcdir)/'`src/group-list.c
 
 src/src_libsinglebin_id_a-group-list.obj: src/group-list.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_id_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_id_a-group-list.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_id_a-group-list.Tpo -c -o src/src_libsinglebin_id_a-group-list.obj `if test -f 'src/group-list.c'; then $(CYGPATH_W) 'src/group-list.c'; else $(CYGPATH_W) '$(srcdir)/src/group-list.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_id_a-group-list.Tpo src/$(DEPDIR)/src_libsinglebin_id_a-group-list.Po
 #	$(AM_V_CC)source='src/group-list.c' object='src/src_libsinglebin_id_a-group-list.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_id_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_id_a-group-list.obj `if test -f 'src/group-list.c'; then $(CYGPATH_W) 'src/group-list.c'; else $(CYGPATH_W) '$(srcdir)/src/group-list.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_id_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_id_a-group-list.obj `if test -f 'src/group-list.c'; then $(CYGPATH_W) 'src/group-list.c'; else $(CYGPATH_W) '$(srcdir)/src/group-list.c'; fi`
 
 src/src_libsinglebin_join_a-join.o: src/join.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_join_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_join_a-join.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_join_a-join.Tpo -c -o src/src_libsinglebin_join_a-join.o `test -f 'src/join.c' || echo '$(srcdir)/'`src/join.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_join_a-join.Tpo src/$(DEPDIR)/src_libsinglebin_join_a-join.Po
 #	$(AM_V_CC)source='src/join.c' object='src/src_libsinglebin_join_a-join.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_join_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_join_a-join.o `test -f 'src/join.c' || echo '$(srcdir)/'`src/join.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_join_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_join_a-join.o `test -f 'src/join.c' || echo '$(srcdir)/'`src/join.c
 
 src/src_libsinglebin_join_a-join.obj: src/join.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_join_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_join_a-join.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_join_a-join.Tpo -c -o src/src_libsinglebin_join_a-join.obj `if test -f 'src/join.c'; then $(CYGPATH_W) 'src/join.c'; else $(CYGPATH_W) '$(srcdir)/src/join.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_join_a-join.Tpo src/$(DEPDIR)/src_libsinglebin_join_a-join.Po
 #	$(AM_V_CC)source='src/join.c' object='src/src_libsinglebin_join_a-join.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_join_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_join_a-join.obj `if test -f 'src/join.c'; then $(CYGPATH_W) 'src/join.c'; else $(CYGPATH_W) '$(srcdir)/src/join.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_join_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_join_a-join.obj `if test -f 'src/join.c'; then $(CYGPATH_W) 'src/join.c'; else $(CYGPATH_W) '$(srcdir)/src/join.c'; fi`
 
 src/src_libsinglebin_kill_a-kill.o: src/kill.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_kill_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_kill_a-kill.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_kill_a-kill.Tpo -c -o src/src_libsinglebin_kill_a-kill.o `test -f 'src/kill.c' || echo '$(srcdir)/'`src/kill.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_kill_a-kill.Tpo src/$(DEPDIR)/src_libsinglebin_kill_a-kill.Po
 #	$(AM_V_CC)source='src/kill.c' object='src/src_libsinglebin_kill_a-kill.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_kill_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_kill_a-kill.o `test -f 'src/kill.c' || echo '$(srcdir)/'`src/kill.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_kill_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_kill_a-kill.o `test -f 'src/kill.c' || echo '$(srcdir)/'`src/kill.c
 
 src/src_libsinglebin_kill_a-kill.obj: src/kill.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_kill_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_kill_a-kill.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_kill_a-kill.Tpo -c -o src/src_libsinglebin_kill_a-kill.obj `if test -f 'src/kill.c'; then $(CYGPATH_W) 'src/kill.c'; else $(CYGPATH_W) '$(srcdir)/src/kill.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_kill_a-kill.Tpo src/$(DEPDIR)/src_libsinglebin_kill_a-kill.Po
 #	$(AM_V_CC)source='src/kill.c' object='src/src_libsinglebin_kill_a-kill.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_kill_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_kill_a-kill.obj `if test -f 'src/kill.c'; then $(CYGPATH_W) 'src/kill.c'; else $(CYGPATH_W) '$(srcdir)/src/kill.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_kill_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_kill_a-kill.obj `if test -f 'src/kill.c'; then $(CYGPATH_W) 'src/kill.c'; else $(CYGPATH_W) '$(srcdir)/src/kill.c'; fi`
 
 src/src_libsinglebin_kill_a-operand2sig.o: src/operand2sig.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_kill_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_kill_a-operand2sig.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_kill_a-operand2sig.Tpo -c -o src/src_libsinglebin_kill_a-operand2sig.o `test -f 'src/operand2sig.c' || echo '$(srcdir)/'`src/operand2sig.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_kill_a-operand2sig.Tpo src/$(DEPDIR)/src_libsinglebin_kill_a-operand2sig.Po
 #	$(AM_V_CC)source='src/operand2sig.c' object='src/src_libsinglebin_kill_a-operand2sig.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_kill_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_kill_a-operand2sig.o `test -f 'src/operand2sig.c' || echo '$(srcdir)/'`src/operand2sig.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_kill_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_kill_a-operand2sig.o `test -f 'src/operand2sig.c' || echo '$(srcdir)/'`src/operand2sig.c
 
 src/src_libsinglebin_kill_a-operand2sig.obj: src/operand2sig.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_kill_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_kill_a-operand2sig.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_kill_a-operand2sig.Tpo -c -o src/src_libsinglebin_kill_a-operand2sig.obj `if test -f 'src/operand2sig.c'; then $(CYGPATH_W) 'src/operand2sig.c'; else $(CYGPATH_W) '$(srcdir)/src/operand2sig.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_kill_a-operand2sig.Tpo src/$(DEPDIR)/src_libsinglebin_kill_a-operand2sig.Po
 #	$(AM_V_CC)source='src/operand2sig.c' object='src/src_libsinglebin_kill_a-operand2sig.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_kill_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_kill_a-operand2sig.obj `if test -f 'src/operand2sig.c'; then $(CYGPATH_W) 'src/operand2sig.c'; else $(CYGPATH_W) '$(srcdir)/src/operand2sig.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_kill_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_kill_a-operand2sig.obj `if test -f 'src/operand2sig.c'; then $(CYGPATH_W) 'src/operand2sig.c'; else $(CYGPATH_W) '$(srcdir)/src/operand2sig.c'; fi`
 
 src/src_libsinglebin_link_a-link.o: src/link.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_link_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_link_a-link.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_link_a-link.Tpo -c -o src/src_libsinglebin_link_a-link.o `test -f 'src/link.c' || echo '$(srcdir)/'`src/link.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_link_a-link.Tpo src/$(DEPDIR)/src_libsinglebin_link_a-link.Po
 #	$(AM_V_CC)source='src/link.c' object='src/src_libsinglebin_link_a-link.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_link_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_link_a-link.o `test -f 'src/link.c' || echo '$(srcdir)/'`src/link.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_link_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_link_a-link.o `test -f 'src/link.c' || echo '$(srcdir)/'`src/link.c
 
 src/src_libsinglebin_link_a-link.obj: src/link.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_link_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_link_a-link.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_link_a-link.Tpo -c -o src/src_libsinglebin_link_a-link.obj `if test -f 'src/link.c'; then $(CYGPATH_W) 'src/link.c'; else $(CYGPATH_W) '$(srcdir)/src/link.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_link_a-link.Tpo src/$(DEPDIR)/src_libsinglebin_link_a-link.Po
 #	$(AM_V_CC)source='src/link.c' object='src/src_libsinglebin_link_a-link.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_link_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_link_a-link.obj `if test -f 'src/link.c'; then $(CYGPATH_W) 'src/link.c'; else $(CYGPATH_W) '$(srcdir)/src/link.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_link_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_link_a-link.obj `if test -f 'src/link.c'; then $(CYGPATH_W) 'src/link.c'; else $(CYGPATH_W) '$(srcdir)/src/link.c'; fi`
 
 src/src_libsinglebin_ln_a-ln.o: src/ln.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ln_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ln_a-ln.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ln_a-ln.Tpo -c -o src/src_libsinglebin_ln_a-ln.o `test -f 'src/ln.c' || echo '$(srcdir)/'`src/ln.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ln_a-ln.Tpo src/$(DEPDIR)/src_libsinglebin_ln_a-ln.Po
 #	$(AM_V_CC)source='src/ln.c' object='src/src_libsinglebin_ln_a-ln.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ln_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ln_a-ln.o `test -f 'src/ln.c' || echo '$(srcdir)/'`src/ln.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ln_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ln_a-ln.o `test -f 'src/ln.c' || echo '$(srcdir)/'`src/ln.c
 
 src/src_libsinglebin_ln_a-ln.obj: src/ln.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ln_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ln_a-ln.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ln_a-ln.Tpo -c -o src/src_libsinglebin_ln_a-ln.obj `if test -f 'src/ln.c'; then $(CYGPATH_W) 'src/ln.c'; else $(CYGPATH_W) '$(srcdir)/src/ln.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ln_a-ln.Tpo src/$(DEPDIR)/src_libsinglebin_ln_a-ln.Po
 #	$(AM_V_CC)source='src/ln.c' object='src/src_libsinglebin_ln_a-ln.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ln_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ln_a-ln.obj `if test -f 'src/ln.c'; then $(CYGPATH_W) 'src/ln.c'; else $(CYGPATH_W) '$(srcdir)/src/ln.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ln_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ln_a-ln.obj `if test -f 'src/ln.c'; then $(CYGPATH_W) 'src/ln.c'; else $(CYGPATH_W) '$(srcdir)/src/ln.c'; fi`
 
 src/src_libsinglebin_ln_a-relpath.o: src/relpath.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ln_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ln_a-relpath.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ln_a-relpath.Tpo -c -o src/src_libsinglebin_ln_a-relpath.o `test -f 'src/relpath.c' || echo '$(srcdir)/'`src/relpath.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ln_a-relpath.Tpo src/$(DEPDIR)/src_libsinglebin_ln_a-relpath.Po
 #	$(AM_V_CC)source='src/relpath.c' object='src/src_libsinglebin_ln_a-relpath.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ln_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ln_a-relpath.o `test -f 'src/relpath.c' || echo '$(srcdir)/'`src/relpath.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ln_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ln_a-relpath.o `test -f 'src/relpath.c' || echo '$(srcdir)/'`src/relpath.c
 
 src/src_libsinglebin_ln_a-relpath.obj: src/relpath.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ln_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ln_a-relpath.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ln_a-relpath.Tpo -c -o src/src_libsinglebin_ln_a-relpath.obj `if test -f 'src/relpath.c'; then $(CYGPATH_W) 'src/relpath.c'; else $(CYGPATH_W) '$(srcdir)/src/relpath.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ln_a-relpath.Tpo src/$(DEPDIR)/src_libsinglebin_ln_a-relpath.Po
 #	$(AM_V_CC)source='src/relpath.c' object='src/src_libsinglebin_ln_a-relpath.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ln_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ln_a-relpath.obj `if test -f 'src/relpath.c'; then $(CYGPATH_W) 'src/relpath.c'; else $(CYGPATH_W) '$(srcdir)/src/relpath.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ln_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ln_a-relpath.obj `if test -f 'src/relpath.c'; then $(CYGPATH_W) 'src/relpath.c'; else $(CYGPATH_W) '$(srcdir)/src/relpath.c'; fi`
 
 src/src_libsinglebin_logname_a-logname.o: src/logname.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_logname_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_logname_a-logname.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_logname_a-logname.Tpo -c -o src/src_libsinglebin_logname_a-logname.o `test -f 'src/logname.c' || echo '$(srcdir)/'`src/logname.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_logname_a-logname.Tpo src/$(DEPDIR)/src_libsinglebin_logname_a-logname.Po
 #	$(AM_V_CC)source='src/logname.c' object='src/src_libsinglebin_logname_a-logname.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_logname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_logname_a-logname.o `test -f 'src/logname.c' || echo '$(srcdir)/'`src/logname.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_logname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_logname_a-logname.o `test -f 'src/logname.c' || echo '$(srcdir)/'`src/logname.c
 
 src/src_libsinglebin_logname_a-logname.obj: src/logname.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_logname_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_logname_a-logname.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_logname_a-logname.Tpo -c -o src/src_libsinglebin_logname_a-logname.obj `if test -f 'src/logname.c'; then $(CYGPATH_W) 'src/logname.c'; else $(CYGPATH_W) '$(srcdir)/src/logname.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_logname_a-logname.Tpo src/$(DEPDIR)/src_libsinglebin_logname_a-logname.Po
 #	$(AM_V_CC)source='src/logname.c' object='src/src_libsinglebin_logname_a-logname.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_logname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_logname_a-logname.obj `if test -f 'src/logname.c'; then $(CYGPATH_W) 'src/logname.c'; else $(CYGPATH_W) '$(srcdir)/src/logname.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_logname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_logname_a-logname.obj `if test -f 'src/logname.c'; then $(CYGPATH_W) 'src/logname.c'; else $(CYGPATH_W) '$(srcdir)/src/logname.c'; fi`
 
 src/src_libsinglebin_ls_a-ls.o: src/ls.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ls_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ls_a-ls.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ls_a-ls.Tpo -c -o src/src_libsinglebin_ls_a-ls.o `test -f 'src/ls.c' || echo '$(srcdir)/'`src/ls.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ls_a-ls.Tpo src/$(DEPDIR)/src_libsinglebin_ls_a-ls.Po
 #	$(AM_V_CC)source='src/ls.c' object='src/src_libsinglebin_ls_a-ls.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ls_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ls_a-ls.o `test -f 'src/ls.c' || echo '$(srcdir)/'`src/ls.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ls_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ls_a-ls.o `test -f 'src/ls.c' || echo '$(srcdir)/'`src/ls.c
 
 src/src_libsinglebin_ls_a-ls.obj: src/ls.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ls_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ls_a-ls.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ls_a-ls.Tpo -c -o src/src_libsinglebin_ls_a-ls.obj `if test -f 'src/ls.c'; then $(CYGPATH_W) 'src/ls.c'; else $(CYGPATH_W) '$(srcdir)/src/ls.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ls_a-ls.Tpo src/$(DEPDIR)/src_libsinglebin_ls_a-ls.Po
 #	$(AM_V_CC)source='src/ls.c' object='src/src_libsinglebin_ls_a-ls.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ls_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ls_a-ls.obj `if test -f 'src/ls.c'; then $(CYGPATH_W) 'src/ls.c'; else $(CYGPATH_W) '$(srcdir)/src/ls.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ls_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ls_a-ls.obj `if test -f 'src/ls.c'; then $(CYGPATH_W) 'src/ls.c'; else $(CYGPATH_W) '$(srcdir)/src/ls.c'; fi`
 
 src/src_libsinglebin_ls_a-ls-ls.o: src/ls-ls.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ls_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ls_a-ls-ls.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ls_a-ls-ls.Tpo -c -o src/src_libsinglebin_ls_a-ls-ls.o `test -f 'src/ls-ls.c' || echo '$(srcdir)/'`src/ls-ls.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ls_a-ls-ls.Tpo src/$(DEPDIR)/src_libsinglebin_ls_a-ls-ls.Po
 #	$(AM_V_CC)source='src/ls-ls.c' object='src/src_libsinglebin_ls_a-ls-ls.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ls_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ls_a-ls-ls.o `test -f 'src/ls-ls.c' || echo '$(srcdir)/'`src/ls-ls.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ls_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ls_a-ls-ls.o `test -f 'src/ls-ls.c' || echo '$(srcdir)/'`src/ls-ls.c
 
 src/src_libsinglebin_ls_a-ls-ls.obj: src/ls-ls.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ls_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ls_a-ls-ls.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ls_a-ls-ls.Tpo -c -o src/src_libsinglebin_ls_a-ls-ls.obj `if test -f 'src/ls-ls.c'; then $(CYGPATH_W) 'src/ls-ls.c'; else $(CYGPATH_W) '$(srcdir)/src/ls-ls.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ls_a-ls-ls.Tpo src/$(DEPDIR)/src_libsinglebin_ls_a-ls-ls.Po
 #	$(AM_V_CC)source='src/ls-ls.c' object='src/src_libsinglebin_ls_a-ls-ls.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ls_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ls_a-ls-ls.obj `if test -f 'src/ls-ls.c'; then $(CYGPATH_W) 'src/ls-ls.c'; else $(CYGPATH_W) '$(srcdir)/src/ls-ls.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ls_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ls_a-ls-ls.obj `if test -f 'src/ls-ls.c'; then $(CYGPATH_W) 'src/ls-ls.c'; else $(CYGPATH_W) '$(srcdir)/src/ls-ls.c'; fi`
 
 src/src_libsinglebin_md5sum_a-md5sum.o: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_md5sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_md5sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_md5sum_a-md5sum.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_md5sum_a-md5sum.Tpo -c -o src/src_libsinglebin_md5sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_md5sum_a-md5sum.Tpo src/$(DEPDIR)/src_libsinglebin_md5sum_a-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_libsinglebin_md5sum_a-md5sum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_md5sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_md5sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_md5sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_md5sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_md5sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_md5sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 
 src/src_libsinglebin_md5sum_a-md5sum.obj: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_md5sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_md5sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_md5sum_a-md5sum.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_md5sum_a-md5sum.Tpo -c -o src/src_libsinglebin_md5sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_md5sum_a-md5sum.Tpo src/$(DEPDIR)/src_libsinglebin_md5sum_a-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_libsinglebin_md5sum_a-md5sum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_md5sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_md5sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_md5sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_md5sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_md5sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_md5sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 
 src/src_libsinglebin_mkdir_a-mkdir.o: src/mkdir.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mkdir_a-mkdir.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mkdir_a-mkdir.Tpo -c -o src/src_libsinglebin_mkdir_a-mkdir.o `test -f 'src/mkdir.c' || echo '$(srcdir)/'`src/mkdir.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mkdir_a-mkdir.Tpo src/$(DEPDIR)/src_libsinglebin_mkdir_a-mkdir.Po
 #	$(AM_V_CC)source='src/mkdir.c' object='src/src_libsinglebin_mkdir_a-mkdir.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkdir_a-mkdir.o `test -f 'src/mkdir.c' || echo '$(srcdir)/'`src/mkdir.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkdir_a-mkdir.o `test -f 'src/mkdir.c' || echo '$(srcdir)/'`src/mkdir.c
 
 src/src_libsinglebin_mkdir_a-mkdir.obj: src/mkdir.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mkdir_a-mkdir.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mkdir_a-mkdir.Tpo -c -o src/src_libsinglebin_mkdir_a-mkdir.obj `if test -f 'src/mkdir.c'; then $(CYGPATH_W) 'src/mkdir.c'; else $(CYGPATH_W) '$(srcdir)/src/mkdir.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mkdir_a-mkdir.Tpo src/$(DEPDIR)/src_libsinglebin_mkdir_a-mkdir.Po
 #	$(AM_V_CC)source='src/mkdir.c' object='src/src_libsinglebin_mkdir_a-mkdir.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkdir_a-mkdir.obj `if test -f 'src/mkdir.c'; then $(CYGPATH_W) 'src/mkdir.c'; else $(CYGPATH_W) '$(srcdir)/src/mkdir.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkdir_a-mkdir.obj `if test -f 'src/mkdir.c'; then $(CYGPATH_W) 'src/mkdir.c'; else $(CYGPATH_W) '$(srcdir)/src/mkdir.c'; fi`
 
 src/src_libsinglebin_mkdir_a-prog-fprintf.o: src/prog-fprintf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mkdir_a-prog-fprintf.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mkdir_a-prog-fprintf.Tpo -c -o src/src_libsinglebin_mkdir_a-prog-fprintf.o `test -f 'src/prog-fprintf.c' || echo '$(srcdir)/'`src/prog-fprintf.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mkdir_a-prog-fprintf.Tpo src/$(DEPDIR)/src_libsinglebin_mkdir_a-prog-fprintf.Po
 #	$(AM_V_CC)source='src/prog-fprintf.c' object='src/src_libsinglebin_mkdir_a-prog-fprintf.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkdir_a-prog-fprintf.o `test -f 'src/prog-fprintf.c' || echo '$(srcdir)/'`src/prog-fprintf.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkdir_a-prog-fprintf.o `test -f 'src/prog-fprintf.c' || echo '$(srcdir)/'`src/prog-fprintf.c
 
 src/src_libsinglebin_mkdir_a-prog-fprintf.obj: src/prog-fprintf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mkdir_a-prog-fprintf.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mkdir_a-prog-fprintf.Tpo -c -o src/src_libsinglebin_mkdir_a-prog-fprintf.obj `if test -f 'src/prog-fprintf.c'; then $(CYGPATH_W) 'src/prog-fprintf.c'; else $(CYGPATH_W) '$(srcdir)/src/prog-fprintf.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mkdir_a-prog-fprintf.Tpo src/$(DEPDIR)/src_libsinglebin_mkdir_a-prog-fprintf.Po
 #	$(AM_V_CC)source='src/prog-fprintf.c' object='src/src_libsinglebin_mkdir_a-prog-fprintf.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkdir_a-prog-fprintf.obj `if test -f 'src/prog-fprintf.c'; then $(CYGPATH_W) 'src/prog-fprintf.c'; else $(CYGPATH_W) '$(srcdir)/src/prog-fprintf.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkdir_a-prog-fprintf.obj `if test -f 'src/prog-fprintf.c'; then $(CYGPATH_W) 'src/prog-fprintf.c'; else $(CYGPATH_W) '$(srcdir)/src/prog-fprintf.c'; fi`
 
 src/src_libsinglebin_mkdir_a-selinux.o: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mkdir_a-selinux.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mkdir_a-selinux.Tpo -c -o src/src_libsinglebin_mkdir_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mkdir_a-selinux.Tpo src/$(DEPDIR)/src_libsinglebin_mkdir_a-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_libsinglebin_mkdir_a-selinux.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkdir_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkdir_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 
 src/src_libsinglebin_mkdir_a-selinux.obj: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mkdir_a-selinux.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mkdir_a-selinux.Tpo -c -o src/src_libsinglebin_mkdir_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mkdir_a-selinux.Tpo src/$(DEPDIR)/src_libsinglebin_mkdir_a-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_libsinglebin_mkdir_a-selinux.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkdir_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkdir_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 
 src/src_libsinglebin_mkfifo_a-mkfifo.o: src/mkfifo.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkfifo_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mkfifo_a-mkfifo.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mkfifo_a-mkfifo.Tpo -c -o src/src_libsinglebin_mkfifo_a-mkfifo.o `test -f 'src/mkfifo.c' || echo '$(srcdir)/'`src/mkfifo.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mkfifo_a-mkfifo.Tpo src/$(DEPDIR)/src_libsinglebin_mkfifo_a-mkfifo.Po
 #	$(AM_V_CC)source='src/mkfifo.c' object='src/src_libsinglebin_mkfifo_a-mkfifo.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkfifo_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkfifo_a-mkfifo.o `test -f 'src/mkfifo.c' || echo '$(srcdir)/'`src/mkfifo.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkfifo_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkfifo_a-mkfifo.o `test -f 'src/mkfifo.c' || echo '$(srcdir)/'`src/mkfifo.c
 
 src/src_libsinglebin_mkfifo_a-mkfifo.obj: src/mkfifo.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkfifo_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mkfifo_a-mkfifo.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mkfifo_a-mkfifo.Tpo -c -o src/src_libsinglebin_mkfifo_a-mkfifo.obj `if test -f 'src/mkfifo.c'; then $(CYGPATH_W) 'src/mkfifo.c'; else $(CYGPATH_W) '$(srcdir)/src/mkfifo.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mkfifo_a-mkfifo.Tpo src/$(DEPDIR)/src_libsinglebin_mkfifo_a-mkfifo.Po
 #	$(AM_V_CC)source='src/mkfifo.c' object='src/src_libsinglebin_mkfifo_a-mkfifo.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkfifo_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkfifo_a-mkfifo.obj `if test -f 'src/mkfifo.c'; then $(CYGPATH_W) 'src/mkfifo.c'; else $(CYGPATH_W) '$(srcdir)/src/mkfifo.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkfifo_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkfifo_a-mkfifo.obj `if test -f 'src/mkfifo.c'; then $(CYGPATH_W) 'src/mkfifo.c'; else $(CYGPATH_W) '$(srcdir)/src/mkfifo.c'; fi`
 
 src/src_libsinglebin_mkfifo_a-selinux.o: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkfifo_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mkfifo_a-selinux.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mkfifo_a-selinux.Tpo -c -o src/src_libsinglebin_mkfifo_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mkfifo_a-selinux.Tpo src/$(DEPDIR)/src_libsinglebin_mkfifo_a-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_libsinglebin_mkfifo_a-selinux.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkfifo_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkfifo_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkfifo_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkfifo_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 
 src/src_libsinglebin_mkfifo_a-selinux.obj: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkfifo_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mkfifo_a-selinux.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mkfifo_a-selinux.Tpo -c -o src/src_libsinglebin_mkfifo_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mkfifo_a-selinux.Tpo src/$(DEPDIR)/src_libsinglebin_mkfifo_a-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_libsinglebin_mkfifo_a-selinux.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkfifo_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkfifo_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mkfifo_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mkfifo_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 
 src/src_libsinglebin_mknod_a-mknod.o: src/mknod.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mknod_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mknod_a-mknod.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mknod_a-mknod.Tpo -c -o src/src_libsinglebin_mknod_a-mknod.o `test -f 'src/mknod.c' || echo '$(srcdir)/'`src/mknod.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mknod_a-mknod.Tpo src/$(DEPDIR)/src_libsinglebin_mknod_a-mknod.Po
 #	$(AM_V_CC)source='src/mknod.c' object='src/src_libsinglebin_mknod_a-mknod.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mknod_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mknod_a-mknod.o `test -f 'src/mknod.c' || echo '$(srcdir)/'`src/mknod.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mknod_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mknod_a-mknod.o `test -f 'src/mknod.c' || echo '$(srcdir)/'`src/mknod.c
 
 src/src_libsinglebin_mknod_a-mknod.obj: src/mknod.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mknod_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mknod_a-mknod.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mknod_a-mknod.Tpo -c -o src/src_libsinglebin_mknod_a-mknod.obj `if test -f 'src/mknod.c'; then $(CYGPATH_W) 'src/mknod.c'; else $(CYGPATH_W) '$(srcdir)/src/mknod.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mknod_a-mknod.Tpo src/$(DEPDIR)/src_libsinglebin_mknod_a-mknod.Po
 #	$(AM_V_CC)source='src/mknod.c' object='src/src_libsinglebin_mknod_a-mknod.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mknod_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mknod_a-mknod.obj `if test -f 'src/mknod.c'; then $(CYGPATH_W) 'src/mknod.c'; else $(CYGPATH_W) '$(srcdir)/src/mknod.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mknod_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mknod_a-mknod.obj `if test -f 'src/mknod.c'; then $(CYGPATH_W) 'src/mknod.c'; else $(CYGPATH_W) '$(srcdir)/src/mknod.c'; fi`
 
 src/src_libsinglebin_mknod_a-selinux.o: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mknod_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mknod_a-selinux.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mknod_a-selinux.Tpo -c -o src/src_libsinglebin_mknod_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mknod_a-selinux.Tpo src/$(DEPDIR)/src_libsinglebin_mknod_a-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_libsinglebin_mknod_a-selinux.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mknod_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mknod_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mknod_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mknod_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 
 src/src_libsinglebin_mknod_a-selinux.obj: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mknod_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mknod_a-selinux.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mknod_a-selinux.Tpo -c -o src/src_libsinglebin_mknod_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mknod_a-selinux.Tpo src/$(DEPDIR)/src_libsinglebin_mknod_a-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_libsinglebin_mknod_a-selinux.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mknod_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mknod_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mknod_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mknod_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 
 src/src_libsinglebin_mktemp_a-mktemp.o: src/mktemp.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mktemp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mktemp_a-mktemp.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mktemp_a-mktemp.Tpo -c -o src/src_libsinglebin_mktemp_a-mktemp.o `test -f 'src/mktemp.c' || echo '$(srcdir)/'`src/mktemp.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mktemp_a-mktemp.Tpo src/$(DEPDIR)/src_libsinglebin_mktemp_a-mktemp.Po
 #	$(AM_V_CC)source='src/mktemp.c' object='src/src_libsinglebin_mktemp_a-mktemp.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mktemp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mktemp_a-mktemp.o `test -f 'src/mktemp.c' || echo '$(srcdir)/'`src/mktemp.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mktemp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mktemp_a-mktemp.o `test -f 'src/mktemp.c' || echo '$(srcdir)/'`src/mktemp.c
 
 src/src_libsinglebin_mktemp_a-mktemp.obj: src/mktemp.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mktemp_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mktemp_a-mktemp.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mktemp_a-mktemp.Tpo -c -o src/src_libsinglebin_mktemp_a-mktemp.obj `if test -f 'src/mktemp.c'; then $(CYGPATH_W) 'src/mktemp.c'; else $(CYGPATH_W) '$(srcdir)/src/mktemp.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mktemp_a-mktemp.Tpo src/$(DEPDIR)/src_libsinglebin_mktemp_a-mktemp.Po
 #	$(AM_V_CC)source='src/mktemp.c' object='src/src_libsinglebin_mktemp_a-mktemp.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mktemp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mktemp_a-mktemp.obj `if test -f 'src/mktemp.c'; then $(CYGPATH_W) 'src/mktemp.c'; else $(CYGPATH_W) '$(srcdir)/src/mktemp.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mktemp_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mktemp_a-mktemp.obj `if test -f 'src/mktemp.c'; then $(CYGPATH_W) 'src/mktemp.c'; else $(CYGPATH_W) '$(srcdir)/src/mktemp.c'; fi`
 
 src/src_libsinglebin_mv_a-mv.o: src/mv.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mv_a-mv.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mv_a-mv.Tpo -c -o src/src_libsinglebin_mv_a-mv.o `test -f 'src/mv.c' || echo '$(srcdir)/'`src/mv.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mv_a-mv.Tpo src/$(DEPDIR)/src_libsinglebin_mv_a-mv.Po
 #	$(AM_V_CC)source='src/mv.c' object='src/src_libsinglebin_mv_a-mv.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-mv.o `test -f 'src/mv.c' || echo '$(srcdir)/'`src/mv.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-mv.o `test -f 'src/mv.c' || echo '$(srcdir)/'`src/mv.c
 
 src/src_libsinglebin_mv_a-mv.obj: src/mv.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mv_a-mv.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mv_a-mv.Tpo -c -o src/src_libsinglebin_mv_a-mv.obj `if test -f 'src/mv.c'; then $(CYGPATH_W) 'src/mv.c'; else $(CYGPATH_W) '$(srcdir)/src/mv.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mv_a-mv.Tpo src/$(DEPDIR)/src_libsinglebin_mv_a-mv.Po
 #	$(AM_V_CC)source='src/mv.c' object='src/src_libsinglebin_mv_a-mv.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-mv.obj `if test -f 'src/mv.c'; then $(CYGPATH_W) 'src/mv.c'; else $(CYGPATH_W) '$(srcdir)/src/mv.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-mv.obj `if test -f 'src/mv.c'; then $(CYGPATH_W) 'src/mv.c'; else $(CYGPATH_W) '$(srcdir)/src/mv.c'; fi`
 
 src/src_libsinglebin_mv_a-remove.o: src/remove.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mv_a-remove.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mv_a-remove.Tpo -c -o src/src_libsinglebin_mv_a-remove.o `test -f 'src/remove.c' || echo '$(srcdir)/'`src/remove.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mv_a-remove.Tpo src/$(DEPDIR)/src_libsinglebin_mv_a-remove.Po
 #	$(AM_V_CC)source='src/remove.c' object='src/src_libsinglebin_mv_a-remove.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-remove.o `test -f 'src/remove.c' || echo '$(srcdir)/'`src/remove.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-remove.o `test -f 'src/remove.c' || echo '$(srcdir)/'`src/remove.c
 
 src/src_libsinglebin_mv_a-remove.obj: src/remove.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mv_a-remove.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mv_a-remove.Tpo -c -o src/src_libsinglebin_mv_a-remove.obj `if test -f 'src/remove.c'; then $(CYGPATH_W) 'src/remove.c'; else $(CYGPATH_W) '$(srcdir)/src/remove.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mv_a-remove.Tpo src/$(DEPDIR)/src_libsinglebin_mv_a-remove.Po
 #	$(AM_V_CC)source='src/remove.c' object='src/src_libsinglebin_mv_a-remove.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-remove.obj `if test -f 'src/remove.c'; then $(CYGPATH_W) 'src/remove.c'; else $(CYGPATH_W) '$(srcdir)/src/remove.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-remove.obj `if test -f 'src/remove.c'; then $(CYGPATH_W) 'src/remove.c'; else $(CYGPATH_W) '$(srcdir)/src/remove.c'; fi`
 
 src/src_libsinglebin_mv_a-copy.o: src/copy.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mv_a-copy.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mv_a-copy.Tpo -c -o src/src_libsinglebin_mv_a-copy.o `test -f 'src/copy.c' || echo '$(srcdir)/'`src/copy.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mv_a-copy.Tpo src/$(DEPDIR)/src_libsinglebin_mv_a-copy.Po
 #	$(AM_V_CC)source='src/copy.c' object='src/src_libsinglebin_mv_a-copy.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-copy.o `test -f 'src/copy.c' || echo '$(srcdir)/'`src/copy.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-copy.o `test -f 'src/copy.c' || echo '$(srcdir)/'`src/copy.c
 
 src/src_libsinglebin_mv_a-copy.obj: src/copy.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mv_a-copy.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mv_a-copy.Tpo -c -o src/src_libsinglebin_mv_a-copy.obj `if test -f 'src/copy.c'; then $(CYGPATH_W) 'src/copy.c'; else $(CYGPATH_W) '$(srcdir)/src/copy.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mv_a-copy.Tpo src/$(DEPDIR)/src_libsinglebin_mv_a-copy.Po
 #	$(AM_V_CC)source='src/copy.c' object='src/src_libsinglebin_mv_a-copy.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-copy.obj `if test -f 'src/copy.c'; then $(CYGPATH_W) 'src/copy.c'; else $(CYGPATH_W) '$(srcdir)/src/copy.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-copy.obj `if test -f 'src/copy.c'; then $(CYGPATH_W) 'src/copy.c'; else $(CYGPATH_W) '$(srcdir)/src/copy.c'; fi`
 
 src/src_libsinglebin_mv_a-cp-hash.o: src/cp-hash.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mv_a-cp-hash.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mv_a-cp-hash.Tpo -c -o src/src_libsinglebin_mv_a-cp-hash.o `test -f 'src/cp-hash.c' || echo '$(srcdir)/'`src/cp-hash.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mv_a-cp-hash.Tpo src/$(DEPDIR)/src_libsinglebin_mv_a-cp-hash.Po
 #	$(AM_V_CC)source='src/cp-hash.c' object='src/src_libsinglebin_mv_a-cp-hash.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-cp-hash.o `test -f 'src/cp-hash.c' || echo '$(srcdir)/'`src/cp-hash.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-cp-hash.o `test -f 'src/cp-hash.c' || echo '$(srcdir)/'`src/cp-hash.c
 
 src/src_libsinglebin_mv_a-cp-hash.obj: src/cp-hash.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mv_a-cp-hash.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mv_a-cp-hash.Tpo -c -o src/src_libsinglebin_mv_a-cp-hash.obj `if test -f 'src/cp-hash.c'; then $(CYGPATH_W) 'src/cp-hash.c'; else $(CYGPATH_W) '$(srcdir)/src/cp-hash.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mv_a-cp-hash.Tpo src/$(DEPDIR)/src_libsinglebin_mv_a-cp-hash.Po
 #	$(AM_V_CC)source='src/cp-hash.c' object='src/src_libsinglebin_mv_a-cp-hash.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-cp-hash.obj `if test -f 'src/cp-hash.c'; then $(CYGPATH_W) 'src/cp-hash.c'; else $(CYGPATH_W) '$(srcdir)/src/cp-hash.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-cp-hash.obj `if test -f 'src/cp-hash.c'; then $(CYGPATH_W) 'src/cp-hash.c'; else $(CYGPATH_W) '$(srcdir)/src/cp-hash.c'; fi`
 
 src/src_libsinglebin_mv_a-extent-scan.o: src/extent-scan.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mv_a-extent-scan.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mv_a-extent-scan.Tpo -c -o src/src_libsinglebin_mv_a-extent-scan.o `test -f 'src/extent-scan.c' || echo '$(srcdir)/'`src/extent-scan.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mv_a-extent-scan.Tpo src/$(DEPDIR)/src_libsinglebin_mv_a-extent-scan.Po
 #	$(AM_V_CC)source='src/extent-scan.c' object='src/src_libsinglebin_mv_a-extent-scan.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-extent-scan.o `test -f 'src/extent-scan.c' || echo '$(srcdir)/'`src/extent-scan.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-extent-scan.o `test -f 'src/extent-scan.c' || echo '$(srcdir)/'`src/extent-scan.c
 
 src/src_libsinglebin_mv_a-extent-scan.obj: src/extent-scan.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mv_a-extent-scan.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mv_a-extent-scan.Tpo -c -o src/src_libsinglebin_mv_a-extent-scan.obj `if test -f 'src/extent-scan.c'; then $(CYGPATH_W) 'src/extent-scan.c'; else $(CYGPATH_W) '$(srcdir)/src/extent-scan.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mv_a-extent-scan.Tpo src/$(DEPDIR)/src_libsinglebin_mv_a-extent-scan.Po
 #	$(AM_V_CC)source='src/extent-scan.c' object='src/src_libsinglebin_mv_a-extent-scan.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-extent-scan.obj `if test -f 'src/extent-scan.c'; then $(CYGPATH_W) 'src/extent-scan.c'; else $(CYGPATH_W) '$(srcdir)/src/extent-scan.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-extent-scan.obj `if test -f 'src/extent-scan.c'; then $(CYGPATH_W) 'src/extent-scan.c'; else $(CYGPATH_W) '$(srcdir)/src/extent-scan.c'; fi`
 
 src/src_libsinglebin_mv_a-selinux.o: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mv_a-selinux.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mv_a-selinux.Tpo -c -o src/src_libsinglebin_mv_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mv_a-selinux.Tpo src/$(DEPDIR)/src_libsinglebin_mv_a-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_libsinglebin_mv_a-selinux.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 
 src/src_libsinglebin_mv_a-selinux.obj: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_mv_a-selinux.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_mv_a-selinux.Tpo -c -o src/src_libsinglebin_mv_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_mv_a-selinux.Tpo src/$(DEPDIR)/src_libsinglebin_mv_a-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_libsinglebin_mv_a-selinux.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_mv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_mv_a-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 
 src/src_libsinglebin_nice_a-nice.o: src/nice.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nice_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_nice_a-nice.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_nice_a-nice.Tpo -c -o src/src_libsinglebin_nice_a-nice.o `test -f 'src/nice.c' || echo '$(srcdir)/'`src/nice.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_nice_a-nice.Tpo src/$(DEPDIR)/src_libsinglebin_nice_a-nice.Po
 #	$(AM_V_CC)source='src/nice.c' object='src/src_libsinglebin_nice_a-nice.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nice_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nice_a-nice.o `test -f 'src/nice.c' || echo '$(srcdir)/'`src/nice.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nice_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nice_a-nice.o `test -f 'src/nice.c' || echo '$(srcdir)/'`src/nice.c
 
 src/src_libsinglebin_nice_a-nice.obj: src/nice.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nice_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_nice_a-nice.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_nice_a-nice.Tpo -c -o src/src_libsinglebin_nice_a-nice.obj `if test -f 'src/nice.c'; then $(CYGPATH_W) 'src/nice.c'; else $(CYGPATH_W) '$(srcdir)/src/nice.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_nice_a-nice.Tpo src/$(DEPDIR)/src_libsinglebin_nice_a-nice.Po
 #	$(AM_V_CC)source='src/nice.c' object='src/src_libsinglebin_nice_a-nice.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nice_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nice_a-nice.obj `if test -f 'src/nice.c'; then $(CYGPATH_W) 'src/nice.c'; else $(CYGPATH_W) '$(srcdir)/src/nice.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nice_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nice_a-nice.obj `if test -f 'src/nice.c'; then $(CYGPATH_W) 'src/nice.c'; else $(CYGPATH_W) '$(srcdir)/src/nice.c'; fi`
 
 src/src_libsinglebin_nl_a-nl.o: src/nl.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nl_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_nl_a-nl.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_nl_a-nl.Tpo -c -o src/src_libsinglebin_nl_a-nl.o `test -f 'src/nl.c' || echo '$(srcdir)/'`src/nl.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_nl_a-nl.Tpo src/$(DEPDIR)/src_libsinglebin_nl_a-nl.Po
 #	$(AM_V_CC)source='src/nl.c' object='src/src_libsinglebin_nl_a-nl.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nl_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nl_a-nl.o `test -f 'src/nl.c' || echo '$(srcdir)/'`src/nl.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nl_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nl_a-nl.o `test -f 'src/nl.c' || echo '$(srcdir)/'`src/nl.c
 
 src/src_libsinglebin_nl_a-nl.obj: src/nl.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nl_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_nl_a-nl.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_nl_a-nl.Tpo -c -o src/src_libsinglebin_nl_a-nl.obj `if test -f 'src/nl.c'; then $(CYGPATH_W) 'src/nl.c'; else $(CYGPATH_W) '$(srcdir)/src/nl.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_nl_a-nl.Tpo src/$(DEPDIR)/src_libsinglebin_nl_a-nl.Po
 #	$(AM_V_CC)source='src/nl.c' object='src/src_libsinglebin_nl_a-nl.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nl_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nl_a-nl.obj `if test -f 'src/nl.c'; then $(CYGPATH_W) 'src/nl.c'; else $(CYGPATH_W) '$(srcdir)/src/nl.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nl_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nl_a-nl.obj `if test -f 'src/nl.c'; then $(CYGPATH_W) 'src/nl.c'; else $(CYGPATH_W) '$(srcdir)/src/nl.c'; fi`
 
 src/src_libsinglebin_nohup_a-nohup.o: src/nohup.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nohup_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_nohup_a-nohup.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_nohup_a-nohup.Tpo -c -o src/src_libsinglebin_nohup_a-nohup.o `test -f 'src/nohup.c' || echo '$(srcdir)/'`src/nohup.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_nohup_a-nohup.Tpo src/$(DEPDIR)/src_libsinglebin_nohup_a-nohup.Po
 #	$(AM_V_CC)source='src/nohup.c' object='src/src_libsinglebin_nohup_a-nohup.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nohup_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nohup_a-nohup.o `test -f 'src/nohup.c' || echo '$(srcdir)/'`src/nohup.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nohup_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nohup_a-nohup.o `test -f 'src/nohup.c' || echo '$(srcdir)/'`src/nohup.c
 
 src/src_libsinglebin_nohup_a-nohup.obj: src/nohup.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nohup_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_nohup_a-nohup.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_nohup_a-nohup.Tpo -c -o src/src_libsinglebin_nohup_a-nohup.obj `if test -f 'src/nohup.c'; then $(CYGPATH_W) 'src/nohup.c'; else $(CYGPATH_W) '$(srcdir)/src/nohup.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_nohup_a-nohup.Tpo src/$(DEPDIR)/src_libsinglebin_nohup_a-nohup.Po
 #	$(AM_V_CC)source='src/nohup.c' object='src/src_libsinglebin_nohup_a-nohup.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nohup_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nohup_a-nohup.obj `if test -f 'src/nohup.c'; then $(CYGPATH_W) 'src/nohup.c'; else $(CYGPATH_W) '$(srcdir)/src/nohup.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nohup_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nohup_a-nohup.obj `if test -f 'src/nohup.c'; then $(CYGPATH_W) 'src/nohup.c'; else $(CYGPATH_W) '$(srcdir)/src/nohup.c'; fi`
 
 src/src_libsinglebin_nproc_a-nproc.o: src/nproc.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nproc_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_nproc_a-nproc.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_nproc_a-nproc.Tpo -c -o src/src_libsinglebin_nproc_a-nproc.o `test -f 'src/nproc.c' || echo '$(srcdir)/'`src/nproc.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_nproc_a-nproc.Tpo src/$(DEPDIR)/src_libsinglebin_nproc_a-nproc.Po
 #	$(AM_V_CC)source='src/nproc.c' object='src/src_libsinglebin_nproc_a-nproc.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nproc_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nproc_a-nproc.o `test -f 'src/nproc.c' || echo '$(srcdir)/'`src/nproc.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nproc_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nproc_a-nproc.o `test -f 'src/nproc.c' || echo '$(srcdir)/'`src/nproc.c
 
 src/src_libsinglebin_nproc_a-nproc.obj: src/nproc.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nproc_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_nproc_a-nproc.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_nproc_a-nproc.Tpo -c -o src/src_libsinglebin_nproc_a-nproc.obj `if test -f 'src/nproc.c'; then $(CYGPATH_W) 'src/nproc.c'; else $(CYGPATH_W) '$(srcdir)/src/nproc.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_nproc_a-nproc.Tpo src/$(DEPDIR)/src_libsinglebin_nproc_a-nproc.Po
 #	$(AM_V_CC)source='src/nproc.c' object='src/src_libsinglebin_nproc_a-nproc.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nproc_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nproc_a-nproc.obj `if test -f 'src/nproc.c'; then $(CYGPATH_W) 'src/nproc.c'; else $(CYGPATH_W) '$(srcdir)/src/nproc.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_nproc_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_nproc_a-nproc.obj `if test -f 'src/nproc.c'; then $(CYGPATH_W) 'src/nproc.c'; else $(CYGPATH_W) '$(srcdir)/src/nproc.c'; fi`
 
 src/src_libsinglebin_numfmt_a-numfmt.o: src/numfmt.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_numfmt_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_numfmt_a-numfmt.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_numfmt_a-numfmt.Tpo -c -o src/src_libsinglebin_numfmt_a-numfmt.o `test -f 'src/numfmt.c' || echo '$(srcdir)/'`src/numfmt.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_numfmt_a-numfmt.Tpo src/$(DEPDIR)/src_libsinglebin_numfmt_a-numfmt.Po
 #	$(AM_V_CC)source='src/numfmt.c' object='src/src_libsinglebin_numfmt_a-numfmt.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_numfmt_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_numfmt_a-numfmt.o `test -f 'src/numfmt.c' || echo '$(srcdir)/'`src/numfmt.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_numfmt_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_numfmt_a-numfmt.o `test -f 'src/numfmt.c' || echo '$(srcdir)/'`src/numfmt.c
 
 src/src_libsinglebin_numfmt_a-numfmt.obj: src/numfmt.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_numfmt_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_numfmt_a-numfmt.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_numfmt_a-numfmt.Tpo -c -o src/src_libsinglebin_numfmt_a-numfmt.obj `if test -f 'src/numfmt.c'; then $(CYGPATH_W) 'src/numfmt.c'; else $(CYGPATH_W) '$(srcdir)/src/numfmt.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_numfmt_a-numfmt.Tpo src/$(DEPDIR)/src_libsinglebin_numfmt_a-numfmt.Po
 #	$(AM_V_CC)source='src/numfmt.c' object='src/src_libsinglebin_numfmt_a-numfmt.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_numfmt_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_numfmt_a-numfmt.obj `if test -f 'src/numfmt.c'; then $(CYGPATH_W) 'src/numfmt.c'; else $(CYGPATH_W) '$(srcdir)/src/numfmt.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_numfmt_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_numfmt_a-numfmt.obj `if test -f 'src/numfmt.c'; then $(CYGPATH_W) 'src/numfmt.c'; else $(CYGPATH_W) '$(srcdir)/src/numfmt.c'; fi`
 
 src/src_libsinglebin_od_a-od.o: src/od.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_od_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_od_a-od.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_od_a-od.Tpo -c -o src/src_libsinglebin_od_a-od.o `test -f 'src/od.c' || echo '$(srcdir)/'`src/od.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_od_a-od.Tpo src/$(DEPDIR)/src_libsinglebin_od_a-od.Po
 #	$(AM_V_CC)source='src/od.c' object='src/src_libsinglebin_od_a-od.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_od_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_od_a-od.o `test -f 'src/od.c' || echo '$(srcdir)/'`src/od.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_od_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_od_a-od.o `test -f 'src/od.c' || echo '$(srcdir)/'`src/od.c
 
 src/src_libsinglebin_od_a-od.obj: src/od.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_od_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_od_a-od.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_od_a-od.Tpo -c -o src/src_libsinglebin_od_a-od.obj `if test -f 'src/od.c'; then $(CYGPATH_W) 'src/od.c'; else $(CYGPATH_W) '$(srcdir)/src/od.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_od_a-od.Tpo src/$(DEPDIR)/src_libsinglebin_od_a-od.Po
 #	$(AM_V_CC)source='src/od.c' object='src/src_libsinglebin_od_a-od.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_od_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_od_a-od.obj `if test -f 'src/od.c'; then $(CYGPATH_W) 'src/od.c'; else $(CYGPATH_W) '$(srcdir)/src/od.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_od_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_od_a-od.obj `if test -f 'src/od.c'; then $(CYGPATH_W) 'src/od.c'; else $(CYGPATH_W) '$(srcdir)/src/od.c'; fi`
 
 src/src_libsinglebin_paste_a-paste.o: src/paste.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_paste_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_paste_a-paste.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_paste_a-paste.Tpo -c -o src/src_libsinglebin_paste_a-paste.o `test -f 'src/paste.c' || echo '$(srcdir)/'`src/paste.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_paste_a-paste.Tpo src/$(DEPDIR)/src_libsinglebin_paste_a-paste.Po
 #	$(AM_V_CC)source='src/paste.c' object='src/src_libsinglebin_paste_a-paste.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_paste_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_paste_a-paste.o `test -f 'src/paste.c' || echo '$(srcdir)/'`src/paste.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_paste_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_paste_a-paste.o `test -f 'src/paste.c' || echo '$(srcdir)/'`src/paste.c
 
 src/src_libsinglebin_paste_a-paste.obj: src/paste.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_paste_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_paste_a-paste.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_paste_a-paste.Tpo -c -o src/src_libsinglebin_paste_a-paste.obj `if test -f 'src/paste.c'; then $(CYGPATH_W) 'src/paste.c'; else $(CYGPATH_W) '$(srcdir)/src/paste.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_paste_a-paste.Tpo src/$(DEPDIR)/src_libsinglebin_paste_a-paste.Po
 #	$(AM_V_CC)source='src/paste.c' object='src/src_libsinglebin_paste_a-paste.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_paste_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_paste_a-paste.obj `if test -f 'src/paste.c'; then $(CYGPATH_W) 'src/paste.c'; else $(CYGPATH_W) '$(srcdir)/src/paste.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_paste_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_paste_a-paste.obj `if test -f 'src/paste.c'; then $(CYGPATH_W) 'src/paste.c'; else $(CYGPATH_W) '$(srcdir)/src/paste.c'; fi`
 
 src/src_libsinglebin_pathchk_a-pathchk.o: src/pathchk.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pathchk_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_pathchk_a-pathchk.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_pathchk_a-pathchk.Tpo -c -o src/src_libsinglebin_pathchk_a-pathchk.o `test -f 'src/pathchk.c' || echo '$(srcdir)/'`src/pathchk.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_pathchk_a-pathchk.Tpo src/$(DEPDIR)/src_libsinglebin_pathchk_a-pathchk.Po
 #	$(AM_V_CC)source='src/pathchk.c' object='src/src_libsinglebin_pathchk_a-pathchk.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pathchk_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pathchk_a-pathchk.o `test -f 'src/pathchk.c' || echo '$(srcdir)/'`src/pathchk.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pathchk_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pathchk_a-pathchk.o `test -f 'src/pathchk.c' || echo '$(srcdir)/'`src/pathchk.c
 
 src/src_libsinglebin_pathchk_a-pathchk.obj: src/pathchk.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pathchk_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_pathchk_a-pathchk.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_pathchk_a-pathchk.Tpo -c -o src/src_libsinglebin_pathchk_a-pathchk.obj `if test -f 'src/pathchk.c'; then $(CYGPATH_W) 'src/pathchk.c'; else $(CYGPATH_W) '$(srcdir)/src/pathchk.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_pathchk_a-pathchk.Tpo src/$(DEPDIR)/src_libsinglebin_pathchk_a-pathchk.Po
 #	$(AM_V_CC)source='src/pathchk.c' object='src/src_libsinglebin_pathchk_a-pathchk.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pathchk_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pathchk_a-pathchk.obj `if test -f 'src/pathchk.c'; then $(CYGPATH_W) 'src/pathchk.c'; else $(CYGPATH_W) '$(srcdir)/src/pathchk.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pathchk_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pathchk_a-pathchk.obj `if test -f 'src/pathchk.c'; then $(CYGPATH_W) 'src/pathchk.c'; else $(CYGPATH_W) '$(srcdir)/src/pathchk.c'; fi`
 
 src/src_libsinglebin_pinky_a-pinky.o: src/pinky.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pinky_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_pinky_a-pinky.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_pinky_a-pinky.Tpo -c -o src/src_libsinglebin_pinky_a-pinky.o `test -f 'src/pinky.c' || echo '$(srcdir)/'`src/pinky.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_pinky_a-pinky.Tpo src/$(DEPDIR)/src_libsinglebin_pinky_a-pinky.Po
 #	$(AM_V_CC)source='src/pinky.c' object='src/src_libsinglebin_pinky_a-pinky.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pinky_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pinky_a-pinky.o `test -f 'src/pinky.c' || echo '$(srcdir)/'`src/pinky.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pinky_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pinky_a-pinky.o `test -f 'src/pinky.c' || echo '$(srcdir)/'`src/pinky.c
 
 src/src_libsinglebin_pinky_a-pinky.obj: src/pinky.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pinky_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_pinky_a-pinky.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_pinky_a-pinky.Tpo -c -o src/src_libsinglebin_pinky_a-pinky.obj `if test -f 'src/pinky.c'; then $(CYGPATH_W) 'src/pinky.c'; else $(CYGPATH_W) '$(srcdir)/src/pinky.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_pinky_a-pinky.Tpo src/$(DEPDIR)/src_libsinglebin_pinky_a-pinky.Po
 #	$(AM_V_CC)source='src/pinky.c' object='src/src_libsinglebin_pinky_a-pinky.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pinky_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pinky_a-pinky.obj `if test -f 'src/pinky.c'; then $(CYGPATH_W) 'src/pinky.c'; else $(CYGPATH_W) '$(srcdir)/src/pinky.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pinky_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pinky_a-pinky.obj `if test -f 'src/pinky.c'; then $(CYGPATH_W) 'src/pinky.c'; else $(CYGPATH_W) '$(srcdir)/src/pinky.c'; fi`
 
 src/src_libsinglebin_pr_a-pr.o: src/pr.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pr_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_pr_a-pr.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_pr_a-pr.Tpo -c -o src/src_libsinglebin_pr_a-pr.o `test -f 'src/pr.c' || echo '$(srcdir)/'`src/pr.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_pr_a-pr.Tpo src/$(DEPDIR)/src_libsinglebin_pr_a-pr.Po
 #	$(AM_V_CC)source='src/pr.c' object='src/src_libsinglebin_pr_a-pr.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pr_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pr_a-pr.o `test -f 'src/pr.c' || echo '$(srcdir)/'`src/pr.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pr_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pr_a-pr.o `test -f 'src/pr.c' || echo '$(srcdir)/'`src/pr.c
 
 src/src_libsinglebin_pr_a-pr.obj: src/pr.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pr_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_pr_a-pr.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_pr_a-pr.Tpo -c -o src/src_libsinglebin_pr_a-pr.obj `if test -f 'src/pr.c'; then $(CYGPATH_W) 'src/pr.c'; else $(CYGPATH_W) '$(srcdir)/src/pr.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_pr_a-pr.Tpo src/$(DEPDIR)/src_libsinglebin_pr_a-pr.Po
 #	$(AM_V_CC)source='src/pr.c' object='src/src_libsinglebin_pr_a-pr.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pr_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pr_a-pr.obj `if test -f 'src/pr.c'; then $(CYGPATH_W) 'src/pr.c'; else $(CYGPATH_W) '$(srcdir)/src/pr.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pr_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pr_a-pr.obj `if test -f 'src/pr.c'; then $(CYGPATH_W) 'src/pr.c'; else $(CYGPATH_W) '$(srcdir)/src/pr.c'; fi`
 
 src/src_libsinglebin_printenv_a-printenv.o: src/printenv.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_printenv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_printenv_a-printenv.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_printenv_a-printenv.Tpo -c -o src/src_libsinglebin_printenv_a-printenv.o `test -f 'src/printenv.c' || echo '$(srcdir)/'`src/printenv.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_printenv_a-printenv.Tpo src/$(DEPDIR)/src_libsinglebin_printenv_a-printenv.Po
 #	$(AM_V_CC)source='src/printenv.c' object='src/src_libsinglebin_printenv_a-printenv.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_printenv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_printenv_a-printenv.o `test -f 'src/printenv.c' || echo '$(srcdir)/'`src/printenv.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_printenv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_printenv_a-printenv.o `test -f 'src/printenv.c' || echo '$(srcdir)/'`src/printenv.c
 
 src/src_libsinglebin_printenv_a-printenv.obj: src/printenv.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_printenv_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_printenv_a-printenv.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_printenv_a-printenv.Tpo -c -o src/src_libsinglebin_printenv_a-printenv.obj `if test -f 'src/printenv.c'; then $(CYGPATH_W) 'src/printenv.c'; else $(CYGPATH_W) '$(srcdir)/src/printenv.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_printenv_a-printenv.Tpo src/$(DEPDIR)/src_libsinglebin_printenv_a-printenv.Po
 #	$(AM_V_CC)source='src/printenv.c' object='src/src_libsinglebin_printenv_a-printenv.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_printenv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_printenv_a-printenv.obj `if test -f 'src/printenv.c'; then $(CYGPATH_W) 'src/printenv.c'; else $(CYGPATH_W) '$(srcdir)/src/printenv.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_printenv_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_printenv_a-printenv.obj `if test -f 'src/printenv.c'; then $(CYGPATH_W) 'src/printenv.c'; else $(CYGPATH_W) '$(srcdir)/src/printenv.c'; fi`
 
 src/src_libsinglebin_printf_a-printf.o: src/printf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_printf_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_printf_a-printf.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_printf_a-printf.Tpo -c -o src/src_libsinglebin_printf_a-printf.o `test -f 'src/printf.c' || echo '$(srcdir)/'`src/printf.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_printf_a-printf.Tpo src/$(DEPDIR)/src_libsinglebin_printf_a-printf.Po
 #	$(AM_V_CC)source='src/printf.c' object='src/src_libsinglebin_printf_a-printf.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_printf_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_printf_a-printf.o `test -f 'src/printf.c' || echo '$(srcdir)/'`src/printf.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_printf_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_printf_a-printf.o `test -f 'src/printf.c' || echo '$(srcdir)/'`src/printf.c
 
 src/src_libsinglebin_printf_a-printf.obj: src/printf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_printf_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_printf_a-printf.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_printf_a-printf.Tpo -c -o src/src_libsinglebin_printf_a-printf.obj `if test -f 'src/printf.c'; then $(CYGPATH_W) 'src/printf.c'; else $(CYGPATH_W) '$(srcdir)/src/printf.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_printf_a-printf.Tpo src/$(DEPDIR)/src_libsinglebin_printf_a-printf.Po
 #	$(AM_V_CC)source='src/printf.c' object='src/src_libsinglebin_printf_a-printf.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_printf_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_printf_a-printf.obj `if test -f 'src/printf.c'; then $(CYGPATH_W) 'src/printf.c'; else $(CYGPATH_W) '$(srcdir)/src/printf.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_printf_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_printf_a-printf.obj `if test -f 'src/printf.c'; then $(CYGPATH_W) 'src/printf.c'; else $(CYGPATH_W) '$(srcdir)/src/printf.c'; fi`
 
 src/src_libsinglebin_ptx_a-ptx.o: src/ptx.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ptx_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ptx_a-ptx.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ptx_a-ptx.Tpo -c -o src/src_libsinglebin_ptx_a-ptx.o `test -f 'src/ptx.c' || echo '$(srcdir)/'`src/ptx.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ptx_a-ptx.Tpo src/$(DEPDIR)/src_libsinglebin_ptx_a-ptx.Po
 #	$(AM_V_CC)source='src/ptx.c' object='src/src_libsinglebin_ptx_a-ptx.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ptx_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ptx_a-ptx.o `test -f 'src/ptx.c' || echo '$(srcdir)/'`src/ptx.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ptx_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ptx_a-ptx.o `test -f 'src/ptx.c' || echo '$(srcdir)/'`src/ptx.c
 
 src/src_libsinglebin_ptx_a-ptx.obj: src/ptx.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ptx_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_ptx_a-ptx.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_ptx_a-ptx.Tpo -c -o src/src_libsinglebin_ptx_a-ptx.obj `if test -f 'src/ptx.c'; then $(CYGPATH_W) 'src/ptx.c'; else $(CYGPATH_W) '$(srcdir)/src/ptx.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_ptx_a-ptx.Tpo src/$(DEPDIR)/src_libsinglebin_ptx_a-ptx.Po
 #	$(AM_V_CC)source='src/ptx.c' object='src/src_libsinglebin_ptx_a-ptx.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ptx_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ptx_a-ptx.obj `if test -f 'src/ptx.c'; then $(CYGPATH_W) 'src/ptx.c'; else $(CYGPATH_W) '$(srcdir)/src/ptx.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_ptx_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_ptx_a-ptx.obj `if test -f 'src/ptx.c'; then $(CYGPATH_W) 'src/ptx.c'; else $(CYGPATH_W) '$(srcdir)/src/ptx.c'; fi`
 
 src/src_libsinglebin_pwd_a-pwd.o: src/pwd.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pwd_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_pwd_a-pwd.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_pwd_a-pwd.Tpo -c -o src/src_libsinglebin_pwd_a-pwd.o `test -f 'src/pwd.c' || echo '$(srcdir)/'`src/pwd.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_pwd_a-pwd.Tpo src/$(DEPDIR)/src_libsinglebin_pwd_a-pwd.Po
 #	$(AM_V_CC)source='src/pwd.c' object='src/src_libsinglebin_pwd_a-pwd.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pwd_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pwd_a-pwd.o `test -f 'src/pwd.c' || echo '$(srcdir)/'`src/pwd.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pwd_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pwd_a-pwd.o `test -f 'src/pwd.c' || echo '$(srcdir)/'`src/pwd.c
 
 src/src_libsinglebin_pwd_a-pwd.obj: src/pwd.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pwd_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_pwd_a-pwd.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_pwd_a-pwd.Tpo -c -o src/src_libsinglebin_pwd_a-pwd.obj `if test -f 'src/pwd.c'; then $(CYGPATH_W) 'src/pwd.c'; else $(CYGPATH_W) '$(srcdir)/src/pwd.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_pwd_a-pwd.Tpo src/$(DEPDIR)/src_libsinglebin_pwd_a-pwd.Po
 #	$(AM_V_CC)source='src/pwd.c' object='src/src_libsinglebin_pwd_a-pwd.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pwd_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pwd_a-pwd.obj `if test -f 'src/pwd.c'; then $(CYGPATH_W) 'src/pwd.c'; else $(CYGPATH_W) '$(srcdir)/src/pwd.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_pwd_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_pwd_a-pwd.obj `if test -f 'src/pwd.c'; then $(CYGPATH_W) 'src/pwd.c'; else $(CYGPATH_W) '$(srcdir)/src/pwd.c'; fi`
 
 src/src_libsinglebin_readlink_a-readlink.o: src/readlink.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_readlink_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_readlink_a-readlink.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_readlink_a-readlink.Tpo -c -o src/src_libsinglebin_readlink_a-readlink.o `test -f 'src/readlink.c' || echo '$(srcdir)/'`src/readlink.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_readlink_a-readlink.Tpo src/$(DEPDIR)/src_libsinglebin_readlink_a-readlink.Po
 #	$(AM_V_CC)source='src/readlink.c' object='src/src_libsinglebin_readlink_a-readlink.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_readlink_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_readlink_a-readlink.o `test -f 'src/readlink.c' || echo '$(srcdir)/'`src/readlink.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_readlink_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_readlink_a-readlink.o `test -f 'src/readlink.c' || echo '$(srcdir)/'`src/readlink.c
 
 src/src_libsinglebin_readlink_a-readlink.obj: src/readlink.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_readlink_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_readlink_a-readlink.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_readlink_a-readlink.Tpo -c -o src/src_libsinglebin_readlink_a-readlink.obj `if test -f 'src/readlink.c'; then $(CYGPATH_W) 'src/readlink.c'; else $(CYGPATH_W) '$(srcdir)/src/readlink.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_readlink_a-readlink.Tpo src/$(DEPDIR)/src_libsinglebin_readlink_a-readlink.Po
 #	$(AM_V_CC)source='src/readlink.c' object='src/src_libsinglebin_readlink_a-readlink.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_readlink_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_readlink_a-readlink.obj `if test -f 'src/readlink.c'; then $(CYGPATH_W) 'src/readlink.c'; else $(CYGPATH_W) '$(srcdir)/src/readlink.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_readlink_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_readlink_a-readlink.obj `if test -f 'src/readlink.c'; then $(CYGPATH_W) 'src/readlink.c'; else $(CYGPATH_W) '$(srcdir)/src/readlink.c'; fi`
 
 src/src_libsinglebin_realpath_a-realpath.o: src/realpath.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_realpath_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_realpath_a-realpath.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_realpath_a-realpath.Tpo -c -o src/src_libsinglebin_realpath_a-realpath.o `test -f 'src/realpath.c' || echo '$(srcdir)/'`src/realpath.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_realpath_a-realpath.Tpo src/$(DEPDIR)/src_libsinglebin_realpath_a-realpath.Po
 #	$(AM_V_CC)source='src/realpath.c' object='src/src_libsinglebin_realpath_a-realpath.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_realpath_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_realpath_a-realpath.o `test -f 'src/realpath.c' || echo '$(srcdir)/'`src/realpath.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_realpath_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_realpath_a-realpath.o `test -f 'src/realpath.c' || echo '$(srcdir)/'`src/realpath.c
 
 src/src_libsinglebin_realpath_a-realpath.obj: src/realpath.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_realpath_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_realpath_a-realpath.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_realpath_a-realpath.Tpo -c -o src/src_libsinglebin_realpath_a-realpath.obj `if test -f 'src/realpath.c'; then $(CYGPATH_W) 'src/realpath.c'; else $(CYGPATH_W) '$(srcdir)/src/realpath.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_realpath_a-realpath.Tpo src/$(DEPDIR)/src_libsinglebin_realpath_a-realpath.Po
 #	$(AM_V_CC)source='src/realpath.c' object='src/src_libsinglebin_realpath_a-realpath.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_realpath_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_realpath_a-realpath.obj `if test -f 'src/realpath.c'; then $(CYGPATH_W) 'src/realpath.c'; else $(CYGPATH_W) '$(srcdir)/src/realpath.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_realpath_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_realpath_a-realpath.obj `if test -f 'src/realpath.c'; then $(CYGPATH_W) 'src/realpath.c'; else $(CYGPATH_W) '$(srcdir)/src/realpath.c'; fi`
 
 src/src_libsinglebin_realpath_a-relpath.o: src/relpath.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_realpath_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_realpath_a-relpath.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_realpath_a-relpath.Tpo -c -o src/src_libsinglebin_realpath_a-relpath.o `test -f 'src/relpath.c' || echo '$(srcdir)/'`src/relpath.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_realpath_a-relpath.Tpo src/$(DEPDIR)/src_libsinglebin_realpath_a-relpath.Po
 #	$(AM_V_CC)source='src/relpath.c' object='src/src_libsinglebin_realpath_a-relpath.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_realpath_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_realpath_a-relpath.o `test -f 'src/relpath.c' || echo '$(srcdir)/'`src/relpath.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_realpath_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_realpath_a-relpath.o `test -f 'src/relpath.c' || echo '$(srcdir)/'`src/relpath.c
 
 src/src_libsinglebin_realpath_a-relpath.obj: src/relpath.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_realpath_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_realpath_a-relpath.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_realpath_a-relpath.Tpo -c -o src/src_libsinglebin_realpath_a-relpath.obj `if test -f 'src/relpath.c'; then $(CYGPATH_W) 'src/relpath.c'; else $(CYGPATH_W) '$(srcdir)/src/relpath.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_realpath_a-relpath.Tpo src/$(DEPDIR)/src_libsinglebin_realpath_a-relpath.Po
 #	$(AM_V_CC)source='src/relpath.c' object='src/src_libsinglebin_realpath_a-relpath.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_realpath_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_realpath_a-relpath.obj `if test -f 'src/relpath.c'; then $(CYGPATH_W) 'src/relpath.c'; else $(CYGPATH_W) '$(srcdir)/src/relpath.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_realpath_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_realpath_a-relpath.obj `if test -f 'src/relpath.c'; then $(CYGPATH_W) 'src/relpath.c'; else $(CYGPATH_W) '$(srcdir)/src/relpath.c'; fi`
 
 src/src_libsinglebin_rm_a-rm.o: src/rm.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rm_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_rm_a-rm.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_rm_a-rm.Tpo -c -o src/src_libsinglebin_rm_a-rm.o `test -f 'src/rm.c' || echo '$(srcdir)/'`src/rm.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_rm_a-rm.Tpo src/$(DEPDIR)/src_libsinglebin_rm_a-rm.Po
 #	$(AM_V_CC)source='src/rm.c' object='src/src_libsinglebin_rm_a-rm.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rm_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rm_a-rm.o `test -f 'src/rm.c' || echo '$(srcdir)/'`src/rm.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rm_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rm_a-rm.o `test -f 'src/rm.c' || echo '$(srcdir)/'`src/rm.c
 
 src/src_libsinglebin_rm_a-rm.obj: src/rm.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rm_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_rm_a-rm.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_rm_a-rm.Tpo -c -o src/src_libsinglebin_rm_a-rm.obj `if test -f 'src/rm.c'; then $(CYGPATH_W) 'src/rm.c'; else $(CYGPATH_W) '$(srcdir)/src/rm.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_rm_a-rm.Tpo src/$(DEPDIR)/src_libsinglebin_rm_a-rm.Po
 #	$(AM_V_CC)source='src/rm.c' object='src/src_libsinglebin_rm_a-rm.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rm_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rm_a-rm.obj `if test -f 'src/rm.c'; then $(CYGPATH_W) 'src/rm.c'; else $(CYGPATH_W) '$(srcdir)/src/rm.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rm_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rm_a-rm.obj `if test -f 'src/rm.c'; then $(CYGPATH_W) 'src/rm.c'; else $(CYGPATH_W) '$(srcdir)/src/rm.c'; fi`
 
 src/src_libsinglebin_rm_a-remove.o: src/remove.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rm_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_rm_a-remove.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_rm_a-remove.Tpo -c -o src/src_libsinglebin_rm_a-remove.o `test -f 'src/remove.c' || echo '$(srcdir)/'`src/remove.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_rm_a-remove.Tpo src/$(DEPDIR)/src_libsinglebin_rm_a-remove.Po
 #	$(AM_V_CC)source='src/remove.c' object='src/src_libsinglebin_rm_a-remove.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rm_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rm_a-remove.o `test -f 'src/remove.c' || echo '$(srcdir)/'`src/remove.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rm_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rm_a-remove.o `test -f 'src/remove.c' || echo '$(srcdir)/'`src/remove.c
 
 src/src_libsinglebin_rm_a-remove.obj: src/remove.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rm_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_rm_a-remove.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_rm_a-remove.Tpo -c -o src/src_libsinglebin_rm_a-remove.obj `if test -f 'src/remove.c'; then $(CYGPATH_W) 'src/remove.c'; else $(CYGPATH_W) '$(srcdir)/src/remove.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_rm_a-remove.Tpo src/$(DEPDIR)/src_libsinglebin_rm_a-remove.Po
 #	$(AM_V_CC)source='src/remove.c' object='src/src_libsinglebin_rm_a-remove.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rm_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rm_a-remove.obj `if test -f 'src/remove.c'; then $(CYGPATH_W) 'src/remove.c'; else $(CYGPATH_W) '$(srcdir)/src/remove.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rm_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rm_a-remove.obj `if test -f 'src/remove.c'; then $(CYGPATH_W) 'src/remove.c'; else $(CYGPATH_W) '$(srcdir)/src/remove.c'; fi`
 
 src/src_libsinglebin_rmdir_a-rmdir.o: src/rmdir.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rmdir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_rmdir_a-rmdir.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_rmdir_a-rmdir.Tpo -c -o src/src_libsinglebin_rmdir_a-rmdir.o `test -f 'src/rmdir.c' || echo '$(srcdir)/'`src/rmdir.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_rmdir_a-rmdir.Tpo src/$(DEPDIR)/src_libsinglebin_rmdir_a-rmdir.Po
 #	$(AM_V_CC)source='src/rmdir.c' object='src/src_libsinglebin_rmdir_a-rmdir.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rmdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rmdir_a-rmdir.o `test -f 'src/rmdir.c' || echo '$(srcdir)/'`src/rmdir.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rmdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rmdir_a-rmdir.o `test -f 'src/rmdir.c' || echo '$(srcdir)/'`src/rmdir.c
 
 src/src_libsinglebin_rmdir_a-rmdir.obj: src/rmdir.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rmdir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_rmdir_a-rmdir.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_rmdir_a-rmdir.Tpo -c -o src/src_libsinglebin_rmdir_a-rmdir.obj `if test -f 'src/rmdir.c'; then $(CYGPATH_W) 'src/rmdir.c'; else $(CYGPATH_W) '$(srcdir)/src/rmdir.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_rmdir_a-rmdir.Tpo src/$(DEPDIR)/src_libsinglebin_rmdir_a-rmdir.Po
 #	$(AM_V_CC)source='src/rmdir.c' object='src/src_libsinglebin_rmdir_a-rmdir.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rmdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rmdir_a-rmdir.obj `if test -f 'src/rmdir.c'; then $(CYGPATH_W) 'src/rmdir.c'; else $(CYGPATH_W) '$(srcdir)/src/rmdir.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rmdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rmdir_a-rmdir.obj `if test -f 'src/rmdir.c'; then $(CYGPATH_W) 'src/rmdir.c'; else $(CYGPATH_W) '$(srcdir)/src/rmdir.c'; fi`
 
 src/src_libsinglebin_rmdir_a-prog-fprintf.o: src/prog-fprintf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rmdir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_rmdir_a-prog-fprintf.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_rmdir_a-prog-fprintf.Tpo -c -o src/src_libsinglebin_rmdir_a-prog-fprintf.o `test -f 'src/prog-fprintf.c' || echo '$(srcdir)/'`src/prog-fprintf.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_rmdir_a-prog-fprintf.Tpo src/$(DEPDIR)/src_libsinglebin_rmdir_a-prog-fprintf.Po
 #	$(AM_V_CC)source='src/prog-fprintf.c' object='src/src_libsinglebin_rmdir_a-prog-fprintf.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rmdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rmdir_a-prog-fprintf.o `test -f 'src/prog-fprintf.c' || echo '$(srcdir)/'`src/prog-fprintf.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rmdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rmdir_a-prog-fprintf.o `test -f 'src/prog-fprintf.c' || echo '$(srcdir)/'`src/prog-fprintf.c
 
 src/src_libsinglebin_rmdir_a-prog-fprintf.obj: src/prog-fprintf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rmdir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_rmdir_a-prog-fprintf.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_rmdir_a-prog-fprintf.Tpo -c -o src/src_libsinglebin_rmdir_a-prog-fprintf.obj `if test -f 'src/prog-fprintf.c'; then $(CYGPATH_W) 'src/prog-fprintf.c'; else $(CYGPATH_W) '$(srcdir)/src/prog-fprintf.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_rmdir_a-prog-fprintf.Tpo src/$(DEPDIR)/src_libsinglebin_rmdir_a-prog-fprintf.Po
 #	$(AM_V_CC)source='src/prog-fprintf.c' object='src/src_libsinglebin_rmdir_a-prog-fprintf.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rmdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rmdir_a-prog-fprintf.obj `if test -f 'src/prog-fprintf.c'; then $(CYGPATH_W) 'src/prog-fprintf.c'; else $(CYGPATH_W) '$(srcdir)/src/prog-fprintf.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_rmdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_rmdir_a-prog-fprintf.obj `if test -f 'src/prog-fprintf.c'; then $(CYGPATH_W) 'src/prog-fprintf.c'; else $(CYGPATH_W) '$(srcdir)/src/prog-fprintf.c'; fi`
 
 src/src_libsinglebin_runcon_a-runcon.o: src/runcon.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_runcon_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_runcon_a-runcon.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_runcon_a-runcon.Tpo -c -o src/src_libsinglebin_runcon_a-runcon.o `test -f 'src/runcon.c' || echo '$(srcdir)/'`src/runcon.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_runcon_a-runcon.Tpo src/$(DEPDIR)/src_libsinglebin_runcon_a-runcon.Po
 #	$(AM_V_CC)source='src/runcon.c' object='src/src_libsinglebin_runcon_a-runcon.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_runcon_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_runcon_a-runcon.o `test -f 'src/runcon.c' || echo '$(srcdir)/'`src/runcon.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_runcon_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_runcon_a-runcon.o `test -f 'src/runcon.c' || echo '$(srcdir)/'`src/runcon.c
 
 src/src_libsinglebin_runcon_a-runcon.obj: src/runcon.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_runcon_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_runcon_a-runcon.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_runcon_a-runcon.Tpo -c -o src/src_libsinglebin_runcon_a-runcon.obj `if test -f 'src/runcon.c'; then $(CYGPATH_W) 'src/runcon.c'; else $(CYGPATH_W) '$(srcdir)/src/runcon.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_runcon_a-runcon.Tpo src/$(DEPDIR)/src_libsinglebin_runcon_a-runcon.Po
 #	$(AM_V_CC)source='src/runcon.c' object='src/src_libsinglebin_runcon_a-runcon.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_runcon_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_runcon_a-runcon.obj `if test -f 'src/runcon.c'; then $(CYGPATH_W) 'src/runcon.c'; else $(CYGPATH_W) '$(srcdir)/src/runcon.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_runcon_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_runcon_a-runcon.obj `if test -f 'src/runcon.c'; then $(CYGPATH_W) 'src/runcon.c'; else $(CYGPATH_W) '$(srcdir)/src/runcon.c'; fi`
 
 src/src_libsinglebin_seq_a-seq.o: src/seq.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_seq_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_seq_a-seq.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_seq_a-seq.Tpo -c -o src/src_libsinglebin_seq_a-seq.o `test -f 'src/seq.c' || echo '$(srcdir)/'`src/seq.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_seq_a-seq.Tpo src/$(DEPDIR)/src_libsinglebin_seq_a-seq.Po
 #	$(AM_V_CC)source='src/seq.c' object='src/src_libsinglebin_seq_a-seq.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_seq_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_seq_a-seq.o `test -f 'src/seq.c' || echo '$(srcdir)/'`src/seq.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_seq_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_seq_a-seq.o `test -f 'src/seq.c' || echo '$(srcdir)/'`src/seq.c
 
 src/src_libsinglebin_seq_a-seq.obj: src/seq.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_seq_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_seq_a-seq.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_seq_a-seq.Tpo -c -o src/src_libsinglebin_seq_a-seq.obj `if test -f 'src/seq.c'; then $(CYGPATH_W) 'src/seq.c'; else $(CYGPATH_W) '$(srcdir)/src/seq.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_seq_a-seq.Tpo src/$(DEPDIR)/src_libsinglebin_seq_a-seq.Po
 #	$(AM_V_CC)source='src/seq.c' object='src/src_libsinglebin_seq_a-seq.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_seq_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_seq_a-seq.obj `if test -f 'src/seq.c'; then $(CYGPATH_W) 'src/seq.c'; else $(CYGPATH_W) '$(srcdir)/src/seq.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_seq_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_seq_a-seq.obj `if test -f 'src/seq.c'; then $(CYGPATH_W) 'src/seq.c'; else $(CYGPATH_W) '$(srcdir)/src/seq.c'; fi`
 
 src/src_libsinglebin_sha1sum_a-md5sum.o: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha1sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha1sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sha1sum_a-md5sum.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sha1sum_a-md5sum.Tpo -c -o src/src_libsinglebin_sha1sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sha1sum_a-md5sum.Tpo src/$(DEPDIR)/src_libsinglebin_sha1sum_a-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_libsinglebin_sha1sum_a-md5sum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha1sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha1sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha1sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha1sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha1sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha1sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 
 src/src_libsinglebin_sha1sum_a-md5sum.obj: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha1sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha1sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sha1sum_a-md5sum.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sha1sum_a-md5sum.Tpo -c -o src/src_libsinglebin_sha1sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sha1sum_a-md5sum.Tpo src/$(DEPDIR)/src_libsinglebin_sha1sum_a-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_libsinglebin_sha1sum_a-md5sum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha1sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha1sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha1sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha1sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha1sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha1sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 
 src/src_libsinglebin_sha224sum_a-md5sum.o: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha224sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha224sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sha224sum_a-md5sum.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sha224sum_a-md5sum.Tpo -c -o src/src_libsinglebin_sha224sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sha224sum_a-md5sum.Tpo src/$(DEPDIR)/src_libsinglebin_sha224sum_a-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_libsinglebin_sha224sum_a-md5sum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha224sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha224sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha224sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha224sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha224sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha224sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 
 src/src_libsinglebin_sha224sum_a-md5sum.obj: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha224sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha224sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sha224sum_a-md5sum.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sha224sum_a-md5sum.Tpo -c -o src/src_libsinglebin_sha224sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sha224sum_a-md5sum.Tpo src/$(DEPDIR)/src_libsinglebin_sha224sum_a-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_libsinglebin_sha224sum_a-md5sum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha224sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha224sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha224sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha224sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha224sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha224sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 
 src/src_libsinglebin_sha256sum_a-md5sum.o: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha256sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha256sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sha256sum_a-md5sum.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sha256sum_a-md5sum.Tpo -c -o src/src_libsinglebin_sha256sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sha256sum_a-md5sum.Tpo src/$(DEPDIR)/src_libsinglebin_sha256sum_a-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_libsinglebin_sha256sum_a-md5sum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha256sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha256sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha256sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha256sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha256sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha256sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 
 src/src_libsinglebin_sha256sum_a-md5sum.obj: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha256sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha256sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sha256sum_a-md5sum.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sha256sum_a-md5sum.Tpo -c -o src/src_libsinglebin_sha256sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sha256sum_a-md5sum.Tpo src/$(DEPDIR)/src_libsinglebin_sha256sum_a-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_libsinglebin_sha256sum_a-md5sum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha256sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha256sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha256sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha256sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha256sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha256sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 
 src/src_libsinglebin_sha384sum_a-md5sum.o: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha384sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha384sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sha384sum_a-md5sum.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sha384sum_a-md5sum.Tpo -c -o src/src_libsinglebin_sha384sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sha384sum_a-md5sum.Tpo src/$(DEPDIR)/src_libsinglebin_sha384sum_a-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_libsinglebin_sha384sum_a-md5sum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha384sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha384sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha384sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha384sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha384sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha384sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 
 src/src_libsinglebin_sha384sum_a-md5sum.obj: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha384sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha384sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sha384sum_a-md5sum.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sha384sum_a-md5sum.Tpo -c -o src/src_libsinglebin_sha384sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sha384sum_a-md5sum.Tpo src/$(DEPDIR)/src_libsinglebin_sha384sum_a-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_libsinglebin_sha384sum_a-md5sum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha384sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha384sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha384sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha384sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha384sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha384sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 
 src/src_libsinglebin_sha512sum_a-md5sum.o: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha512sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha512sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sha512sum_a-md5sum.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sha512sum_a-md5sum.Tpo -c -o src/src_libsinglebin_sha512sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sha512sum_a-md5sum.Tpo src/$(DEPDIR)/src_libsinglebin_sha512sum_a-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_libsinglebin_sha512sum_a-md5sum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha512sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha512sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha512sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha512sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha512sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha512sum_a-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 
 src/src_libsinglebin_sha512sum_a-md5sum.obj: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha512sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha512sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sha512sum_a-md5sum.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sha512sum_a-md5sum.Tpo -c -o src/src_libsinglebin_sha512sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sha512sum_a-md5sum.Tpo src/$(DEPDIR)/src_libsinglebin_sha512sum_a-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_libsinglebin_sha512sum_a-md5sum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha512sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha512sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha512sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_libsinglebin_sha512sum_a_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sha512sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sha512sum_a-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 
 src/src_libsinglebin_shred_a-shred.o: src/shred.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_shred_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_shred_a-shred.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_shred_a-shred.Tpo -c -o src/src_libsinglebin_shred_a-shred.o `test -f 'src/shred.c' || echo '$(srcdir)/'`src/shred.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_shred_a-shred.Tpo src/$(DEPDIR)/src_libsinglebin_shred_a-shred.Po
 #	$(AM_V_CC)source='src/shred.c' object='src/src_libsinglebin_shred_a-shred.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_shred_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_shred_a-shred.o `test -f 'src/shred.c' || echo '$(srcdir)/'`src/shred.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_shred_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_shred_a-shred.o `test -f 'src/shred.c' || echo '$(srcdir)/'`src/shred.c
 
 src/src_libsinglebin_shred_a-shred.obj: src/shred.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_shred_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_shred_a-shred.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_shred_a-shred.Tpo -c -o src/src_libsinglebin_shred_a-shred.obj `if test -f 'src/shred.c'; then $(CYGPATH_W) 'src/shred.c'; else $(CYGPATH_W) '$(srcdir)/src/shred.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_shred_a-shred.Tpo src/$(DEPDIR)/src_libsinglebin_shred_a-shred.Po
 #	$(AM_V_CC)source='src/shred.c' object='src/src_libsinglebin_shred_a-shred.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_shred_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_shred_a-shred.obj `if test -f 'src/shred.c'; then $(CYGPATH_W) 'src/shred.c'; else $(CYGPATH_W) '$(srcdir)/src/shred.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_shred_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_shred_a-shred.obj `if test -f 'src/shred.c'; then $(CYGPATH_W) 'src/shred.c'; else $(CYGPATH_W) '$(srcdir)/src/shred.c'; fi`
 
 src/src_libsinglebin_shuf_a-shuf.o: src/shuf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_shuf_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_shuf_a-shuf.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_shuf_a-shuf.Tpo -c -o src/src_libsinglebin_shuf_a-shuf.o `test -f 'src/shuf.c' || echo '$(srcdir)/'`src/shuf.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_shuf_a-shuf.Tpo src/$(DEPDIR)/src_libsinglebin_shuf_a-shuf.Po
 #	$(AM_V_CC)source='src/shuf.c' object='src/src_libsinglebin_shuf_a-shuf.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_shuf_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_shuf_a-shuf.o `test -f 'src/shuf.c' || echo '$(srcdir)/'`src/shuf.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_shuf_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_shuf_a-shuf.o `test -f 'src/shuf.c' || echo '$(srcdir)/'`src/shuf.c
 
 src/src_libsinglebin_shuf_a-shuf.obj: src/shuf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_shuf_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_shuf_a-shuf.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_shuf_a-shuf.Tpo -c -o src/src_libsinglebin_shuf_a-shuf.obj `if test -f 'src/shuf.c'; then $(CYGPATH_W) 'src/shuf.c'; else $(CYGPATH_W) '$(srcdir)/src/shuf.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_shuf_a-shuf.Tpo src/$(DEPDIR)/src_libsinglebin_shuf_a-shuf.Po
 #	$(AM_V_CC)source='src/shuf.c' object='src/src_libsinglebin_shuf_a-shuf.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_shuf_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_shuf_a-shuf.obj `if test -f 'src/shuf.c'; then $(CYGPATH_W) 'src/shuf.c'; else $(CYGPATH_W) '$(srcdir)/src/shuf.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_shuf_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_shuf_a-shuf.obj `if test -f 'src/shuf.c'; then $(CYGPATH_W) 'src/shuf.c'; else $(CYGPATH_W) '$(srcdir)/src/shuf.c'; fi`
 
 src/src_libsinglebin_sleep_a-sleep.o: src/sleep.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sleep_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sleep_a-sleep.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sleep_a-sleep.Tpo -c -o src/src_libsinglebin_sleep_a-sleep.o `test -f 'src/sleep.c' || echo '$(srcdir)/'`src/sleep.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sleep_a-sleep.Tpo src/$(DEPDIR)/src_libsinglebin_sleep_a-sleep.Po
 #	$(AM_V_CC)source='src/sleep.c' object='src/src_libsinglebin_sleep_a-sleep.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sleep_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sleep_a-sleep.o `test -f 'src/sleep.c' || echo '$(srcdir)/'`src/sleep.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sleep_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sleep_a-sleep.o `test -f 'src/sleep.c' || echo '$(srcdir)/'`src/sleep.c
 
 src/src_libsinglebin_sleep_a-sleep.obj: src/sleep.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sleep_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sleep_a-sleep.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sleep_a-sleep.Tpo -c -o src/src_libsinglebin_sleep_a-sleep.obj `if test -f 'src/sleep.c'; then $(CYGPATH_W) 'src/sleep.c'; else $(CYGPATH_W) '$(srcdir)/src/sleep.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sleep_a-sleep.Tpo src/$(DEPDIR)/src_libsinglebin_sleep_a-sleep.Po
 #	$(AM_V_CC)source='src/sleep.c' object='src/src_libsinglebin_sleep_a-sleep.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sleep_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sleep_a-sleep.obj `if test -f 'src/sleep.c'; then $(CYGPATH_W) 'src/sleep.c'; else $(CYGPATH_W) '$(srcdir)/src/sleep.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sleep_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sleep_a-sleep.obj `if test -f 'src/sleep.c'; then $(CYGPATH_W) 'src/sleep.c'; else $(CYGPATH_W) '$(srcdir)/src/sleep.c'; fi`
 
 src/src_libsinglebin_sort_a-sort.o: src/sort.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sort_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sort_a-sort.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sort_a-sort.Tpo -c -o src/src_libsinglebin_sort_a-sort.o `test -f 'src/sort.c' || echo '$(srcdir)/'`src/sort.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sort_a-sort.Tpo src/$(DEPDIR)/src_libsinglebin_sort_a-sort.Po
 #	$(AM_V_CC)source='src/sort.c' object='src/src_libsinglebin_sort_a-sort.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sort_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sort_a-sort.o `test -f 'src/sort.c' || echo '$(srcdir)/'`src/sort.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sort_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sort_a-sort.o `test -f 'src/sort.c' || echo '$(srcdir)/'`src/sort.c
 
 src/src_libsinglebin_sort_a-sort.obj: src/sort.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sort_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sort_a-sort.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sort_a-sort.Tpo -c -o src/src_libsinglebin_sort_a-sort.obj `if test -f 'src/sort.c'; then $(CYGPATH_W) 'src/sort.c'; else $(CYGPATH_W) '$(srcdir)/src/sort.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sort_a-sort.Tpo src/$(DEPDIR)/src_libsinglebin_sort_a-sort.Po
 #	$(AM_V_CC)source='src/sort.c' object='src/src_libsinglebin_sort_a-sort.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sort_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sort_a-sort.obj `if test -f 'src/sort.c'; then $(CYGPATH_W) 'src/sort.c'; else $(CYGPATH_W) '$(srcdir)/src/sort.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sort_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sort_a-sort.obj `if test -f 'src/sort.c'; then $(CYGPATH_W) 'src/sort.c'; else $(CYGPATH_W) '$(srcdir)/src/sort.c'; fi`
 
 src/src_libsinglebin_split_a-split.o: src/split.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_split_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_split_a-split.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_split_a-split.Tpo -c -o src/src_libsinglebin_split_a-split.o `test -f 'src/split.c' || echo '$(srcdir)/'`src/split.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_split_a-split.Tpo src/$(DEPDIR)/src_libsinglebin_split_a-split.Po
 #	$(AM_V_CC)source='src/split.c' object='src/src_libsinglebin_split_a-split.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_split_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_split_a-split.o `test -f 'src/split.c' || echo '$(srcdir)/'`src/split.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_split_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_split_a-split.o `test -f 'src/split.c' || echo '$(srcdir)/'`src/split.c
 
 src/src_libsinglebin_split_a-split.obj: src/split.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_split_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_split_a-split.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_split_a-split.Tpo -c -o src/src_libsinglebin_split_a-split.obj `if test -f 'src/split.c'; then $(CYGPATH_W) 'src/split.c'; else $(CYGPATH_W) '$(srcdir)/src/split.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_split_a-split.Tpo src/$(DEPDIR)/src_libsinglebin_split_a-split.Po
 #	$(AM_V_CC)source='src/split.c' object='src/src_libsinglebin_split_a-split.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_split_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_split_a-split.obj `if test -f 'src/split.c'; then $(CYGPATH_W) 'src/split.c'; else $(CYGPATH_W) '$(srcdir)/src/split.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_split_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_split_a-split.obj `if test -f 'src/split.c'; then $(CYGPATH_W) 'src/split.c'; else $(CYGPATH_W) '$(srcdir)/src/split.c'; fi`
 
 src/src_libsinglebin_stat_a-stat.o: src/stat.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stat_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_stat_a-stat.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_stat_a-stat.Tpo -c -o src/src_libsinglebin_stat_a-stat.o `test -f 'src/stat.c' || echo '$(srcdir)/'`src/stat.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_stat_a-stat.Tpo src/$(DEPDIR)/src_libsinglebin_stat_a-stat.Po
 #	$(AM_V_CC)source='src/stat.c' object='src/src_libsinglebin_stat_a-stat.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stat_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stat_a-stat.o `test -f 'src/stat.c' || echo '$(srcdir)/'`src/stat.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stat_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stat_a-stat.o `test -f 'src/stat.c' || echo '$(srcdir)/'`src/stat.c
 
 src/src_libsinglebin_stat_a-stat.obj: src/stat.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stat_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_stat_a-stat.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_stat_a-stat.Tpo -c -o src/src_libsinglebin_stat_a-stat.obj `if test -f 'src/stat.c'; then $(CYGPATH_W) 'src/stat.c'; else $(CYGPATH_W) '$(srcdir)/src/stat.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_stat_a-stat.Tpo src/$(DEPDIR)/src_libsinglebin_stat_a-stat.Po
 #	$(AM_V_CC)source='src/stat.c' object='src/src_libsinglebin_stat_a-stat.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stat_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stat_a-stat.obj `if test -f 'src/stat.c'; then $(CYGPATH_W) 'src/stat.c'; else $(CYGPATH_W) '$(srcdir)/src/stat.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stat_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stat_a-stat.obj `if test -f 'src/stat.c'; then $(CYGPATH_W) 'src/stat.c'; else $(CYGPATH_W) '$(srcdir)/src/stat.c'; fi`
 
 src/src_libsinglebin_stat_a-find-mount-point.o: src/find-mount-point.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stat_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_stat_a-find-mount-point.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_stat_a-find-mount-point.Tpo -c -o src/src_libsinglebin_stat_a-find-mount-point.o `test -f 'src/find-mount-point.c' || echo '$(srcdir)/'`src/find-mount-point.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_stat_a-find-mount-point.Tpo src/$(DEPDIR)/src_libsinglebin_stat_a-find-mount-point.Po
 #	$(AM_V_CC)source='src/find-mount-point.c' object='src/src_libsinglebin_stat_a-find-mount-point.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stat_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stat_a-find-mount-point.o `test -f 'src/find-mount-point.c' || echo '$(srcdir)/'`src/find-mount-point.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stat_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stat_a-find-mount-point.o `test -f 'src/find-mount-point.c' || echo '$(srcdir)/'`src/find-mount-point.c
 
 src/src_libsinglebin_stat_a-find-mount-point.obj: src/find-mount-point.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stat_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_stat_a-find-mount-point.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_stat_a-find-mount-point.Tpo -c -o src/src_libsinglebin_stat_a-find-mount-point.obj `if test -f 'src/find-mount-point.c'; then $(CYGPATH_W) 'src/find-mount-point.c'; else $(CYGPATH_W) '$(srcdir)/src/find-mount-point.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_stat_a-find-mount-point.Tpo src/$(DEPDIR)/src_libsinglebin_stat_a-find-mount-point.Po
 #	$(AM_V_CC)source='src/find-mount-point.c' object='src/src_libsinglebin_stat_a-find-mount-point.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stat_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stat_a-find-mount-point.obj `if test -f 'src/find-mount-point.c'; then $(CYGPATH_W) 'src/find-mount-point.c'; else $(CYGPATH_W) '$(srcdir)/src/find-mount-point.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stat_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stat_a-find-mount-point.obj `if test -f 'src/find-mount-point.c'; then $(CYGPATH_W) 'src/find-mount-point.c'; else $(CYGPATH_W) '$(srcdir)/src/find-mount-point.c'; fi`
 
 src/src_libsinglebin_stdbuf_a-stdbuf.o: src/stdbuf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stdbuf_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_stdbuf_a-stdbuf.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_stdbuf_a-stdbuf.Tpo -c -o src/src_libsinglebin_stdbuf_a-stdbuf.o `test -f 'src/stdbuf.c' || echo '$(srcdir)/'`src/stdbuf.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_stdbuf_a-stdbuf.Tpo src/$(DEPDIR)/src_libsinglebin_stdbuf_a-stdbuf.Po
 #	$(AM_V_CC)source='src/stdbuf.c' object='src/src_libsinglebin_stdbuf_a-stdbuf.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stdbuf_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stdbuf_a-stdbuf.o `test -f 'src/stdbuf.c' || echo '$(srcdir)/'`src/stdbuf.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stdbuf_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stdbuf_a-stdbuf.o `test -f 'src/stdbuf.c' || echo '$(srcdir)/'`src/stdbuf.c
 
 src/src_libsinglebin_stdbuf_a-stdbuf.obj: src/stdbuf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stdbuf_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_stdbuf_a-stdbuf.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_stdbuf_a-stdbuf.Tpo -c -o src/src_libsinglebin_stdbuf_a-stdbuf.obj `if test -f 'src/stdbuf.c'; then $(CYGPATH_W) 'src/stdbuf.c'; else $(CYGPATH_W) '$(srcdir)/src/stdbuf.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_stdbuf_a-stdbuf.Tpo src/$(DEPDIR)/src_libsinglebin_stdbuf_a-stdbuf.Po
 #	$(AM_V_CC)source='src/stdbuf.c' object='src/src_libsinglebin_stdbuf_a-stdbuf.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stdbuf_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stdbuf_a-stdbuf.obj `if test -f 'src/stdbuf.c'; then $(CYGPATH_W) 'src/stdbuf.c'; else $(CYGPATH_W) '$(srcdir)/src/stdbuf.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stdbuf_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stdbuf_a-stdbuf.obj `if test -f 'src/stdbuf.c'; then $(CYGPATH_W) 'src/stdbuf.c'; else $(CYGPATH_W) '$(srcdir)/src/stdbuf.c'; fi`
 
 src/src_libsinglebin_stty_a-stty.o: src/stty.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stty_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_stty_a-stty.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_stty_a-stty.Tpo -c -o src/src_libsinglebin_stty_a-stty.o `test -f 'src/stty.c' || echo '$(srcdir)/'`src/stty.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_stty_a-stty.Tpo src/$(DEPDIR)/src_libsinglebin_stty_a-stty.Po
 #	$(AM_V_CC)source='src/stty.c' object='src/src_libsinglebin_stty_a-stty.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stty_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stty_a-stty.o `test -f 'src/stty.c' || echo '$(srcdir)/'`src/stty.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stty_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stty_a-stty.o `test -f 'src/stty.c' || echo '$(srcdir)/'`src/stty.c
 
 src/src_libsinglebin_stty_a-stty.obj: src/stty.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stty_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_stty_a-stty.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_stty_a-stty.Tpo -c -o src/src_libsinglebin_stty_a-stty.obj `if test -f 'src/stty.c'; then $(CYGPATH_W) 'src/stty.c'; else $(CYGPATH_W) '$(srcdir)/src/stty.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_stty_a-stty.Tpo src/$(DEPDIR)/src_libsinglebin_stty_a-stty.Po
 #	$(AM_V_CC)source='src/stty.c' object='src/src_libsinglebin_stty_a-stty.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stty_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stty_a-stty.obj `if test -f 'src/stty.c'; then $(CYGPATH_W) 'src/stty.c'; else $(CYGPATH_W) '$(srcdir)/src/stty.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_stty_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_stty_a-stty.obj `if test -f 'src/stty.c'; then $(CYGPATH_W) 'src/stty.c'; else $(CYGPATH_W) '$(srcdir)/src/stty.c'; fi`
 
 src/src_libsinglebin_sum_a-sum.o: src/sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sum_a-sum.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sum_a-sum.Tpo -c -o src/src_libsinglebin_sum_a-sum.o `test -f 'src/sum.c' || echo '$(srcdir)/'`src/sum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sum_a-sum.Tpo src/$(DEPDIR)/src_libsinglebin_sum_a-sum.Po
 #	$(AM_V_CC)source='src/sum.c' object='src/src_libsinglebin_sum_a-sum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sum_a-sum.o `test -f 'src/sum.c' || echo '$(srcdir)/'`src/sum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sum_a-sum.o `test -f 'src/sum.c' || echo '$(srcdir)/'`src/sum.c
 
 src/src_libsinglebin_sum_a-sum.obj: src/sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sum_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sum_a-sum.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sum_a-sum.Tpo -c -o src/src_libsinglebin_sum_a-sum.obj `if test -f 'src/sum.c'; then $(CYGPATH_W) 'src/sum.c'; else $(CYGPATH_W) '$(srcdir)/src/sum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sum_a-sum.Tpo src/$(DEPDIR)/src_libsinglebin_sum_a-sum.Po
 #	$(AM_V_CC)source='src/sum.c' object='src/src_libsinglebin_sum_a-sum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sum_a-sum.obj `if test -f 'src/sum.c'; then $(CYGPATH_W) 'src/sum.c'; else $(CYGPATH_W) '$(srcdir)/src/sum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sum_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sum_a-sum.obj `if test -f 'src/sum.c'; then $(CYGPATH_W) 'src/sum.c'; else $(CYGPATH_W) '$(srcdir)/src/sum.c'; fi`
 
 src/src_libsinglebin_sync_a-sync.o: src/sync.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sync_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sync_a-sync.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sync_a-sync.Tpo -c -o src/src_libsinglebin_sync_a-sync.o `test -f 'src/sync.c' || echo '$(srcdir)/'`src/sync.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sync_a-sync.Tpo src/$(DEPDIR)/src_libsinglebin_sync_a-sync.Po
 #	$(AM_V_CC)source='src/sync.c' object='src/src_libsinglebin_sync_a-sync.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sync_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sync_a-sync.o `test -f 'src/sync.c' || echo '$(srcdir)/'`src/sync.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sync_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sync_a-sync.o `test -f 'src/sync.c' || echo '$(srcdir)/'`src/sync.c
 
 src/src_libsinglebin_sync_a-sync.obj: src/sync.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sync_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_sync_a-sync.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_sync_a-sync.Tpo -c -o src/src_libsinglebin_sync_a-sync.obj `if test -f 'src/sync.c'; then $(CYGPATH_W) 'src/sync.c'; else $(CYGPATH_W) '$(srcdir)/src/sync.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_sync_a-sync.Tpo src/$(DEPDIR)/src_libsinglebin_sync_a-sync.Po
 #	$(AM_V_CC)source='src/sync.c' object='src/src_libsinglebin_sync_a-sync.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sync_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sync_a-sync.obj `if test -f 'src/sync.c'; then $(CYGPATH_W) 'src/sync.c'; else $(CYGPATH_W) '$(srcdir)/src/sync.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_sync_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_sync_a-sync.obj `if test -f 'src/sync.c'; then $(CYGPATH_W) 'src/sync.c'; else $(CYGPATH_W) '$(srcdir)/src/sync.c'; fi`
 
 src/src_libsinglebin_tac_a-tac.o: src/tac.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tac_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_tac_a-tac.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_tac_a-tac.Tpo -c -o src/src_libsinglebin_tac_a-tac.o `test -f 'src/tac.c' || echo '$(srcdir)/'`src/tac.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_tac_a-tac.Tpo src/$(DEPDIR)/src_libsinglebin_tac_a-tac.Po
 #	$(AM_V_CC)source='src/tac.c' object='src/src_libsinglebin_tac_a-tac.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tac_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tac_a-tac.o `test -f 'src/tac.c' || echo '$(srcdir)/'`src/tac.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tac_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tac_a-tac.o `test -f 'src/tac.c' || echo '$(srcdir)/'`src/tac.c
 
 src/src_libsinglebin_tac_a-tac.obj: src/tac.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tac_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_tac_a-tac.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_tac_a-tac.Tpo -c -o src/src_libsinglebin_tac_a-tac.obj `if test -f 'src/tac.c'; then $(CYGPATH_W) 'src/tac.c'; else $(CYGPATH_W) '$(srcdir)/src/tac.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_tac_a-tac.Tpo src/$(DEPDIR)/src_libsinglebin_tac_a-tac.Po
 #	$(AM_V_CC)source='src/tac.c' object='src/src_libsinglebin_tac_a-tac.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tac_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tac_a-tac.obj `if test -f 'src/tac.c'; then $(CYGPATH_W) 'src/tac.c'; else $(CYGPATH_W) '$(srcdir)/src/tac.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tac_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tac_a-tac.obj `if test -f 'src/tac.c'; then $(CYGPATH_W) 'src/tac.c'; else $(CYGPATH_W) '$(srcdir)/src/tac.c'; fi`
 
 src/src_libsinglebin_tail_a-tail.o: src/tail.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tail_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_tail_a-tail.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_tail_a-tail.Tpo -c -o src/src_libsinglebin_tail_a-tail.o `test -f 'src/tail.c' || echo '$(srcdir)/'`src/tail.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_tail_a-tail.Tpo src/$(DEPDIR)/src_libsinglebin_tail_a-tail.Po
 #	$(AM_V_CC)source='src/tail.c' object='src/src_libsinglebin_tail_a-tail.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tail_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tail_a-tail.o `test -f 'src/tail.c' || echo '$(srcdir)/'`src/tail.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tail_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tail_a-tail.o `test -f 'src/tail.c' || echo '$(srcdir)/'`src/tail.c
 
 src/src_libsinglebin_tail_a-tail.obj: src/tail.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tail_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_tail_a-tail.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_tail_a-tail.Tpo -c -o src/src_libsinglebin_tail_a-tail.obj `if test -f 'src/tail.c'; then $(CYGPATH_W) 'src/tail.c'; else $(CYGPATH_W) '$(srcdir)/src/tail.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_tail_a-tail.Tpo src/$(DEPDIR)/src_libsinglebin_tail_a-tail.Po
 #	$(AM_V_CC)source='src/tail.c' object='src/src_libsinglebin_tail_a-tail.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tail_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tail_a-tail.obj `if test -f 'src/tail.c'; then $(CYGPATH_W) 'src/tail.c'; else $(CYGPATH_W) '$(srcdir)/src/tail.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tail_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tail_a-tail.obj `if test -f 'src/tail.c'; then $(CYGPATH_W) 'src/tail.c'; else $(CYGPATH_W) '$(srcdir)/src/tail.c'; fi`
 
 src/src_libsinglebin_tee_a-tee.o: src/tee.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tee_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_tee_a-tee.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_tee_a-tee.Tpo -c -o src/src_libsinglebin_tee_a-tee.o `test -f 'src/tee.c' || echo '$(srcdir)/'`src/tee.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_tee_a-tee.Tpo src/$(DEPDIR)/src_libsinglebin_tee_a-tee.Po
 #	$(AM_V_CC)source='src/tee.c' object='src/src_libsinglebin_tee_a-tee.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tee_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tee_a-tee.o `test -f 'src/tee.c' || echo '$(srcdir)/'`src/tee.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tee_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tee_a-tee.o `test -f 'src/tee.c' || echo '$(srcdir)/'`src/tee.c
 
 src/src_libsinglebin_tee_a-tee.obj: src/tee.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tee_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_tee_a-tee.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_tee_a-tee.Tpo -c -o src/src_libsinglebin_tee_a-tee.obj `if test -f 'src/tee.c'; then $(CYGPATH_W) 'src/tee.c'; else $(CYGPATH_W) '$(srcdir)/src/tee.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_tee_a-tee.Tpo src/$(DEPDIR)/src_libsinglebin_tee_a-tee.Po
 #	$(AM_V_CC)source='src/tee.c' object='src/src_libsinglebin_tee_a-tee.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tee_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tee_a-tee.obj `if test -f 'src/tee.c'; then $(CYGPATH_W) 'src/tee.c'; else $(CYGPATH_W) '$(srcdir)/src/tee.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tee_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tee_a-tee.obj `if test -f 'src/tee.c'; then $(CYGPATH_W) 'src/tee.c'; else $(CYGPATH_W) '$(srcdir)/src/tee.c'; fi`
 
 src/src_libsinglebin_test_a-test.o: src/test.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_test_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_test_a-test.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_test_a-test.Tpo -c -o src/src_libsinglebin_test_a-test.o `test -f 'src/test.c' || echo '$(srcdir)/'`src/test.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_test_a-test.Tpo src/$(DEPDIR)/src_libsinglebin_test_a-test.Po
 #	$(AM_V_CC)source='src/test.c' object='src/src_libsinglebin_test_a-test.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_test_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_test_a-test.o `test -f 'src/test.c' || echo '$(srcdir)/'`src/test.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_test_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_test_a-test.o `test -f 'src/test.c' || echo '$(srcdir)/'`src/test.c
 
 src/src_libsinglebin_test_a-test.obj: src/test.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_test_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_test_a-test.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_test_a-test.Tpo -c -o src/src_libsinglebin_test_a-test.obj `if test -f 'src/test.c'; then $(CYGPATH_W) 'src/test.c'; else $(CYGPATH_W) '$(srcdir)/src/test.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_test_a-test.Tpo src/$(DEPDIR)/src_libsinglebin_test_a-test.Po
 #	$(AM_V_CC)source='src/test.c' object='src/src_libsinglebin_test_a-test.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_test_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_test_a-test.obj `if test -f 'src/test.c'; then $(CYGPATH_W) 'src/test.c'; else $(CYGPATH_W) '$(srcdir)/src/test.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_test_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_test_a-test.obj `if test -f 'src/test.c'; then $(CYGPATH_W) 'src/test.c'; else $(CYGPATH_W) '$(srcdir)/src/test.c'; fi`
 
 src/src_libsinglebin_timeout_a-timeout.o: src/timeout.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_timeout_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_timeout_a-timeout.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_timeout_a-timeout.Tpo -c -o src/src_libsinglebin_timeout_a-timeout.o `test -f 'src/timeout.c' || echo '$(srcdir)/'`src/timeout.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_timeout_a-timeout.Tpo src/$(DEPDIR)/src_libsinglebin_timeout_a-timeout.Po
 #	$(AM_V_CC)source='src/timeout.c' object='src/src_libsinglebin_timeout_a-timeout.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_timeout_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_timeout_a-timeout.o `test -f 'src/timeout.c' || echo '$(srcdir)/'`src/timeout.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_timeout_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_timeout_a-timeout.o `test -f 'src/timeout.c' || echo '$(srcdir)/'`src/timeout.c
 
 src/src_libsinglebin_timeout_a-timeout.obj: src/timeout.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_timeout_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_timeout_a-timeout.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_timeout_a-timeout.Tpo -c -o src/src_libsinglebin_timeout_a-timeout.obj `if test -f 'src/timeout.c'; then $(CYGPATH_W) 'src/timeout.c'; else $(CYGPATH_W) '$(srcdir)/src/timeout.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_timeout_a-timeout.Tpo src/$(DEPDIR)/src_libsinglebin_timeout_a-timeout.Po
 #	$(AM_V_CC)source='src/timeout.c' object='src/src_libsinglebin_timeout_a-timeout.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_timeout_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_timeout_a-timeout.obj `if test -f 'src/timeout.c'; then $(CYGPATH_W) 'src/timeout.c'; else $(CYGPATH_W) '$(srcdir)/src/timeout.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_timeout_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_timeout_a-timeout.obj `if test -f 'src/timeout.c'; then $(CYGPATH_W) 'src/timeout.c'; else $(CYGPATH_W) '$(srcdir)/src/timeout.c'; fi`
 
 src/src_libsinglebin_timeout_a-operand2sig.o: src/operand2sig.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_timeout_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_timeout_a-operand2sig.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_timeout_a-operand2sig.Tpo -c -o src/src_libsinglebin_timeout_a-operand2sig.o `test -f 'src/operand2sig.c' || echo '$(srcdir)/'`src/operand2sig.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_timeout_a-operand2sig.Tpo src/$(DEPDIR)/src_libsinglebin_timeout_a-operand2sig.Po
 #	$(AM_V_CC)source='src/operand2sig.c' object='src/src_libsinglebin_timeout_a-operand2sig.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_timeout_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_timeout_a-operand2sig.o `test -f 'src/operand2sig.c' || echo '$(srcdir)/'`src/operand2sig.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_timeout_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_timeout_a-operand2sig.o `test -f 'src/operand2sig.c' || echo '$(srcdir)/'`src/operand2sig.c
 
 src/src_libsinglebin_timeout_a-operand2sig.obj: src/operand2sig.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_timeout_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_timeout_a-operand2sig.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_timeout_a-operand2sig.Tpo -c -o src/src_libsinglebin_timeout_a-operand2sig.obj `if test -f 'src/operand2sig.c'; then $(CYGPATH_W) 'src/operand2sig.c'; else $(CYGPATH_W) '$(srcdir)/src/operand2sig.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_timeout_a-operand2sig.Tpo src/$(DEPDIR)/src_libsinglebin_timeout_a-operand2sig.Po
 #	$(AM_V_CC)source='src/operand2sig.c' object='src/src_libsinglebin_timeout_a-operand2sig.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_timeout_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_timeout_a-operand2sig.obj `if test -f 'src/operand2sig.c'; then $(CYGPATH_W) 'src/operand2sig.c'; else $(CYGPATH_W) '$(srcdir)/src/operand2sig.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_timeout_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_timeout_a-operand2sig.obj `if test -f 'src/operand2sig.c'; then $(CYGPATH_W) 'src/operand2sig.c'; else $(CYGPATH_W) '$(srcdir)/src/operand2sig.c'; fi`
 
 src/src_libsinglebin_touch_a-touch.o: src/touch.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_touch_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_touch_a-touch.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_touch_a-touch.Tpo -c -o src/src_libsinglebin_touch_a-touch.o `test -f 'src/touch.c' || echo '$(srcdir)/'`src/touch.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_touch_a-touch.Tpo src/$(DEPDIR)/src_libsinglebin_touch_a-touch.Po
 #	$(AM_V_CC)source='src/touch.c' object='src/src_libsinglebin_touch_a-touch.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_touch_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_touch_a-touch.o `test -f 'src/touch.c' || echo '$(srcdir)/'`src/touch.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_touch_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_touch_a-touch.o `test -f 'src/touch.c' || echo '$(srcdir)/'`src/touch.c
 
 src/src_libsinglebin_touch_a-touch.obj: src/touch.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_touch_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_touch_a-touch.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_touch_a-touch.Tpo -c -o src/src_libsinglebin_touch_a-touch.obj `if test -f 'src/touch.c'; then $(CYGPATH_W) 'src/touch.c'; else $(CYGPATH_W) '$(srcdir)/src/touch.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_touch_a-touch.Tpo src/$(DEPDIR)/src_libsinglebin_touch_a-touch.Po
 #	$(AM_V_CC)source='src/touch.c' object='src/src_libsinglebin_touch_a-touch.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_touch_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_touch_a-touch.obj `if test -f 'src/touch.c'; then $(CYGPATH_W) 'src/touch.c'; else $(CYGPATH_W) '$(srcdir)/src/touch.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_touch_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_touch_a-touch.obj `if test -f 'src/touch.c'; then $(CYGPATH_W) 'src/touch.c'; else $(CYGPATH_W) '$(srcdir)/src/touch.c'; fi`
 
 src/src_libsinglebin_tr_a-tr.o: src/tr.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tr_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_tr_a-tr.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_tr_a-tr.Tpo -c -o src/src_libsinglebin_tr_a-tr.o `test -f 'src/tr.c' || echo '$(srcdir)/'`src/tr.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_tr_a-tr.Tpo src/$(DEPDIR)/src_libsinglebin_tr_a-tr.Po
 #	$(AM_V_CC)source='src/tr.c' object='src/src_libsinglebin_tr_a-tr.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tr_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tr_a-tr.o `test -f 'src/tr.c' || echo '$(srcdir)/'`src/tr.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tr_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tr_a-tr.o `test -f 'src/tr.c' || echo '$(srcdir)/'`src/tr.c
 
 src/src_libsinglebin_tr_a-tr.obj: src/tr.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tr_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_tr_a-tr.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_tr_a-tr.Tpo -c -o src/src_libsinglebin_tr_a-tr.obj `if test -f 'src/tr.c'; then $(CYGPATH_W) 'src/tr.c'; else $(CYGPATH_W) '$(srcdir)/src/tr.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_tr_a-tr.Tpo src/$(DEPDIR)/src_libsinglebin_tr_a-tr.Po
 #	$(AM_V_CC)source='src/tr.c' object='src/src_libsinglebin_tr_a-tr.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tr_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tr_a-tr.obj `if test -f 'src/tr.c'; then $(CYGPATH_W) 'src/tr.c'; else $(CYGPATH_W) '$(srcdir)/src/tr.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tr_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tr_a-tr.obj `if test -f 'src/tr.c'; then $(CYGPATH_W) 'src/tr.c'; else $(CYGPATH_W) '$(srcdir)/src/tr.c'; fi`
 
 src/src_libsinglebin_true_a-true.o: src/true.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_true_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_true_a-true.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_true_a-true.Tpo -c -o src/src_libsinglebin_true_a-true.o `test -f 'src/true.c' || echo '$(srcdir)/'`src/true.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_true_a-true.Tpo src/$(DEPDIR)/src_libsinglebin_true_a-true.Po
 #	$(AM_V_CC)source='src/true.c' object='src/src_libsinglebin_true_a-true.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_true_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_true_a-true.o `test -f 'src/true.c' || echo '$(srcdir)/'`src/true.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_true_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_true_a-true.o `test -f 'src/true.c' || echo '$(srcdir)/'`src/true.c
 
 src/src_libsinglebin_true_a-true.obj: src/true.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_true_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_true_a-true.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_true_a-true.Tpo -c -o src/src_libsinglebin_true_a-true.obj `if test -f 'src/true.c'; then $(CYGPATH_W) 'src/true.c'; else $(CYGPATH_W) '$(srcdir)/src/true.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_true_a-true.Tpo src/$(DEPDIR)/src_libsinglebin_true_a-true.Po
 #	$(AM_V_CC)source='src/true.c' object='src/src_libsinglebin_true_a-true.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_true_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_true_a-true.obj `if test -f 'src/true.c'; then $(CYGPATH_W) 'src/true.c'; else $(CYGPATH_W) '$(srcdir)/src/true.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_true_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_true_a-true.obj `if test -f 'src/true.c'; then $(CYGPATH_W) 'src/true.c'; else $(CYGPATH_W) '$(srcdir)/src/true.c'; fi`
 
 src/src_libsinglebin_truncate_a-truncate.o: src/truncate.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_truncate_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_truncate_a-truncate.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_truncate_a-truncate.Tpo -c -o src/src_libsinglebin_truncate_a-truncate.o `test -f 'src/truncate.c' || echo '$(srcdir)/'`src/truncate.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_truncate_a-truncate.Tpo src/$(DEPDIR)/src_libsinglebin_truncate_a-truncate.Po
 #	$(AM_V_CC)source='src/truncate.c' object='src/src_libsinglebin_truncate_a-truncate.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_truncate_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_truncate_a-truncate.o `test -f 'src/truncate.c' || echo '$(srcdir)/'`src/truncate.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_truncate_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_truncate_a-truncate.o `test -f 'src/truncate.c' || echo '$(srcdir)/'`src/truncate.c
 
 src/src_libsinglebin_truncate_a-truncate.obj: src/truncate.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_truncate_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_truncate_a-truncate.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_truncate_a-truncate.Tpo -c -o src/src_libsinglebin_truncate_a-truncate.obj `if test -f 'src/truncate.c'; then $(CYGPATH_W) 'src/truncate.c'; else $(CYGPATH_W) '$(srcdir)/src/truncate.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_truncate_a-truncate.Tpo src/$(DEPDIR)/src_libsinglebin_truncate_a-truncate.Po
 #	$(AM_V_CC)source='src/truncate.c' object='src/src_libsinglebin_truncate_a-truncate.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_truncate_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_truncate_a-truncate.obj `if test -f 'src/truncate.c'; then $(CYGPATH_W) 'src/truncate.c'; else $(CYGPATH_W) '$(srcdir)/src/truncate.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_truncate_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_truncate_a-truncate.obj `if test -f 'src/truncate.c'; then $(CYGPATH_W) 'src/truncate.c'; else $(CYGPATH_W) '$(srcdir)/src/truncate.c'; fi`
 
 src/src_libsinglebin_tsort_a-tsort.o: src/tsort.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tsort_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_tsort_a-tsort.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_tsort_a-tsort.Tpo -c -o src/src_libsinglebin_tsort_a-tsort.o `test -f 'src/tsort.c' || echo '$(srcdir)/'`src/tsort.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_tsort_a-tsort.Tpo src/$(DEPDIR)/src_libsinglebin_tsort_a-tsort.Po
 #	$(AM_V_CC)source='src/tsort.c' object='src/src_libsinglebin_tsort_a-tsort.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tsort_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tsort_a-tsort.o `test -f 'src/tsort.c' || echo '$(srcdir)/'`src/tsort.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tsort_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tsort_a-tsort.o `test -f 'src/tsort.c' || echo '$(srcdir)/'`src/tsort.c
 
 src/src_libsinglebin_tsort_a-tsort.obj: src/tsort.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tsort_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_tsort_a-tsort.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_tsort_a-tsort.Tpo -c -o src/src_libsinglebin_tsort_a-tsort.obj `if test -f 'src/tsort.c'; then $(CYGPATH_W) 'src/tsort.c'; else $(CYGPATH_W) '$(srcdir)/src/tsort.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_tsort_a-tsort.Tpo src/$(DEPDIR)/src_libsinglebin_tsort_a-tsort.Po
 #	$(AM_V_CC)source='src/tsort.c' object='src/src_libsinglebin_tsort_a-tsort.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tsort_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tsort_a-tsort.obj `if test -f 'src/tsort.c'; then $(CYGPATH_W) 'src/tsort.c'; else $(CYGPATH_W) '$(srcdir)/src/tsort.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tsort_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tsort_a-tsort.obj `if test -f 'src/tsort.c'; then $(CYGPATH_W) 'src/tsort.c'; else $(CYGPATH_W) '$(srcdir)/src/tsort.c'; fi`
 
 src/src_libsinglebin_tty_a-tty.o: src/tty.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tty_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_tty_a-tty.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_tty_a-tty.Tpo -c -o src/src_libsinglebin_tty_a-tty.o `test -f 'src/tty.c' || echo '$(srcdir)/'`src/tty.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_tty_a-tty.Tpo src/$(DEPDIR)/src_libsinglebin_tty_a-tty.Po
 #	$(AM_V_CC)source='src/tty.c' object='src/src_libsinglebin_tty_a-tty.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tty_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tty_a-tty.o `test -f 'src/tty.c' || echo '$(srcdir)/'`src/tty.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tty_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tty_a-tty.o `test -f 'src/tty.c' || echo '$(srcdir)/'`src/tty.c
 
 src/src_libsinglebin_tty_a-tty.obj: src/tty.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tty_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_tty_a-tty.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_tty_a-tty.Tpo -c -o src/src_libsinglebin_tty_a-tty.obj `if test -f 'src/tty.c'; then $(CYGPATH_W) 'src/tty.c'; else $(CYGPATH_W) '$(srcdir)/src/tty.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_tty_a-tty.Tpo src/$(DEPDIR)/src_libsinglebin_tty_a-tty.Po
 #	$(AM_V_CC)source='src/tty.c' object='src/src_libsinglebin_tty_a-tty.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tty_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tty_a-tty.obj `if test -f 'src/tty.c'; then $(CYGPATH_W) 'src/tty.c'; else $(CYGPATH_W) '$(srcdir)/src/tty.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_tty_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_tty_a-tty.obj `if test -f 'src/tty.c'; then $(CYGPATH_W) 'src/tty.c'; else $(CYGPATH_W) '$(srcdir)/src/tty.c'; fi`
 
 src/src_libsinglebin_uname_a-uname.o: src/uname.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uname_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_uname_a-uname.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_uname_a-uname.Tpo -c -o src/src_libsinglebin_uname_a-uname.o `test -f 'src/uname.c' || echo '$(srcdir)/'`src/uname.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_uname_a-uname.Tpo src/$(DEPDIR)/src_libsinglebin_uname_a-uname.Po
 #	$(AM_V_CC)source='src/uname.c' object='src/src_libsinglebin_uname_a-uname.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uname_a-uname.o `test -f 'src/uname.c' || echo '$(srcdir)/'`src/uname.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uname_a-uname.o `test -f 'src/uname.c' || echo '$(srcdir)/'`src/uname.c
 
 src/src_libsinglebin_uname_a-uname.obj: src/uname.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uname_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_uname_a-uname.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_uname_a-uname.Tpo -c -o src/src_libsinglebin_uname_a-uname.obj `if test -f 'src/uname.c'; then $(CYGPATH_W) 'src/uname.c'; else $(CYGPATH_W) '$(srcdir)/src/uname.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_uname_a-uname.Tpo src/$(DEPDIR)/src_libsinglebin_uname_a-uname.Po
 #	$(AM_V_CC)source='src/uname.c' object='src/src_libsinglebin_uname_a-uname.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uname_a-uname.obj `if test -f 'src/uname.c'; then $(CYGPATH_W) 'src/uname.c'; else $(CYGPATH_W) '$(srcdir)/src/uname.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uname_a-uname.obj `if test -f 'src/uname.c'; then $(CYGPATH_W) 'src/uname.c'; else $(CYGPATH_W) '$(srcdir)/src/uname.c'; fi`
 
 src/src_libsinglebin_uname_a-uname-uname.o: src/uname-uname.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uname_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_uname_a-uname-uname.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_uname_a-uname-uname.Tpo -c -o src/src_libsinglebin_uname_a-uname-uname.o `test -f 'src/uname-uname.c' || echo '$(srcdir)/'`src/uname-uname.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_uname_a-uname-uname.Tpo src/$(DEPDIR)/src_libsinglebin_uname_a-uname-uname.Po
 #	$(AM_V_CC)source='src/uname-uname.c' object='src/src_libsinglebin_uname_a-uname-uname.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uname_a-uname-uname.o `test -f 'src/uname-uname.c' || echo '$(srcdir)/'`src/uname-uname.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uname_a-uname-uname.o `test -f 'src/uname-uname.c' || echo '$(srcdir)/'`src/uname-uname.c
 
 src/src_libsinglebin_uname_a-uname-uname.obj: src/uname-uname.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uname_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_uname_a-uname-uname.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_uname_a-uname-uname.Tpo -c -o src/src_libsinglebin_uname_a-uname-uname.obj `if test -f 'src/uname-uname.c'; then $(CYGPATH_W) 'src/uname-uname.c'; else $(CYGPATH_W) '$(srcdir)/src/uname-uname.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_uname_a-uname-uname.Tpo src/$(DEPDIR)/src_libsinglebin_uname_a-uname-uname.Po
 #	$(AM_V_CC)source='src/uname-uname.c' object='src/src_libsinglebin_uname_a-uname-uname.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uname_a-uname-uname.obj `if test -f 'src/uname-uname.c'; then $(CYGPATH_W) 'src/uname-uname.c'; else $(CYGPATH_W) '$(srcdir)/src/uname-uname.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uname_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uname_a-uname-uname.obj `if test -f 'src/uname-uname.c'; then $(CYGPATH_W) 'src/uname-uname.c'; else $(CYGPATH_W) '$(srcdir)/src/uname-uname.c'; fi`
 
 src/src_libsinglebin_unexpand_a-unexpand.o: src/unexpand.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_unexpand_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_unexpand_a-unexpand.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_unexpand_a-unexpand.Tpo -c -o src/src_libsinglebin_unexpand_a-unexpand.o `test -f 'src/unexpand.c' || echo '$(srcdir)/'`src/unexpand.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_unexpand_a-unexpand.Tpo src/$(DEPDIR)/src_libsinglebin_unexpand_a-unexpand.Po
 #	$(AM_V_CC)source='src/unexpand.c' object='src/src_libsinglebin_unexpand_a-unexpand.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_unexpand_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_unexpand_a-unexpand.o `test -f 'src/unexpand.c' || echo '$(srcdir)/'`src/unexpand.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_unexpand_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_unexpand_a-unexpand.o `test -f 'src/unexpand.c' || echo '$(srcdir)/'`src/unexpand.c
 
 src/src_libsinglebin_unexpand_a-unexpand.obj: src/unexpand.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_unexpand_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_unexpand_a-unexpand.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_unexpand_a-unexpand.Tpo -c -o src/src_libsinglebin_unexpand_a-unexpand.obj `if test -f 'src/unexpand.c'; then $(CYGPATH_W) 'src/unexpand.c'; else $(CYGPATH_W) '$(srcdir)/src/unexpand.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_unexpand_a-unexpand.Tpo src/$(DEPDIR)/src_libsinglebin_unexpand_a-unexpand.Po
 #	$(AM_V_CC)source='src/unexpand.c' object='src/src_libsinglebin_unexpand_a-unexpand.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_unexpand_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_unexpand_a-unexpand.obj `if test -f 'src/unexpand.c'; then $(CYGPATH_W) 'src/unexpand.c'; else $(CYGPATH_W) '$(srcdir)/src/unexpand.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_unexpand_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_unexpand_a-unexpand.obj `if test -f 'src/unexpand.c'; then $(CYGPATH_W) 'src/unexpand.c'; else $(CYGPATH_W) '$(srcdir)/src/unexpand.c'; fi`
 
 src/src_libsinglebin_uniq_a-uniq.o: src/uniq.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uniq_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_uniq_a-uniq.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_uniq_a-uniq.Tpo -c -o src/src_libsinglebin_uniq_a-uniq.o `test -f 'src/uniq.c' || echo '$(srcdir)/'`src/uniq.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_uniq_a-uniq.Tpo src/$(DEPDIR)/src_libsinglebin_uniq_a-uniq.Po
 #	$(AM_V_CC)source='src/uniq.c' object='src/src_libsinglebin_uniq_a-uniq.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uniq_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uniq_a-uniq.o `test -f 'src/uniq.c' || echo '$(srcdir)/'`src/uniq.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uniq_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uniq_a-uniq.o `test -f 'src/uniq.c' || echo '$(srcdir)/'`src/uniq.c
 
 src/src_libsinglebin_uniq_a-uniq.obj: src/uniq.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uniq_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_uniq_a-uniq.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_uniq_a-uniq.Tpo -c -o src/src_libsinglebin_uniq_a-uniq.obj `if test -f 'src/uniq.c'; then $(CYGPATH_W) 'src/uniq.c'; else $(CYGPATH_W) '$(srcdir)/src/uniq.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_uniq_a-uniq.Tpo src/$(DEPDIR)/src_libsinglebin_uniq_a-uniq.Po
 #	$(AM_V_CC)source='src/uniq.c' object='src/src_libsinglebin_uniq_a-uniq.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uniq_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uniq_a-uniq.obj `if test -f 'src/uniq.c'; then $(CYGPATH_W) 'src/uniq.c'; else $(CYGPATH_W) '$(srcdir)/src/uniq.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uniq_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uniq_a-uniq.obj `if test -f 'src/uniq.c'; then $(CYGPATH_W) 'src/uniq.c'; else $(CYGPATH_W) '$(srcdir)/src/uniq.c'; fi`
 
 src/src_libsinglebin_unlink_a-unlink.o: src/unlink.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_unlink_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_unlink_a-unlink.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_unlink_a-unlink.Tpo -c -o src/src_libsinglebin_unlink_a-unlink.o `test -f 'src/unlink.c' || echo '$(srcdir)/'`src/unlink.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_unlink_a-unlink.Tpo src/$(DEPDIR)/src_libsinglebin_unlink_a-unlink.Po
 #	$(AM_V_CC)source='src/unlink.c' object='src/src_libsinglebin_unlink_a-unlink.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_unlink_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_unlink_a-unlink.o `test -f 'src/unlink.c' || echo '$(srcdir)/'`src/unlink.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_unlink_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_unlink_a-unlink.o `test -f 'src/unlink.c' || echo '$(srcdir)/'`src/unlink.c
 
 src/src_libsinglebin_unlink_a-unlink.obj: src/unlink.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_unlink_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_unlink_a-unlink.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_unlink_a-unlink.Tpo -c -o src/src_libsinglebin_unlink_a-unlink.obj `if test -f 'src/unlink.c'; then $(CYGPATH_W) 'src/unlink.c'; else $(CYGPATH_W) '$(srcdir)/src/unlink.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_unlink_a-unlink.Tpo src/$(DEPDIR)/src_libsinglebin_unlink_a-unlink.Po
 #	$(AM_V_CC)source='src/unlink.c' object='src/src_libsinglebin_unlink_a-unlink.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_unlink_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_unlink_a-unlink.obj `if test -f 'src/unlink.c'; then $(CYGPATH_W) 'src/unlink.c'; else $(CYGPATH_W) '$(srcdir)/src/unlink.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_unlink_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_unlink_a-unlink.obj `if test -f 'src/unlink.c'; then $(CYGPATH_W) 'src/unlink.c'; else $(CYGPATH_W) '$(srcdir)/src/unlink.c'; fi`
 
 src/src_libsinglebin_uptime_a-uptime.o: src/uptime.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uptime_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_uptime_a-uptime.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_uptime_a-uptime.Tpo -c -o src/src_libsinglebin_uptime_a-uptime.o `test -f 'src/uptime.c' || echo '$(srcdir)/'`src/uptime.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_uptime_a-uptime.Tpo src/$(DEPDIR)/src_libsinglebin_uptime_a-uptime.Po
 #	$(AM_V_CC)source='src/uptime.c' object='src/src_libsinglebin_uptime_a-uptime.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uptime_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uptime_a-uptime.o `test -f 'src/uptime.c' || echo '$(srcdir)/'`src/uptime.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uptime_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uptime_a-uptime.o `test -f 'src/uptime.c' || echo '$(srcdir)/'`src/uptime.c
 
 src/src_libsinglebin_uptime_a-uptime.obj: src/uptime.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uptime_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_uptime_a-uptime.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_uptime_a-uptime.Tpo -c -o src/src_libsinglebin_uptime_a-uptime.obj `if test -f 'src/uptime.c'; then $(CYGPATH_W) 'src/uptime.c'; else $(CYGPATH_W) '$(srcdir)/src/uptime.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_uptime_a-uptime.Tpo src/$(DEPDIR)/src_libsinglebin_uptime_a-uptime.Po
 #	$(AM_V_CC)source='src/uptime.c' object='src/src_libsinglebin_uptime_a-uptime.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uptime_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uptime_a-uptime.obj `if test -f 'src/uptime.c'; then $(CYGPATH_W) 'src/uptime.c'; else $(CYGPATH_W) '$(srcdir)/src/uptime.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_uptime_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_uptime_a-uptime.obj `if test -f 'src/uptime.c'; then $(CYGPATH_W) 'src/uptime.c'; else $(CYGPATH_W) '$(srcdir)/src/uptime.c'; fi`
 
 src/src_libsinglebin_users_a-users.o: src/users.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_users_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_users_a-users.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_users_a-users.Tpo -c -o src/src_libsinglebin_users_a-users.o `test -f 'src/users.c' || echo '$(srcdir)/'`src/users.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_users_a-users.Tpo src/$(DEPDIR)/src_libsinglebin_users_a-users.Po
 #	$(AM_V_CC)source='src/users.c' object='src/src_libsinglebin_users_a-users.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_users_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_users_a-users.o `test -f 'src/users.c' || echo '$(srcdir)/'`src/users.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_users_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_users_a-users.o `test -f 'src/users.c' || echo '$(srcdir)/'`src/users.c
 
 src/src_libsinglebin_users_a-users.obj: src/users.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_users_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_users_a-users.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_users_a-users.Tpo -c -o src/src_libsinglebin_users_a-users.obj `if test -f 'src/users.c'; then $(CYGPATH_W) 'src/users.c'; else $(CYGPATH_W) '$(srcdir)/src/users.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_users_a-users.Tpo src/$(DEPDIR)/src_libsinglebin_users_a-users.Po
 #	$(AM_V_CC)source='src/users.c' object='src/src_libsinglebin_users_a-users.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_users_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_users_a-users.obj `if test -f 'src/users.c'; then $(CYGPATH_W) 'src/users.c'; else $(CYGPATH_W) '$(srcdir)/src/users.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_users_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_users_a-users.obj `if test -f 'src/users.c'; then $(CYGPATH_W) 'src/users.c'; else $(CYGPATH_W) '$(srcdir)/src/users.c'; fi`
 
 src/src_libsinglebin_vdir_a-coreutils-vdir.o: src/coreutils-vdir.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_vdir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_vdir_a-coreutils-vdir.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_vdir_a-coreutils-vdir.Tpo -c -o src/src_libsinglebin_vdir_a-coreutils-vdir.o `test -f 'src/coreutils-vdir.c' || echo '$(srcdir)/'`src/coreutils-vdir.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_vdir_a-coreutils-vdir.Tpo src/$(DEPDIR)/src_libsinglebin_vdir_a-coreutils-vdir.Po
 #	$(AM_V_CC)source='src/coreutils-vdir.c' object='src/src_libsinglebin_vdir_a-coreutils-vdir.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_vdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_vdir_a-coreutils-vdir.o `test -f 'src/coreutils-vdir.c' || echo '$(srcdir)/'`src/coreutils-vdir.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_vdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_vdir_a-coreutils-vdir.o `test -f 'src/coreutils-vdir.c' || echo '$(srcdir)/'`src/coreutils-vdir.c
 
 src/src_libsinglebin_vdir_a-coreutils-vdir.obj: src/coreutils-vdir.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_vdir_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_vdir_a-coreutils-vdir.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_vdir_a-coreutils-vdir.Tpo -c -o src/src_libsinglebin_vdir_a-coreutils-vdir.obj `if test -f 'src/coreutils-vdir.c'; then $(CYGPATH_W) 'src/coreutils-vdir.c'; else $(CYGPATH_W) '$(srcdir)/src/coreutils-vdir.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_vdir_a-coreutils-vdir.Tpo src/$(DEPDIR)/src_libsinglebin_vdir_a-coreutils-vdir.Po
 #	$(AM_V_CC)source='src/coreutils-vdir.c' object='src/src_libsinglebin_vdir_a-coreutils-vdir.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_vdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_vdir_a-coreutils-vdir.obj `if test -f 'src/coreutils-vdir.c'; then $(CYGPATH_W) 'src/coreutils-vdir.c'; else $(CYGPATH_W) '$(srcdir)/src/coreutils-vdir.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_vdir_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_vdir_a-coreutils-vdir.obj `if test -f 'src/coreutils-vdir.c'; then $(CYGPATH_W) 'src/coreutils-vdir.c'; else $(CYGPATH_W) '$(srcdir)/src/coreutils-vdir.c'; fi`
 
 src/src_libsinglebin_wc_a-wc.o: src/wc.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_wc_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_wc_a-wc.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_wc_a-wc.Tpo -c -o src/src_libsinglebin_wc_a-wc.o `test -f 'src/wc.c' || echo '$(srcdir)/'`src/wc.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_wc_a-wc.Tpo src/$(DEPDIR)/src_libsinglebin_wc_a-wc.Po
 #	$(AM_V_CC)source='src/wc.c' object='src/src_libsinglebin_wc_a-wc.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_wc_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_wc_a-wc.o `test -f 'src/wc.c' || echo '$(srcdir)/'`src/wc.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_wc_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_wc_a-wc.o `test -f 'src/wc.c' || echo '$(srcdir)/'`src/wc.c
 
 src/src_libsinglebin_wc_a-wc.obj: src/wc.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_wc_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_wc_a-wc.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_wc_a-wc.Tpo -c -o src/src_libsinglebin_wc_a-wc.obj `if test -f 'src/wc.c'; then $(CYGPATH_W) 'src/wc.c'; else $(CYGPATH_W) '$(srcdir)/src/wc.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_wc_a-wc.Tpo src/$(DEPDIR)/src_libsinglebin_wc_a-wc.Po
 #	$(AM_V_CC)source='src/wc.c' object='src/src_libsinglebin_wc_a-wc.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_wc_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_wc_a-wc.obj `if test -f 'src/wc.c'; then $(CYGPATH_W) 'src/wc.c'; else $(CYGPATH_W) '$(srcdir)/src/wc.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_wc_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_wc_a-wc.obj `if test -f 'src/wc.c'; then $(CYGPATH_W) 'src/wc.c'; else $(CYGPATH_W) '$(srcdir)/src/wc.c'; fi`
 
 src/src_libsinglebin_who_a-who.o: src/who.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_who_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_who_a-who.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_who_a-who.Tpo -c -o src/src_libsinglebin_who_a-who.o `test -f 'src/who.c' || echo '$(srcdir)/'`src/who.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_who_a-who.Tpo src/$(DEPDIR)/src_libsinglebin_who_a-who.Po
 #	$(AM_V_CC)source='src/who.c' object='src/src_libsinglebin_who_a-who.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_who_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_who_a-who.o `test -f 'src/who.c' || echo '$(srcdir)/'`src/who.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_who_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_who_a-who.o `test -f 'src/who.c' || echo '$(srcdir)/'`src/who.c
 
 src/src_libsinglebin_who_a-who.obj: src/who.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_who_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_who_a-who.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_who_a-who.Tpo -c -o src/src_libsinglebin_who_a-who.obj `if test -f 'src/who.c'; then $(CYGPATH_W) 'src/who.c'; else $(CYGPATH_W) '$(srcdir)/src/who.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_who_a-who.Tpo src/$(DEPDIR)/src_libsinglebin_who_a-who.Po
 #	$(AM_V_CC)source='src/who.c' object='src/src_libsinglebin_who_a-who.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_who_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_who_a-who.obj `if test -f 'src/who.c'; then $(CYGPATH_W) 'src/who.c'; else $(CYGPATH_W) '$(srcdir)/src/who.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_who_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_who_a-who.obj `if test -f 'src/who.c'; then $(CYGPATH_W) 'src/who.c'; else $(CYGPATH_W) '$(srcdir)/src/who.c'; fi`
 
 src/src_libsinglebin_whoami_a-whoami.o: src/whoami.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_whoami_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_whoami_a-whoami.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_whoami_a-whoami.Tpo -c -o src/src_libsinglebin_whoami_a-whoami.o `test -f 'src/whoami.c' || echo '$(srcdir)/'`src/whoami.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_whoami_a-whoami.Tpo src/$(DEPDIR)/src_libsinglebin_whoami_a-whoami.Po
 #	$(AM_V_CC)source='src/whoami.c' object='src/src_libsinglebin_whoami_a-whoami.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_whoami_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_whoami_a-whoami.o `test -f 'src/whoami.c' || echo '$(srcdir)/'`src/whoami.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_whoami_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_whoami_a-whoami.o `test -f 'src/whoami.c' || echo '$(srcdir)/'`src/whoami.c
 
 src/src_libsinglebin_whoami_a-whoami.obj: src/whoami.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_whoami_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_whoami_a-whoami.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_whoami_a-whoami.Tpo -c -o src/src_libsinglebin_whoami_a-whoami.obj `if test -f 'src/whoami.c'; then $(CYGPATH_W) 'src/whoami.c'; else $(CYGPATH_W) '$(srcdir)/src/whoami.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_whoami_a-whoami.Tpo src/$(DEPDIR)/src_libsinglebin_whoami_a-whoami.Po
 #	$(AM_V_CC)source='src/whoami.c' object='src/src_libsinglebin_whoami_a-whoami.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_whoami_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_whoami_a-whoami.obj `if test -f 'src/whoami.c'; then $(CYGPATH_W) 'src/whoami.c'; else $(CYGPATH_W) '$(srcdir)/src/whoami.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_whoami_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_whoami_a-whoami.obj `if test -f 'src/whoami.c'; then $(CYGPATH_W) 'src/whoami.c'; else $(CYGPATH_W) '$(srcdir)/src/whoami.c'; fi`
 
 src/src_libsinglebin_yes_a-yes.o: src/yes.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_yes_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_yes_a-yes.o -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_yes_a-yes.Tpo -c -o src/src_libsinglebin_yes_a-yes.o `test -f 'src/yes.c' || echo '$(srcdir)/'`src/yes.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_yes_a-yes.Tpo src/$(DEPDIR)/src_libsinglebin_yes_a-yes.Po
 #	$(AM_V_CC)source='src/yes.c' object='src/src_libsinglebin_yes_a-yes.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_yes_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_yes_a-yes.o `test -f 'src/yes.c' || echo '$(srcdir)/'`src/yes.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_yes_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_yes_a-yes.o `test -f 'src/yes.c' || echo '$(srcdir)/'`src/yes.c
 
 src/src_libsinglebin_yes_a-yes.obj: src/yes.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_yes_a_CFLAGS) $(CFLAGS) -MT src/src_libsinglebin_yes_a-yes.obj -MD -MP -MF src/$(DEPDIR)/src_libsinglebin_yes_a-yes.Tpo -c -o src/src_libsinglebin_yes_a-yes.obj `if test -f 'src/yes.c'; then $(CYGPATH_W) 'src/yes.c'; else $(CYGPATH_W) '$(srcdir)/src/yes.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libsinglebin_yes_a-yes.Tpo src/$(DEPDIR)/src_libsinglebin_yes_a-yes.Po
 #	$(AM_V_CC)source='src/yes.c' object='src/src_libsinglebin_yes_a-yes.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_yes_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_yes_a-yes.obj `if test -f 'src/yes.c'; then $(CYGPATH_W) 'src/yes.c'; else $(CYGPATH_W) '$(srcdir)/src/yes.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libsinglebin_yes_a_CFLAGS) $(CFLAGS) -c -o src/src_libsinglebin_yes_a-yes.obj `if test -f 'src/yes.c'; then $(CYGPATH_W) 'src/yes.c'; else $(CYGPATH_W) '$(srcdir)/src/yes.c'; fi`
 
 src/src_coreutils-coreutils.o: src/coreutils.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_coreutils_CFLAGS) $(CFLAGS) -MT src/src_coreutils-coreutils.o -MD -MP -MF src/$(DEPDIR)/src_coreutils-coreutils.Tpo -c -o src/src_coreutils-coreutils.o `test -f 'src/coreutils.c' || echo '$(srcdir)/'`src/coreutils.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_coreutils-coreutils.Tpo src/$(DEPDIR)/src_coreutils-coreutils.Po
 #	$(AM_V_CC)source='src/coreutils.c' object='src/src_coreutils-coreutils.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_coreutils_CFLAGS) $(CFLAGS) -c -o src/src_coreutils-coreutils.o `test -f 'src/coreutils.c' || echo '$(srcdir)/'`src/coreutils.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_coreutils_CFLAGS) $(CFLAGS) -c -o src/src_coreutils-coreutils.o `test -f 'src/coreutils.c' || echo '$(srcdir)/'`src/coreutils.c
 
 src/src_coreutils-coreutils.obj: src/coreutils.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_coreutils_CFLAGS) $(CFLAGS) -MT src/src_coreutils-coreutils.obj -MD -MP -MF src/$(DEPDIR)/src_coreutils-coreutils.Tpo -c -o src/src_coreutils-coreutils.obj `if test -f 'src/coreutils.c'; then $(CYGPATH_W) 'src/coreutils.c'; else $(CYGPATH_W) '$(srcdir)/src/coreutils.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_coreutils-coreutils.Tpo src/$(DEPDIR)/src_coreutils-coreutils.Po
 #	$(AM_V_CC)source='src/coreutils.c' object='src/src_coreutils-coreutils.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_coreutils_CFLAGS) $(CFLAGS) -c -o src/src_coreutils-coreutils.obj `if test -f 'src/coreutils.c'; then $(CYGPATH_W) 'src/coreutils.c'; else $(CYGPATH_W) '$(srcdir)/src/coreutils.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_coreutils_CFLAGS) $(CFLAGS) -c -o src/src_coreutils-coreutils.obj `if test -f 'src/coreutils.c'; then $(CYGPATH_W) 'src/coreutils.c'; else $(CYGPATH_W) '$(srcdir)/src/coreutils.c'; fi`
 
 src/src_ginstall-install.o: src/install.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_ginstall-install.o -MD -MP -MF src/$(DEPDIR)/src_ginstall-install.Tpo -c -o src/src_ginstall-install.o `test -f 'src/install.c' || echo '$(srcdir)/'`src/install.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_ginstall-install.Tpo src/$(DEPDIR)/src_ginstall-install.Po
 #	$(AM_V_CC)source='src/install.c' object='src/src_ginstall-install.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-install.o `test -f 'src/install.c' || echo '$(srcdir)/'`src/install.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-install.o `test -f 'src/install.c' || echo '$(srcdir)/'`src/install.c
 
 src/src_ginstall-install.obj: src/install.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_ginstall-install.obj -MD -MP -MF src/$(DEPDIR)/src_ginstall-install.Tpo -c -o src/src_ginstall-install.obj `if test -f 'src/install.c'; then $(CYGPATH_W) 'src/install.c'; else $(CYGPATH_W) '$(srcdir)/src/install.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_ginstall-install.Tpo src/$(DEPDIR)/src_ginstall-install.Po
 #	$(AM_V_CC)source='src/install.c' object='src/src_ginstall-install.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-install.obj `if test -f 'src/install.c'; then $(CYGPATH_W) 'src/install.c'; else $(CYGPATH_W) '$(srcdir)/src/install.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-install.obj `if test -f 'src/install.c'; then $(CYGPATH_W) 'src/install.c'; else $(CYGPATH_W) '$(srcdir)/src/install.c'; fi`
 
 src/src_ginstall-prog-fprintf.o: src/prog-fprintf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_ginstall-prog-fprintf.o -MD -MP -MF src/$(DEPDIR)/src_ginstall-prog-fprintf.Tpo -c -o src/src_ginstall-prog-fprintf.o `test -f 'src/prog-fprintf.c' || echo '$(srcdir)/'`src/prog-fprintf.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_ginstall-prog-fprintf.Tpo src/$(DEPDIR)/src_ginstall-prog-fprintf.Po
 #	$(AM_V_CC)source='src/prog-fprintf.c' object='src/src_ginstall-prog-fprintf.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-prog-fprintf.o `test -f 'src/prog-fprintf.c' || echo '$(srcdir)/'`src/prog-fprintf.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-prog-fprintf.o `test -f 'src/prog-fprintf.c' || echo '$(srcdir)/'`src/prog-fprintf.c
 
 src/src_ginstall-prog-fprintf.obj: src/prog-fprintf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_ginstall-prog-fprintf.obj -MD -MP -MF src/$(DEPDIR)/src_ginstall-prog-fprintf.Tpo -c -o src/src_ginstall-prog-fprintf.obj `if test -f 'src/prog-fprintf.c'; then $(CYGPATH_W) 'src/prog-fprintf.c'; else $(CYGPATH_W) '$(srcdir)/src/prog-fprintf.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_ginstall-prog-fprintf.Tpo src/$(DEPDIR)/src_ginstall-prog-fprintf.Po
 #	$(AM_V_CC)source='src/prog-fprintf.c' object='src/src_ginstall-prog-fprintf.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-prog-fprintf.obj `if test -f 'src/prog-fprintf.c'; then $(CYGPATH_W) 'src/prog-fprintf.c'; else $(CYGPATH_W) '$(srcdir)/src/prog-fprintf.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-prog-fprintf.obj `if test -f 'src/prog-fprintf.c'; then $(CYGPATH_W) 'src/prog-fprintf.c'; else $(CYGPATH_W) '$(srcdir)/src/prog-fprintf.c'; fi`
 
 src/src_ginstall-copy.o: src/copy.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_ginstall-copy.o -MD -MP -MF src/$(DEPDIR)/src_ginstall-copy.Tpo -c -o src/src_ginstall-copy.o `test -f 'src/copy.c' || echo '$(srcdir)/'`src/copy.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_ginstall-copy.Tpo src/$(DEPDIR)/src_ginstall-copy.Po
 #	$(AM_V_CC)source='src/copy.c' object='src/src_ginstall-copy.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-copy.o `test -f 'src/copy.c' || echo '$(srcdir)/'`src/copy.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-copy.o `test -f 'src/copy.c' || echo '$(srcdir)/'`src/copy.c
 
 src/src_ginstall-copy.obj: src/copy.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_ginstall-copy.obj -MD -MP -MF src/$(DEPDIR)/src_ginstall-copy.Tpo -c -o src/src_ginstall-copy.obj `if test -f 'src/copy.c'; then $(CYGPATH_W) 'src/copy.c'; else $(CYGPATH_W) '$(srcdir)/src/copy.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_ginstall-copy.Tpo src/$(DEPDIR)/src_ginstall-copy.Po
 #	$(AM_V_CC)source='src/copy.c' object='src/src_ginstall-copy.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-copy.obj `if test -f 'src/copy.c'; then $(CYGPATH_W) 'src/copy.c'; else $(CYGPATH_W) '$(srcdir)/src/copy.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-copy.obj `if test -f 'src/copy.c'; then $(CYGPATH_W) 'src/copy.c'; else $(CYGPATH_W) '$(srcdir)/src/copy.c'; fi`
 
 src/src_ginstall-cp-hash.o: src/cp-hash.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_ginstall-cp-hash.o -MD -MP -MF src/$(DEPDIR)/src_ginstall-cp-hash.Tpo -c -o src/src_ginstall-cp-hash.o `test -f 'src/cp-hash.c' || echo '$(srcdir)/'`src/cp-hash.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_ginstall-cp-hash.Tpo src/$(DEPDIR)/src_ginstall-cp-hash.Po
 #	$(AM_V_CC)source='src/cp-hash.c' object='src/src_ginstall-cp-hash.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-cp-hash.o `test -f 'src/cp-hash.c' || echo '$(srcdir)/'`src/cp-hash.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-cp-hash.o `test -f 'src/cp-hash.c' || echo '$(srcdir)/'`src/cp-hash.c
 
 src/src_ginstall-cp-hash.obj: src/cp-hash.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_ginstall-cp-hash.obj -MD -MP -MF src/$(DEPDIR)/src_ginstall-cp-hash.Tpo -c -o src/src_ginstall-cp-hash.obj `if test -f 'src/cp-hash.c'; then $(CYGPATH_W) 'src/cp-hash.c'; else $(CYGPATH_W) '$(srcdir)/src/cp-hash.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_ginstall-cp-hash.Tpo src/$(DEPDIR)/src_ginstall-cp-hash.Po
 #	$(AM_V_CC)source='src/cp-hash.c' object='src/src_ginstall-cp-hash.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-cp-hash.obj `if test -f 'src/cp-hash.c'; then $(CYGPATH_W) 'src/cp-hash.c'; else $(CYGPATH_W) '$(srcdir)/src/cp-hash.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-cp-hash.obj `if test -f 'src/cp-hash.c'; then $(CYGPATH_W) 'src/cp-hash.c'; else $(CYGPATH_W) '$(srcdir)/src/cp-hash.c'; fi`
 
 src/src_ginstall-extent-scan.o: src/extent-scan.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_ginstall-extent-scan.o -MD -MP -MF src/$(DEPDIR)/src_ginstall-extent-scan.Tpo -c -o src/src_ginstall-extent-scan.o `test -f 'src/extent-scan.c' || echo '$(srcdir)/'`src/extent-scan.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_ginstall-extent-scan.Tpo src/$(DEPDIR)/src_ginstall-extent-scan.Po
 #	$(AM_V_CC)source='src/extent-scan.c' object='src/src_ginstall-extent-scan.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-extent-scan.o `test -f 'src/extent-scan.c' || echo '$(srcdir)/'`src/extent-scan.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-extent-scan.o `test -f 'src/extent-scan.c' || echo '$(srcdir)/'`src/extent-scan.c
 
 src/src_ginstall-extent-scan.obj: src/extent-scan.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_ginstall-extent-scan.obj -MD -MP -MF src/$(DEPDIR)/src_ginstall-extent-scan.Tpo -c -o src/src_ginstall-extent-scan.obj `if test -f 'src/extent-scan.c'; then $(CYGPATH_W) 'src/extent-scan.c'; else $(CYGPATH_W) '$(srcdir)/src/extent-scan.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_ginstall-extent-scan.Tpo src/$(DEPDIR)/src_ginstall-extent-scan.Po
 #	$(AM_V_CC)source='src/extent-scan.c' object='src/src_ginstall-extent-scan.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-extent-scan.obj `if test -f 'src/extent-scan.c'; then $(CYGPATH_W) 'src/extent-scan.c'; else $(CYGPATH_W) '$(srcdir)/src/extent-scan.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-extent-scan.obj `if test -f 'src/extent-scan.c'; then $(CYGPATH_W) 'src/extent-scan.c'; else $(CYGPATH_W) '$(srcdir)/src/extent-scan.c'; fi`
 
 src/src_ginstall-selinux.o: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_ginstall-selinux.o -MD -MP -MF src/$(DEPDIR)/src_ginstall-selinux.Tpo -c -o src/src_ginstall-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_ginstall-selinux.Tpo src/$(DEPDIR)/src_ginstall-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_ginstall-selinux.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-selinux.o `test -f 'src/selinux.c' || echo '$(srcdir)/'`src/selinux.c
 
 src/src_ginstall-selinux.obj: src/selinux.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_ginstall-selinux.obj -MD -MP -MF src/$(DEPDIR)/src_ginstall-selinux.Tpo -c -o src/src_ginstall-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_ginstall-selinux.Tpo src/$(DEPDIR)/src_ginstall-selinux.Po
 #	$(AM_V_CC)source='src/selinux.c' object='src/src_ginstall-selinux.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_ginstall_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_ginstall-selinux.obj `if test -f 'src/selinux.c'; then $(CYGPATH_W) 'src/selinux.c'; else $(CYGPATH_W) '$(srcdir)/src/selinux.c'; fi`
 
 src/src_libstdbuf_so-libstdbuf.o: src/libstdbuf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libstdbuf_so_CFLAGS) $(CFLAGS) -MT src/src_libstdbuf_so-libstdbuf.o -MD -MP -MF src/$(DEPDIR)/src_libstdbuf_so-libstdbuf.Tpo -c -o src/src_libstdbuf_so-libstdbuf.o `test -f 'src/libstdbuf.c' || echo '$(srcdir)/'`src/libstdbuf.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libstdbuf_so-libstdbuf.Tpo src/$(DEPDIR)/src_libstdbuf_so-libstdbuf.Po
 #	$(AM_V_CC)source='src/libstdbuf.c' object='src/src_libstdbuf_so-libstdbuf.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libstdbuf_so_CFLAGS) $(CFLAGS) -c -o src/src_libstdbuf_so-libstdbuf.o `test -f 'src/libstdbuf.c' || echo '$(srcdir)/'`src/libstdbuf.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libstdbuf_so_CFLAGS) $(CFLAGS) -c -o src/src_libstdbuf_so-libstdbuf.o `test -f 'src/libstdbuf.c' || echo '$(srcdir)/'`src/libstdbuf.c
 
 src/src_libstdbuf_so-libstdbuf.obj: src/libstdbuf.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libstdbuf_so_CFLAGS) $(CFLAGS) -MT src/src_libstdbuf_so-libstdbuf.obj -MD -MP -MF src/$(DEPDIR)/src_libstdbuf_so-libstdbuf.Tpo -c -o src/src_libstdbuf_so-libstdbuf.obj `if test -f 'src/libstdbuf.c'; then $(CYGPATH_W) 'src/libstdbuf.c'; else $(CYGPATH_W) '$(srcdir)/src/libstdbuf.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_libstdbuf_so-libstdbuf.Tpo src/$(DEPDIR)/src_libstdbuf_so-libstdbuf.Po
 #	$(AM_V_CC)source='src/libstdbuf.c' object='src/src_libstdbuf_so-libstdbuf.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libstdbuf_so_CFLAGS) $(CFLAGS) -c -o src/src_libstdbuf_so-libstdbuf.obj `if test -f 'src/libstdbuf.c'; then $(CYGPATH_W) 'src/libstdbuf.c'; else $(CYGPATH_W) '$(srcdir)/src/libstdbuf.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(src_libstdbuf_so_CFLAGS) $(CFLAGS) -c -o src/src_libstdbuf_so-libstdbuf.obj `if test -f 'src/libstdbuf.c'; then $(CYGPATH_W) 'src/libstdbuf.c'; else $(CYGPATH_W) '$(srcdir)/src/libstdbuf.c'; fi`
 
 src/src_md5sum-md5sum.o: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_md5sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_md5sum-md5sum.o -MD -MP -MF src/$(DEPDIR)/src_md5sum-md5sum.Tpo -c -o src/src_md5sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_md5sum-md5sum.Tpo src/$(DEPDIR)/src_md5sum-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_md5sum-md5sum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_md5sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_md5sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_md5sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_md5sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 
 src/src_md5sum-md5sum.obj: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_md5sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_md5sum-md5sum.obj -MD -MP -MF src/$(DEPDIR)/src_md5sum-md5sum.Tpo -c -o src/src_md5sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_md5sum-md5sum.Tpo src/$(DEPDIR)/src_md5sum-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_md5sum-md5sum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_md5sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_md5sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_md5sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_md5sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 
 src/src_sha1sum-md5sum.o: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha1sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_sha1sum-md5sum.o -MD -MP -MF src/$(DEPDIR)/src_sha1sum-md5sum.Tpo -c -o src/src_sha1sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_sha1sum-md5sum.Tpo src/$(DEPDIR)/src_sha1sum-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_sha1sum-md5sum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha1sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha1sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha1sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha1sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 
 src/src_sha1sum-md5sum.obj: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha1sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_sha1sum-md5sum.obj -MD -MP -MF src/$(DEPDIR)/src_sha1sum-md5sum.Tpo -c -o src/src_sha1sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_sha1sum-md5sum.Tpo src/$(DEPDIR)/src_sha1sum-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_sha1sum-md5sum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha1sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha1sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha1sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha1sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 
 src/src_sha224sum-md5sum.o: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha224sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_sha224sum-md5sum.o -MD -MP -MF src/$(DEPDIR)/src_sha224sum-md5sum.Tpo -c -o src/src_sha224sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_sha224sum-md5sum.Tpo src/$(DEPDIR)/src_sha224sum-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_sha224sum-md5sum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha224sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha224sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha224sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha224sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 
 src/src_sha224sum-md5sum.obj: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha224sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_sha224sum-md5sum.obj -MD -MP -MF src/$(DEPDIR)/src_sha224sum-md5sum.Tpo -c -o src/src_sha224sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_sha224sum-md5sum.Tpo src/$(DEPDIR)/src_sha224sum-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_sha224sum-md5sum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha224sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha224sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha224sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha224sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 
 src/src_sha256sum-md5sum.o: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha256sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_sha256sum-md5sum.o -MD -MP -MF src/$(DEPDIR)/src_sha256sum-md5sum.Tpo -c -o src/src_sha256sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_sha256sum-md5sum.Tpo src/$(DEPDIR)/src_sha256sum-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_sha256sum-md5sum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha256sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha256sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha256sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha256sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 
 src/src_sha256sum-md5sum.obj: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha256sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_sha256sum-md5sum.obj -MD -MP -MF src/$(DEPDIR)/src_sha256sum-md5sum.Tpo -c -o src/src_sha256sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_sha256sum-md5sum.Tpo src/$(DEPDIR)/src_sha256sum-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_sha256sum-md5sum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha256sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha256sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha256sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha256sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 
 src/src_sha384sum-md5sum.o: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha384sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_sha384sum-md5sum.o -MD -MP -MF src/$(DEPDIR)/src_sha384sum-md5sum.Tpo -c -o src/src_sha384sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_sha384sum-md5sum.Tpo src/$(DEPDIR)/src_sha384sum-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_sha384sum-md5sum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha384sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha384sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha384sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha384sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 
 src/src_sha384sum-md5sum.obj: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha384sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_sha384sum-md5sum.obj -MD -MP -MF src/$(DEPDIR)/src_sha384sum-md5sum.Tpo -c -o src/src_sha384sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_sha384sum-md5sum.Tpo src/$(DEPDIR)/src_sha384sum-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_sha384sum-md5sum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha384sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha384sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha384sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha384sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 
 src/src_sha512sum-md5sum.o: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha512sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_sha512sum-md5sum.o -MD -MP -MF src/$(DEPDIR)/src_sha512sum-md5sum.Tpo -c -o src/src_sha512sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_sha512sum-md5sum.Tpo src/$(DEPDIR)/src_sha512sum-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_sha512sum-md5sum.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha512sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha512sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha512sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha512sum-md5sum.o `test -f 'src/md5sum.c' || echo '$(srcdir)/'`src/md5sum.c
 
 src/src_sha512sum-md5sum.obj: src/md5sum.c
 	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha512sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT src/src_sha512sum-md5sum.obj -MD -MP -MF src/$(DEPDIR)/src_sha512sum-md5sum.Tpo -c -o src/src_sha512sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 	$(AM_V_at)$(am__mv) src/$(DEPDIR)/src_sha512sum-md5sum.Tpo src/$(DEPDIR)/src_sha512sum-md5sum.Po
 #	$(AM_V_CC)source='src/md5sum.c' object='src/src_sha512sum-md5sum.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha512sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha512sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
+#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(src_sha512sum_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o src/src_sha512sum-md5sum.obj `if test -f 'src/md5sum.c'; then $(CYGPATH_W) 'src/md5sum.c'; else $(CYGPATH_W) '$(srcdir)/src/md5sum.c'; fi`
 
 .y.c:
 	$(AM_V_YACC)$(am__skipyacc) $(SHELL) $(YLWRAP) $< y.tab.c $@ y.tab.h `echo $@ | $(am__yacc_c2h)` y.output $*.output -- $(YACCCOMPILE)
@@ -14062,29 +14062,30 @@ man/dynamic-deps.mk: Makefile
 include man/dynamic-deps.mk
 
 .x.1:
-	$(AM_V_GEN)name=`echo $@ | sed 's|.*/||; s|\.1$$||'` || exit 1;	\
-	case $$name in							\
-	  install) prog='ginstall'; argv=$$name;;			\
-	     test) prog='['; argv='[';;					\
-		*) prog=$$name; argv=$$prog;;				\
-	esac;								\
-	rm -f $@ $@-t							\
-	  && t=$*.td							\
-	  && rm -rf $$t							\
-	  && $(MKDIR_P) $$t						\
-	  && (cd $$t && $(LN_S) '$(abs_top_builddir)/src/'$$prog $$argv) \
-	  && $(run_help2man)						\
-		     --source='$(PACKAGE_STRING)'			\
-		     --include=$(srcdir)/man/$$name.x			\
-		     --output=$$t/$$name.1 $$t/$$argv			\
-		     --info-page='coreutils \(aq'$$name' invocation\(aq' \
-	  && sed \
-	       -e 's|$*\.td/||g' \
-	       -e '/For complete documentation/d' \
-	       $$t/$$name.1 > $@-t			\
-	  && rm -rf $$t							\
-	  && chmod a-w $@-t						\
-	  && mv $@-t $@
+#	$(AM_V_GEN)name=`echo $@ | sed 's|.*/||; s|\.1$$||'` || exit 1;	\
+#	case $$name in							\
+#	  install) prog='ginstall'; argv=$$name;;			\
+#	     test) prog='['; argv='[';;					\
+#		*) prog=$$name; argv=$$prog;;				\
+#	esac;								\
+#	rm -f $@ $@-t							\
+#	  && t=$*.td							\
+#	  && rm -rf $$t							\
+#	  && $(MKDIR_P) $$t						\
+#	  && (cd $$t && $(LN_S) '$(abs_top_builddir)/src/'$$prog $$argv) \
+#	  && $(run_help2man)						\
+#		     --source='$(PACKAGE_STRING)'			\
+#		     --include=$(srcdir)/man/$$name.x			\
+#		     --output=$$t/$$name.1 $$t/$$argv			\
+#		     --info-page='coreutils \(aq'$$name' invocation\(aq' \
+#	  && sed \
+#	       -e 's|$*\.td/||g' \
+#	       -e '/For complete documentation/d' \
+#	       $$t/$$name.1 > $@-t			\
+#	  && rm -rf $$t							\
+#	  && chmod a-w $@-t						\
+#	  && mv $@-t $@
+
 .PHONY: check-root
 check-root:
 	$(MAKE) check TESTS='$(root_tests)' SUBDIRS=.

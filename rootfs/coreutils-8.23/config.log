@@ -546,7 +546,7 @@ configure:7143: result: 64
 configure:7315: autobuild project... GNU coreutils
 configure:7321: autobuild revision... 8.23
 configure:7326: autobuild hostname... debian
-configure:7337: autobuild timestamp... 20141124T034414Z
+configure:7337: autobuild timestamp... 20141124T070035Z
 configure:8079: checking for working alloca.h
 configure:8096: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
 configure:8096: $? = 0
@@ -1501,7 +1501,7 @@ configure:8527: $? = 0
 configure:8527: result: yes
 configure:8527: checking for _set_invalid_parameter_handler
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccWasVWh.o: In function `main':
+/tmp/ccaSYDQ5.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `_set_invalid_parameter_handler'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -1825,7 +1825,7 @@ configure:8527: $? = 0
 configure:8527: result: yes
 configure:8527: checking for fpurge
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/cccMqK71.o: In function `main':
+/tmp/cc4kLZW7.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `fpurge'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -1973,7 +1973,7 @@ configure:8527: $? = 0
 configure:8527: result: yes
 configure:8527: checking for __freadahead
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccKsyoYb.o: In function `main':
+/tmp/ccm34MRd.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `__freadahead'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -2122,7 +2122,7 @@ configure:8527: $? = 0
 configure:8527: result: yes
 configure:8527: checking for __freadptr
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccYwn6ve.o: In function `main':
+/tmp/ccK44Oeq.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `__freadptr'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -2268,7 +2268,7 @@ configure: failed program was:
 configure:8527: result: no
 configure:8527: checking for __freadptrinc
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/cckog18i.o: In function `main':
+/tmp/ccCGHhIu.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `__freadptrinc'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -2414,7 +2414,7 @@ configure: failed program was:
 configure:8527: result: no
 configure:8527: checking for __fseterr
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccuVLBNp.o: In function `main':
+/tmp/ccivv90b.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `__fseterr'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -2592,7 +2592,7 @@ configure:8527: $? = 0
 configure:8527: result: yes
 configure:8527: checking for microuptime
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccqC0bD2.o: In function `main':
+/tmp/cce7IYTH.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `microuptime'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -2746,7 +2746,7 @@ configure: failed program was:
 configure:8527: result: no
 configure:8527: checking for nanouptime
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccoV9A82.o: In function `main':
+/tmp/ccoEwNYM.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `nanouptime'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -2928,7 +2928,7 @@ configure:8527: $? = 0
 configure:8527: result: yes
 configure:8527: checking for nanotime
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/cckOjxMe.o: In function `main':
+/tmp/ccsD6egm.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `nanotime'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -3131,7 +3131,7 @@ configure:8527: $? = 0
 configure:8527: result: yes
 configure:8527: checking for mbslen
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccKrF1AU.o: In function `main':
+/tmp/cc4Kfub2.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `mbslen'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -3347,7 +3347,7 @@ configure:8527: $? = 0
 configure:8527: result: yes
 configure:8527: checking for secure_getenv
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/cc03BYoG.o: In function `main':
+/tmp/cc4BQKeq.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `secure_getenv'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -3617,7 +3617,7 @@ configure:8527: $? = 0
 configure:8527: result: yes
 configure:8527: checking for vasnprintf
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccetJFMJ.o: In function `main':
+/tmp/cciWvqhM.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `vasnprintf'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -3864,7 +3864,7 @@ configure:8527: $? = 0
 configure:8527: result: yes
 configure:8527: checking for directio
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccsdabNv.o: In function `main':
+/tmp/cc8FhsNe.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `directio'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -4123,7 +4123,7 @@ configure:8527: $? = 0
 configure:8527: result: yes
 configure:8527: checking for getgrgid_nomembers
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccwDQpFc.o: In function `main':
+/tmp/ccyrkQSV.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `getgrgid_nomembers'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -4348,7 +4348,7 @@ configure: failed program was:
 configure:8527: result: no
 configure:8527: checking for getgrnam_nomembers
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/cciAnYKd.o: In function `main':
+/tmp/cc8z6ye0.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `getgrnam_nomembers'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -4573,7 +4573,7 @@ configure: failed program was:
 configure:8527: result: no
 configure:8527: checking for getgrent_nomembers
 configure:8527: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/cc2bQjZi.o: In function `main':
+/tmp/ccKBSLe7.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `getgrent_nomembers'
 collect2: ld returned 1 exit status
 configure:8527: $? = 1
@@ -8542,7 +8542,7 @@ configure:17533: result: guessing yes
 configure:17538: checking for pthread.h
 configure:17538: result: yes
 configure:17566: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/cc0nioS5.o: In function `main':
+/tmp/ccMXg4WN.o: In function `main':
 conftest.c:(.text+0x10): undefined reference to `pthread_mutexattr_init'
 collect2: ld returned 1 exit status
 configure:17566: $? = 1
@@ -11100,7 +11100,7 @@ configure:24825: checking whether this system has an arbitrary file name length 
 configure:24866: result: yes
 configure:24934: checking for library containing clock_gettime
 configure:24965: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccW1oWEX.o: In function `main':
+/tmp/cc4Hev1Q.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `clock_gettime'
 collect2: ld returned 1 exit status
 configure:24965: $? = 1
@@ -11457,7 +11457,7 @@ configure:26103: checking whether dup2 works
 configure:26180: result: guessing no
 configure:26188: checking for setdtablesize
 configure:26188: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccsrEDvs.o: In function `main':
+/tmp/ccCwDE2p.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `setdtablesize'
 collect2: ld returned 1 exit status
 configure:26188: $? = 1
@@ -12629,7 +12629,7 @@ configure:29174: checking whether fflush works on input streams
 configure:29248: result: cross
 configure:29281: checking for _fseeki64
 configure:29281: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccGHTc3o.o: In function `main':
+/tmp/ccW4xicT.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `_fseeki64'
 collect2: ld returned 1 exit status
 configure:29281: $? = 1
@@ -20539,7 +20539,7 @@ configure: failed program was:
 configure:34306: result: no
 configure:34325: checking for isapipe
 configure:34325: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccOkGgh8.o: In function `main':
+/tmp/cc26UoZE.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `isapipe'
 collect2: ld returned 1 exit status
 configure:34325: $? = 1
@@ -21046,7 +21046,7 @@ configure:35614: checking whether link obeys POSIX
 configure:35668: result: guessing yes
 configure:35708: checking for __xpg4
 configure:35724: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccyBDYgo.o: In function `main':
+/tmp/ccQYq25a.o: In function `main':
 conftest.c:(.text+0xc): undefined reference to `__xpg4'
 collect2: ld returned 1 exit status
 configure:35724: $? = 1
@@ -23877,7 +23877,7 @@ configure:38811: checking for working mktime
 configure:39030: result: no
 configure:39075: checking for listmntent
 configure:39075: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/cc8n9N0V.o: In function `main':
+/tmp/ccwi0dnN.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `listmntent'
 collect2: ld returned 1 exit status
 configure:39075: $? = 1
@@ -24380,7 +24380,7 @@ configure: failed program was:
 configure:39075: result: no
 configure:39075: checking for getmntinfo
 configure:39075: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccqbl5d1.o: In function `main':
+/tmp/ccOpyZxS.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `getmntinfo'
 collect2: ld returned 1 exit status
 configure:39075: $? = 1
@@ -29873,7 +29873,7 @@ configure:40402: $? = 0
 configure:40402: result: yes
 configure:40402: checking for sched_getaffinity_np
 configure:40402: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccIrKl43.o: In function `main':
+/tmp/ccOndjAx.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `sched_getaffinity_np'
 collect2: ld returned 1 exit status
 configure:40402: $? = 1
@@ -30388,7 +30388,7 @@ configure: failed program was:
 configure:40402: result: no
 configure:40402: checking for pstat_getdynamic
 configure:40402: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccu8wZA8.o: In function `main':
+/tmp/ccg8MFGy.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `pstat_getdynamic'
 collect2: ld returned 1 exit status
 configure:40402: $? = 1
@@ -30903,7 +30903,7 @@ configure: failed program was:
 configure:40402: result: no
 configure:40402: checking for sysmp
 configure:40402: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccq6Hiuf.o: In function `main':
+/tmp/ccO7cYSD.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `sysmp'
 collect2: ld returned 1 exit status
 configure:40402: $? = 1
@@ -33027,7 +33027,7 @@ configure:40909: checking for sys/sysctl.h
 configure:40909: result: yes
 configure:40928: checking for pstat_getstatic
 configure:40928: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccy0MZyt.o: In function `main':
+/tmp/ccoRBmfg.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `pstat_getstatic'
 collect2: ld returned 1 exit status
 configure:40928: $? = 1
@@ -33561,7 +33561,7 @@ configure:40928: checking for sysmp
 configure:40928: result: no
 configure:40928: checking for getsysinfo
 configure:40928: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccMnMiAz.o: In function `main':
+/tmp/ccInSDRl.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `getsysinfo'
 collect2: ld returned 1 exit status
 configure:40928: $? = 1
@@ -34093,7 +34093,7 @@ configure:40928: checking for sysctl
 configure:40928: result: yes
 configure:40928: checking for table
 configure:40928: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccMq2AdE.o: In function `main':
+/tmp/cckIA4mq.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `table'
 collect2: ld returned 1 exit status
 configure:40928: $? = 1
@@ -34652,7 +34652,7 @@ configure:41470: $? = 0
 configure:41470: result: yes
 configure:41486: checking for getppriv
 configure:41486: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccy2afMS.o: In function `main':
+/tmp/cccUm4fE.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `getppriv'
 collect2: ld returned 1 exit status
 configure:41486: $? = 1
@@ -36299,7 +36299,7 @@ configure: failed program was:
 configure:41659: result: yes
 configure:41711: checking for library containing pthread_create and pthread_join
 configure:41735: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c   >&5
-/tmp/ccsCWUci.o: In function `main':
+/tmp/ccumnho3.o: In function `main':
 conftest.c:(.text+0x24): undefined reference to `pthread_create'
 conftest.c:(.text+0x30): undefined reference to `pthread_join'
 collect2: ld returned 1 exit status
@@ -46119,7 +46119,7 @@ configure:44675: checking whether setenv validates arguments
 configure:44729: result: guessing yes
 configure:44774: checking for sig2str
 configure:44774: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/cc62Hqvu.o: In function `main':
+/tmp/ccOBBgme.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `sig2str'
 collect2: ld returned 1 exit status
 configure:44774: $? = 1
@@ -53950,7 +53950,7 @@ configure:49965: $? = 0
 configure:49973: result: yes
 configure:50023: checking for library containing timer_settime
 configure:50054: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccQiwECl.o: In function `main':
+/tmp/ccc8Rzi9.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `timer_settime'
 collect2: ld returned 1 exit status
 configure:50054: $? = 1
@@ -63788,7 +63788,7 @@ configure: failed program was:
 configure:59909: result: no
 configure:59946: checking for mode_to_security_class
 configure:59946: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c   >&5
-/tmp/cc0AWkHw.o: In function `main':
+/tmp/ccKynrlf.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `mode_to_security_class'
 collect2: ld returned 1 exit status
 configure:59946: $? = 1
@@ -64507,7 +64507,7 @@ configure: failed program was:
 configure:59946: result: no
 configure:59958: checking for matchpathcon_init_prefix
 configure:59958: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c   >&5
-/tmp/ccWguNDx.o: In function `main':
+/tmp/cciODSmk.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `matchpathcon_init_prefix'
 collect2: ld returned 1 exit status
 configure:59958: $? = 1
@@ -72446,7 +72446,7 @@ configure:60310: result: no
 configure:60329: WARNING: libcap library was not found or not usable.
 configure:60331: WARNING: GNU coreutils will be built without capability support.
 configure:60363: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccUphXNj.o: In function `main':
+/tmp/ccKodcI9.o: In function `main':
 conftest.c:(.text+0xc): undefined reference to `floor'
 conftest.c:(.text+0x14): undefined reference to `rint'
 collect2: ld returned 1 exit status
@@ -75280,7 +75280,7 @@ configure:61651: checking whether localtime caches TZ
 configure:61709: result: yes
 configure:61720: checking for getattrat
 configure:61720: arm-hisiv200-linux-gcc -std=gnu99 -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c  >&5
-/tmp/ccKVxJWS.o: In function `main':
+/tmp/cciEpu0m.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `getattrat'
 collect2: ld returned 1 exit status
 configure:61720: $? = 1
@@ -76862,6 +76862,7 @@ config.status:2826: creating Makefile
 config.status:2826: creating po/Makefile.in
 config.status:2826: creating gnulib-tests/Makefile
 config.status:2826: creating lib/config.h
+config.status:3006: lib/config.h is unchanged
 config.status:3085: executing depfiles commands
 config.status:3085: executing po-directories commands
 config.status:3085: executing man/dynamic-deps.mk commands
@@ -79708,3 +79709,21 @@ target_alias=''
 #define HAVE_DECL___SYS_SIGLIST 0
 
 configure: exit 0
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by GNU coreutils config.status 8.23, which was
+generated by GNU Autoconf 2.67.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status lib/config.h
+
+on debian
+
+config.status:2826: creating lib/config.h
+config.status:3006: lib/config.h is unchanged

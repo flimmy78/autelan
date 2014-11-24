@@ -1,1 +1,14 @@
-# dummy
+lib/stripslash.o: lib/stripslash.c lib/config.h lib/dirname.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stdbool.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stddef.h \
+ lib/dosname.h
+
+lib/config.h:
+
+lib/dirname.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stdbool.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stddef.h:
+
+lib/dosname.h:

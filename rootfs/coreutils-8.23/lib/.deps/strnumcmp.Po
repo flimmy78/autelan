@@ -1,1 +1,11 @@
-# dummy
+lib/strnumcmp.o: lib/strnumcmp.c lib/config.h lib/strnumcmp-in.h \
+ lib/strnumcmp.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stddef.h
+
+lib/config.h:
+
+lib/strnumcmp-in.h:
+
+lib/strnumcmp.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stddef.h:

@@ -1,1 +1,3 @@
-# dummy
+src/version.o: src/version.c lib/config.h
+
+lib/config.h:
