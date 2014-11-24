@@ -185,7 +185,7 @@ arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/u
 ----------------------------------------
 checking for crypt()
 
-/tmp/ccuNYouy.o: In function `main':
+/tmp/cc0X5gBp.o: In function `main':
 autotest.c:(.text+0xc): undefined reference to `crypt'
 collect2: ld returned 1 exit status
 ----------
@@ -293,7 +293,7 @@ checking for statvfs()
 ----------------------------------------
 checking for dlopen()
 
-/tmp/cccxVmC7.o: In function `main':
+/tmp/cciPFdKA.o: In function `main':
 autotest.c:(.text+0xc): undefined reference to `dlopen'
 collect2: ld returned 1 exit status
 ----------
@@ -402,7 +402,7 @@ checking for TCP_INFO
 ----------------------------------------
 checking for accept4()
 
-/tmp/cceNi4EB.o: In function `main':
+/tmp/cc8A4MM4.o: In function `main':
 autotest.c:(.text+0x18): warning: warning: accept4 is not implemented and will always fail
 
 ----------------------------------------
@@ -484,7 +484,7 @@ checking for time_t size
 ----------------------------------------
 checking for setproctitle()
 
-/tmp/ccC4WhTw.o: In function `main':
+/tmp/cccxlJYi.o: In function `main':
 autotest.c:(.text+0x8): undefined reference to `setproctitle'
 collect2: ld returned 1 exit status
 ----------
@@ -513,7 +513,7 @@ checking for pwrite()
 ----------------------------------------
 checking for sys_nerr
 
-/tmp/ccqc4EpJ.o: In function `main':
+/tmp/cc8NTcFc.o: In function `main':
 autotest.c:(.text+0x1c): warning: `sys_nerr' is deprecated; use `strerror' or `strerror_r' instead
 /bin/sh: objs/autotest: cannot execute binary file
 
@@ -557,7 +557,7 @@ checking for System V shared memory
 ----------------------------------------
 checking for POSIX semaphores
 
-/tmp/cc8GKHxs.o: In function `main':
+/tmp/ccAKOdIS.o: In function `main':
 autotest.c:(.text+0x14): undefined reference to `sem_init'
 autotest.c:(.text+0x2c): undefined reference to `sem_destroy'
 collect2: ld returned 1 exit status

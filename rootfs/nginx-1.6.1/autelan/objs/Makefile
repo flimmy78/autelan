@@ -1114,13 +1114,47 @@ objs/src/http/modules/ngx_http_upstream_keepalive_module.o:	$(CORE_DEPS) $(HTTP_
 manpage:	objs/nginx.8
 
 objs/nginx.8:	man/nginx.8 objs/ngx_auto_config.h
-#	sed -e "s|%%PREFIX%%|/home/hisisdk/histb/autelan/release/usr|" \
-#		-e "s|%%PID_PATH%%|/home/hisisdk/histb/autelan/release/usr/logs/nginx.pid|" \
-#		-e "s|%%CONF_PATH%%|/home/hisisdk/histb/autelan/release/usr/local/nginx/conf/|" \
-#		-e "s|%%ERROR_LOG_PATH%%|/home/hisisdk/histb/autelan/release/usr/local/nginx/logs/|" \
-#		< man/nginx.8 > $@
+	sed -e "s|%%PREFIX%%|/home/hisisdk/histb/autelan/release/usr|" \
+		-e "s|%%PID_PATH%%|/home/hisisdk/histb/autelan/release/usr/logs/nginx.pid|" \
+		-e "s|%%CONF_PATH%%|/home/hisisdk/histb/autelan/release/usr/local/nginx/conf/|" \
+		-e "s|%%ERROR_LOG_PATH%%|/home/hisisdk/histb/autelan/release/usr/local/nginx/logs/|" \
+		< man/nginx.8 > $@
 
-include objs/install.mk
+install:	objs/nginx 		
+	test -d '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr' || mkdir -p '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr'
 
-install:objs/nginx AUTELAN_INSTALL
+	test -d '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr' 		|| mkdir -p '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr'
+	test ! -f '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/sbin/' 		|| mv '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/sbin/' 			'$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/sbin/.old'
+	cp objs/nginx '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/sbin/'
 
+	test -d '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx' 		|| mkdir -p '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx'
+
+	cp conf/koi-win '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx'
+	cp conf/koi-utf '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx'
+	cp conf/win-utf '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx'
+
+	test -f '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx/mime.types' 		|| cp conf/mime.types '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx'
+	cp conf/mime.types '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx/mime.types.default'
+
+	test -f '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx/fastcgi_params' 		|| cp conf/fastcgi_params '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx'
+	cp conf/fastcgi_params 		'$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx/fastcgi_params.default'
+
+	test -f '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx/fastcgi.conf' 		|| cp conf/fastcgi.conf '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx'
+	cp conf/fastcgi.conf '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx/fastcgi.conf.default'
+
+	test -f '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx/uwsgi_params' 		|| cp conf/uwsgi_params '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx'
+	cp conf/uwsgi_params 		'$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx/uwsgi_params.default'
+
+	test -f '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx/scgi_params' 		|| cp conf/scgi_params '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx'
+	cp conf/scgi_params 		'$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx/scgi_params.default'
+
+	test -f '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx/conf/' 		|| cp conf/nginx.conf '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx/conf/'
+	cp conf/nginx.conf '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx/nginx.conf.default'
+
+	test -d '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/logs' 		|| mkdir -p '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/logs'
+
+	test -d '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx' || 		mkdir -p '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx'
+
+	test -d '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/html' 		|| cp -R html '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr'
+
+	test -d '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx' || 		mkdir -p '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx'
