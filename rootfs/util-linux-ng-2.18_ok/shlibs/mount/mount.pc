@@ -1,0 +1,11 @@
+prefix=/home/hisisdk/histb/autelan/release
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=/home/hisisdk/histb/autelan/fakerelease/usr/include
+
+Name: mount
+Description: mount library
+Version: 2.18.0
+Requires.private: blkid
+Cflags: -I${includedir}/mount
+Libs: -L${libdir} -lmount
