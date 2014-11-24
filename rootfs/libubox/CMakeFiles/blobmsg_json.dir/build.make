@@ -4,7 +4,7 @@
 #=============================================================================
 # Special targets provided by cmake.
 
-# Disable implicit rules so canonical targets will work.
+# Disable implicit rules so canoncical targets will work.
 .SUFFIXES:
 
 # Remove some rules from gmake that .SUFFIXES does not remove.
@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = $(hisitopdir)/source/rootfs/libubox
+CMAKE_SOURCE_DIR = /home/hisisdk/histb/autelan/rootfs/libubox
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = $(hisitopdir)/source/rootfs/libubox
+CMAKE_BINARY_DIR = /home/hisisdk/histb/autelan/rootfs/libubox
 
 # Include any dependencies generated for this target.
 include CMakeFiles/blobmsg_json.dir/depend.make
@@ -48,17 +48,17 @@ include CMakeFiles/blobmsg_json.dir/flags.make
 
 CMakeFiles/blobmsg_json.dir/blobmsg_json.c.o: CMakeFiles/blobmsg_json.dir/flags.make
 CMakeFiles/blobmsg_json.dir/blobmsg_json.c.o: blobmsg_json.c
-	$(CMAKE_COMMAND) -E cmake_progress_report $(hisitopdir)/source/rootfs/libubox/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hisisdk/histb/autelan/rootfs/libubox/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/blobmsg_json.dir/blobmsg_json.c.o"
-	/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin/arm-hisiv200-linux-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/blobmsg_json.dir/blobmsg_json.c.o   -c $(hisitopdir)/source/rootfs/libubox/blobmsg_json.c
+	/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin/arm-hisiv200-linux-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/blobmsg_json.dir/blobmsg_json.c.o   -c /home/hisisdk/histb/autelan/rootfs/libubox/blobmsg_json.c
 
 CMakeFiles/blobmsg_json.dir/blobmsg_json.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/blobmsg_json.dir/blobmsg_json.c.i"
-	/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin/arm-hisiv200-linux-gcc  $(C_DEFINES) $(C_FLAGS) -E $(hisitopdir)/source/rootfs/libubox/blobmsg_json.c > CMakeFiles/blobmsg_json.dir/blobmsg_json.c.i
+	/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin/arm-hisiv200-linux-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/hisisdk/histb/autelan/rootfs/libubox/blobmsg_json.c > CMakeFiles/blobmsg_json.dir/blobmsg_json.c.i
 
 CMakeFiles/blobmsg_json.dir/blobmsg_json.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/blobmsg_json.dir/blobmsg_json.c.s"
-	/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin/arm-hisiv200-linux-gcc  $(C_DEFINES) $(C_FLAGS) -S $(hisitopdir)/source/rootfs/libubox/blobmsg_json.c -o CMakeFiles/blobmsg_json.dir/blobmsg_json.c.s
+	/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin/arm-hisiv200-linux-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/hisisdk/histb/autelan/rootfs/libubox/blobmsg_json.c -o CMakeFiles/blobmsg_json.dir/blobmsg_json.c.s
 
 CMakeFiles/blobmsg_json.dir/blobmsg_json.c.o.requires:
 .PHONY : CMakeFiles/blobmsg_json.dir/blobmsg_json.c.o.requires
@@ -68,6 +68,7 @@ CMakeFiles/blobmsg_json.dir/blobmsg_json.c.o.provides: CMakeFiles/blobmsg_json.d
 .PHONY : CMakeFiles/blobmsg_json.dir/blobmsg_json.c.o.provides
 
 CMakeFiles/blobmsg_json.dir/blobmsg_json.c.o.provides.build: CMakeFiles/blobmsg_json.dir/blobmsg_json.c.o
+.PHONY : CMakeFiles/blobmsg_json.dir/blobmsg_json.c.o.provides.build
 
 # Object files for target blobmsg_json
 blobmsg_json_OBJECTS = \
@@ -78,7 +79,6 @@ blobmsg_json_EXTERNAL_OBJECTS =
 
 libblobmsg_json.so: CMakeFiles/blobmsg_json.dir/blobmsg_json.c.o
 libblobmsg_json.so: libubox.so
-libblobmsg_json.so: $(hisitopdir)/source/rootfs/json-c/.libs/libjson-c.so
 libblobmsg_json.so: CMakeFiles/blobmsg_json.dir/build.make
 libblobmsg_json.so: CMakeFiles/blobmsg_json.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library libblobmsg_json.so"
@@ -96,6 +96,6 @@ CMakeFiles/blobmsg_json.dir/clean:
 .PHONY : CMakeFiles/blobmsg_json.dir/clean
 
 CMakeFiles/blobmsg_json.dir/depend:
-	cd $(hisitopdir)/source/rootfs/libubox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" $(hisitopdir)/source/rootfs/libubox $(hisitopdir)/source/rootfs/libubox $(hisitopdir)/source/rootfs/libubox $(hisitopdir)/source/rootfs/libubox $(hisitopdir)/source/rootfs/libubox/CMakeFiles/blobmsg_json.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hisisdk/histb/autelan/rootfs/libubox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hisisdk/histb/autelan/rootfs/libubox /home/hisisdk/histb/autelan/rootfs/libubox /home/hisisdk/histb/autelan/rootfs/libubox /home/hisisdk/histb/autelan/rootfs/libubox /home/hisisdk/histb/autelan/rootfs/libubox/CMakeFiles/blobmsg_json.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/blobmsg_json.dir/depend
 
