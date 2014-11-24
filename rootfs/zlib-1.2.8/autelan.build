@@ -1,0 +1,7 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+package_common "$(pwd)"
+
+rm -f ${auterelease}/usr/lib/libz.a

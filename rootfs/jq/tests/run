@@ -1,0 +1,133 @@
+#!/bin/sh
+
+set -e
+
+if which valgrind > /dev/null; then
+    VALGRIND='valgrind --error-exitcode=1 --leak-check=full --suppressions=tests/onig.supp'
+    Q=-q
+else
+    VALGRIND=
+    Q=
+fi
+
+cat $@ | $VALGRIND $Q ./jq --run-tests
+
+d=
+trap '[ -n "$d" ] && rm -rf "$d"' EXIT
+d=`mktemp -d -t || true`
+if [ -z "$d" ]; then
+    echo "Your OS does not support mktemp(1) -d" 1>&2
+    exit 0
+fi
+
+
+## Test constant folding
+
+# String constant folding (addition only)
+n=`$VALGRIND $Q ./jq -n --debug-dump-disasm '"foo"' | wc -l`
+if [ $n -ne 5 ]; then
+    echo "Constant expression folding for strings didn't work"
+    exit 1
+fi
+
+# Numeric constant folding (not all ops yet)
+n=`$VALGRIND $Q ./jq -n --debug-dump-disasm '1+1' | wc -l`
+if [ $n -ne 5 ]; then
+    echo "Constant expression folding for strings didn't work"
+    exit 1
+fi
+n=`$VALGRIND $Q ./jq -n --debug-dump-disasm '1-1' | wc -l`
+if [ $n -ne 5 ]; then
+    echo "Constant expression folding for strings didn't work"
+    exit 1
+fi
+n=`$VALGRIND $Q ./jq -n --debug-dump-disasm '2*3' | wc -l`
+if [ $n -ne 5 ]; then
+    echo "Constant expression folding for strings didn't work"
+    exit 1
+fi
+n=`$VALGRIND $Q ./jq -n --debug-dump-disasm '9/3' | wc -l`
+if [ $n -ne 5 ]; then
+    echo "Constant expression folding for strings didn't work"
+    exit 1
+fi
+n=`$VALGRIND $Q ./jq -n --debug-dump-disasm '9==3' | wc -l`
+if [ $n -ne 5 ]; then
+    echo "Constant expression folding for strings didn't work"
+    exit 1
+fi
+n=`$VALGRIND $Q ./jq -n --debug-dump-disasm '9!=3' | wc -l`
+if [ $n -ne 5 ]; then
+    echo "Constant expression folding for strings didn't work"
+    exit 1
+fi
+n=`$VALGRIND $Q ./jq -n --debug-dump-disasm '9<=3' | wc -l`
+if [ $n -ne 5 ]; then
+    echo "Constant expression folding for strings didn't work"
+    exit 1
+fi
+n=`$VALGRIND $Q ./jq -n --debug-dump-disasm '9>=3' | wc -l`
+if [ $n -ne 5 ]; then
+    echo "Constant expression folding for strings didn't work"
+    exit 1
+fi
+
+v=`scripts/version`
+case "$v" in
+*-*) v=`echo $v|sed -e 's/-.*$/-master/'`;;
+*) true;;
+esac
+
+## Test library/module system
+
+mods=$PWD/tests/modules
+
+if [ "`HOME=$mods $VALGRIND $Q ./jq -nr fg`" != foobar ]; then
+    echo "Bug #479 appears to be back" 1>&2
+    exit 1
+fi
+
+if [ `HOME=$mods $VALGRIND $Q ./jq --debug-dump-disasm -n fg | grep '^[a-z]' | wc -l` -gt 3 ]; then
+    echo "Binding too many defs into program" 1>&2
+    exit 1
+fi
+
+if ! $VALGRIND $Q ./jq -ner -L $mods 'import a as foo; import b as bar; import a; def fooa: foo::a; [fooa, bar::a, bar::b, foo::a, a] | . == ["a","b","c","a","a"]' > /dev/null; then
+    echo "Module system appears to be broken" 1>&2
+    exit 1
+fi
+
+if ! $VALGRIND $Q ./jq -ner -L $mods 'import c as foo; [foo::a, foo::c] | . == [0,"acmeh"]' > /dev/null; then
+    echo "Module system appears to be broken" 1>&2
+    exit 1
+fi
+
+if [ "`$VALGRIND $Q ./jq -cner -L $mods '\"c\" | modulemeta'`" != '{"whatever":null,"name":"c","deps":[{"as":"foo","name":"a"},{"search":"$ORIGIN/","as":"d","name":"d"}]}' ]; then
+    echo "modulemeta builtin appears to be broken" 1>&2
+    exit 1
+fi
+    
+if $VALGRIND ./jq -ner -L $mods 'import syntaxerror; .' > $d/out 2>&1; then
+    echo "Module system appears to be broken" 1>&2
+    exit 1
+fi
+if [ -n "$VALGRIND" ] && ! grep 'ERROR SUMMARY: 0 errors from 0 contexts' $d/out > /dev/null; then
+    echo "Module system has memory errors when modules have syntax errors" 1>&2
+    cat $d/out
+    exit 1
+fi
+if ! grep '^jq: error: syntax error,' $d/out > /dev/null; then
+    echo "Module system not detecting syntax errors in modules correctly" 1>&2
+    exit 1
+fi
+
+if $VALGRIND ./jq -ner -L $mods '%::wat' > $d/out 2>&1 ||
+   ! grep '^jq: error: syntax error,' $d/out > /dev/null; then
+    echo "Syntax errors not detected?" 1>&2
+    exit 1
+fi
+if [ -n "$VALGRIND" ] && ! grep 'ERROR SUMMARY: 0 errors from 0 contexts' $d/out > /dev/null; then
+    echo "Memory errors when programs have syntax errors" 1>&2
+    cat $d/out
+    exit 1
+fi

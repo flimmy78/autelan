@@ -1,0 +1,14 @@
+lib/xconcat-filename.o: lib/xconcat-filename.c lib/config.h \
+ lib/concat-filename.h lib/xalloc.h \
+ /usr/lib/gcc/i486-linux-gnu/4.4.5/include/stddef.h \
+ lib/xalloc-oversized.h
+
+lib/config.h:
+
+lib/concat-filename.h:
+
+lib/xalloc.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.4.5/include/stddef.h:
+
+lib/xalloc-oversized.h:

@@ -1,0 +1,13 @@
+prefix=/home/hisisdk/histb/autelan/release/usr
+exec_prefix=/home/hisisdk/histb/autelan/release/usr
+libdir=/home/hisisdk/histb/autelan/release/usr/lib
+sharedlibdir=/home/hisisdk/histb/autelan/fakerelease/usr/lib
+includedir=/home/hisisdk/histb/autelan/fakerelease/usr/lib
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.8
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

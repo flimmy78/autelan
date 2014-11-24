@@ -1,0 +1,12 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+package_common "$(pwd)"
+
+rm -fr ${auterelease}/usr/lib/pkgconfig
+rm -f ${auterelease}/usr/lib/libpcrecpp.*
+rm -f ${auterelease}/usr/lib/libpcreposix.*
+rm -f ${auterelease}/usr/lib/libpcre.la
+rm -f ${auterelease}/usr/lib/libpcre.a
+

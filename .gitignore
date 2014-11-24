@@ -1,0 +1,12 @@
+############
+#   files  #
+############
+*.o
+
+
+############
+#  floders #
+############
+/rootfs/coreutils-8.23/man/
+/fakerelease/usr/local/ssl/man/
+/release/

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+package_common "$(pwd)"
+
+rm -f ${auterelease}/usr/lib/libjson-c.la
+rm -fr ${auterelease}/usr/lib/pkgconfig
+

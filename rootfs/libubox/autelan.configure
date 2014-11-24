@@ -1,0 +1,11 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+cp -f autelan/CMakeLists.txt .
+CC=${hisiprefix}-gcc cmake .
+
+cp -fr autelan/blobmsg_json.dir/* CMakeFiles/blobmsg_json.dir
+cp -fr autelan/jshn.dir/* CMakeFiles/jshn.dir
+CC=${hisiprefix}-gcc make
+

@@ -1,0 +1,67 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+	CC=${hisiprefix}-gcc \
+	GCC=${hisiprefix}-gcc \
+	CXX=${hisiprefix}-g++ \
+	CFLAGS=" \
+		-O2 \
+		-I${hisitools}/usr/include \
+		-I${autefake}/usr/include -I${autefake}/usr/local/include \
+		" \
+	LDFLAGS=" \
+		-L${hisitools}/lib -L${hisitools}/usr/lib \
+		-L${auterelease}/lib -L${auterelease}/usr/lib -L${auterelease}/usr/local/lib \
+		" \
+./configure \
+	--host=${hisiprefix} \
+	--prefix=${auterelease} \
+	--bindir=${auterelease}/bin \
+	--sbindir=${auterelease}/sbin \
+	--libexecdir=${auterelease}/lib\
+	--sysconfdir=${auterelease}/etc \
+	--sharedstatedir=${auterelease}/com \
+	--localstatedir=${auterelease}/var \
+	--libdir=${auterelease}/lib \
+	\
+	--includedir=${autefake}/usr/include \
+	--datarootdir=${autefake}/usr/share \
+	--datadir=${autefake}/usr/share \
+	--infodir=${autefake}/usr/share/info \
+	--localedir=${autefake}/usr/share/local \
+	--mandir=${autefake}/usr/share/man \
+	--docdir=${autefake}/usr/share/doc/bash \
+	--htmldir=${autefake}/usr/share/doc \
+	--dvidir=${autefake}/usr/share/doc \
+	--pdfdir=${autefake}/usr/share/doc \
+	--psdir=${autefake}/usr/share/doc \
+	\
+	--disable-static \
+	--enable-static-sudoers \
+	--with-vardir=${auterelease}/var \
+	--with-rundir=${auterelease}/var/run \
+	--without-interfaces \
+	--without-selinux \
+	--disable-nls \
+	--with-pam-login \
+	--without-sendmail \
+	;
+
+cp Makefile autelan/Makefile
+cp common/Makefile autelan/common/Makefile
+cp compat/Makefile autelan/compat/Makefile
+cp doc/Makefile autelan/doc/Makefile
+cp include/Makefile autelan/include/Makefile
+cp init.d/aix.sh autelan/init.d/aix.sh
+cp init.d/hpux.sh autelan/init.d/hpux.sh
+cp src/sudo_usage.h autelan/src/sudo_usage.h
+cp src/Makefile autelan/src/Makefile
+cp plugins/sample/Makefile autelan/plugins/sample/Makefile
+cp plugins/group_file/Makefile autelan/plugins/group_file/Makefile
+cp plugins/system_group/Makefile autelan/plugins/system_group/Makefile
+cp plugins/sudoers/Makefile autelan/plugins/sudoers/Makefile
+cp plugins/sudoers/sudoers autelan/plugins/sudoers/sudoers
+cp config.h autelan/config.h
+cp pathnames.h autelan/pathnames.h
+

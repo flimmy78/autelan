@@ -1,0 +1,20 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+sed -i 's/^#define SIZEOF_OFF_T 0/#define SIZEOF_OFF_T 4/' ./main/php_config.h
+sed -i 's@^#define uint unsigned int@//#define uint unsigned int@' ./main/php_config.h
+sed -i 's@^#define ulong unsigned long@//#define ulong unsigned long@' ./main/php_config.h
+
+package_common "$(pwd)"
+
+
+CP modules/opcache.so ${auterelease}/usr/lib
+RM ${auterelease}/usr/lib/build
+RM ${auterelease}/usr/lib/extensions
+RM ${auterelease}/usr/bin/phpize
+RM ${auterelease}/usr/bin/php-cgi
+RM ${auterelease}/usr/bin/php-config
+
+
+

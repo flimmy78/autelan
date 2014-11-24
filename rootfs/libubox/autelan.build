@@ -1,0 +1,23 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+
+#package_prepare "$(pwd)"
+#package_compile "$(pwd)"
+
+
+echo "install files..."
+mkdir -p ${auterelease}/usr
+mkdir -p ${auterelease}/usr/bin
+CP autelan/jshn ${auterelease}/usr/bin
+
+mkdir -p ${auterelease}/usr/lib
+CP autelan/libubox.so autelan/libblobmsg_json.so autelan/libjson_script.so ${auterelease}/usr/lib
+
+mkdir -p ${auterelease}/usr/local
+mkdir -p ${auterelease}/usr/local/share
+mkdir -p ${auterelease}/usr/local/share/libubox
+CP sh/jshn.sh ${auterelease}/usr/local/share/libubox/jshn.sh
+echo "install files end"
+

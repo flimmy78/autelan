@@ -1,0 +1,1 @@
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/bin/arm-hisiv200-linux-gcc  -fPIC   -shared -Wl,-soname,libjson_script.so -o libjson_script.so CMakeFiles/json_script.dir/json_script.c.o -L/home/hisisdk/histb/source/rootfs/json-c/.libs libubox.so -lrt -Wl,-rpath,/home/hisisdk/histb/source/rootfs/json-c/.libs:/home/hisisdk/histb/autelan/rootfs/libubox: 

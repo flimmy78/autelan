@@ -1,0 +1,23 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+package_prepare "$(pwd)"
+package_compile "$(pwd)"
+
+mkdir -p ${auterelease}/etc
+mkdir -p ${auterelease}/etc/init.d
+cp scripts/init.d/wifidog ${auterelease}/etc/init.d/
+
+
+mkdir -p ${auterelease}/usr
+mkdir -p ${auterelease}/usr/bin
+mkdir -p ${auterelease}/usr/lib
+
+cp src/.libs/wifidog ${auterelease}/usr/bin
+cp src/wdctl ${auterelease}/usr/bin
+cp -fl libhttpd/.libs/*.so ${auterelease}/usr/lib
+cp -fl libhttpd/.libs/*.so.* ${auterelease}/usr/lib
+
+
+

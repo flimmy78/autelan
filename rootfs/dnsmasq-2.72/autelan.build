@@ -1,0 +1,11 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+package_common "$(pwd)"
+
+mkdir -p ${auterelease}/etc
+cp autelan/dnsmasq.conf.example ${auterelease}/etc
+
+rm -f ${hisirootfs}/etc/resolv.conf
+

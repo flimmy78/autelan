@@ -1,0 +1,12 @@
+prefix=/home/hisisdk/histb/autelan/release
+exec_prefix=${prefix}
+libdir=/home/hisisdk/histb/autelan/release/usr/lib
+includedir=/home/hisisdk/histb/autelan/fakerelease/usr/include
+
+
+Name: libexslt
+Version: 0.8.17
+Description: EXSLT Extension library
+Requires: libxml-2.0
+Libs: -L${libdir} -lexslt -lxslt -L/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1 -L/home/hisisdk/histb/autelan/release/usr/lib -lxml2 -lm -ldl -lm 
+Cflags: -I${includedir}

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+package_common "$(pwd)"
+
+mkdir -p ${auterelease}/etc
+mkdir -p ${auterelease}/etc/xinetd.d
+cp contrib/xinetd.conf ${auterelease}/etc
+
+rm -f ${auterelease}/sbin/itox
+rm -f ${auterelease}/sbin/xconv.pl
+
+

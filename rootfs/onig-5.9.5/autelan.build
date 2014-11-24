@@ -1,0 +1,10 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+package_common "$(pwd)"
+
+rm -f ${auterelease}/usr/lib/libonig.la
+rm -fr ${auterelease}/usr/lib/pkgconfig
+
+

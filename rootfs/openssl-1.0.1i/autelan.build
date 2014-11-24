@@ -1,0 +1,13 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+package_common "$(pwd)"
+
+mkdir -p ${autefake}/usr/local/ssl
+CP ${auterelease}/usr/local/ssl/* ${autefake}/usr/local/ssl
+
+RM ${auterelease}/usr/local/ssl/include
+RM ${auterelease}/usr/local/ssl/man
+RM ${auterelease}/usr/local/ssl/lib/pkgconfig
+

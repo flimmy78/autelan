@@ -1,0 +1,523 @@
+libxml.lo: libxml.c /usr/include/python2.7/Python.h \
+ /usr/include/python2.7/patchlevel.h /usr/include/python2.7/pyconfig.h \
+ /usr/include/python2.7/pymacconfig.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include-fixed/limits.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include-fixed/syslimits.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/limits.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/features.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/predefs.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/cdefs.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/wordsize.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/gnu/stubs.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/posix1_lim.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/local_lim.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/linux/limits.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/posix2_lim.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/xopen_lim.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/stdio_lim.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdio.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stddef.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/types.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/typesizes.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/libio.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/_G_config.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/wchar.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stdarg.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/sys_errlist.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/stdio.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/string.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/xlocale.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string2.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdlib.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/errno.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/errno.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/linux/errno.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/asm/errno.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/asm-generic/errno.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/asm-generic/errno-base.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/waitflags.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/waitstatus.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/endian.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/endian.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/byteswap.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/types.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/time.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/select.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/select.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/sigset.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/time.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/sysmacros.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/pthreadtypes.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/alloca.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/unistd.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/posix_opt.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/environments.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/confname.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/getopt.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/assert.h \
+ /usr/include/python2.7/pyport.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/inttypes.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdint.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/wchar.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/math.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/huge_val.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/huge_valf.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/huge_vall.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/inf.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/nan.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/mathdef.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/mathcalls.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/mathinline.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/time.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/stat.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/stat.h \
+ /usr/include/python2.7/pymath.h /usr/include/python2.7/pymem.h \
+ /usr/include/python2.7/object.h /usr/include/python2.7/objimpl.h \
+ /usr/include/python2.7/pydebug.h /usr/include/python2.7/unicodeobject.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/ctype.h \
+ /usr/include/python2.7/intobject.h /usr/include/python2.7/boolobject.h \
+ /usr/include/python2.7/longobject.h /usr/include/python2.7/floatobject.h \
+ /usr/include/python2.7/complexobject.h \
+ /usr/include/python2.7/rangeobject.h \
+ /usr/include/python2.7/stringobject.h \
+ /usr/include/python2.7/memoryobject.h \
+ /usr/include/python2.7/bufferobject.h \
+ /usr/include/python2.7/bytesobject.h \
+ /usr/include/python2.7/bytearrayobject.h \
+ /usr/include/python2.7/tupleobject.h /usr/include/python2.7/listobject.h \
+ /usr/include/python2.7/dictobject.h /usr/include/python2.7/enumobject.h \
+ /usr/include/python2.7/setobject.h /usr/include/python2.7/methodobject.h \
+ /usr/include/python2.7/moduleobject.h \
+ /usr/include/python2.7/funcobject.h /usr/include/python2.7/classobject.h \
+ /usr/include/python2.7/fileobject.h /usr/include/python2.7/cobject.h \
+ /usr/include/python2.7/pycapsule.h /usr/include/python2.7/traceback.h \
+ /usr/include/python2.7/sliceobject.h /usr/include/python2.7/cellobject.h \
+ /usr/include/python2.7/iterobject.h /usr/include/python2.7/genobject.h \
+ /usr/include/python2.7/descrobject.h /usr/include/python2.7/warnings.h \
+ /usr/include/python2.7/weakrefobject.h /usr/include/python2.7/codecs.h \
+ /usr/include/python2.7/pyerrors.h /usr/include/python2.7/pystate.h \
+ /usr/include/python2.7/pyarena.h /usr/include/python2.7/modsupport.h \
+ /usr/include/python2.7/pythonrun.h /usr/include/python2.7/ceval.h \
+ /usr/include/python2.7/sysmodule.h /usr/include/python2.7/intrcheck.h \
+ /usr/include/python2.7/import.h /usr/include/python2.7/abstract.h \
+ /usr/include/python2.7/compile.h /usr/include/python2.7/code.h \
+ /usr/include/python2.7/eval.h /usr/include/python2.7/pyctype.h \
+ /usr/include/python2.7/pystrtod.h /usr/include/python2.7/pystrcmp.h \
+ /usr/include/python2.7/dtoa.h /usr/include/python2.7/pyfpe.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/signal.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/signum.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/siginfo.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/sigaction.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/sigcontext.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/asm/sigcontext.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/sigstack.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/ucontext.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/procfs.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/user.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/sigthread.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/setjmp.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/setjmp.h \
+ /usr/include/python2.7/fileobject.h ../include/libxml/xmlmemory.h \
+ ../include/libxml/xmlversion.h ../include/libxml/xmlexports.h \
+ ../include/libxml/threads.h ../include/libxml/globals.h \
+ ../include/libxml/parser.h ../include/libxml/tree.h \
+ ../include/libxml/xmlstring.h ../include/libxml/xmlregexp.h \
+ ../include/libxml/dict.h ../include/libxml/hash.h \
+ ../include/libxml/valid.h ../include/libxml/xmlerror.h \
+ ../include/libxml/list.h ../include/libxml/xmlautomata.h \
+ ../include/libxml/entities.h ../include/libxml/encoding.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/iconv.h \
+ ../include/libxml/xmlIO.h ../include/libxml/SAX.h \
+ ../include/libxml/xlink.h ../include/libxml/SAX2.h \
+ ../include/libxml/xpath.h ../include/libxml/xpathInternals.h \
+ ../include/libxml/c14n.h ../include/libxml/xmlreader.h \
+ ../include/libxml/relaxng.h ../include/libxml/xmlschemas.h \
+ ../include/libxml/xmlsave.h libxml_wrap.h \
+ ../include/libxml/parserInternals.h ../include/libxml/HTMLparser.h \
+ ../include/libxml/chvalid.h ../include/libxml/catalog.h \
+ ../include/libxml/nanoftp.h ../include/libxml/nanohttp.h \
+ ../include/libxml/uri.h ../include/libxml/debugXML.h \
+ ../include/libxml/HTMLtree.h ../include/libxml/xinclude.h \
+ ../include/libxml/xpointer.h ../include/libxml/xmlunicode.h libxml2-py.h \
+ libxml2-export.c
+
+/usr/include/python2.7/Python.h:
+
+/usr/include/python2.7/patchlevel.h:
+
+/usr/include/python2.7/pyconfig.h:
+
+/usr/include/python2.7/pymacconfig.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include-fixed/limits.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include-fixed/syslimits.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/limits.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/features.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/predefs.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/cdefs.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/wordsize.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/gnu/stubs.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/posix1_lim.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/local_lim.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/linux/limits.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/posix2_lim.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/xopen_lim.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/stdio_lim.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdio.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stddef.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/types.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/typesizes.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/libio.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/_G_config.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/wchar.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stdarg.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/sys_errlist.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/stdio.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/string.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/xlocale.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string2.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdlib.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/errno.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/errno.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/linux/errno.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/asm/errno.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/asm-generic/errno.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/asm-generic/errno-base.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/waitflags.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/waitstatus.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/endian.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/endian.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/byteswap.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/types.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/time.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/select.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/select.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/sigset.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/time.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/sysmacros.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/pthreadtypes.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/alloca.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/unistd.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/posix_opt.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/environments.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/confname.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/getopt.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/assert.h:
+
+/usr/include/python2.7/pyport.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/inttypes.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdint.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/wchar.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/math.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/huge_val.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/huge_valf.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/huge_vall.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/inf.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/nan.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/mathdef.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/mathcalls.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/mathinline.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/time.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/stat.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/stat.h:
+
+/usr/include/python2.7/pymath.h:
+
+/usr/include/python2.7/pymem.h:
+
+/usr/include/python2.7/object.h:
+
+/usr/include/python2.7/objimpl.h:
+
+/usr/include/python2.7/pydebug.h:
+
+/usr/include/python2.7/unicodeobject.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/ctype.h:
+
+/usr/include/python2.7/intobject.h:
+
+/usr/include/python2.7/boolobject.h:
+
+/usr/include/python2.7/longobject.h:
+
+/usr/include/python2.7/floatobject.h:
+
+/usr/include/python2.7/complexobject.h:
+
+/usr/include/python2.7/rangeobject.h:
+
+/usr/include/python2.7/stringobject.h:
+
+/usr/include/python2.7/memoryobject.h:
+
+/usr/include/python2.7/bufferobject.h:
+
+/usr/include/python2.7/bytesobject.h:
+
+/usr/include/python2.7/bytearrayobject.h:
+
+/usr/include/python2.7/tupleobject.h:
+
+/usr/include/python2.7/listobject.h:
+
+/usr/include/python2.7/dictobject.h:
+
+/usr/include/python2.7/enumobject.h:
+
+/usr/include/python2.7/setobject.h:
+
+/usr/include/python2.7/methodobject.h:
+
+/usr/include/python2.7/moduleobject.h:
+
+/usr/include/python2.7/funcobject.h:
+
+/usr/include/python2.7/classobject.h:
+
+/usr/include/python2.7/fileobject.h:
+
+/usr/include/python2.7/cobject.h:
+
+/usr/include/python2.7/pycapsule.h:
+
+/usr/include/python2.7/traceback.h:
+
+/usr/include/python2.7/sliceobject.h:
+
+/usr/include/python2.7/cellobject.h:
+
+/usr/include/python2.7/iterobject.h:
+
+/usr/include/python2.7/genobject.h:
+
+/usr/include/python2.7/descrobject.h:
+
+/usr/include/python2.7/warnings.h:
+
+/usr/include/python2.7/weakrefobject.h:
+
+/usr/include/python2.7/codecs.h:
+
+/usr/include/python2.7/pyerrors.h:
+
+/usr/include/python2.7/pystate.h:
+
+/usr/include/python2.7/pyarena.h:
+
+/usr/include/python2.7/modsupport.h:
+
+/usr/include/python2.7/pythonrun.h:
+
+/usr/include/python2.7/ceval.h:
+
+/usr/include/python2.7/sysmodule.h:
+
+/usr/include/python2.7/intrcheck.h:
+
+/usr/include/python2.7/import.h:
+
+/usr/include/python2.7/abstract.h:
+
+/usr/include/python2.7/compile.h:
+
+/usr/include/python2.7/code.h:
+
+/usr/include/python2.7/eval.h:
+
+/usr/include/python2.7/pyctype.h:
+
+/usr/include/python2.7/pystrtod.h:
+
+/usr/include/python2.7/pystrcmp.h:
+
+/usr/include/python2.7/dtoa.h:
+
+/usr/include/python2.7/pyfpe.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/signal.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/signum.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/siginfo.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/sigaction.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/sigcontext.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/asm/sigcontext.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/sigstack.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/ucontext.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/procfs.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/user.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/sigthread.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/setjmp.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/setjmp.h:
+
+/usr/include/python2.7/fileobject.h:
+
+../include/libxml/xmlmemory.h:
+
+../include/libxml/xmlversion.h:
+
+../include/libxml/xmlexports.h:
+
+../include/libxml/threads.h:
+
+../include/libxml/globals.h:
+
+../include/libxml/parser.h:
+
+../include/libxml/tree.h:
+
+../include/libxml/xmlstring.h:
+
+../include/libxml/xmlregexp.h:
+
+../include/libxml/dict.h:
+
+../include/libxml/hash.h:
+
+../include/libxml/valid.h:
+
+../include/libxml/xmlerror.h:
+
+../include/libxml/list.h:
+
+../include/libxml/xmlautomata.h:
+
+../include/libxml/entities.h:
+
+../include/libxml/encoding.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/iconv.h:
+
+../include/libxml/xmlIO.h:
+
+../include/libxml/SAX.h:
+
+../include/libxml/xlink.h:
+
+../include/libxml/SAX2.h:
+
+../include/libxml/xpath.h:
+
+../include/libxml/xpathInternals.h:
+
+../include/libxml/c14n.h:
+
+../include/libxml/xmlreader.h:
+
+../include/libxml/relaxng.h:
+
+../include/libxml/xmlschemas.h:
+
+../include/libxml/xmlsave.h:
+
+libxml_wrap.h:
+
+../include/libxml/parserInternals.h:
+
+../include/libxml/HTMLparser.h:
+
+../include/libxml/chvalid.h:
+
+../include/libxml/catalog.h:
+
+../include/libxml/nanoftp.h:
+
+../include/libxml/nanohttp.h:
+
+../include/libxml/uri.h:
+
+../include/libxml/debugXML.h:
+
+../include/libxml/HTMLtree.h:
+
+../include/libxml/xinclude.h:
+
+../include/libxml/xpointer.h:
+
+../include/libxml/xmlunicode.h:
+
+libxml2-py.h:
+
+libxml2-export.c:

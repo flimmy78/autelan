@@ -1,0 +1,5 @@
+/home/hisisdk/histb/autelan/rootfs/libubox/CMakeFiles/blobmsg_json.dir
+/home/hisisdk/histb/autelan/rootfs/libubox/CMakeFiles/jshn.dir
+/home/hisisdk/histb/autelan/rootfs/libubox/CMakeFiles/json_script.dir
+/home/hisisdk/histb/autelan/rootfs/libubox/CMakeFiles/ubox.dir
+/home/hisisdk/histb/autelan/rootfs/libubox/CMakeFiles/ubox-static.dir

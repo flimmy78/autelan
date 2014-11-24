@@ -1,0 +1,43 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+	CC=${hisiprefix}-gcc \
+	GCC=${hisiprefix}-gcc \
+	CXX=${hisiprefix}-g++ \
+	CFLAGS=" \
+		-O2 \
+		-I${hisitools}/usr/include \
+		-I${autefake}/usr/include -I${autefake}/usr/local/include \
+		" \
+	LDFLAGS=" \
+		-L${hisitools}/lib -L${hisitools}/usr/lib \
+		-L${auterelease}/lib -L${auterelease}/usr/lib -L${auterelease}/usr/local/lib \
+		" \
+./configure \
+	--host=${hisiprefix} \
+	--prefix=${auterelease}/usr \
+	--bindir=${auterelease}/usr/bin \
+	--sbindir=${auterelease}/usr/sbin \
+	--libexecdir=${auterelease}/usr/libexec \
+	--sysconfdir=${auterelease}/etc \
+	--localstatedir=${auterelease}/var \
+	--libdir=${auterelease}/usr/lib \
+	\
+	--includedir=${autefake}/usr/include \
+	--datarootdir=${autefake}/usr/share \
+	--datadir=${autefake}/usr/share \
+	--infodir=${autefake}/usr/share/info \
+	--localedir=${autefake}/usr/share/local \
+	--mandir=${autefake}/usr/share/man \
+	--docdir=${autefake}/usr/share/doc \
+	--htmldir=${autefake}/usr/share/doc \
+	--dvidir=${autefake}/usr/share/doc \
+	--pdfdir=${autefake}/usr/share/doc \
+	--psdir=${autefake}/usr/share/doc \
+	\
+	--enable-jit \
+	--enable-utf8 \
+	;
+
+

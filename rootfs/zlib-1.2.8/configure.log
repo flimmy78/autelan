@@ -1,0 +1,308 @@
+--------------------
+./configure --prefix=/home/hisisdk/histb/autelan/release/usr --eprefix=/home/hisisdk/histb/autelan/release/usr --libdir=/home/hisisdk/histb/autelan/release/usr/lib --sharedlibdir=/home/hisisdk/histb/autelan/fakerelease/usr/lib --includedir=/home/hisisdk/histb/autelan/fakerelease/usr/lib --static
+Sat Sep  6 13:48:35 CST 2014
+=== ztest28743.c ===
+extern int getchar();
+int hello() {return getchar();}
+===
+arm-hisiv200-linux-gcc -c ztest28743.c
+... using gcc
+
+Checking for obsessive-compulsive compiler options...
+=== ztest28743.c ===
+int foo() { return 0; }
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include ztest28743.c
+
+Building static library libz.a version 1.2.8 with arm-hisiv200-linux-gcc.
+
+=== ztest28743.c ===
+#include <sys/types.h>
+off64_t dummy = 0;
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 ztest28743.c
+Checking for off64_t... Yes.
+Checking for fseeko... Yes.
+
+=== ztest28743.c ===
+#include <string.h>
+#include <errno.h>
+int main() { return strlen(strerror(errno)); }
+===
+arm-hisiv200-linux-gcc -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 -o ztest28743 ztest28743.c
+Checking for strerror... Yes.
+
+=== ztest28743.c ===
+#include <unistd.h>
+int main() { return 0; }
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 ztest28743.c
+Checking for unistd.h... Yes.
+
+=== ztest28743.c ===
+#include <stdarg.h>
+int main() { return 0; }
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 ztest28743.c
+Checking for stdarg.h... Yes.
+
+=== ztest28743.c ===
+#include <stdio.h>
+#include <stdarg.h>
+#include "zconf.h"
+int main()
+{
+#ifndef STDC
+  choke me
+#endif
+  return 0;
+}
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 ztest28743.c
+Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
+
+=== ztest28743.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return 0;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+arm-hisiv200-linux-gcc -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 -o ztest28743 ztest28743.c
+Checking for vsnprintf() in stdio.h... Yes.
+
+=== ztest28743.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  int n;
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  n = vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return n;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 ztest28743.c
+Checking for return value of vsnprintf()... Yes.
+
+=== ztest28743.c ===
+#define ZLIB_INTERNAL __attribute__((visibility ("hidden")))
+int ZLIB_INTERNAL foo;
+int main()
+{
+  return 0;
+}
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 ztest28743.c
+Checking for attribute(visibility) support... Yes.
+
+ALL = static all64
+AR = ar
+ARFLAGS = rc
+CC = arm-hisiv200-linux-gcc
+CFLAGS = -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
+CPP = arm-hisiv200-linux-gcc -E
+EXE =
+LDCONFIG = ldconfig
+LDFLAGS = -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib
+LDSHARED = arm-hisiv200-linux-gcc
+LDSHAREDLIBC = -lc
+OBJC = $(OBJZ) $(OBJG)
+PIC_OBJC = $(PIC_OBJZ) $(PIC_OBJG)
+RANLIB = ranlib
+SFLAGS = -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
+SHAREDLIB =
+SHAREDLIBM =
+SHAREDLIBV =
+STATICLIB = libz.a
+TEST = all teststatic test64
+VER = 1.2.8
+Z_U4 =
+exec_prefix = /home/hisisdk/histb/autelan/release/usr
+includedir = /home/hisisdk/histb/autelan/fakerelease/usr/lib
+libdir = /home/hisisdk/histb/autelan/release/usr/lib
+mandir = ${prefix}/share/man
+prefix = /home/hisisdk/histb/autelan/release/usr
+sharedlibdir = /home/hisisdk/histb/autelan/fakerelease/usr/lib
+uname = Linux
+--------------------
+
+
+--------------------
+./configure --prefix=/home/hisisdk/histb/autelan/release/usr --eprefix=/home/hisisdk/histb/autelan/release/usr --libdir=/home/hisisdk/histb/autelan/release/usr/lib --sharedlibdir=/home/hisisdk/histb/autelan/fakerelease/usr/lib --includedir=/home/hisisdk/histb/autelan/fakerelease/usr/lib --static
+Sat Sep  6 14:01:09 CST 2014
+=== ztest2157.c ===
+extern int getchar();
+int hello() {return getchar();}
+===
+arm-hisiv200-linux-gcc -c ztest2157.c
+... using gcc
+
+Checking for obsessive-compulsive compiler options...
+=== ztest2157.c ===
+int foo() { return 0; }
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include ztest2157.c
+
+Building static library libz.a version 1.2.8 with arm-hisiv200-linux-gcc.
+
+=== ztest2157.c ===
+#include <sys/types.h>
+off64_t dummy = 0;
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 ztest2157.c
+Checking for off64_t... Yes.
+Checking for fseeko... Yes.
+
+=== ztest2157.c ===
+#include <string.h>
+#include <errno.h>
+int main() { return strlen(strerror(errno)); }
+===
+arm-hisiv200-linux-gcc -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 -o ztest2157 ztest2157.c
+Checking for strerror... Yes.
+
+=== ztest2157.c ===
+#include <unistd.h>
+int main() { return 0; }
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 ztest2157.c
+Checking for unistd.h... Yes.
+
+=== ztest2157.c ===
+#include <stdarg.h>
+int main() { return 0; }
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 ztest2157.c
+Checking for stdarg.h... Yes.
+
+=== ztest2157.c ===
+#include <stdio.h>
+#include <stdarg.h>
+#include "zconf.h"
+int main()
+{
+#ifndef STDC
+  choke me
+#endif
+  return 0;
+}
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 ztest2157.c
+Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
+
+=== ztest2157.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return 0;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+arm-hisiv200-linux-gcc -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 -o ztest2157 ztest2157.c
+Checking for vsnprintf() in stdio.h... Yes.
+
+=== ztest2157.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  int n;
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  n = vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return n;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 ztest2157.c
+Checking for return value of vsnprintf()... Yes.
+
+=== ztest2157.c ===
+#define ZLIB_INTERNAL __attribute__((visibility ("hidden")))
+int ZLIB_INTERNAL foo;
+int main()
+{
+  return 0;
+}
+===
+arm-hisiv200-linux-gcc -c -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 ztest2157.c
+Checking for attribute(visibility) support... Yes.
+
+ALL = static all64
+AR = ar
+ARFLAGS = rc
+CC = arm-hisiv200-linux-gcc
+CFLAGS = -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
+CPP = arm-hisiv200-linux-gcc -E
+EXE =
+LDCONFIG = ldconfig
+LDFLAGS = -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib
+LDSHARED = arm-hisiv200-linux-gcc
+LDSHAREDLIBC = -lc
+OBJC = $(OBJZ) $(OBJG)
+PIC_OBJC = $(PIC_OBJZ) $(PIC_OBJG)
+RANLIB = ranlib
+SFLAGS = -g -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
+SHAREDLIB =
+SHAREDLIBM =
+SHAREDLIBV =
+STATICLIB = libz.a
+TEST = all teststatic test64
+VER = 1.2.8
+Z_U4 =
+exec_prefix = /home/hisisdk/histb/autelan/release/usr
+includedir = /home/hisisdk/histb/autelan/fakerelease/usr/lib
+libdir = /home/hisisdk/histb/autelan/release/usr/lib
+mandir = ${prefix}/share/man
+prefix = /home/hisisdk/histb/autelan/release/usr
+sharedlibdir = /home/hisisdk/histb/autelan/fakerelease/usr/lib
+uname = Linux
+--------------------
+
+
+--------------------
+./configure --help
+Sat Sep  6 13:59:59 CST 2014
+usage:
+  configure [--const] [--zprefix] [--prefix=PREFIX]  [--eprefix=EXPREFIX]
+    [--static] [--64] [--libdir=LIBDIR] [--sharedlibdir=LIBDIR]
+    [--includedir=INCLUDEDIR] [--archs="-arch i386 -arch x86_64"]
+--------------------
+./configure --help
+Sat Sep  6 14:11:56 CST 2014
+usage:
+  configure [--const] [--zprefix] [--prefix=PREFIX]  [--eprefix=EXPREFIX]
+    [--static] [--64] [--libdir=LIBDIR] [--sharedlibdir=LIBDIR]
+    [--includedir=INCLUDEDIR] [--archs="-arch i386 -arch x86_64"]
