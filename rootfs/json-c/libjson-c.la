@@ -17,7 +17,7 @@ old_library=''
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -L/home/hisisdk/histb/source/rootfs/lib -L/home/hisisdk/histb/source/rootfs/user/lib -L/home/hisisdk/histb/source/rootfs/user/local/lib'
+dependency_libs=' -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -L/home/hisisdk/histb/source/rootfs/lib -L/home/hisisdk/histb/source/rootfs/usr/lib -L/home/hisisdk/histb/source/rootfs/usr/local/lib'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
