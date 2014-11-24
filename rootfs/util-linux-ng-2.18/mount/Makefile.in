@@ -115,10 +115,9 @@ am_mount_OBJECTS = mount-mount.$(OBJEXT) $(am__objects_6) \
 	mount-setproctitle.$(OBJEXT) mount-strtosize.$(OBJEXT)
 mount_OBJECTS = $(am_mount_OBJECTS)
 am__DEPENDENCIES_1 =
-@BUILD_LIBBLKID_FALSE@am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
-am__DEPENDENCIES_3 = $(am__append_5) $(am__DEPENDENCIES_2)
-@HAVE_SELINUX_TRUE@am__DEPENDENCIES_4 = $(am__DEPENDENCIES_1)
-mount_DEPENDENCIES = $(am__DEPENDENCIES_3) $(am__DEPENDENCIES_4)
+am__DEPENDENCIES_2 = $(am__append_5) $(am__DEPENDENCIES_1)
+@HAVE_SELINUX_TRUE@am__DEPENDENCIES_3 = $(am__DEPENDENCIES_1)
+mount_DEPENDENCIES = $(am__DEPENDENCIES_2) $(am__DEPENDENCIES_3)
 mount_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(mount_CFLAGS) $(CFLAGS) \
 	$(mount_LDFLAGS) $(LDFLAGS) -o $@
@@ -146,10 +145,11 @@ am__objects_9 = mount_static-mount.$(OBJEXT) $(am__objects_8) \
 	mount_static-strtosize.$(OBJEXT)
 @HAVE_STATIC_MOUNT_TRUE@am_mount_static_OBJECTS = $(am__objects_9)
 mount_static_OBJECTS = $(am_mount_static_OBJECTS)
-am__DEPENDENCIES_5 = $(am__append_6) $(am__DEPENDENCIES_2)
+@BUILD_LIBBLKID_FALSE@am__DEPENDENCIES_4 = $(am__DEPENDENCIES_1)
+am__DEPENDENCIES_5 = $(am__append_6) $(am__DEPENDENCIES_4)
 @HAVE_STATIC_MOUNT_TRUE@am__DEPENDENCIES_6 = $(am__DEPENDENCIES_5)
 mount_static_DEPENDENCIES = $(am__DEPENDENCIES_6) \
-	$(am__DEPENDENCIES_4)
+	$(am__DEPENDENCIES_3)
 mount_static_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(mount_static_CFLAGS) \
 	$(CFLAGS) $(mount_static_LDFLAGS) $(LDFLAGS) -o $@
@@ -165,7 +165,7 @@ am_swapon_OBJECTS = swapon-swapon.$(OBJEXT) \
 	swapon-fsprobe.$(OBJEXT) swapon-canonicalize.$(OBJEXT) \
 	swapon-mangle.$(OBJEXT)
 swapon_OBJECTS = $(am_swapon_OBJECTS)
-swapon_DEPENDENCIES = $(am__DEPENDENCIES_3)
+swapon_DEPENDENCIES = $(am__DEPENDENCIES_2)
 swapon_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(swapon_CFLAGS) $(CFLAGS) \
 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -179,7 +179,7 @@ am__objects_12 = umount-fstab.$(OBJEXT) umount-mount_mntent.$(OBJEXT) \
 	umount-mangle.$(OBJEXT)
 am_umount_OBJECTS = umount-umount.$(OBJEXT) $(am__objects_12)
 umount_OBJECTS = $(am_umount_OBJECTS)
-umount_DEPENDENCIES = $(am__DEPENDENCIES_3)
+umount_DEPENDENCIES = $(am__DEPENDENCIES_2)
 umount_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(umount_CFLAGS) $(CFLAGS) \
 	$(umount_LDFLAGS) $(LDFLAGS) -o $@
@@ -281,8 +281,6 @@ AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
 AUTOMAKE = @AUTOMAKE@
 AWK = @AWK@
-BLKID_CFLAGS = @BLKID_CFLAGS@
-BLKID_LIBS = @BLKID_LIBS@
 BLKID_LIBS_STATIC = @BLKID_LIBS_STATIC@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
@@ -346,10 +344,10 @@ PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
 PACKAGE_NAME = @PACKAGE_NAME@
 PACKAGE_STRING = @PACKAGE_STRING@
 PACKAGE_TARNAME = @PACKAGE_TARNAME@
+PACKAGE_URL = @PACKAGE_URL@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
 PERL = @PERL@
-PKG_CONFIG = @PKG_CONFIG@
 POSUB = @POSUB@
 RANLIB = @RANLIB@
 SED = @SED@
@@ -361,8 +359,6 @@ STRIP = @STRIP@
 SUID_CFLAGS = @SUID_CFLAGS@
 SUID_LDFLAGS = @SUID_LDFLAGS@
 USE_NLS = @USE_NLS@
-UUID_CFLAGS = @UUID_CFLAGS@
-UUID_LIBS = @UUID_LIBS@
 VERSION = @VERSION@
 XGETTEXT = @XGETTEXT@
 XSLTPROC = @XSLTPROC@

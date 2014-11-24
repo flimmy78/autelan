@@ -115,10 +115,9 @@ am_mount_OBJECTS = mount-mount.$(OBJEXT) $(am__objects_6) \
 	mount-setproctitle.$(OBJEXT) mount-strtosize.$(OBJEXT)
 mount_OBJECTS = $(am_mount_OBJECTS)
 am__DEPENDENCIES_1 =
-#am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
-am__DEPENDENCIES_3 = $(am__append_5) $(am__DEPENDENCIES_2)
-#am__DEPENDENCIES_4 = $(am__DEPENDENCIES_1)
-mount_DEPENDENCIES = $(am__DEPENDENCIES_3) $(am__DEPENDENCIES_4)
+am__DEPENDENCIES_2 = $(am__append_5) $(am__DEPENDENCIES_1)
+#am__DEPENDENCIES_3 = $(am__DEPENDENCIES_1)
+mount_DEPENDENCIES = $(am__DEPENDENCIES_2) $(am__DEPENDENCIES_3)
 mount_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(mount_CFLAGS) $(CFLAGS) \
 	$(mount_LDFLAGS) $(LDFLAGS) -o $@
@@ -146,10 +145,11 @@ am__objects_9 = mount_static-mount.$(OBJEXT) $(am__objects_8) \
 	mount_static-strtosize.$(OBJEXT)
 #am_mount_static_OBJECTS = $(am__objects_9)
 mount_static_OBJECTS = $(am_mount_static_OBJECTS)
-am__DEPENDENCIES_5 = $(am__append_6) $(am__DEPENDENCIES_2)
+#am__DEPENDENCIES_4 = $(am__DEPENDENCIES_1)
+am__DEPENDENCIES_5 = $(am__append_6) $(am__DEPENDENCIES_4)
 #am__DEPENDENCIES_6 = $(am__DEPENDENCIES_5)
 mount_static_DEPENDENCIES = $(am__DEPENDENCIES_6) \
-	$(am__DEPENDENCIES_4)
+	$(am__DEPENDENCIES_3)
 mount_static_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(mount_static_CFLAGS) \
 	$(CFLAGS) $(mount_static_LDFLAGS) $(LDFLAGS) -o $@
@@ -165,7 +165,7 @@ am_swapon_OBJECTS = swapon-swapon.$(OBJEXT) \
 	swapon-fsprobe.$(OBJEXT) swapon-canonicalize.$(OBJEXT) \
 	swapon-mangle.$(OBJEXT)
 swapon_OBJECTS = $(am_swapon_OBJECTS)
-swapon_DEPENDENCIES = $(am__DEPENDENCIES_3)
+swapon_DEPENDENCIES = $(am__DEPENDENCIES_2)
 swapon_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(swapon_CFLAGS) $(CFLAGS) \
 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -179,7 +179,7 @@ am__objects_12 = umount-fstab.$(OBJEXT) umount-mount_mntent.$(OBJEXT) \
 	umount-mangle.$(OBJEXT)
 am_umount_OBJECTS = umount-umount.$(OBJEXT) $(am__objects_12)
 umount_OBJECTS = $(am_umount_OBJECTS)
-umount_DEPENDENCIES = $(am__DEPENDENCIES_3)
+umount_DEPENDENCIES = $(am__DEPENDENCIES_2)
 umount_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(umount_CFLAGS) $(CFLAGS) \
 	$(umount_LDFLAGS) $(LDFLAGS) -o $@
@@ -281,8 +281,6 @@ AUTOCONF = ${SHELL} /home/hisisdk/histb/autelan/rootfs/util-linux-ng-2.18/config
 AUTOHEADER = ${SHELL} /home/hisisdk/histb/autelan/rootfs/util-linux-ng-2.18/config/missing --run autoheader
 AUTOMAKE = ${SHELL} /home/hisisdk/histb/autelan/rootfs/util-linux-ng-2.18/config/missing --run automake-1.11
 AWK = gawk
-BLKID_CFLAGS = 
-BLKID_LIBS = -lblkid -luuid
 BLKID_LIBS_STATIC = 
 CC = arm-hisiv200-linux-gcc -std=gnu99
 CCDEPMODE = depmode=gcc3
@@ -346,10 +344,10 @@ PACKAGE_BUGREPORT = kzak@redhat.com
 PACKAGE_NAME = util-linux-ng
 PACKAGE_STRING = util-linux-ng 2.18
 PACKAGE_TARNAME = util-linux-ng
+PACKAGE_URL = 
 PACKAGE_VERSION = 2.18
 PATH_SEPARATOR = :
 PERL = /usr/bin/perl
-PKG_CONFIG = 
 POSUB = po
 RANLIB = arm-hisiv200-linux-ranlib
 SED = /bin/sed
@@ -361,8 +359,6 @@ STRIP = arm-hisiv200-linux-strip
 SUID_CFLAGS = 
 SUID_LDFLAGS = 
 USE_NLS = yes
-UUID_CFLAGS = 
-UUID_LIBS = -luuid
 VERSION = 2.18
 XGETTEXT = /usr/bin/xgettext
 XSLTPROC = /usr/bin/xsltproc
