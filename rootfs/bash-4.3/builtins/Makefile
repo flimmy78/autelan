@@ -39,11 +39,11 @@ srcdir = .
 VPATH = .
 topdir = ..
 
-datarootdir = /home/hisisdk/histb/autelan/fakerelease/share
+datarootdir = /home/hisisdk/histb/autelan/fakerelease/usr/share
 
-includedir = /home/hisisdk/histb/autelan/fakerelease/include
-datadir = /home/hisisdk/histb/autelan/fakerelease/share
-localedir = /home/hisisdk/histb/autelan/fakerelease/share/local
+includedir = /home/hisisdk/histb/autelan/fakerelease/usr/include
+datadir = /home/hisisdk/histb/autelan/fakerelease/usr/share
+localedir = /home/hisisdk/histb/autelan/fakerelease/usr/share/local
 
 # Support an alternate destination root directory for package building
 DESTDIR =
@@ -55,7 +55,7 @@ BUILD_DIR = /home/hisisdk/histb/autelan/rootfs/bash-4.3
 LIBBUILD = ${BUILD_DIR}/lib
 
 PROFILE_FLAGS = 
-CFLAGS =  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		
+CFLAGS =  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		
 CFLAGS_FOR_BUILD = -g -DCROSS_COMPILING
 CPPFLAGS = 
 CPPFLAGS_FOR_BUILD = 
@@ -64,7 +64,7 @@ DEFS = -DHAVE_CONFIG_H
 LOCAL_DEFS = -DSHELL
 
 LIBS = -ldl 
-LDFLAGS =  		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/source/rootfs/lib -L/home/hisisdk/histb/source/rootfs/user/lib -L/home/hisisdk/histb/source/rootfs/user/local/lib 		 -L./lib/termcap $(LOCAL_LDFLAGS) $(CFLAGS)
+LDFLAGS =  		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 -L./lib/termcap $(LOCAL_LDFLAGS) $(CFLAGS)
 LDFLAGS_FOR_BUILD =  $(LOCAL_LDFLAGS) $(CFLAGS_FOR_BUILD)
 LOCAL_LDFLAGS = -rdynamic
 LIBS_FOR_BUILD = 

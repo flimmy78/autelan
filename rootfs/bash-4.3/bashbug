@@ -29,7 +29,7 @@
 MACHINE="arm"
 OS="linux-gnu"
 CC="arm-hisiv200-linux-gcc"
-CFLAGS=" -DPROGRAM='bash' -DCONF_HOSTTYPE='arm' -DCONF_OSTYPE='linux-gnu' -DCONF_MACHTYPE='arm-hisiv200-linux-gnu' -DCONF_VENDOR='hisiv200' -DLOCALEDIR='/home/hisisdk/histb/autelan/fakerelease/share/local' -DPACKAGE='bash' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		"
+CFLAGS=" -DPROGRAM='bash' -DCONF_HOSTTYPE='arm' -DCONF_OSTYPE='linux-gnu' -DCONF_MACHTYPE='arm-hisiv200-linux-gnu' -DCONF_VENDOR='hisiv200' -DLOCALEDIR='/home/hisisdk/histb/autelan/fakerelease/usr/share/local' -DPACKAGE='bash' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		"
 RELEASE="4.3"
 PATCHLEVEL="0"
 RELSTATUS="release"

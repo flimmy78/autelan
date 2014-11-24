@@ -39,7 +39,7 @@ INTL_BUILDDIR = ${LIBBUILD}/intl
 INTL_INC = 
 LIBINTL_H = 
 
-datarootdir = /home/hisisdk/histb/autelan/fakerelease/share
+datarootdir = /home/hisisdk/histb/autelan/fakerelease/usr/share
 
 INSTALL = /usr/bin/install -c
 INSTALL_PROGRAM = ${INSTALL}
@@ -55,10 +55,10 @@ MV = mv
 
 SHELL = /bin/sh
 
-CFLAGS =  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		
+CFLAGS =  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		
 LOCAL_CFLAGS =  ${DEBUG}
 CPPFLAGS = 
-LDFLAGS =  		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/source/rootfs/lib -L/home/hisisdk/histb/source/rootfs/user/lib -L/home/hisisdk/histb/source/rootfs/user/local/lib 		 -L./lib/termcap -rdynamic
+LDFLAGS =  		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 -L./lib/termcap -rdynamic
 
 PROFILE_FLAGS = 
 

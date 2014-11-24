@@ -24,10 +24,10 @@ exec_prefix = ${prefix}
 
 bindir = /home/hisisdk/histb/autelan/release/bin
 libdir = /home/hisisdk/histb/autelan/release/lib
-infodir = /home/hisisdk/histb/autelan/fakerelease/share/info
-includedir = /home/hisisdk/histb/autelan/fakerelease/include
+infodir = /home/hisisdk/histb/autelan/fakerelease/usr/share/info
+includedir = /home/hisisdk/histb/autelan/fakerelease/usr/include
 
-datarootdir = /home/hisisdk/histb/autelan/fakerelease/share
+datarootdir = /home/hisisdk/histb/autelan/fakerelease/usr/share
 
 topdir = ../../..
 BUILD_DIR = /home/hisisdk/histb/autelan/rootfs/bash-4.3
@@ -42,7 +42,7 @@ SHELL = /bin/sh
 
 PERL5 = perl5
 
-CFLAGS =  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		
+CFLAGS =  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		
 
 #
 # These values are generated for configure by ${topdir}/support/shobj-conf.

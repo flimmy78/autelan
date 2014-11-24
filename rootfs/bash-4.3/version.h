@@ -5,7 +5,7 @@
 #define DISTVERSION "4.3"
 
 /* The last built version of this shell. */
-#define BUILDVERSION 6
+#define BUILDVERSION 1
 
 /* The release status of this shell. */
 #define RELSTATUS "release"
@@ -14,4 +14,4 @@
 #define DEFAULT_COMPAT_LEVEL 43
 
 /* A version string for use by sccs and the what command. */
-#define SCCSVERSION "@(#)Bash version 4.3.0(6) release GNU"
+#define SCCSVERSION "@(#)Bash version 4.3.0(1) release GNU"

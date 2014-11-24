@@ -23,10 +23,10 @@ prefix = /home/hisisdk/histb/autelan/release
 exec_prefix = ${prefix}
 bindir = /home/hisisdk/histb/autelan/release/bin
 libdir = /home/hisisdk/histb/autelan/release/lib
-infodir = /home/hisisdk/histb/autelan/fakerelease/share/info
-includedir = /home/hisisdk/histb/autelan/fakerelease/include
+infodir = /home/hisisdk/histb/autelan/fakerelease/usr/share/info
+includedir = /home/hisisdk/histb/autelan/fakerelease/usr/include
 
-datarootdir = /home/hisisdk/histb/autelan/fakerelease/share
+datarootdir = /home/hisisdk/histb/autelan/fakerelease/usr/share
 
 topdir = ../..
 BUILD_DIR = /home/hisisdk/histb/autelan/rootfs/bash-4.3
@@ -43,7 +43,7 @@ host_os = linux-gnu
 host_cpu = arm
 host_vendor = hisiv200
 
-CFLAGS =  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		
+CFLAGS =  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		
 LOCAL_CFLAGS = 
 DEFS = -DHAVE_CONFIG_H
 LOCAL_DEFS = -DSHELL
@@ -70,7 +70,7 @@ CCFLAGS = $(DEFS) $(LOCAL_DEFS) $(LOCAL_CFLAGS) $(CFLAGS)
 SHOBJ_CC = arm-hisiv200-linux-gcc
 SHOBJ_CFLAGS = -fPIC
 SHOBJ_LD = ${CC}
-SHOBJ_LDFLAGS = -shared -Wl,-soname,$@  		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/source/rootfs/lib -L/home/hisisdk/histb/source/rootfs/user/lib -L/home/hisisdk/histb/source/rootfs/user/local/lib 		 -L./lib/termcap
+SHOBJ_LDFLAGS = -shared -Wl,-soname,$@  		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 -L./lib/termcap
 SHOBJ_XLDFLAGS = 
 SHOBJ_LIBS = 
 SHOBJ_STATUS = supported

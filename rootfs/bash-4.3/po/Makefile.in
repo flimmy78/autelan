@@ -24,9 +24,9 @@ BUILD_DIR = /home/hisisdk/histb/autelan/rootfs/bash-4.3
 prefix = /home/hisisdk/histb/autelan/release
 exec_prefix = ${prefix}
 
-datarootdir = /home/hisisdk/histb/autelan/fakerelease/share
-datadir = /home/hisisdk/histb/autelan/fakerelease/share
-localedir = /home/hisisdk/histb/autelan/fakerelease/share/local
+datarootdir = /home/hisisdk/histb/autelan/fakerelease/usr/share
+datadir = /home/hisisdk/histb/autelan/fakerelease/usr/share
+localedir = /home/hisisdk/histb/autelan/fakerelease/usr/share/local
 
 gettextsrcdir = $(datadir)/gettext/po
 

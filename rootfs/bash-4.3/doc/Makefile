@@ -36,19 +36,19 @@ VPATH = .
 prefix = /home/hisisdk/histb/autelan/release
 exec_prefix = ${prefix}
 
-datarootdir = /home/hisisdk/histb/autelan/fakerelease/share
+datarootdir = /home/hisisdk/histb/autelan/fakerelease/usr/share
 
-infodir = /home/hisisdk/histb/autelan/fakerelease/share/info
+infodir = /home/hisisdk/histb/autelan/fakerelease/usr/share/info
 
-docdir = /home/hisisdk/histb/autelan/fakerelease/share/doc/bash
+docdir = /home/hisisdk/histb/autelan/fakerelease/usr/share/doc/bash
 
 # set this to a directory name to have the HTML files installed
-htmldir = /home/hisisdk/histb/autelan/fakerelease/share/doc
+htmldir = /home/hisisdk/histb/autelan/fakerelease/usr/share/doc
 
 # Support an alternate destination root directory for package building
 DESTDIR =
 
-mandir = /home/hisisdk/histb/autelan/fakerelease/share/man
+mandir = /home/hisisdk/histb/autelan/fakerelease/usr/share/man
 manpfx = man
 
 man1ext = .1

@@ -33,18 +33,18 @@ prefix = /home/hisisdk/histb/autelan/release
 
 exec_prefix = ${prefix}
 
-datarootdir = /home/hisisdk/histb/autelan/fakerelease/share
+datarootdir = /home/hisisdk/histb/autelan/fakerelease/usr/share
 
 bindir = /home/hisisdk/histb/autelan/release/bin
 libdir = /home/hisisdk/histb/autelan/release/lib
-infodir = /home/hisisdk/histb/autelan/fakerelease/share/info
-includedir = /home/hisisdk/histb/autelan/fakerelease/include
-datadir = /home/hisisdk/histb/autelan/fakerelease/share
-localedir = /home/hisisdk/histb/autelan/fakerelease/share/local
+infodir = /home/hisisdk/histb/autelan/fakerelease/usr/share/info
+includedir = /home/hisisdk/histb/autelan/fakerelease/usr/include
+datadir = /home/hisisdk/histb/autelan/fakerelease/usr/share
+localedir = /home/hisisdk/histb/autelan/fakerelease/usr/share/local
 
-docdir = /home/hisisdk/histb/autelan/fakerelease/share/doc/bash
+docdir = /home/hisisdk/histb/autelan/fakerelease/usr/share/doc/bash
 
-mandir = /home/hisisdk/histb/autelan/fakerelease/share/man
+mandir = /home/hisisdk/histb/autelan/fakerelease/usr/share/man
 manpfx = man
 
 man1ext = .1
@@ -52,7 +52,7 @@ man1dir = $(mandir)/$(manpfx)1
 man3ext = .3
 man3dir = $(mandir)/$(manpfx)3
 
-htmldir = /home/hisisdk/histb/autelan/fakerelease/share/doc
+htmldir = /home/hisisdk/histb/autelan/fakerelease/usr/share/doc
 
 # Support an alternate destination root directory for package building
 DESTDIR =
@@ -124,7 +124,7 @@ THIS_SH = $(BUILD_DIR)/$(Program)
 # with gprof, or nothing (the default).
 PROFILE_FLAGS= 
 
-CFLAGS =  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		
+CFLAGS =  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		
 CFLAGS_FOR_BUILD = -g -DCROSS_COMPILING
 CPPFLAGS = 
 CPPFLAGS_FOR_BUILD = 
@@ -150,7 +150,7 @@ CCFLAGS = $(BASE_CCFLAGS) $(CPPFLAGS) $(CFLAGS)
 
 CCFLAGS_FOR_BUILD = $(BASE_CCFLAGS) $(CPPFLAGS_FOR_BUILD) $(CFLAGS_FOR_BUILD)
 
-LDFLAGS =  		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/source/rootfs/lib -L/home/hisisdk/histb/source/rootfs/usr/lib -L/home/hisisdk/histb/source/rootfs/usr/local/lib 		 -L./lib/termcap $(STATIC_LD) $(LOCAL_LDFLAGS) $(PROFILE_FLAGS) $(CFLAGS)
+LDFLAGS =  		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 -L./lib/termcap $(STATIC_LD) $(LOCAL_LDFLAGS) $(PROFILE_FLAGS) $(CFLAGS)
 LDFLAGS_FOR_BUILD =  $(LOCAL_LDFLAGS) $(CFLAGS_FOR_BUILD)
 
 INCLUDES = -I.  -I$(srcdir) -I$(BASHINCDIR) -I$(LIBSRC) $(INTL_INC)
