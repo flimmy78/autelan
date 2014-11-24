@@ -2579,7 +2579,7 @@ This directory should
 .Em not
 be cleared when the system reboots.
 The default is
-.Pa /var/lib/sudo/lectured .
+.Pa /home/hisisdk/histb/autelan/release/var/lectured .
 .It mailsub
 Subject of the mail sent to the
 .Em mailto
@@ -2735,7 +2735,7 @@ The directory in which
 stores its time stamp files.
 This directory should be cleared when the system reboots.
 The default is
-.Pa /var/run/sudo/ts .
+.Pa /home/hisisdk/histb/autelan/release/var/run/ts .
 .It timestampowner
 The owner of the lecture status directory, time stamp directory and all
 files stored therein.
@@ -2768,7 +2768,7 @@ A string containing a
 group plugin with optional arguments.
 The string should consist of the plugin
 path, either fully-qualified or relative to the
-.Pa /home/hisisdk/histb/autelan/release/libexec/sudo
+.Pa /home/hisisdk/histb/autelan/release/lib/sudo
 directory, followed by any configuration arguments the plugin requires.
 These arguments (if any) will be passed to the plugin's initialization function.
 If arguments are present, the string must be enclosed in double quotes
@@ -3057,7 +3057,7 @@ Defaults setting.
 The argument to
 .Em group_plugin
 should consist of the plugin path, either fully-qualified or relative to the
-.Pa /home/hisisdk/histb/autelan/release/libexec/sudo
+.Pa /home/hisisdk/histb/autelan/release/lib/sudo
 directory, followed by any configuration options the plugin requires.
 These options (if specified) will be passed to the plugin's initialization
 function.
@@ -3322,21 +3322,21 @@ file) to the
 line in the
 .Xr sudo.conf 5
 file.
-.It unable to open /var/run/sudo/ts/username
+.It unable to open /home/hisisdk/histb/autelan/release/var/run/ts/username
 .Em sudoers
 was unable to read or create the user's time stamp file.
 This can happen when
 .Em timestampowner
 is set to a user other than root and the mode on
-.Pa /var/run/sudo
+.Pa /home/hisisdk/histb/autelan/release/var/run
 is not searchable by group or other.
 The default mode for
-.Pa /var/run/sudo
+.Pa /home/hisisdk/histb/autelan/release/var/run
 is 0711.
-.It unable to write to /var/run/sudo/ts/username
+.It unable to write to /home/hisisdk/histb/autelan/release/var/run/ts/username
 .Em sudoers
 was unable to write to the user's time stamp file.
-.It /var/run/sudo/ts is owned by uid X, should be Y
+.It /home/hisisdk/histb/autelan/release/var/run/ts is owned by uid X, should be Y
 The time stamp directory is owned by a user other than
 .Em timestampowner .
 This can occur when the value of
@@ -3344,7 +3344,7 @@ This can occur when the value of
 has been changed.
 .Em sudoers
 will ignore the time stamp directory until the owner is corrected.
-.It /var/run/sudo/ts is group writable
+.It /home/hisisdk/histb/autelan/release/var/run/ts is group writable
 The time stamp directory is group-writable; it should be writable only by
 .Em timestampowner .
 The default mode for the time stamp directory is 0700.
@@ -3428,11 +3428,11 @@ Local groups file
 List of network groups
 .It Pa /var/log/sudo-io
 I/O log files
-.It Pa /var/run/sudo/ts
+.It Pa /home/hisisdk/histb/autelan/release/var/run/ts
 Directory containing time stamps for the
 .Em sudoers
 security policy
-.It Pa /var/lib/sudo/lectured
+.It Pa /home/hisisdk/histb/autelan/release/var/lectured
 Directory containing lecture status files for the
 .Em sudoers
 security policy
@@ -3992,7 +3992,7 @@ will be updated with the contents of the temporary copy.
 .Em sudoers
 will check the ownership of its time stamp directory
 .Po
-.Pa /var/run/sudo/ts
+.Pa /home/hisisdk/histb/autelan/release/var/run/ts
 by default
 .Pc
 and ignore the directory's contents if it is not owned by root or
