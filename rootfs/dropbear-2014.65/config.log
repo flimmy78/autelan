@@ -321,7 +321,7 @@ configure:4634: Disabling PAM
 configure:4712: Using openpty if available
 configure:4714: checking for library containing openpty
 configure:4745: arm-hisiv200-linux-gcc -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c -lz  >&5
-/tmp/cc2uVq3a.o: In function `main':
+/tmp/cckyWhdh.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `openpty'
 collect2: ld returned 1 exit status
 configure:4745: $? = 1
@@ -3557,7 +3557,7 @@ configure:5861: checking for mach/mach_time.h
 configure:5861: result: no
 configure:5873: checking for mach_absolute_time
 configure:5873: arm-hisiv200-linux-gcc -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c -lutil -lz  >&5
-/tmp/ccUA9wEP.o: In function `main':
+/tmp/ccQyF6MX.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `mach_absolute_time'
 collect2: ld returned 1 exit status
 configure:5873: $? = 1
@@ -4384,7 +4384,7 @@ configure:6703: $? = 0
 configure:6703: result: yes
 configure:6703: checking for strlcpy
 configure:6703: arm-hisiv200-linux-gcc -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c -lutil -lz  >&5
-/tmp/ccmVGQUF.o: In function `main':
+/tmp/cci7ncFH.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `strlcpy'
 collect2: ld returned 1 exit status
 configure:6703: $? = 1
@@ -4544,7 +4544,7 @@ configure: failed program was:
 configure:6703: result: no
 configure:6703: checking for strlcat
 configure:6703: arm-hisiv200-linux-gcc -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c -lutil -lz  >&5
-/tmp/ccuxdP1G.o: In function `main':
+/tmp/cc67urpO.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `strlcat'
 collect2: ld returned 1 exit status
 configure:6703: $? = 1
@@ -4712,7 +4712,7 @@ configure:6703: $? = 0
 configure:6703: result: yes
 configure:6703: checking for _getpty
 configure:6703: arm-hisiv200-linux-gcc -o conftest  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 conftest.c -lutil -lz  >&5
-/tmp/ccWtaUZS.o: In function `main':
+/tmp/ccoIk52Z.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `_getpty'
 collect2: ld returned 1 exit status
 configure:6703: $? = 1
