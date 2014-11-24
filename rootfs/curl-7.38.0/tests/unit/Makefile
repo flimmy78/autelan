@@ -1325,44 +1325,7 @@ clean-am: clean-generic clean-libtool clean-noinstPROGRAMS \
 	mostlyclean-am
 
 distclean: distclean-am
-	-rm -f ../libtest/$(DEPDIR)/unit1300-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1301-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1302-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1303-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1304-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1305-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1307-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1308-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1309-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1330-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1394-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1395-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1396-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1397-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1398-first.Po
-	-rm -f ./$(DEPDIR)/unit1300-unit1300.Po
-	-rm -f ./$(DEPDIR)/unit1301-unit1301.Po
-	-rm -f ./$(DEPDIR)/unit1302-unit1302.Po
-	-rm -f ./$(DEPDIR)/unit1303-unit1303.Po
-	-rm -f ./$(DEPDIR)/unit1304-unit1304.Po
-	-rm -f ./$(DEPDIR)/unit1305-unit1305.Po
-	-rm -f ./$(DEPDIR)/unit1307-unit1307.Po
-	-rm -f ./$(DEPDIR)/unit1308-unit1308.Po
-	-rm -f ./$(DEPDIR)/unit1309-unit1309.Po
-	-rm -f ./$(DEPDIR)/unit1330-unit1330.Po
-	-rm -f ./$(DEPDIR)/unit1394-unit1394.Po
-	-rm -f ./$(DEPDIR)/unit1395-unit1395.Po
-	-rm -f ./$(DEPDIR)/unit1396-unit1396.Po
-	-rm -f ./$(DEPDIR)/unit1397-unit1397.Po
-	-rm -f ./$(DEPDIR)/unit1398-unit1398.Po
-	@xm_dep_cnt=`ls ../libtest/$(DEPDIR) | wc -l 2>/dev/null`; \
-	if test $$xm_dep_cnt -eq 0 && test -d ../libtest/$(DEPDIR); then \
-	  rm -rf ../libtest/$(DEPDIR); \
-	fi
-	@xm_dep_cnt=`ls ./$(DEPDIR) | wc -l 2>/dev/null`; \
-	if test $$xm_dep_cnt -eq 0 && test -d ./$(DEPDIR); then \
-	  rm -rf ./$(DEPDIR); \
-	fi
+	-rm -rf ../libtest/$(DEPDIR) ./$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -1408,44 +1371,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-	-rm -f ../libtest/$(DEPDIR)/unit1300-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1301-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1302-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1303-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1304-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1305-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1307-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1308-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1309-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1330-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1394-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1395-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1396-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1397-first.Po
-	-rm -f ../libtest/$(DEPDIR)/unit1398-first.Po
-	-rm -f ./$(DEPDIR)/unit1300-unit1300.Po
-	-rm -f ./$(DEPDIR)/unit1301-unit1301.Po
-	-rm -f ./$(DEPDIR)/unit1302-unit1302.Po
-	-rm -f ./$(DEPDIR)/unit1303-unit1303.Po
-	-rm -f ./$(DEPDIR)/unit1304-unit1304.Po
-	-rm -f ./$(DEPDIR)/unit1305-unit1305.Po
-	-rm -f ./$(DEPDIR)/unit1307-unit1307.Po
-	-rm -f ./$(DEPDIR)/unit1308-unit1308.Po
-	-rm -f ./$(DEPDIR)/unit1309-unit1309.Po
-	-rm -f ./$(DEPDIR)/unit1330-unit1330.Po
-	-rm -f ./$(DEPDIR)/unit1394-unit1394.Po
-	-rm -f ./$(DEPDIR)/unit1395-unit1395.Po
-	-rm -f ./$(DEPDIR)/unit1396-unit1396.Po
-	-rm -f ./$(DEPDIR)/unit1397-unit1397.Po
-	-rm -f ./$(DEPDIR)/unit1398-unit1398.Po
-	@xm_dep_cnt=`ls ../libtest/$(DEPDIR) | wc -l 2>/dev/null`; \
-	if test $$xm_dep_cnt -eq 0 && test -d ../libtest/$(DEPDIR); then \
-	  rm -rf ../libtest/$(DEPDIR); \
-	fi
-	@xm_dep_cnt=`ls ./$(DEPDIR) | wc -l 2>/dev/null`; \
-	if test $$xm_dep_cnt -eq 0 && test -d ./$(DEPDIR); then \
-	  rm -rf ./$(DEPDIR); \
-	fi
+	-rm -rf ../libtest/$(DEPDIR) ./$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 
