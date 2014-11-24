@@ -22,7 +22,7 @@ srcdir = .
 top_srcdir = ..
 
 
-prefix = /home/hisisdk/histb/autelan/release
+prefix = /home/hisisdk/histb/autelan/release/usr
 exec_prefix = ${prefix}
 datarootdir = /home/hisisdk/histb/autelan/fakerelease/usr/share
 datadir = /home/hisisdk/histb/autelan/fakerelease/usr/share

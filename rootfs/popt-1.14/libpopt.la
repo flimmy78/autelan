@@ -14,7 +14,7 @@ library_names='libpopt.so.0.0.0 libpopt.so.0 libpopt.so'
 old_library=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -L/home/hisisdk/histb/source/rootfs/lib -L/home/hisisdk/histb/source/rootfs/usr/lib -L/home/hisisdk/histb/source/rootfs/usr/local/lib'
+dependency_libs=' -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib'
 
 # Version information for libpopt.
 current=0

@@ -85,7 +85,7 @@ AR_FLAGS="cru"
 LTCC="arm-hisiv200-linux-gcc"
 
 # LTCC compiler flags.
-LTCFLAGS=" 		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		"
+LTCFLAGS=" 		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		"
 
 # A language-specific compiler.
 CC="arm-hisiv200-linux-gcc"
@@ -7323,7 +7323,7 @@ AR_FLAGS="cru"
 LTCC="arm-hisiv200-linux-gcc"
 
 # LTCC compiler flags.
-LTCFLAGS=" 		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		"
+LTCFLAGS=" 		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		"
 
 # A language-specific compiler.
 CC="arm-hisiv200-linux-g++"
