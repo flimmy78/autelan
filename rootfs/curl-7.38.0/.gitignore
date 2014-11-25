@@ -3,6 +3,7 @@
 config.log
 docs/examples/Makefile
 lib/.libs/libcurl.so.4.3.0
+lib/Makefile
 src/tool_hugehelp.c
 tests/libtest/Makefile
 tests/server/Makefile
