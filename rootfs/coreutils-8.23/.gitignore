@@ -1,0 +1,4 @@
+config.log
+autom4te.cache/requests
+lib/libcoreutils.a
+src/libver.a
