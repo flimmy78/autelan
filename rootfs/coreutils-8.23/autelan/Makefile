@@ -5782,14 +5782,14 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/lib/local.mk $(srcdi
 	  $(AUTOMAKE) --gnu Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
-	@case '$?' in \
-	  *config.status*) \
-	    echo ' $(SHELL) ./config.status'; \
-	    $(SHELL) ./config.status;; \
+	#@case '$?' in \
+	#  *config.status*) \
+	#    echo ' $(SHELL) ./config.status'; \
+	#    $(SHELL) ./config.status;; \
 	  #*) \
 	  #  echo ' cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe)'; \
 	  #  cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe);; \
-	esac;
+	#esac;
 $(top_srcdir)/lib/local.mk $(srcdir)/lib/gnulib.mk $(top_srcdir)/src/local.mk $(srcdir)/src/cu-progs.mk $(top_srcdir)/src/single-binary.mk $(top_srcdir)/doc/local.mk $(top_srcdir)/man/local.mk $(top_srcdir)/tests/local.mk:
 
 $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
