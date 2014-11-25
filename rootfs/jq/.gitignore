@@ -9,6 +9,9 @@
 .*.sw[a-p]
 tags
 
+autom4te.cache/requests
+config.log
+
 jq
 jq.1
 
