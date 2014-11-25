@@ -1,0 +1,7 @@
+*.o
+libs/lib/libmisc.a
+libs/lib/libportable.a
+libs/lib/libpset.a
+libs/lib/libsio.a
+libs/lib/libstr.a
+libs/lib/libxlog.a
