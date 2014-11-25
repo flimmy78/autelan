@@ -4,11 +4,10 @@ autom4te.cache/
 .libs/libpcre.a
 .libs/libpcrecpp.a
 .libs/libpcreposix.a
-Makefile
-Makefile.in
-aclocal.m4
 config.log
-config.status
-configure
+Makefile
 libtool
-
+libpcreposix.la
+pcre_jit_test
+pcregrep
+pcretest
