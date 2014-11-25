@@ -6,7 +6,6 @@ autom4te.cache/
 .libs/libpcreposix.a
 config.log
 Makefile
-libtool
 libpcreposix.la
 pcre_jit_test
 pcregrep
