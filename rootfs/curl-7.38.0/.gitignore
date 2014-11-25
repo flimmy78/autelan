@@ -8,4 +8,5 @@ src/tool_hugehelp.c
 tests/libtest/Makefile
 tests/server/Makefile
 tests/unit/Makefile
+src/Makefile
 
