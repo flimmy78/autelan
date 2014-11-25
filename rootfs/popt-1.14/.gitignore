@@ -1,4 +1,3 @@
 *.o
 *.lo
 config.log
-.libs/libpopt.lai
