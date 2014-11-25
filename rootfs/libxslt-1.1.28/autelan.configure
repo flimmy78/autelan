@@ -40,6 +40,5 @@
 	\
 	--disable-static \
 	--without-python \
-	--with-libxml-src=${auterootfs}/${app_libxml2} \
 	;
 

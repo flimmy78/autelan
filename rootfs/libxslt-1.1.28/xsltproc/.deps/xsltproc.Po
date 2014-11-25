@@ -1,9 +1,7 @@
 xsltproc.o: xsltproc.c ../libxslt/libxslt.h ../config.h \
- ../libxslt/xsltconfig.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlversion.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlexports.h \
- ../libexslt/exslt.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/tree.h \
+ ../libxslt/xsltconfig.h /usr/include/libxml2/libxml/xmlversion.h \
+ /usr/include/libxml2/libxml/xmlexports.h ../libexslt/exslt.h \
+ /usr/include/libxml2/libxml/tree.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdio.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/features.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/predefs.h \
@@ -20,31 +18,21 @@ xsltproc.o: xsltproc.c ../libxslt/libxslt.h ../config.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/stdio_lim.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/sys_errlist.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/stdio.h \
- /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include-fixed/limits.h \
- /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include-fixed/syslimits.h \
- /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/limits.h \
- /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/posix1_lim.h \
- /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/local_lim.h \
- /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/linux/limits.h \
- /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/posix2_lim.h \
- /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/xopen_lim.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlstring.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlregexp.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/dict.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlmemory.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/threads.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/globals.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/parser.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/hash.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/valid.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlerror.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/list.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlautomata.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/entities.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/encoding.h \
+ /usr/include/libxml2/libxml/xmlstring.h \
+ /usr/include/libxml2/libxml/xmlregexp.h \
+ /usr/include/libxml2/libxml/dict.h \
+ /usr/include/libxml2/libxml/xmlmemory.h \
+ /usr/include/libxml2/libxml/threads.h \
+ /usr/include/libxml2/libxml/globals.h \
+ /usr/include/libxml2/libxml/parser.h /usr/include/libxml2/libxml/hash.h \
+ /usr/include/libxml2/libxml/valid.h \
+ /usr/include/libxml2/libxml/xmlerror.h \
+ /usr/include/libxml2/libxml/list.h \
+ /usr/include/libxml2/libxml/xmlautomata.h \
+ /usr/include/libxml2/libxml/entities.h \
+ /usr/include/libxml2/libxml/encoding.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/iconv.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlIO.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/SAX.h \
+ /usr/include/libxml2/libxml/xmlIO.h /usr/include/libxml2/libxml/SAX.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdlib.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/waitflags.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/waitstatus.h \
@@ -61,10 +49,9 @@ xsltproc.o: xsltproc.c ../libxslt/libxslt.h ../config.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/sysmacros.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/pthreadtypes.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/alloca.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xlink.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/SAX2.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xpath.h \
- ../libexslt/exsltexports.h ../libexslt/exsltconfig.h \
+ /usr/include/libxml2/libxml/xlink.h /usr/include/libxml2/libxml/SAX2.h \
+ /usr/include/libxml2/libxml/xpath.h ../libexslt/exsltexports.h \
+ ../libexslt/exsltconfig.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/string.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string2.h \
@@ -76,14 +63,13 @@ xsltproc.o: xsltproc.c ../libxslt/libxslt.h ../config.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/environments.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/confname.h \
  /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/getopt.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/debugXML.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/HTMLtree.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/HTMLparser.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xinclude.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/catalog.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/parserInternals.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/chvalid.h \
- /home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/uri.h \
+ /usr/include/libxml2/libxml/debugXML.h \
+ /usr/include/libxml2/libxml/HTMLtree.h \
+ /usr/include/libxml2/libxml/HTMLparser.h \
+ /usr/include/libxml2/libxml/xinclude.h \
+ /usr/include/libxml2/libxml/catalog.h \
+ /usr/include/libxml2/libxml/parserInternals.h \
+ /usr/include/libxml2/libxml/chvalid.h /usr/include/libxml2/libxml/uri.h \
  ../libxslt/xslt.h ../libxslt/xsltexports.h ../libxslt/xsltInternals.h \
  ../libxslt/xsltlocale.h ../libxslt/numbersInternals.h \
  ../libxslt/transform.h ../libxslt/xsltutils.h ../libxslt/xsltInternals.h \
@@ -96,13 +82,13 @@ xsltproc.o: xsltproc.c ../libxslt/libxslt.h ../config.h \
 
 ../libxslt/xsltconfig.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlversion.h:
+/usr/include/libxml2/libxml/xmlversion.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlexports.h:
+/usr/include/libxml2/libxml/xmlexports.h:
 
 ../libexslt/exslt.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/tree.h:
+/usr/include/libxml2/libxml/tree.h:
 
 /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdio.h:
 
@@ -136,55 +122,39 @@ xsltproc.o: xsltproc.c ../libxslt/libxslt.h ../config.h \
 
 /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/stdio.h:
 
-/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include-fixed/limits.h:
+/usr/include/libxml2/libxml/xmlstring.h:
 
-/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include-fixed/syslimits.h:
+/usr/include/libxml2/libxml/xmlregexp.h:
 
-/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/limits.h:
+/usr/include/libxml2/libxml/dict.h:
 
-/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/posix1_lim.h:
+/usr/include/libxml2/libxml/xmlmemory.h:
 
-/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/local_lim.h:
+/usr/include/libxml2/libxml/threads.h:
 
-/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/linux/limits.h:
+/usr/include/libxml2/libxml/globals.h:
 
-/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/posix2_lim.h:
+/usr/include/libxml2/libxml/parser.h:
 
-/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/xopen_lim.h:
+/usr/include/libxml2/libxml/hash.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlstring.h:
+/usr/include/libxml2/libxml/valid.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlregexp.h:
+/usr/include/libxml2/libxml/xmlerror.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/dict.h:
+/usr/include/libxml2/libxml/list.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlmemory.h:
+/usr/include/libxml2/libxml/xmlautomata.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/threads.h:
+/usr/include/libxml2/libxml/entities.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/globals.h:
-
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/parser.h:
-
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/hash.h:
-
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/valid.h:
-
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlerror.h:
-
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/list.h:
-
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlautomata.h:
-
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/entities.h:
-
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/encoding.h:
+/usr/include/libxml2/libxml/encoding.h:
 
 /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/iconv.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xmlIO.h:
+/usr/include/libxml2/libxml/xmlIO.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/SAX.h:
+/usr/include/libxml2/libxml/SAX.h:
 
 /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdlib.h:
 
@@ -218,11 +188,11 @@ xsltproc.o: xsltproc.c ../libxslt/libxslt.h ../config.h \
 
 /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/alloca.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xlink.h:
+/usr/include/libxml2/libxml/xlink.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/SAX2.h:
+/usr/include/libxml2/libxml/SAX2.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xpath.h:
+/usr/include/libxml2/libxml/xpath.h:
 
 ../libexslt/exsltexports.h:
 
@@ -250,21 +220,21 @@ xsltproc.o: xsltproc.c ../libxslt/libxslt.h ../config.h \
 
 /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/getopt.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/debugXML.h:
+/usr/include/libxml2/libxml/debugXML.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/HTMLtree.h:
+/usr/include/libxml2/libxml/HTMLtree.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/HTMLparser.h:
+/usr/include/libxml2/libxml/HTMLparser.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/xinclude.h:
+/usr/include/libxml2/libxml/xinclude.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/catalog.h:
+/usr/include/libxml2/libxml/catalog.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/parserInternals.h:
+/usr/include/libxml2/libxml/parserInternals.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/chvalid.h:
+/usr/include/libxml2/libxml/chvalid.h:
 
-/home/hisisdk/histb/autelan/rootfs/libxml2-2.9.1/include/libxml/uri.h:
+/usr/include/libxml2/libxml/uri.h:
 
 ../libxslt/xslt.h:
 

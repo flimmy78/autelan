@@ -167,7 +167,7 @@ lock_old_archive_extraction=no
 LTCC="arm-hisiv200-linux-gcc"
 
 # LTCC compiler flags.
-LTCFLAGS=" 		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/source/rootfs/usr/include -I/home/hisisdk/histb/source/rootfs/usr/local/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		 -Wall"
+LTCFLAGS=" 		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		 -Wall"
 
 # Take the output of nm and produce a listing of raw symbols and C names.
 global_symbol_pipe="sed -n -e 's/^.*[	 ]\\([ABCDGIRSTW][ABCDGIRSTW]*\\)[	 ][	 ]*\\([_A-Za-z][_A-Za-z0-9]*\\)\$/\\1 \\2 \\2/p' | sed '/ __gnu_lto/d'"
@@ -278,7 +278,7 @@ hardcode_into_libs=yes
 sys_lib_search_path_spec="/opt/hisi-linux/x86-arm/arm-hisiv200-linux/lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1 /opt/hisi-linux/x86-arm/arm-hisiv200-linux/lib/gcc /opt/hisi-linux/x86-arm/arm-hisiv200-linux/arm-hisiv200-linux-gnueabi/lib /opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib /opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib "
 
 # Run-time system search path for libraries.
-sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib /usr/lib/i386-linux-gnu/mesa /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /lib64 /usr/lib64 "
+sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib /lib/i486-linux-gnu /usr/lib/i486-linux-gnu /usr/local/lib "
 
 # Whether dlopen is supported.
 dlopen_support=unknown

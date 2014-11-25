@@ -120,7 +120,7 @@ extern "C" {
 #ifndef WITH_MODULES
 #define WITH_MODULES
 #endif
-#define LIBXSLT_DEFAULT_PLUGINS_PATH() "/home/hisisdk/histb/autelan/release/lib/libxslt-plugins"
+#define LIBXSLT_DEFAULT_PLUGINS_PATH() "/home/hisisdk/histb/autelan/release/usr/lib/libxslt-plugins"
 #endif
 
 /**
