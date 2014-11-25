@@ -1,3 +1,5 @@
 *.o
 libcrypto.a
 libssl.a
+apps/openssl
+crypto/buildinf.h
