@@ -9,3 +9,4 @@ ssh-keysign
 ssh-pkcs11-helper
 sshd
 libssh.a
+openbsd-compat/libopenbsd-compat.a
