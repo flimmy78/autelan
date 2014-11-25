@@ -1,5 +1,6 @@
 *.o
 *.lo
+Makefile
 config.log
 doc/xsltproc.1
 libexslt/.libs/libexslt.la
