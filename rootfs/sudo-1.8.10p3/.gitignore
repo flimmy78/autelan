@@ -1,0 +1,10 @@
+*.o
+*.lo
+config.log
+compat/.libs/libreplace.a
+common/.libs/libsudo_util.a
+plugins/group_file/.libs/group_file.a
+plugins/sudoers/.libs/libparsesudoers.a
+plugins/sudoers/.libs/sudoers.a
+plugins/system_group/.libs/system_group.a
+src/.libs/libsudo_noexec.a 
