@@ -5,3 +5,9 @@ libs/lib/libpset.a
 libs/lib/libsio.a
 libs/lib/libstr.a
 libs/lib/libxlog.a
+libs/src/misc/libmisc.a
+libs/src/portable/libportable.a
+libs/src/pset/libpset.a
+libs/src/sio/libsio.a
+libs/src/str/libstr.a
+libs/src/xlog/libxlog.a
