@@ -1,11 +1,7 @@
 *.o
 *.lo
-Makefile
 config.log
 doc/xsltproc.1
-libexslt/.deps/
-libxslt/.deps/
-xsltproc/.deps/
 libexslt/.libs/libexslt.la
 libexslt/.libs/libexslt.lai
 libexslt/.libs/libexslt.so
