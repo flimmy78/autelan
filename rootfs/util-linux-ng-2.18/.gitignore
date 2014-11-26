@@ -1,3 +1,5 @@
+*.o
+*.lo
 config.log
 shlibs/blkid/src/.libs/libblkid.a
 shlibs/blkid/src/partitions/.libs/libblkid_partitions.a
