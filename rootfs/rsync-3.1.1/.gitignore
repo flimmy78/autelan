@@ -1,5 +1,6 @@
 *.[oa]
 *~
+*.o
 dummy
 ID
 Makefile
