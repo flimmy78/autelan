@@ -1,0 +1,52 @@
+lib/xstrndup.o: lib/xstrndup.c lib/config.h lib/xstrndup.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stddef.h \
+ lib/string.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/string.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/features.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/predefs.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/cdefs.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/wordsize.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/gnu/stubs.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/xlocale.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string2.h \
+ lib/stdlib.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdlib.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string3.h \
+ lib/xalloc.h lib/xalloc-oversized.h
+
+lib/config.h:
+
+lib/xstrndup.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stddef.h:
+
+lib/string.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/string.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/features.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/predefs.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/cdefs.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/wordsize.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/gnu/stubs.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/xlocale.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string2.h:
+
+lib/stdlib.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdlib.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string3.h:
+
+lib/xalloc.h:
+
+lib/xalloc-oversized.h:
