@@ -11,6 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2008-08-23 23:20+0800\n"
 "Last-Translator: Ray Wang <wanglei1123@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3997,8 +3998,8 @@ msgstr ""
 #: fdisk/fdisksgilabel.c:718 fdisk/fdisksunlabel.c:222
 #, c-format
 msgid ""
-"Warning:  BLKGETSIZE ioctl failed on %s.  Using geometry cylinder value of %"
-"d.\n"
+"Warning:  BLKGETSIZE ioctl failed on %s.  Using geometry cylinder value of "
+"%d.\n"
 "This value may be truncated for devices > 33.8 GB.\n"
 msgstr ""
 
@@ -4706,15 +4707,15 @@ msgstr ""
 #: fdisk/sfdisk.c:600
 #, c-format
 msgid ""
-"%s of partition %s has impossible value for sector: %lu (should be in 1-%"
-"lu)\n"
+"%s of partition %s has impossible value for sector: %lu (should be in 1-"
+"%lu)\n"
 msgstr ""
 
 #: fdisk/sfdisk.c:605
 #, c-format
 msgid ""
-"%s of partition %s has impossible value for cylinders: %lu (should be in 0-%"
-"lu)\n"
+"%s of partition %s has impossible value for cylinders: %lu (should be in 0-"
+"%lu)\n"
 msgstr ""
 
 #: fdisk/sfdisk.c:645

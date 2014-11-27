@@ -17,6 +17,7 @@ msgstr ""
 "PO-Revision-Date: 2005-08-15 21:00+0200\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -4255,8 +4256,8 @@ msgstr ""
 #: fdisk/fdisksgilabel.c:718 fdisk/fdisksunlabel.c:222
 #, c-format
 msgid ""
-"Warning:  BLKGETSIZE ioctl failed on %s.  Using geometry cylinder value of %"
-"d.\n"
+"Warning:  BLKGETSIZE ioctl failed on %s.  Using geometry cylinder value of "
+"%d.\n"
 "This value may be truncated for devices > 33.8 GB.\n"
 msgstr ""
 "Advarsel:  BLKGETSIZE ioctl mislykkedes på %s.  Benytter geometri-"
@@ -5016,19 +5017,19 @@ msgstr ""
 #: fdisk/sfdisk.c:600
 #, c-format
 msgid ""
-"%s of partition %s has impossible value for sector: %lu (should be in 1-%"
-"lu)\n"
+"%s of partition %s has impossible value for sector: %lu (should be in 1-"
+"%lu)\n"
 msgstr ""
 "%s for partition %s har umulig sektor-værdi: %lu (burde være mellem 1-%lu)\n"
 
 #: fdisk/sfdisk.c:605
 #, c-format
 msgid ""
-"%s of partition %s has impossible value for cylinders: %lu (should be in 0-%"
-"lu)\n"
+"%s of partition %s has impossible value for cylinders: %lu (should be in 0-"
+"%lu)\n"
 msgstr ""
-"%s for partition %s har umulig cylinder-værdi: %lu (burde være mellem 0-%"
-"lu)\n"
+"%s for partition %s har umulig cylinder-værdi: %lu (burde være mellem 0-"
+"%lu)\n"
 
 #: fdisk/sfdisk.c:645
 #, c-format
@@ -5209,8 +5210,8 @@ msgid ""
 "Warning: partition %s contains part of the partition table (sector %lu),\n"
 "and will destroy it when filled\n"
 msgstr ""
-"Advarsel: partitionen %s indeholder en del af partitionstabellen (sektor %"
-"lu),\n"
+"Advarsel: partitionen %s indeholder en del af partitionstabellen (sektor "
+"%lu),\n"
 "og vil ødelægge denne, når der skrives til partitionen.\n"
 
 #: fdisk/sfdisk.c:1250
@@ -5403,8 +5404,8 @@ msgstr "Ugyldig type\n"
 #, c-format
 msgid "Warning: given size (%lu) exceeds max allowable size (%lu)\n"
 msgstr ""
-"Advarsel: den angiven størrelse(%lu) overstiger den maksimalt tilladte (%"
-"lu)\n"
+"Advarsel: den angiven størrelse(%lu) overstiger den maksimalt tilladte "
+"(%lu)\n"
 
 #: fdisk/sfdisk.c:2113
 msgid "Warning: empty partition\n"

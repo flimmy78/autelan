@@ -201,6 +201,7 @@ PACKAGE_BUGREPORT = kzak@redhat.com
 PACKAGE_NAME = util-linux-ng
 PACKAGE_STRING = util-linux-ng 2.18
 PACKAGE_TARNAME = util-linux-ng
+PACKAGE_URL = 
 PACKAGE_VERSION = 2.18
 PATH_SEPARATOR = :
 PERL = /usr/bin/perl
@@ -661,7 +662,7 @@ distcheck: dist
 	*.zip*) \
 	  unzip $(distdir).zip ;;\
 	esac
-	chmod -R a-w $(distdir); chmod a+w $(distdir)
+	chmod -R a-w $(distdir); chmod u+w $(distdir)
 	mkdir $(distdir)/_build
 	mkdir $(distdir)/_inst
 	chmod a-w $(distdir)
