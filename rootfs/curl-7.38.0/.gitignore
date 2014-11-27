@@ -1,6 +1,9 @@
 config.log
 tests/libtest/Makefile
 tests/server/Makefile
+docs/examples/Makefile
+lib/Makefile
+src/Makefile
 lib/.libs/
 lib/libcurl.la
 lib/libcurl_la-amigaos.lo
