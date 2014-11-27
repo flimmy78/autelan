@@ -1,3 +1,4 @@
+config.log
 gnulib-tests/arg-nonnull.h
 gnulib-tests/c++defs.h
 gnulib-tests/unused-parameter.h
