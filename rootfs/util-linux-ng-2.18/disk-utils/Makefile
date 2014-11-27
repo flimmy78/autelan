@@ -152,11 +152,13 @@ am__objects_5 = mkswap-blkdev.$(OBJEXT) $(am__objects_4)
 am_mkswap_OBJECTS = mkswap-mkswap.$(OBJEXT) $(am__objects_5) \
 	mkswap-wholedisk.$(OBJEXT)
 mkswap_OBJECTS = $(am_mkswap_OBJECTS)
-am__DEPENDENCIES_1 =  \
+am__DEPENDENCIES_1 =
+#am__DEPENDENCIES_2 =  \
+#	$(am__DEPENDENCIES_1)
+am__DEPENDENCIES_2 =  \
 	$(ul_libuuid_la)
-am__DEPENDENCIES_2 =
-mkswap_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__append_14) \
-	$(am__DEPENDENCIES_2)
+mkswap_DEPENDENCIES = $(am__DEPENDENCIES_2) $(am__append_14) \
+	$(am__DEPENDENCIES_1)
 mkswap_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(mkswap_CFLAGS) $(CFLAGS) \
 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -169,7 +171,7 @@ am__objects_6 = swaplabel-linux_version.$(OBJEXT)
 am__objects_7 = swaplabel-blkdev.$(OBJEXT) $(am__objects_6)
 am_swaplabel_OBJECTS = swaplabel-swaplabel.$(OBJEXT) $(am__objects_7)
 swaplabel_OBJECTS = $(am_swaplabel_OBJECTS)
-swaplabel_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__append_7)
+swaplabel_DEPENDENCIES = $(am__DEPENDENCIES_2) $(am__append_7)
 swaplabel_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(swaplabel_CFLAGS) \
 	$(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -249,6 +251,8 @@ AUTOCONF = ${SHELL} /home/hisisdk/histb/autelan/rootfs/util-linux-ng-2.18/config
 AUTOHEADER = ${SHELL} /home/hisisdk/histb/autelan/rootfs/util-linux-ng-2.18/config/missing --run autoheader
 AUTOMAKE = ${SHELL} /home/hisisdk/histb/autelan/rootfs/util-linux-ng-2.18/config/missing --run automake-1.11
 AWK = gawk
+BLKID_CFLAGS = 
+BLKID_LIBS = -lblkid -luuid
 BLKID_LIBS_STATIC = 
 CC = arm-hisiv200-linux-gcc -std=gnu99
 CCDEPMODE = depmode=gcc3
@@ -312,10 +316,10 @@ PACKAGE_BUGREPORT = kzak@redhat.com
 PACKAGE_NAME = util-linux-ng
 PACKAGE_STRING = util-linux-ng 2.18
 PACKAGE_TARNAME = util-linux-ng
-PACKAGE_URL = 
 PACKAGE_VERSION = 2.18
 PATH_SEPARATOR = :
 PERL = /usr/bin/perl
+PKG_CONFIG = 
 POSUB = po
 RANLIB = arm-hisiv200-linux-ranlib
 SED = /bin/sed
@@ -327,6 +331,8 @@ STRIP = arm-hisiv200-linux-strip
 SUID_CFLAGS = 
 SUID_LDFLAGS = 
 USE_NLS = yes
+UUID_CFLAGS = 
+UUID_LIBS = -luuid
 VERSION = 2.18
 XGETTEXT = /usr/bin/xgettext
 XSLTPROC = /usr/bin/xsltproc

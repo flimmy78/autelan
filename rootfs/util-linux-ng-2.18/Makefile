@@ -136,6 +136,8 @@ AUTOCONF = ${SHELL} /home/hisisdk/histb/autelan/rootfs/util-linux-ng-2.18/config
 AUTOHEADER = ${SHELL} /home/hisisdk/histb/autelan/rootfs/util-linux-ng-2.18/config/missing --run autoheader
 AUTOMAKE = ${SHELL} /home/hisisdk/histb/autelan/rootfs/util-linux-ng-2.18/config/missing --run automake-1.11
 AWK = gawk
+BLKID_CFLAGS = 
+BLKID_LIBS = -lblkid -luuid
 BLKID_LIBS_STATIC = 
 CC = arm-hisiv200-linux-gcc -std=gnu99
 CCDEPMODE = depmode=gcc3
@@ -199,10 +201,10 @@ PACKAGE_BUGREPORT = kzak@redhat.com
 PACKAGE_NAME = util-linux-ng
 PACKAGE_STRING = util-linux-ng 2.18
 PACKAGE_TARNAME = util-linux-ng
-PACKAGE_URL = 
 PACKAGE_VERSION = 2.18
 PATH_SEPARATOR = :
 PERL = /usr/bin/perl
+PKG_CONFIG = 
 POSUB = po
 RANLIB = arm-hisiv200-linux-ranlib
 SED = /bin/sed
@@ -214,6 +216,8 @@ STRIP = arm-hisiv200-linux-strip
 SUID_CFLAGS = 
 SUID_LDFLAGS = 
 USE_NLS = yes
+UUID_CFLAGS = 
+UUID_LIBS = -luuid
 VERSION = 2.18
 XGETTEXT = /usr/bin/xgettext
 XSLTPROC = /usr/bin/xsltproc
@@ -657,7 +661,7 @@ distcheck: dist
 	*.zip*) \
 	  unzip $(distdir).zip ;;\
 	esac
-	chmod -R a-w $(distdir); chmod u+w $(distdir)
+	chmod -R a-w $(distdir); chmod a+w $(distdir)
 	mkdir $(distdir)/_build
 	mkdir $(distdir)/_inst
 	chmod a-w $(distdir)

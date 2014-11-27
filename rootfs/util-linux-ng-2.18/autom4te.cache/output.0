@@ -870,6 +870,8 @@ LIBMOUNT_VERSION
 BLKID_LIBS_STATIC
 HAVE_BLKID_FALSE
 HAVE_BLKID_TRUE
+BLKID_LIBS
+BLKID_CFLAGS
 BUILD_LIBBLKID_FALSE
 BUILD_LIBBLKID_TRUE
 LIBBLKID_VERSION_INFO
@@ -879,6 +881,8 @@ BUILD_UUIDD_FALSE
 BUILD_UUIDD_TRUE
 HAVE_UUID_FALSE
 HAVE_UUID_TRUE
+UUID_LIBS
+UUID_CFLAGS
 BUILD_LIBUUID_FALSE
 BUILD_LIBUUID_TRUE
 LIBUUID_VERSION_INFO
@@ -911,6 +915,7 @@ ENABLE_GTK_DOC_FALSE
 ENABLE_GTK_DOC_TRUE
 GTKDOC_CHECK
 HTML_DIR
+PKG_CONFIG
 OTOOL64
 OTOOL
 LIPO
@@ -1094,6 +1099,11 @@ LDFLAGS
 LIBS
 CPPFLAGS
 CPP
+PKG_CONFIG
+UUID_CFLAGS
+UUID_LIBS
+BLKID_CFLAGS
+BLKID_LIBS
 BLKID_LIBS_STATIC
 SUID_CFLAGS
 SUID_LDFLAGS'
@@ -1813,6 +1823,12 @@ Some influential environment variables:
   CPPFLAGS    (Objective) C/C++ preprocessor flags, e.g. -I<include dir> if
               you have headers in a nonstandard directory <include dir>
   CPP         C preprocessor
+  PKG_CONFIG  path to pkg-config utility
+  UUID_CFLAGS C compiler flags for UUID, overriding pkg-config
+  UUID_LIBS   linker flags for UUID, overriding pkg-config
+  BLKID_CFLAGS 
+              C compiler flags for BLKID, overriding pkg-config
+  BLKID_LIBS  linker flags for BLKID, overriding pkg-config
   BLKID_LIBS_STATIC 
               -l options for linking statically with blkid
   SUID_CFLAGS CFLAGS used for binaries which are usually with the suid bit
@@ -11636,7 +11652,122 @@ CC="$lt_save_CC"
 
 
 
-PKG_PROG_PKG_CONFIG
+
+
+if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
+	if test -n "$ac_tool_prefix"; then
+  # Extract the first word of "${ac_tool_prefix}pkg-config", so it can be a program name with args.
+set dummy ${ac_tool_prefix}pkg-config; ac_word=$2
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+$as_echo_n "checking for $ac_word... " >&6; }
+if test "${ac_cv_path_PKG_CONFIG+set}" = set; then :
+  $as_echo_n "(cached) " >&6
+else
+  case $PKG_CONFIG in
+  [\\/]* | ?:[\\/]*)
+  ac_cv_path_PKG_CONFIG="$PKG_CONFIG" # Let the user override the test with a path.
+  ;;
+  *)
+  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+for as_dir in $PATH
+do
+  IFS=$as_save_IFS
+  test -z "$as_dir" && as_dir=.
+    for ac_exec_ext in '' $ac_executable_extensions; do
+  if { test -f "$as_dir/$ac_word$ac_exec_ext" && $as_test_x "$as_dir/$ac_word$ac_exec_ext"; }; then
+    ac_cv_path_PKG_CONFIG="$as_dir/$ac_word$ac_exec_ext"
+    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+    break 2
+  fi
+done
+  done
+IFS=$as_save_IFS
+
+  ;;
+esac
+fi
+PKG_CONFIG=$ac_cv_path_PKG_CONFIG
+if test -n "$PKG_CONFIG"; then
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $PKG_CONFIG" >&5
+$as_echo "$PKG_CONFIG" >&6; }
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+fi
+
+
+fi
+if test -z "$ac_cv_path_PKG_CONFIG"; then
+  ac_pt_PKG_CONFIG=$PKG_CONFIG
+  # Extract the first word of "pkg-config", so it can be a program name with args.
+set dummy pkg-config; ac_word=$2
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+$as_echo_n "checking for $ac_word... " >&6; }
+if test "${ac_cv_path_ac_pt_PKG_CONFIG+set}" = set; then :
+  $as_echo_n "(cached) " >&6
+else
+  case $ac_pt_PKG_CONFIG in
+  [\\/]* | ?:[\\/]*)
+  ac_cv_path_ac_pt_PKG_CONFIG="$ac_pt_PKG_CONFIG" # Let the user override the test with a path.
+  ;;
+  *)
+  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+for as_dir in $PATH
+do
+  IFS=$as_save_IFS
+  test -z "$as_dir" && as_dir=.
+    for ac_exec_ext in '' $ac_executable_extensions; do
+  if { test -f "$as_dir/$ac_word$ac_exec_ext" && $as_test_x "$as_dir/$ac_word$ac_exec_ext"; }; then
+    ac_cv_path_ac_pt_PKG_CONFIG="$as_dir/$ac_word$ac_exec_ext"
+    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+    break 2
+  fi
+done
+  done
+IFS=$as_save_IFS
+
+  ;;
+esac
+fi
+ac_pt_PKG_CONFIG=$ac_cv_path_ac_pt_PKG_CONFIG
+if test -n "$ac_pt_PKG_CONFIG"; then
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_pt_PKG_CONFIG" >&5
+$as_echo "$ac_pt_PKG_CONFIG" >&6; }
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+fi
+
+  if test "x$ac_pt_PKG_CONFIG" = x; then
+    PKG_CONFIG=""
+  else
+    case $cross_compiling:$ac_tool_warned in
+yes:)
+{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: using cross tools not prefixed with host triplet" >&5
+$as_echo "$as_me: WARNING: using cross tools not prefixed with host triplet" >&2;}
+ac_tool_warned=yes ;;
+esac
+    PKG_CONFIG=$ac_pt_PKG_CONFIG
+  fi
+else
+  PKG_CONFIG="$ac_cv_path_PKG_CONFIG"
+fi
+
+fi
+if test -n "$PKG_CONFIG"; then
+	_pkg_min_version=0.9.0
+	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking pkg-config is at least version $_pkg_min_version" >&5
+$as_echo_n "checking pkg-config is at least version $_pkg_min_version... " >&6; }
+	if $PKG_CONFIG --atleast-pkgconfig-version $_pkg_min_version; then
+		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+$as_echo "yes" >&6; }
+	else
+		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+		PKG_CONFIG=""
+	fi
+		
+fi
 
 
         
@@ -11659,8 +11790,16 @@ fi
 
 
   if test x$enable_gtk_doc = xyes; then
-    PKG_CHECK_EXISTS(gtk-doc >= 1.10,,
-                        as_fn_error $? "You need to have gtk-doc >= 1.10 installed to build gtk-doc" "$LINENO" 5 )
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gtk-doc >= 1.10\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "gtk-doc >= 1.10") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  :
+else
+  as_fn_error $? "You need to have gtk-doc >= 1.10 installed to build gtk-doc" "$LINENO" 5 
+fi
   fi
 
   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build gtk-doc documentation" >&5
@@ -12652,7 +12791,73 @@ have_uuid=yes
 
 if test "x$enable_libuuid" = xno; then
   # Check for external (e2fsprogs) libuuid
-  PKG_CHECK_MODULES(UUID, uuid, have_uuid=yes, have_uuid=no)
+  
+pkg_failed=no
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for UUID" >&5
+$as_echo_n "checking for UUID... " >&6; }
+
+if test -n "$UUID_CFLAGS"; then
+    pkg_cv_UUID_CFLAGS="$UUID_CFLAGS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"uuid\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "uuid") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_UUID_CFLAGS=`$PKG_CONFIG --cflags "uuid" 2>/dev/null`
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+if test -n "$UUID_LIBS"; then
+    pkg_cv_UUID_LIBS="$UUID_LIBS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"uuid\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "uuid") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_UUID_LIBS=`$PKG_CONFIG --libs "uuid" 2>/dev/null`
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+
+
+
+if test $pkg_failed = yes; then
+        
+if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+        _pkg_short_errors_supported=yes
+else
+        _pkg_short_errors_supported=no
+fi
+        if test $_pkg_short_errors_supported = yes; then
+	        UUID_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "uuid" 2>&1`
+        else 
+	        UUID_PKG_ERRORS=`$PKG_CONFIG --print-errors "uuid" 2>&1`
+        fi
+	# Put the nasty error message in config.log where it belongs
+	echo "$UUID_PKG_ERRORS" >&5
+
+	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+                have_uuid=no
+elif test $pkg_failed = untried; then
+	have_uuid=no
+else
+	UUID_CFLAGS=$pkg_cv_UUID_CFLAGS
+	UUID_LIBS=$pkg_cv_UUID_LIBS
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+$as_echo "yes" >&6; }
+	have_uuid=yes
+fi
   if test "x$have_uuid" = xno; then
     # system without pkg-config or so, try classic check
     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for uuid_is_null in -luuid" >&5
@@ -12817,7 +13022,73 @@ have_blkid=yes
 if test "x$enable_libblkid" = xno; then
   if test "x$build_mount" = xyes || test "x$enable_fsck" = xyes; then
     # Check for external (e2fsprogs) libblkid
-    PKG_CHECK_MODULES(BLKID, blkid, have_blkid=yes, have_blkid=no)
+    
+pkg_failed=no
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for BLKID" >&5
+$as_echo_n "checking for BLKID... " >&6; }
+
+if test -n "$BLKID_CFLAGS"; then
+    pkg_cv_BLKID_CFLAGS="$BLKID_CFLAGS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"blkid\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "blkid") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_BLKID_CFLAGS=`$PKG_CONFIG --cflags "blkid" 2>/dev/null`
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+if test -n "$BLKID_LIBS"; then
+    pkg_cv_BLKID_LIBS="$BLKID_LIBS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"blkid\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "blkid") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_BLKID_LIBS=`$PKG_CONFIG --libs "blkid" 2>/dev/null`
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+
+
+
+if test $pkg_failed = yes; then
+        
+if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+        _pkg_short_errors_supported=yes
+else
+        _pkg_short_errors_supported=no
+fi
+        if test $_pkg_short_errors_supported = yes; then
+	        BLKID_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "blkid" 2>&1`
+        else 
+	        BLKID_PKG_ERRORS=`$PKG_CONFIG --print-errors "blkid" 2>&1`
+        fi
+	# Put the nasty error message in config.log where it belongs
+	echo "$BLKID_PKG_ERRORS" >&5
+
+	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+                have_blkid=no
+elif test $pkg_failed = untried; then
+	have_blkid=no
+else
+	BLKID_CFLAGS=$pkg_cv_BLKID_CFLAGS
+	BLKID_LIBS=$pkg_cv_BLKID_LIBS
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+$as_echo "yes" >&6; }
+	have_blkid=yes
+fi
     if test "x$have_blkid" = xno; then
       # system without pkg-config or so, try classic check
       { $as_echo "$as_me:${as_lineno-$LINENO}: checking for blkid_get_cache in -lblkid" >&5

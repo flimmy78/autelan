@@ -308,10 +308,10 @@
 /* Define to 1 if you have the `strtoull' function. */
 #define HAVE_STRTOULL 1
 
-/* Define to 1 if `st_mtim.tv_nsec' is a member of `struct stat'. */
+/* Define to 1 if `st_mtim.tv_nsec' is member of `struct stat'. */
 #define HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC 1
 
-/* Define to 1 if `c_line' is a member of `struct termios'. */
+/* Define to 1 if `c_line' is member of `struct termios'. */
 #define HAVE_STRUCT_TERMIOS_C_LINE 1
 
 /* Define to 1 if you have the `sysconf' function. */
@@ -452,9 +452,6 @@
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "util-linux-ng"
-
-/* Define to the home page for this package. */
-#define PACKAGE_URL ""
 
 /* Define to the version of this package. */
 #define PACKAGE_VERSION "2.18"

@@ -1,9 +1,3 @@
+config.log
 *.o
 *.lo
-config.log
-shlibs/blkid/src/.libs/libblkid.a
-shlibs/blkid/src/partitions/.libs/libblkid_partitions.a
-shlibs/blkid/src/superblocks/.libs/libblkid_superblocks.a
-shlibs/blkid/src/topology/.libs/libblkid_topology.a
-shlibs/mount/src/.libs/libmount.a
-
