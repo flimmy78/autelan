@@ -1,6 +1,0 @@
-#!/bin/bash
-
-arm-hisiv200-linux-gcc flock.c -o flock -I../include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/local/lib -DPACKAGE_STRING=\"util-linux-ng-2.18\"
-
-mkdir -p ~/histb/autelan/custom/usr/bin
-cp flock ~/histb/autelan/custom/usr/bin
