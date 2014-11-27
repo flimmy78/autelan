@@ -1,6 +1,7 @@
 *.[oa]
 *~
-*.o
+rsync
+rounding.h
 dummy
 ID
 Makefile
