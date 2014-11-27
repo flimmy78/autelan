@@ -1,3 +1,15 @@
 *.o
 *.lo
 config.log
+.libs/libpopt.la
+.libs/libpopt.lai
+.libs/libpopt.so
+.libs/libpopt.so.0
+.libs/libpopt.so.0.0.0
+.libs/test1
+.libs/test2
+.libs/test3
+libpopt.la
+test1
+test2
+test3
