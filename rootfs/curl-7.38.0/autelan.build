@@ -1,0 +1,10 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+package_common "$(pwd)"
+
+RM ${auterelease}/lib/pkgconfig
+RM ${auterelease}/lib/libcurl.la
+
+
