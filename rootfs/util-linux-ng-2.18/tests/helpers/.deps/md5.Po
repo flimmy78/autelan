@@ -1,0 +1,54 @@
+md5.o: ../../lib/md5.c ../../config.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/endian.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/features.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/predefs.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/cdefs.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/wordsize.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/gnu/stubs.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/endian.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/byteswap.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/string.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stddef.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/xlocale.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string2.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdlib.h \
+ ../../include/md5.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdint.h \
+ /opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/wchar.h
+
+../../config.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/endian.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/features.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/predefs.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/sys/cdefs.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/wordsize.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/gnu/stubs.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/endian.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/byteswap.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/string.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../lib/gcc/arm-hisiv200-linux-gnueabi/4.4.1/include/stddef.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/xlocale.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/string2.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdlib.h:
+
+../../include/md5.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/stdint.h:
+
+/opt/hisi-linux/x86-arm/arm-hisiv200-linux/bin/../target/usr/include/bits/wchar.h:
