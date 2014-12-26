@@ -7,4 +7,5 @@ package_compile $(pwd)
 
 mkdir -p ${auterelease}/usr/bin
 CP_FILE src/base64 ${auterelease}/usr/bin/
+CP_FILE src/du ${auterelease}/usr/bin/
 
