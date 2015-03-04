@@ -2,6 +2,10 @@
 
 . ${hisitopdir}/autelan/autelan.in
 
+cp autelan/errors/Makefile.in errors/
+cp autelan/src/main.cc src/
+cp autelan/libltdl/ltdl.h libltdl
+
 	CC=${hisiprefix}-gcc \
 	GCC=${hisiprefix}-gcc \
 	CXX=${hisiprefix}-g++ \
@@ -24,10 +28,11 @@
 	--sysconfdir=${auterelease}/etc \
 	--localstatedir=${auterelease}/var \
 	--libdir=${auterelease}/lib \
+	--datarootdir=${auterelease}/usr/share \
+	--datadir=${auterelease}/usr/share \
+	--with-default-user=root \
 	\
 	--includedir=${autefake}/usr/include \
-	--datarootdir=${autefake}/usr/share \
-	--datadir=${autefake}/usr/share \
 	--infodir=${autefake}/usr/share/info \
 	--localedir=${autefake}/usr/share/local \
 	--mandir=${autefake}/usr/share/man \

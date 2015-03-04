@@ -4,3 +4,4 @@
 
 package_common "$(pwd)"
 
+rm -f ${auterelease}/etc/squid.conf
