@@ -1,9 +1,0 @@
-#!/bin/bash
-
-. ${hisitopdir}/autelan/autelan.in
-
-mkdir -p objs auto/lib/pcre auto/lib/zlib
-
-package_common "$(pwd)"
-
-
