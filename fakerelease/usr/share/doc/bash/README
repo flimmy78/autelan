@@ -1,80 +1,99 @@
-The sudo philosophy
-===================
-Sudo is a program designed to allow a sysadmin to give limited root privileges
-to users and log root activity.  The basic philosophy is to give as few
-privileges as possible but still allow people to get their work done.
+Introduction
+============
 
-Where to find sudo
-==================
-Before you try and build sudo, *please* make sure you have the current
-version.  The latest sudo may always be gotten via anonymous ftp from
-ftp.sudo.ws in the directory /pub/sudo/ or from the sudo web site,
-http://www.sudo.ws/
+This is GNU Bash, version 4.3.  Bash is the GNU Project's Bourne
+Again SHell, a complete implementation of the POSIX shell spec,
+but also with interactive command line editing, job control on
+architectures that support it, csh-like features such as history
+substitution and brace expansion, and a slew of other features. 
+For more information on the features of Bash that are new to this
+type of shell, see the file `doc/bashref.texi'.  There is also a
+large Unix-style man page.  The man page is the definitive description
+of the shell's features. 
 
-The distribution is sudo-M.m.tar.gz where `M' is the major version
-number and `m' is the minor version number.  BETA versions of sudo may
-also be available.  If you join the `sudo-workers' mailing list you
-will get the BETA announcements (see the `Mailing lists' section below).
+See the file POSIX for a discussion of how the Bash defaults differ
+from the POSIX spec and a description of the Bash `posix mode'.
 
-What's new
-==========
-See the NEWS file for a list of major changes in this release.
-For a complete list of changes, see the ChangeLog file.  For a
-summary of major changes to the current stable release, see the web
-page, http://www.sudo.ws/sudo/stable.html.
+There are some user-visible incompatibilities between this version
+of Bash and previous widely-distributed versions, bash-4.1 and
+bash-4.2.  For details, see the file COMPAT.  The NEWS file tersely
+lists features that are new in this release. 
 
-If you are upgrading from an earlier version of Sudo, please see
-the UPGRADE file in the doc directory.
+Bash is free software, distributed under the terms of the [GNU] General
+Public License as published by the Free Software Foundation,
+version 3 of the License (or any later version).  For more information,
+see the file COPYING. 
 
-For a history of sudo please see the HISTORY file in the doc directory.
-You can find a list of contributors to sudo in the doc/CONTRIBUTORS file.
+A number of frequently-asked questions are answered in the file
+`doc/FAQ'.
 
-Building the release
-====================
-Please read the installation guide in the `INSTALL' file before trying to
-build sudo.  Pay special attention to the "OS dependent notes" section.
+To compile Bash, type `./configure', then `make'.  Bash auto-configures
+the build process, so no further intervention should be necessary.  Bash
+builds with `gcc' by default if it is available.  If you want to use `cc'
+instead, type
 
-Copyright
-=========
-Sudo is distributed under an ISC-style license.
-Please refer to the `LICENSE' file included with the release for details.
+	CC=cc ./configure
 
-Mailing lists
-=============
-sudo-announce	This list receives announcements whenever a new version
-		of sudo is released.
-		http://www.sudo.ws/mailman/listinfo/sudo-announce
+if you are using a Bourne-style shell.  If you are not, the following
+may work:
 
-sudo-users	This list is for questions and general discussion about sudo.
-		http://www.sudo.ws/mailman/listinfo/sudo-users
+	env CC=cc ./configure
 
-sudo-workers	This list is for people working on and porting sudo.
-		http://www.sudo.ws/mailman/listinfo/sudo-workers
+Read the file INSTALL in this directory for more information about how
+to customize and control the build process.  The file NOTES contains
+platform-specific installation and configuration information.
 
-sudo-commits	This list receives a message for each commit made to
-		the sudo source repository.
-		http://www.sudo.ws/mailman/listinfo/sudo-commits
+If you are a csh user and wish to convert your csh aliases to Bash
+aliases, you may wish to use the script `examples/misc/alias-conv.sh'
+as a starting point.  The script `examples/misc/cshtobash' is a
+more ambitious script that attempts to do a more complete job.
 
-To subscribe to a list, visit its url (as listed above) and enter
-your email address to subscribe.  Digest versions are available but
-these are fairly low traffic lists so the digest versions are not
-a significant win.
+Reporting Bugs
+==============
 
-Mailing list archives are also available.  See the mailing list web sites
-for the appropriate links.
+Bug reports for bash should be sent to:
 
-Web page
-========
-There is a sudo web page at http://www.sudo.ws/ that contains an
-overview of sudo, documentation, downloads, a bug tracker, information
-about beta versions and other useful info.
+	bug-bash@gnu.org
 
-Bug reports
-===========
-If you have found what you believe to be a bug, you can file a bug
-report in the sudo bug database, on the web at http://www.sudo.ws/bugs/.
+using the `bashbug' program that is built and installed at the same
+time as bash.
 
-Please read over the `TROUBLESHOOTING' file in the doc directory *before*
-submitting a bug report.  When reporting bugs, please be sure to include
-the version of sudo you are using as well as the platform you are running
-it on.
+The discussion list `bug-bash@gnu.org' often contains information
+about new ports of Bash, or discussions of new features or behavior
+changes that people would like.  This mailing list is also available
+as a usenet newsgroup: gnu.bash.bug. 
+
+When you send a bug report, please use the `bashbug' program that is
+built at the same time as bash.  If bash fails to build, try building
+bashbug directly with `make bashbug'.  If you cannot build `bashbug',
+please send mail to bug-bash@gnu.org with the following information:
+
+	* the version number and release status of Bash (e.g., 2.05a-release)
+	* the machine and OS that it is running on (you may run
+	  `bashversion -l' from the bash build directory for this information)
+	* a list of the compilation flags or the contents of `config.h', if
+	  appropriate
+	* a description of the bug
+	* a recipe for recreating the bug reliably
+	* a fix for the bug if you have one!
+
+The `bashbug' program includes much of this automatically.
+
+Questions and requests for help with bash and bash programming may be
+sent to the help-bash@gnu.org mailing list.
+
+If you would like to contact the Bash maintainers directly, send mail
+to bash-maintainers@gnu.org.
+
+While the Bash maintainers do not promise to fix all bugs, we would
+like this shell to be the best that we can make it.
+
+Enjoy!
+
+Chet Ramey
+chet.ramey@case.edu
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.  This file is offered as-is,
+without any warranty.

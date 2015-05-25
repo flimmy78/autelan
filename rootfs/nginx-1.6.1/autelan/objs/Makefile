@@ -103,6 +103,9 @@ HTTP_INCS = -I src/http \
 	-I src/http/modules
 
 
+ADDON_DEPS = $(CORE_DEPS)  $(HTTP_DEPS)
+
+
 objs/nginx:	objs/src/core/nginx.o \
 	objs/src/core/ngx_log.o \
 	objs/src/core/ngx_palloc.o \
@@ -190,12 +193,14 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/ngx_http_postpone_filter_module.o \
 	objs/src/http/modules/ngx_http_ssi_filter_module.o \
 	objs/src/http/modules/ngx_http_charset_filter_module.o \
+	objs/src/http/modules/ngx_http_addition_filter_module.o \
 	objs/src/http/modules/ngx_http_userid_filter_module.o \
 	objs/src/http/modules/ngx_http_autoindex_module.o \
 	objs/src/http/modules/ngx_http_auth_basic_module.o \
 	objs/src/http/modules/ngx_http_access_module.o \
 	objs/src/http/modules/ngx_http_limit_conn_module.o \
 	objs/src/http/modules/ngx_http_limit_req_module.o \
+	objs/src/http/modules/ngx_http_realip_module.o \
 	objs/src/http/modules/ngx_http_geo_module.o \
 	objs/src/http/modules/ngx_http_map_module.o \
 	objs/src/http/modules/ngx_http_split_clients_module.o \
@@ -211,6 +216,8 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/modules/ngx_http_upstream_ip_hash_module.o \
 	objs/src/http/modules/ngx_http_upstream_least_conn_module.o \
 	objs/src/http/modules/ngx_http_upstream_keepalive_module.o \
+	objs/src/http/modules/ngx_http_stub_status_module.o \
+	objs/addon/nginx-http-footer-filter/ngx_http_footer_filter_module.o \
 	objs/ngx_modules.o \
 	/home/hisisdk/histb/autelan/rootfs/pcre-8.35/.libs/libpcre.a \
 	/home/hisisdk/histb/autelan/rootfs/zlib-1.2.8/libz.a
@@ -303,12 +310,14 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/ngx_http_postpone_filter_module.o \
 	objs/src/http/modules/ngx_http_ssi_filter_module.o \
 	objs/src/http/modules/ngx_http_charset_filter_module.o \
+	objs/src/http/modules/ngx_http_addition_filter_module.o \
 	objs/src/http/modules/ngx_http_userid_filter_module.o \
 	objs/src/http/modules/ngx_http_autoindex_module.o \
 	objs/src/http/modules/ngx_http_auth_basic_module.o \
 	objs/src/http/modules/ngx_http_access_module.o \
 	objs/src/http/modules/ngx_http_limit_conn_module.o \
 	objs/src/http/modules/ngx_http_limit_req_module.o \
+	objs/src/http/modules/ngx_http_realip_module.o \
 	objs/src/http/modules/ngx_http_geo_module.o \
 	objs/src/http/modules/ngx_http_map_module.o \
 	objs/src/http/modules/ngx_http_split_clients_module.o \
@@ -324,6 +333,8 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/modules/ngx_http_upstream_ip_hash_module.o \
 	objs/src/http/modules/ngx_http_upstream_least_conn_module.o \
 	objs/src/http/modules/ngx_http_upstream_keepalive_module.o \
+	objs/src/http/modules/ngx_http_stub_status_module.o \
+	objs/addon/nginx-http-footer-filter/ngx_http_footer_filter_module.o \
 	objs/ngx_modules.o \
 	-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -lcrypt /home/hisisdk/histb/autelan/rootfs/pcre-8.35/.libs/libpcre.a /home/hisisdk/histb/autelan/rootfs/zlib-1.2.8/libz.a
 	
@@ -945,6 +956,13 @@ objs/src/http/modules/ngx_http_charset_filter_module.o:	$(CORE_DEPS) $(HTTP_DEPS
 		src/http/modules/ngx_http_charset_filter_module.c
 
 
+objs/src/http/modules/ngx_http_addition_filter_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
+	src/http/modules/ngx_http_addition_filter_module.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
+		-o objs/src/http/modules/ngx_http_addition_filter_module.o \
+		src/http/modules/ngx_http_addition_filter_module.c
+
+
 objs/src/http/modules/ngx_http_userid_filter_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
 	src/http/modules/ngx_http_userid_filter_module.c
 	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
@@ -985,6 +1003,13 @@ objs/src/http/modules/ngx_http_limit_req_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
 	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
 		-o objs/src/http/modules/ngx_http_limit_req_module.o \
 		src/http/modules/ngx_http_limit_req_module.c
+
+
+objs/src/http/modules/ngx_http_realip_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
+	src/http/modules/ngx_http_realip_module.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
+		-o objs/src/http/modules/ngx_http_realip_module.o \
+		src/http/modules/ngx_http_realip_module.c
 
 
 objs/src/http/modules/ngx_http_geo_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
@@ -1090,6 +1115,20 @@ objs/src/http/modules/ngx_http_upstream_keepalive_module.o:	$(CORE_DEPS) $(HTTP_
 	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
 		-o objs/src/http/modules/ngx_http_upstream_keepalive_module.o \
 		src/http/modules/ngx_http_upstream_keepalive_module.c
+
+
+objs/src/http/modules/ngx_http_stub_status_module.o:	$(CORE_DEPS) $(HTTP_DEPS) \
+	src/http/modules/ngx_http_stub_status_module.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
+		-o objs/src/http/modules/ngx_http_stub_status_module.o \
+		src/http/modules/ngx_http_stub_status_module.c
+
+
+objs/addon/nginx-http-footer-filter/ngx_http_footer_filter_module.o:	$(ADDON_DEPS) \
+	/home/hisisdk/histb/autelan/rootfs/nginx-module/nginx-http-footer-filter/ngx_http_footer_filter_module.c
+	$(CC) -c $(CFLAGS)  $(ALL_INCS) \
+		-o objs/addon/nginx-http-footer-filter/ngx_http_footer_filter_module.o \
+		/home/hisisdk/histb/autelan/rootfs/nginx-module/nginx-http-footer-filter/ngx_http_footer_filter_module.c
 
 
 /home/hisisdk/histb/autelan/rootfs/pcre-8.35/pcre.h:	/home/hisisdk/histb/autelan/rootfs/pcre-8.35/Makefile

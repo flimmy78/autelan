@@ -1,4 +1,4 @@
-#define NGX_CONFIGURE " --prefix=/home/hisisdk/histb/autelan/release/usr --sbin-path=/home/hisisdk/histb/autelan/release/usr/sbin --conf-path=/home/hisisdk/histb/autelan/release/usr/local/nginx/conf --error-log-path=/home/hisisdk/histb/autelan/release/usr/local/nginx/logs --http-log-path=/home/hisisdk/histb/autelan/release/usr/local/nginx/logs --with-poll_module --with-cc=arm-hisiv200-linux-gcc --with-pcre=/home/hisisdk/histb/autelan/rootfs/pcre-8.35 --with-zlib=/home/hisisdk/histb/autelan/rootfs/zlib-1.2.8 --with-cc-opt='-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2' --with-ld-opt=-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib"
+#define NGX_CONFIGURE " --prefix=/home/hisisdk/histb/autelan/release/usr --sbin-path=/home/hisisdk/histb/autelan/release/usr/sbin/ --conf-path=/home/hisisdk/histb/autelan/release/usr/local/nginx/conf/ --error-log-path=/home/hisisdk/histb/autelan/release/usr/local/nginx/logs/ --http-log-path=/home/hisisdk/histb/autelan/release/usr/local/nginx/logs/ --with-poll_module --with-http_realip_module --with-http_addition_module --with-http_stub_status_module --add-module=/home/hisisdk/histb/autelan/rootfs/nginx-module/nginx-http-footer-filter --with-cc=arm-hisiv200-linux-gcc --with-pcre=/home/hisisdk/histb/autelan/rootfs/pcre-8.35 --with-zlib=/home/hisisdk/histb/autelan/rootfs/zlib-1.2.8 --with-cc-opt='-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2' --with-ld-opt=-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib"
 
 #ifndef NGX_HAVE_SCHED_SETAFFINITY
 #define NGX_HAVE_SCHED_SETAFFINITY  1
@@ -208,6 +208,11 @@
 #endif
 
 
+#ifndef NGX_HTTP_REALIP
+#define NGX_HTTP_REALIP  1
+#endif
+
+
 #ifndef NGX_HTTP_X_FORWARDED_FOR
 #define NGX_HTTP_X_FORWARDED_FOR  1
 #endif
@@ -215,6 +220,16 @@
 
 #ifndef NGX_HTTP_X_FORWARDED_FOR
 #define NGX_HTTP_X_FORWARDED_FOR  1
+#endif
+
+
+#ifndef NGX_HTTP_X_FORWARDED_FOR
+#define NGX_HTTP_X_FORWARDED_FOR  1
+#endif
+
+
+#ifndef NGX_STAT_STUB
+#define NGX_STAT_STUB  1
 #endif
 
 
@@ -239,12 +254,12 @@
 
 
 #ifndef NGX_SBIN_PATH
-#define NGX_SBIN_PATH  "/home/hisisdk/histb/autelan/release/usr/sbin"
+#define NGX_SBIN_PATH  "/home/hisisdk/histb/autelan/release/usr/sbin/"
 #endif
 
 
 #ifndef NGX_CONF_PATH
-#define NGX_CONF_PATH  "/home/hisisdk/histb/autelan/release/usr/local/nginx/conf"
+#define NGX_CONF_PATH  "/home/hisisdk/histb/autelan/release/usr/local/nginx/conf/"
 #endif
 
 
@@ -259,12 +274,12 @@
 
 
 #ifndef NGX_ERROR_LOG_PATH
-#define NGX_ERROR_LOG_PATH  "/home/hisisdk/histb/autelan/release/usr/local/nginx/logs"
+#define NGX_ERROR_LOG_PATH  "/home/hisisdk/histb/autelan/release/usr/local/nginx/logs/"
 #endif
 
 
 #ifndef NGX_HTTP_LOG_PATH
-#define NGX_HTTP_LOG_PATH  "/home/hisisdk/histb/autelan/release/usr/local/nginx/logs"
+#define NGX_HTTP_LOG_PATH  "/home/hisisdk/histb/autelan/release/usr/local/nginx/logs/"
 #endif
 
 

@@ -1,1378 +1,1815 @@
-What's new in Sudo 1.8.10p3?
+This is a terse description of the new features added to bash-4.3 since
+the release of bash-4.2.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
 
- * Fixed expansion of %p in the prompt for "sudo -l" when rootpw,
-   runaspw or targetpw is set.  Bug #639
+1.  New Features in Bash
 
- * Fixed matching of uids and gids which was broken in version 1.8.9.
-   Bug #640
+a.  The `helptopic' completion action now maps to all the help topics, not just
+    the shell builtins.
 
- * PAM credential initialization has been re-enabled.  It was
-   unintentionally disabled by default in version 1.8.8.  The way
-   credentials are initialized has also been fixed.  Bug #642.
+b.  The `help' builtin no longer does prefix substring matching first, so
+    `help read' does not match `readonly', but will do it if exact string
+    matching fails.
 
- * Fixed a descriptor leak on Linux when determing boot time.  Sudo
-   normally closes extra descriptors before running a command so
-   the impact is limited.  Bug #645
+c.  The shell can be compiled to not display a message about processes that
+    terminate due to SIGTERM.
 
- * Fixed flushing of the last buffer of data when I/O logging is
-   enabled.  This bug, introduced in version 1.8.9, could cause
-   incomplete command output on some systems.  Bug #646
+d.  Non-interactive shells now react to the setting of checkwinsize and set
+    LINES and COLUMNS after a foreground job exits.
 
-What's new in Sudo 1.8.10p2?
+e.  There is a new shell option, `globasciiranges', which, when set to on,
+    forces globbing range comparisons to use character ordering as if they
+    were run in the C locale.
 
- * Fixed a hang introduced in sudo 1.8.10 when timestamp_timeout
-   is set to zero.
+f.  There is a new shell option, `direxpand', which makes filename completion
+    expand variables in directory names in the way bash-4.1 did.
 
-What's new in Sudo 1.8.10p1?
+g.  In Posix mode, the `command' builtin does not change whether or not a
+    builtin it shadows is treated as an assignment builtin.
 
- * Fixed a bug introduced in sudo 1.8.10 that prevented the disabling
-   of tty-based tickets.
+h.  The `return' and `exit' builtins accept negative exit status arguments.
 
- * Fixed a bug with netgated commands in "sudo -l command" that
-   could cause the command to be listed even when it was explicitly
-   denied.  This only affected list mode when a command was specified.
-   Bug #636
+i.  The word completion code checks whether or not a filename containing a
+    shell variable expands to a directory name and appends `/' to the word
+    as appropriate.  The same code expands shell variables in command names
+    when performing command completion.
 
-What's new in Sudo 1.8.10?
+j.  In Posix mode, it is now an error to attempt to define a shell function
+    with the same name as a Posix special builtin.
 
- * It is now possible to disable network interface probing in
-   sudo.conf by changing the value of the probe_interfaces
-   setting.
+k.  When compiled for strict Posix conformance, history expansion is disabled
+    by default.
 
- * When listing a user's privileges (sudo -l), the sudoers plugin
-   will now prompt for the user's password even if the targetpw,
-   rootpw or runaspw options are set.
+l.  The history expansion character (!) does not cause history expansion when
+    followed by the closing quote in a double-quoted string.
 
- * The sudoers plugin uses a new format for its time stamp files.
-   Each user now has a single file which may contain multiple records
-   when per-tty time stamps are in use (the default).  The time
-   stamps use a monotonic timer where available and are once again
-   located in a directory under /var/run.  The lecture status is
-   now stored separately from the time stamps in a different directory.
-   Bug #616
+m.  `complete' and its siblings compgen/compopt now takes a new `-o noquote'
+    option to inhibit quoting of the completions.
 
- * sudo's -K option will now remove all of the user's time stamps,
-   not just the time stamp for the current terminal.  The -k option
-   can be used to only disable time stamps for the current terminal.
+n.  Setting HISTSIZE to a value less than zero causes the history list to be
+    unlimited (setting it 0 zero disables the history list).
 
- * If sudo was started in the background and needed to prompt for
-   a password, it was not possible to suspend it at the password
-   prompt.  This now works properly.
+o.  Setting HISTFILESIZE to a value less than zero causes the history file size
+    to be unlimited (setting it to 0 causes the history file to be truncated
+    to zero size).
 
- * LDAP-based sudoers now uses a default search filter of
-   (objectClass=sudoRole) for more efficient queries.  The netgroup
-   query has been modified to avoid falling below the minimum length
-   for OpenLDAP substring indices.
+p.  The `read' builtin now skips NUL bytes in the input.
 
- * The new "use_netgroups" sudoers option can be used to explicitly
-   enable or disable netgroups support.  For LDAP-based sudoers,
-   netgroup support requires an expensive substring match on the
-   server.  If netgroups are not needed, this option can be disabled
-   to reduce the load on the LDAP server.
+q.  There is a new `bind -X' option to print all key sequences bound to Unix
+    commands.
 
- * Sudo is once again able to open the sudoers file when the group
-   on sudoers doesn't match the expected value, so long as the file
-   is not group writable.
+r.  When in Posix mode, `read' is interruptible by a trapped signal.  After
+    running the trap handler, read returns 128+signal and throws away any
+    partially-read input.
 
- * Sudo now installs an init.d script to clear the time stamp
-   directory at boot time on AIX and HP-UX systems.  These systems
-   either lack /var/run or do not clear it on boot.
+s.  The command completion code skips whitespace and assignment statements
+    before looking for the command name word to be completed.
 
- * The JSON format used by "visudo -x" now properly supports the
-   negation operator.  In addition, the Options object is now the
-   same for both Defaults and Cmnd_Specs.
+t.  The build process has a new mechanism for constructing separate help files
+    that better reflects the current set of compilation options.
 
- * Czech and Serbian translations for sudoers from translationproject.org.
+u.  The -nt and -ot options to test now work with files with nanosecond
+    timestamp resolution.
 
- * Catalan translation for sudo from translationproject.org.
+v.  The shell saves the command history in any shell for which history is
+    enabled and HISTFILE is set, not just interactive shells.
 
-What's new in Sudo 1.8.9p5?
+w.  The shell has `nameref' variables and new -n(/+n) options to declare and
+    unset to use them, and a `test -R' option to test for them.
 
- * Fixed a compilation error on AIX when LDAP support is enabled.
+x.  The shell now allows assigning, referencing, and unsetting elements of
+    indexed arrays using negative subscripts (a[-1]=2, echo ${a[-1]}) which
+    count back from the last element of the array.
 
- * Fixed parsing of the "umask" defaults setting in sudoers.  Bug #632.
+y.  The {x}<word redirection feature now allows words like {array[ind]} and
+    can use variables with special meanings to the shell (e.g., BASH_XTRACEFD).
 
- * Fixed a failed assertion when the "closefrom_override" defaults
-   setting is enabled in sudoers and sudo's -C flag is used.  Bug #633.
+z.  There is a new CHILD_MAX special shell variable; its value controls the
+    number of exited child statues the shell remembers.
 
-What's new in Sudo 1.8.9p4?
+aa. There is a new configuration option (--enable-direxpand-default) that
+    causes the `direxpand' shell option to be enabled by default.
 
- * Fixed a bug where sudo could consume large amounts of CPU while
-   the command was running when I/O logging is not enabled.  Bug #631
+bb. Bash does not do anything special to ensure that the file descriptor
+    assigned to X in {x}<foo remains open after the block containing it
+    completes.
 
- * Fixed a bug where sudo would exit with an error when the debug
-   level is set to util@debug or all@debug and I/O logging is not
-   enabled.  The command would continue runnning after sudo exited.
+cc. The `wait' builtin has a new `-n' option to wait for the next child to
+    change status.
 
-What's new in Sudo 1.8.9p3?
+dd. The `printf' %(...)T format specifier now uses the current time if no
+    argument is supplied.
 
- * Fixed a bug introduced in sudo 1.8.9 that prevented the tty name
-   from being resolved properly on Linux systems.  Bug #630.
+ee. There is a new variable, BASH_COMPAT, that controls the current shell
+    compatibility level.
 
-What's new in Sudo 1.8.9p2?
+ff. The `popd' builtin now treats additional arguments as errors.
 
- * Updated config.guess, config.sub and libtool to support the ppc64le
-   architecture (IBM PowerPC Little Endian).
+gg. The brace expansion code now treats a failed sequence expansion as a
+    simple string and will continue to expand brace terms in the remainder
+    of the word.
 
-What's new in Sudo 1.8.9p1?
+hh. Shells started to run process substitutions now run any trap set on EXIT.
 
- * Fixed a problem with gcc 4.8's handling of bit fields that could
-   lead to the noexec flag being enabled even when it was not
-   explicitly set.
+ii. The fc builtin now interprets -0 as the current command line.
 
-What's new in Sudo 1.8.9?
+jj. Completing directory names containing shell variables now adds a trailing
+    slash if the expanded result is a directory.
 
- * Reworked sudo's main event loop to use a simple event subsystem
-   using poll(2) or select(2) as the back end.
+kk. `cd' has a new `-@' option to browse a file's extended attributes on
+    systems that support O_XATTR.
 
- * It is now possible to statically compile the sudoers plugin into
-   the sudo binary without disabling shared library support.  The
-   sudo.conf file may still be used to configure other plugins.
+ll. The test/[/[[ `-v variable' binary operator now understands array
+    references.
 
- * Sudo can now be compiled again with a C preprocessor that does
-   not support variadic macros.
+2.  New Features in Readline
 
- * Visudo can now export a sudoers file in JSON format using the
-   new -x flag.
+a.  Readline is now more responsive to SIGHUP and other fatal signals when
+    reading input from the terminal or performing word completion but no
+    longer attempts to run any not-allowable functions from a signal handler
+    context.
 
- * The locale is now set correctly again for visudo and sudoreplay.
+b.  There are new bindable commands to search the history for the string of
+    characters between the beginning of the line and the point
+    (history-substring-search-forward, history-substring-search-backward)
 
- * The plugin API has been extended to allow the plugin to exclude
-   specific file descriptors from the "closefrom" range.
+c.  Readline allows quoted strings as the values of variables when setting
+    them with `set'.  As a side effect, trailing spaces and tabs are ignored
+    when setting a string variable's value.
 
- * There is now a workaround for a Solaris-specific problem where
-   NOEXEC was overriding traditional root DAC behavior.
+d.  The history library creates a backup of the history file when writing it
+    and restores the backup on a write error.
 
- * Add user netgroup filtering for SSSD. Previously, rules for
-   a netgroup were applied to all even when they did not belong
-   to the specified netgroup.
+e.  New application-settable variable: rl_filename_stat_hook: a function called
+    with a filename before using it in a call to stat(2).  Bash uses it to
+    expand shell variables so things like $HOME/Downloads have a slash
+    appended.
 
- * On systems with BSD login classes, if the user specified a group
-   (not a user) to run the command as, it was possible to specify
-   a different login class even when the command was not run as the
-   super user.
+f.  New bindable function `print-last-kbd-macro', prints the most-recently-
+    defined keyboard macro in a reusable format.
 
- * The closefrom() emulation on Mac OS X now uses /dev/fd if possible.
+g.  New user-settable variable `colored-stats', enables use of colored text
+    to denote file types when displaying possible completions (colored analog
+    of visible-stats).
 
- * Fixed a bug where sudoedit would not update the original file
-   from the temporary when PAM or I/O logging is not enabled.
+h.  New user-settable variable `keyseq-timout', acts as an inter-character
+    timeout when reading input or incremental search strings.
 
- * When recycling I/O logs, the log files are now truncated properly.
+i.  New application-callable function: rl_clear_history. Clears the history list
+    and frees all readline-associated private data.
 
- * Fixes bugs #617, #621, #622, #623, #624, #625, #626
+j.  New user-settable variable, show-mode-in-prompt, adds a characters to the
+    beginning of the prompt indicating the current editing mode.
 
-What's new in Sudo 1.8.8?
+k.  New application-settable variable: rl_input_available_hook; function to be
+    called when readline detects there is data available on its input file
+    descriptor.
 
- * Removed a warning on PAM systems with stacked auth modules
-   where the first module on the stack does not succeed.
+l.  Readline calls an application-set event hook (rl_event_hook) after it gets
+    a signal while reading input (read returns -1/EINTR but readline does not
+    handle the signal immediately) to allow the application to handle or
+    otherwise note it.
 
- * Sudo, sudoreplay and visudo now support GNU-style long options.
+m.  If the user-settable variable `history-size' is set to a value less than
+    0, the history list size is unlimited.
 
- * The -h (--host) option may now be used to specify a host name.
-   This is currently only used by the sudoers plugin in conjunction
-   with the -l (--list) option.
+n.  New application-settable variable: rl_signal_event_hook; function that is
+    called when readline is reading terminal input and read(2) is interrupted
+    by a signal.  Currently not called for SIGHUP or SIGTERM.
 
- * Program usage messages and manual SYNOPSIS sections have been
-   simplified.
+o.  rl_change_environment: new application-settable variable that controls
+    whether or not Readline modifies the environment (currently readline
+    modifies only LINES and COLUMNS).
 
- * Sudo's LDAP SASL support now works properly with Kerberos.
-   Previously, the SASL library was unable to locate the user's
-   credential cache.
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-4.2 since
+the release of bash-4.1.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
 
- * It is now possible to set the nproc resource limit to unlimited
-   via pam_limits on Linux (bug #565).
+1.  New Features in Bash
 
- * New "pam_service" and "pam_login_service" sudoers options
-   that can be used to specify the PAM service name to use.
+a.  `exec -a foo' now sets $0 to `foo' in an executable shell script without a
+    leading #!.
 
- * New "pam_session" and "pam_setcred" sudoers options that
-   can be used to disable PAM session and credential support.
+b.  Subshells begun to execute command substitutions or run shell functions or
+    builtins in subshells do not reset trap strings until a new trap is
+    specified.  This allows $(trap) to display the caller's traps and the
+    trap strings to persist until a new trap is set.
 
- * The sudoers plugin now properly supports UIDs and GIDs
-   that are larger than 0x7fffffff on 32-bit platforms.
+c.  `trap -p' will now show signals ignored at shell startup, though their
+    disposition still cannot be modified.
 
- * Fixed a visudo bug introduced in sudo 1.8.7 where per-group
-   Defaults entries would cause an internal error.
+d.  $'...', echo, and printf understand \uXXXX and \UXXXXXXXX escape sequences.
 
- * If the "tty_tickets" sudoers option is enabled (the default),
-   but there is no tty present, sudo will now use a ticket file
-   based on the parent process ID.  This makes it possible to support
-   the normal timeout behavior for the session.
+e.  declare/typeset has a new `-g' option, which creates variables in the
+    global scope even when run in a shell function.
 
- * Fixed a problem running commands that change their process
-   group and then attempt to change the terminal settings when not
-   running the command in a pseudo-terminal.  Previously, the process
-   would receive SIGTTOU since it was effectively a background
-   process.  Sudo will now grant the child the controlling tty and
-   continue it when this happens.
+f.  test/[/[[ have a new -v variable unary operator, which returns success if
+    `variable' has been set.
 
- * The "closefrom_override" sudoers option may now be used in
-   a command-specified Defaults entry (bug #610).
+g.  Posix parsing changes to allow `! time command' and multiple consecutive
+    instances of `!' (which toggle) and `time' (which have no cumulative
+    effect).
 
- * Sudo's BSM audit support now works on Solaris 11.
+h.  Posix change to allow `time' as a command by itself to print the elapsed
+    user, system, and real times for the shell and its children.
 
- * Brazilian Portuguese translation for sudo and sudoers from
-   translationproject.org.
+j.  $((...)) is always parsed as an arithmetic expansion first, instead of as
+    a potential nested command substitution, as Posix requires.
 
- * Czech translation for sudo from translationproject.org.
+k.  A new FUNCNEST variable to allow the user to control the maximum shell
+    function nesting (recursive execution) level.
 
- * French translation for sudo from translationproject.org.
+l.  The mapfile builtin now supplies a third argument to the callback command:
+    the line about to be assigned to the supplied array index.
 
- * Sudo's noexec support on Mac OS X 10.4 and above now uses dynamic
-   symbol interposition instead of setting DYLD_FORCE_FLAT_NAMESPACE=1
-   which causes issues with some programs.
+m.  The printf builtin has a new %(fmt)T specifier, which allows time values
+    to use strftime-like formatting.
 
- * Fixed visudo's -q (--quiet) flag, broken in sudo 1.8.6.
+n.  There is a new `compat41' shell option.
 
- * Root may no longer change its SELinux role without entering
-   a password.
+o.  The cd builtin has a new Posix-mandated `-e' option.
 
- * Fixed a bug introduced in Sudo 1.8.7 where the indexes written
-   to the I/O log timing file are two greater than they should be.
-   Sudoreplay now contains a work-around to parse those files.
+p.  Negative subscripts to indexed arrays, previously errors, now are treated
+    as offsets from the maximum assigned index + 1.
 
- * In sudoreplay's list mode, the "this" qualifier in "fromdate"
-   or "todate" expressions now behaves more sensibly.  Previously,
-   it would often match a date that was "one more" than expected.
-   For example, "this week" now matches the current week instead
-   of the following week.
+q.  Negative length specifications in the ${var:offset:length} expansion,
+    previously errors, are now treated as offsets from the end of the variable.
 
-What's new in Sudo 1.8.7?
+r.  Parsing change to allow `time -p --'.
 
- * The non-Unix group plugin is now supported when sudoers data
-   is stored in LDAP.
+s.  Posix-mode parsing change to not recognize `time' as a keyword if the
+    following token begins with a `-'.  This means no more Posix-mode
+    `time -p'.  Posix interpretation 267.
 
- * Sudo now uses a workaround for a locale bug on Solaris 11.0
-   that prevents setuid programs like sudo from fully using locales.
+t.  There is a new `lastpipe' shell option that runs the last command of a
+    pipeline in the current shell context.  The lastpipe option has no
+    effect if job control is enabled.
 
- * User messages are now always displayed in the user's locale,
-   even when the same message is being logged or mailed in a
-   different locale.
+u.  History expansion no longer expands the `$!' variable expansion.
 
- * Log files created by sudo now explicitly have the group set
-   to group ID 0 rather than relying on BSD group semantics (which
-   may not be the default).
+v.  Posix mode shells no longer exit if a variable assignment error occurs
+    with an assignment preceding a command that is not a special builtin.
 
- * A new "exec_background" sudoers option can be used to initially
-   run the command without read access to the terminal when running
-   a command in a pseudo-tty.  If the command tries to read from
-   the terminal it will be stopped by the kernel (via SIGTTIN or
-   SIGTTOU) and sudo will immediately restart it as the foreground
-   process (if possible).  This allows sudo to only pass terminal
-   input to the program if the program actually is expecting it.
-   Unfortunately, a few poorly-behaved programs (like "su" on most
-   Linux systems) do not handle SIGTTIN and SIGTTOU properly.
+w.  Non-interactive mode shells exit if -u is enabled and an attempt is made
+    to use an unset variable with the % or # expansions, the `//', `^', or
+    `,' expansions, or the parameter length expansion.
 
- * Sudo now uses an efficient group query to get all the groups
-   for a user instead of iterating over every record in the group
-   database on HP-UX and Solaris.
+x.  Posix-mode shells use the argument passed to `.' as-is if a $PATH search
+    fails, effectively searching the current directory.  Posix-2008 change.
 
- * Sudo now produces better error messages when there is an error
-   in the sudo.conf file.
+2.  New Features in Readline
 
- * Two new settings have been added to sudo.conf to give the admin
-   better control of how group database queries are performed.  The
-   "group_source" specifies how the group list for a user will be
-   determined.  Legal values are "static" (use the kernel groups
-   list), "dynamic" (perform a group database query) and "adaptive"
-   (only perform a group database query if the kernel list is full).
-   The "max_groups" setting specifies the maximum number of groups
-   a user may belong to when performing a group database query.
+a.  The history library does not try to write the history filename in the
+    current directory if $HOME is unset.  This closes a potential security
+    problem if the application does not specify a history filename.
 
- * The sudo.conf file now supports line continuation by using a
-   backslash as the last character on the line.
+b.  New bindable variable `completion-display-width' to set the number of
+    columns used when displaying completions.
 
- * There is now a standalone sudo.conf manual page.
+c.  New bindable variable `completion-case-map' to cause case-insensitive
+    completion to treat `-' and `_' as identical.
 
- * Sudo now stores its libexec files in a "sudo" sub-directory instead
-   of in libexec itself. For backwards compatibility, if the plugin
-   is not found in the default plugin directory, sudo will check
-   the parent directory if the default directory ends in "/sudo".
+d.  There are new bindable vi-mode command names to avoid readline's case-
+    insensitive matching not allowing them to be bound separately.
 
- * The sudoers I/O logging plugin now logs the terminal size.
+e.  New bindable variable `menu-complete-display-prefix' causes the menu
+    completion code to display the common prefix of the possible completions
+    before cycling through the list, instead of after.
 
- * A new sudoers option "maxseq" can be used to limit the number of
-   I/O log entries that are stored.
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-4.1 since
+the release of bash-4.0.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
 
- * The "system_group" and "group_file" sudoers group provider plugins
-   are now installed by default.
+1.  New Features in Bash
 
- * The list output (sudo -l) output from the sudoers plugin is now
-   less ambiguous when an entry includes different runas users.
-   The long list output (sudo -ll) for file-based sudoers is now
-   more consistent with the format of LDAP-based sudoers.
+a.  Here-documents within $(...) command substitutions may once more be
+    delimited by the closing right paren, instead of requiring a newline.
 
- * A uid may now be used in the sudoRunAsUser attributes for LDAP
-   sudoers.
+b.  Bash's file status checks (executable, readable, etc.) now take file
+    system ACLs into account on file systems that support them.
 
- * Minor plugin API change: the close and version functions are now
-   optional.  If the policy plugin does not provide a close function
-   and the command is not being run in a new pseudo-tty, sudo may
-   now execute the command directly instead of in a child process.
+c.  Bash now passes environment variables with names that are not valid
+    shell variable names through into the environment passed to child
+    processes.
 
- * A new sudoers option "pam_session" can be used to disable sudo's
-   PAM session support.
+d.  The `execute-unix-command' readline function now attempts to clear and
+    reuse the current line rather than move to a new one after the command
+    executes.
 
- * On HP-UX systems, sudo will now use the pstat() function to
-   determine the tty instead of ttyname().
+e.  `printf -v' can now assign values to array indices.
 
- * Turkish translation for sudo and sudoers from translationproject.org.
+f.  New `complete -E' and `compopt -E' options that work on the "empty"
+    completion: completion attempted on an empty command line.
 
- * Dutch translation for sudo and sudoers from translationproject.org.
+g.  New complete/compgen/compopt -D option to define a `default' completion:
+    a completion to be invoked on command for which no completion has been
+    defined.  If this function returns 124, programmable completion is
+    attempted again, allowing a user to dynamically build a set of completions
+    as completion is attempted by having the default completion function
+    install individual completion functions each time it is invoked.
 
- * Tivoli Directory Server client libraries may now be used with
-   HP-UX where libibmldap has a hidden dependency on libCsup.
+h.  When displaying associative arrays, subscripts are now quoted.
 
- * The sudoers plugin will now ignore invalid domain names when
-   checking netgroup membership.  Most Linux systems use the string
-   "(none)" for the NIS-style domain name instead of an empty string.
+i.  Changes to dabbrev-expand to make it more `emacs-like': no space appended
+    after matches, completions are not sorted, and most recent history entries
+    are presented first.
 
- * New support for specifying a SHA-2 digest along with the command
-   in sudoers.  Supported hash types are sha224, sha256, sha384 and
-   sha512.  See the description of Digest_Spec in the sudoers manual
-   or the description of sudoCommand in the sudoers.ldap manual for
-   details.
+j.  The [[ and (( commands are now subject to the setting of `set -e' and the
+    ERR trap.
 
- * The paths to ldap.conf and ldap.secret may now be specified as
-   arguments to the sudoers plugin in the sudo.conf file.
+k.  The source/. builtin now removes NUL bytes from the file before attempting
+    to parse commands.
 
- * Fixed potential false positives in visudo's alias cycle detection.
+l.  There is a new configuration option (in config-top.h) that forces bash to
+    forward all history entries to syslog.
 
- * Fixed a problem where the time stamp file was being treated
-   as out of date on Linux systems where the change time on the
-   pseudo-tty device node can change after it is allocated.
+m.  A new variable $BASHOPTS to export shell options settable using `shopt' to
+    child processes.
 
- * Sudo now only builds Position Independent Executables (PIE)
-   by default on Linux systems and verifies that a trivial test
-   program builds and runs.
+n.  There is a new confgure option that forces the extglob option to be
+    enabled by default.
 
- * On Solaris 11.1 and higher, sudo binaries will now have the
-   ASLR tag enabled if supported by the linker.
+o.  New variable $BASH_XTRACEFD; when set to an integer bash will write xtrace
+    output to that file descriptor.
 
-What's new in Sudo 1.8.6p8?
+p.  If the optional left-hand-side of a redirection is of the form {var}, the
+    shell assigns the file descriptor used to $var or uses $var as the file
+    descriptor to move or close, depending on the redirection operator.
 
- * Terminal detection now works properly on 64-bit AIX kernels.
-   This was broken by the removal of the ttyname() fallback in Sudo
-   1.8.6p6.  Sudo is now able to map an AIX 64-bit device number
-   to the corresponding device file in /dev.
+q.  The < and > operators to the [[ conditional command now do string
+    comparison according to the current locale if the compatibility level
+    is greater than 40.
 
- * Sudo now checks for crypt() returning NULL when performing
-   passwd-based authentication.
+r.  Programmable completion now uses the completion for `b' instead of `a'
+    when completion is attempted on a line like: a $(b c.
 
-What's new in Sudo 1.8.6p7?
+s.  Force extglob on temporarily when parsing the pattern argument to
+    the == and != operators to the [[ command, for compatibility.
 
- * A time stamp file with the date set to the epoch by "sudo -k"
-   is now completely ignored regardless of what the local clock is
-   set to.  Previously, if the local clock was set to a value between
-   the epoch and the time stamp timeout value, a time stamp reset
-   by "sudo -k" would be considered current.
+t.  Changed the behavior of interrupting the wait builtin when a SIGCHLD is
+    received and a trap on SIGCHLD is set to be Posix-mode only.
 
- * The tty-specific time stamp file now includes the session ID
-   of the sudo process that created it.  If a process with the same
-   tty but a different session ID runs sudo, the user will now be
-   prompted for a password (assuming authentication is required for
-   the command).
+u.  The read builtin has a new `-N nchars' option, which reads exactly NCHARS
+    characters, ignoring delimiters like newline.
 
-What's new in Sudo 1.8.6p6?
+v.  The mapfile/readarray builtin no longer stores the commands it invokes via
+    callbacks in the history list.
 
- * On systems where the controlling tty can be determined via /proc
-   or sysctl(), sudo will no longer fall back to using ttyname()
-   if the process has no controlling tty.  This prevents sudo from
-   using a non-controlling tty for logging and time stamp purposes.
+w.  There is a new `compat40' shopt option.
 
-What's new in Sudo 1.8.6p5?
+2.  New Features in Readline
 
- * Fixed a potential crash in visudo's alias cycle detection.
+a.  New bindable function: menu-complete-backward.
 
- * Improved performance on Solaris when retrieving the group list
-   for the target user.  On systems with a large number of groups
-   where the group database is not local (NIS, LDAP, AD), fetching
-   the group list could take a minute or more.
+b.  In the vi insertion keymap, C-n is now bound to menu-complete by default,
+    and C-p to menu-complete-backward.
 
-What's new in Sudo 1.8.6p4?
+c.  When in vi command mode, repeatedly hitting ESC now does nothing, even
+    when ESC introduces a bound key sequence.  This is closer to how
+    historical vi behaves.
 
- * The -fstack-protector is now used when linking visudo, sudoreplay
-   and testsudoers.
+d.  New bindable function: skip-csi-sequence.  Can be used as a default to
+    consume key sequences generated by keys like Home and End without having
+    to bind all keys.
 
- * Avoid building PIE binaries on FreeBSD/ia64 as they don't run
-   properly.
+e.  New application-settable function: rl_filename_rewrite_hook.  Can be used
+    to rewite or modify filenames read from the file system before they are
+    compared to the word to be completed.
 
- * Fixed a crash in visudo strict mode when an unknown Defaults
-   setting is encountered.
+f.  New bindable variable: skip-completed-text, active when completing in the
+    middle of a word.  If enabled, it means that characters in the completion
+    that match characters in the remainder of the word are "skipped" rather
+    than inserted into the line.
 
- * Do not inform the user that the command was not permitted by the
-   policy if they do not successfully authenticate. This is a
-   regression introduced in sudo 1.8.6.
+g.  The pre-readline-6.0 version of menu completion is available as
+    "old-menu-complete" for users who do not like the readline-6.0 version.
 
- * Allow sudo to be build with sss support without also including
-   ldap support.
+h.  New bindable variable: echo-control-characters.  If enabled, and the
+    tty ECHOCTL bit is set, controls the echoing of characters corresponding
+    to keyboard-generated signals.
 
- * Fix running commands that need the terminal in the background
-   when I/O logging is enabled. E.g. "sudo vi &". When the command
-   is foregrounded, it will now resume properly.
+i.  New bindable variable: enable-meta-key.  Controls whether or not readline
+    sends the smm/rmm sequences if the terminal indicates it has a meta key
+    that enables eight-bit characters.
 
-What's new in Sudo 1.8.6p3?
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-4.0 since
+the release of bash-3.2.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
 
- * Fixed post-processing of the man pages on systems with legacy
-   versions of sed.
+1.  New Features in Bash
 
- * Fixed "sudoreplay -l" on Linux systems with file systems that
-   set DT_UNKNOWN in the d_type field of struct dirent.
+a.  When using substring expansion on the positional parameters, a starting
+    index of 0 now causes $0 to be prefixed to the list.
 
-What's new in Sudo 1.8.6p2?
+b.  The `help' builtin now prints its columns with entries sorted vertically
+    rather than horizontally.
 
- * Fixed suspending a command after it has already been resumed
-   once when I/O logging (or use_pty) is not enabled.
-   This was a regression introduced in version 1.8.6.
+c.  There is a new variable, $BASHPID, which always returns the process id of
+    the current shell.
 
-What's new in Sudo 1.8.6p1?
+d.  There is a new `autocd' option that, when enabled, causes bash to attempt
+    to `cd' to a directory name that is supplied as the first word of a
+    simple command.
 
- * Fixed the setting of LOGNAME, USER and USERNAME variables in the
-   command's environment when env_reset is enabled (the default).
-   This was a regression introduced in version 1.8.6.
+e.  There is a new `checkjobs' option that causes the shell to check for and
+    report any running or stopped jobs at exit.
 
- * Sudo now honors SUCCESS=return in /etc/nsswitch.conf.
+f.  The programmable completion code exports a new COMP_TYPE variable, set to
+    a character describing the type of completion being attempted.
 
-What's new in Sudo 1.8.6?
+g.  The programmable completion code exports a new COMP_KEY variable, set to
+    the character that caused the completion to be invoked (e.g., TAB).
 
- * Sudo is now built with the -fstack-protector flag if the the
-   compiler supports it.  Also, the -zrelro linker flag is used if
-   supported.  The --disable-hardening configure option can be used
-   to build sudo without stack smashing protection.
+h.  If creation of a child process fails due to insufficient resources, bash
+    will try again several times before reporting failure.
 
- * Sudo is now built as a Position Independent Executable (PIE)
-   if supported by the compiler and linker.
+i.  The programmable completion code now uses the same set of characters as
+    readline when breaking the command line into a list of words.
 
- * If the user is a member of the "exempt" group in sudoers, they
-   will no longer be prompted for a password even if the -k flag
-   is specified with the command.  This makes "sudo -k command"
-   consistent with the behavior one would get if the user ran "sudo
-   -k" immediately before running the command.
+j.  The block multiplier for the ulimit -c and -f options is now 512 when in
+    Posix mode, as Posix specifies.
 
- * The sudoers file may now be a symbolic link.  Previously, sudo
-   would refuse to read sudoers unless it was a regular file.
+k.  Changed the behavior of the read builtin to save any partial input received
+    in the specified variable when the read builtin times out.  This also
+    results in variables specified as arguments to read to be set to the empty
+    string when there is no input available.  When the read builtin times out,
+    it returns an exit status greater than 128.
 
- * The sudoreplay command can now properly replay sessions where
-   no tty was present.
+l.  The shell now has the notion of a `compatibility level', controlled by
+    new variables settable by `shopt'.  Setting this variable currently
+    restores the bash-3.1 behavior when processing quoted strings on the rhs
+    of the `=~' operator to the `[[' command.
 
- * The sudoers plugin now takes advantage of symbol visibility
-   controls when supported by the compiler or linker.  As a result,
-   only a small number of symbols are exported which significantly
-   reduces the chances of a conflict with other shared objects.
+m.  The `ulimit' builtin now has new -b (socket buffer size) and -T (number
+    of threads) options.
 
- * Improved support for the Tivoli Directory Server LDAP client
-   libraries.  This includes support for using LDAP over SSL (ldaps)
-   as well as support for the BIND_TIMELIMIT, TLS_KEY and TLS_CIPHERS
-   ldap.conf options.  A new ldap.conf option, TLS_KEYPW can be
-   used to specify a password to decrypt the key database.
+n.  The -p option to `declare' now displays all variable values and attributes
+    (or function values and attributes if used with -f).
 
- * When constructing a time filter for use with LDAP sudoNotBefore
-   and sudoNotAfter attributes, the current time now includes tenths
-   of a second.  This fixes a problem with timed entries on Active
-   Directory.
+o.  There is a new `compopt' builtin that allows completion functions to modify
+    completion options for existing completions or the completion currently
+    being executed.
 
- * If a user fails to authenticate and the command would be rejected
-   by sudoers, it is now logged with "command not allowed" instead
-   of "N incorrect password attempts".  Likewise, the "mail_no_perms"
-   sudoers option now takes precedence over "mail_badpass".
+p.  The `read' builtin has a new -i option which inserts text into the reply
+    buffer when using readline.
 
- * The sudo manuals are now formatted using the mdoc macros.  Versions
-   using the legacy man macros are provided for systems that lack mdoc.
+q.  A new `-E' option to the complete builtin allows control of the default
+    behavior for completion on an empty line.
 
- * New support for Solaris privilege sets.  This makes it possible
-   to specify fine-grained privileges in the sudoers file on Solaris
-   10 and above.  A Runas_Spec that contains no Runas_Lists can be
-   used to give a user the ability to run a command as themselves
-   but with an expanded privilege set.
+r.  There is now limited support for completing command name words containing
+    globbing characters.
 
- * Fixed a problem with the reboot and shutdown commands on some
-   systems (such as HP-UX and BSD).  On these systems, reboot sends
-   all processes (except itself) SIGTERM.  When sudo received
-   SIGTERM, it would relay it to the reboot process, thus killing
-   reboot before it had a chance to actually reboot the system.
+s.  Changed format of internal help documentation for all builtins to roughly
+    follow man page format.
 
- * Support for using the System Security Services Daemon (SSSD) as
-   a source of sudoers data.
+t.  The `help' builtin now has a new -d option, to display a short description,
+    and a -m option, to print help information in a man page-like format.
 
- * Slovenian translation for sudo and sudoers from translationproject.org.
+u.  There is a new `mapfile' builtin to populate an array with lines from a
+    given file.  The name `readarray' is a synonym.
 
- * Visudo will now warn about unknown Defaults entries that are
-   per-host, per-user, per-runas or per-command.
+v.  If a command is not found, the shell attempts to execute a shell function
+    named `command_not_found_handle', supplying the command words as the
+    function arguments.
 
- * Fixed a race condition that could cause sudo to receive SIGTTOU
-   (and stop) when resuming a shell that was run via sudo when I/O
-   logging (and use_pty) is not enabled.
+w.  There is a new shell option: `globstar'.  When enabled, the globbing code
+    treats `**' specially -- it matches all directories (and files within
+    them, when appropriate) recursively.
 
- * Sending SIGTSTP directly to the sudo process will now suspend the
-   running command when I/O logging (and use_pty) is not enabled.
+x.  There is a new shell option: `dirspell'.  When enabled, the filename
+    completion code performs spelling correction on directory names during
+    completion.
 
-What's new in Sudo 1.8.5p3?
+y.  The `-t' option to the `read' builtin now supports fractional timeout
+    values.
 
- * Fixed the loading of I/O plugins that conform to a plugin API
-   version older than 1.2.
+z.  Brace expansion now allows zero-padding of expanded numeric values and
+    will add the proper number of zeroes to make sure all values contain the
+    same number of digits.
 
-What's new in Sudo 1.8.5p2?
+aa. There is a new bash-specific bindable readline function: `dabbrev-expand'.
+    It uses menu completion on a set of words taken from the history list.
 
- * Fixed use of the SUDO_ASKPASS environment variable which was
-   broken in Sudo 1.8.5.
+bb. The command assigned to a key sequence with `bind -x' now sets two new
+    variables in the environment of the executed command:  READLINE_LINE_BUFFER
+    and READLINE_POINT.  The command can change the current readline line
+    and cursor position by modifying READLINE_LINE_BUFFER and READLINE_POINT,
+    respectively.
 
- * Fixed a problem reading the sudoers file when the file mode is
-   more restrictive than the expected mode.  For example, when the
-   expected sudoers file mode is 0440 but the actual mode is 0400.
+cc. There is a new &>> redirection operator, which appends the standard output
+    and standard error to the named file.
 
-What's new in Sudo 1.8.5p1?
+dd. The parser now understands `|&' as a synonym for `2>&1 |', which redirects
+    the standard error for a command through a pipe.
 
- * Fixed a bug that prevented files in an include directory from
-   being evaluated.
+ee. The new `;&' case statement action list terminator causes execution to
+    continue with the action associated with the next pattern in the
+    statement rather than terminating the command.
 
-What's new in Sudo 1.8.5?
+ff. The new `;;&' case statement action list terminator causes the shell to
+    test the next set of patterns after completing execution of the current
+    action, rather than terminating the command.
 
- * When "noexec" is enabled, sudo_noexec.so will now be prepended
-   to any existing LD_PRELOAD variable instead of replacing it.
+gg. The shell understands a new variable: PROMPT_DIRTRIM.  When set to an
+    integer value greater than zero, prompt expansion of \w and \W  will
+    retain only that number of trailing pathname components and replace
+    the intervening characters with `...'.
 
- * The sudo_noexec.so shared library now wraps the execvpe(),
-   exect(), posix_spawn() and posix_spawnp() functions.
+hh. There are new case-modifying word expansions: uppercase (^[^]) and
+    lowercase (,[,]).  They can work on either the first character or
+    array element, or globally.  They accept an optional shell pattern
+    that determines which characters to modify.  There is an optionally-
+    configured feature to include capitalization operators.
 
- * The user/group/mode checks on sudoers files have been relaxed.
-   As long as the file is owned by the sudoers uid, not world-writable
-   and not writable by a group other than the sudoers gid, the file
-   is considered OK.  Note that visudo will still set the mode to
-   the value specified at configure time.
+ii. The shell provides associative array variables, with the appropriate
+    support to create, delete, assign values to, and expand them.
 
- * It is now possible to specify the sudoers path, uid, gid and
-   file mode as options to the plugin in the sudo.conf file.
+jj. The `declare' builtin now has new -l (convert value to lowercase upon
+    assignment) and -u (convert value to uppercase upon assignment) options.
+    There is an optionally-configurable -c option to capitalize a value at
+    assignment.
 
- * Croatian, Galician, German, Lithuanian, Swedish and Vietnamese
-   translations from translationproject.org.
+kk. There is a new `coproc' reserved word that specifies a coprocess: an
+    asynchronous command run with two pipes connected to the creating shell.
+    Coprocs can be named.  The input and output file descriptors and the
+    PID of the coprocess are available to the calling shell in variables
+    with coproc-specific names.
 
- * /etc/environment is no longer read directly on Linux systems
-   when PAM is used.  Sudo now merges the PAM environment into the
-   user's environment which is typically set by the pam_env module.
+ll. A value of 0 for the -t option to `read' now returns success if there is
+    input available to be read from the specified file descriptor.
 
- * The initial evironment created when env_reset is in effect now
-   includes the contents of /etc/environment on AIX systems and the
-   "setenv" and "path" entries from /etc/login.conf on BSD systems.
+mm. CDPATH and GLOBIGNORE are ignored when the shell is running in privileged
+    mode.
 
- * The plugin API has been extended in three ways.  First, options
-   specified in sudo.conf after the plugin pathname are passed to
-   the plugin's open function.  Second, sudo has limited support
-   for hooks that can be used by plugins.  Currently, the hooks are
-   limited to environment handling functions.  Third, the init_session
-   policy plugin function is passed a pointer to the user environment
-   which can be updated during session setup.  The plugin API version
-   has been incremented to version 1.2.  See the sudo_plugin manual
-   for more information.
+nn. New bindable readline functions shell-forward-word and shell-backward-word,
+    which move forward and backward words delimited by shell metacharacters
+    and honor shell quoting.
 
- * The policy plugin's init_session function is now called by the
-   parent sudo process, not the child process that executes the
-   command.  This allows the PAM session to be open and closed in
-   the same process, which some PAM modules require.
+oo.  New bindable readline functions shell-backward-kill-word and shell-kill-word
+    which kill words backward and forward, but use the same word boundaries
+    as shell-forward-word and shell-backward-word.
 
- * Fixed parsing of "Path askpass" and "Path noexec" in sudo.conf,
-   which was broken in version 1.8.4.
+2.  New Features in Readline
 
- * On systems with an SVR4-style /proc file system, the /proc/pid/psinfo
-   file is now uses to determine the controlling terminal, if possible.
-   This allows tty-based tickets to work properly even when, e.g.
-   standard input, output and error are redirected to /dev/null.
+a.  A new variable, rl_sort_completion_matches; allows applications to inhibit
+    match list sorting (but beware: some things don't work right if
+    applications do this).
 
- * The output of "sudoreplay -l" is now sorted by file name (or
-   sequence number).  Previously, entries were displayed in the
-   order in which they were found on the file system.
+b.  A new variable, rl_completion_invoking_key; allows applications to discover
+    the key that invoked rl_complete or rl_menu_complete.
 
- * Sudo now behaves properly when I/O logging is enabled and the
-   controlling terminal is revoked (e.g. the running sshd is killed).
-   Previously, sudo may have exited without calling the I/O plugin's
-   close function which can lead to an incomplete I/O log.
+c.  The functions rl_block_sigint and rl_release_sigint are now public and
+    available to calling applications who want to protect critical sections
+    (like redisplay).
 
- * Sudo can now detect when a user has logged out and back in again
-   on Solaris 11, just like it can on Solaris 10.
+d.  The functions rl_save_state and rl_restore_state are now public and
+    available to calling applications; documented rest of readline's state
+    flag values.
 
- * The built-in zlib included with Sudo has been upgraded to version
-   1.2.6.
+e.  A new user-settable variable, `history-size', allows setting the maximum
+    number of entries in the history list.
 
- * Setting the SSL parameter to start_tls in ldap.conf now works
-   properly when using Mozilla-based SDKs that support the
-   ldap_start_tls_s() function.
+f.  There is a new implementation of menu completion, with several improvements
+    over the old; the most notable improvement is a better `completions
+    browsing' mode.
 
- * The TLS_CHECKPEER parameter in ldap.conf now works when the
-   Mozilla NSS crypto backend is used with OpenLDAP.
+g.  The menu completion code now uses the rl_menu_completion_entry_function
+    variable, allowing applications to provide their own menu completion
+    generators.
 
- * A new group provider plugin, system_group, is included which
-   performs group look ups by name using the system groups database.
-   This can be used to restore the pre-1.7.3 sudo group lookup
-   behavior.
+h.  There is support for replacing a prefix  of a pathname with a `...' when
+    displaying possible completions.  This is controllable by setting the
+    `completion-prefix-display-length' variable.  Matches with a common prefix
+    longer than this value have the common prefix replaced with `...'.
 
-What's new in Sudo 1.8.4p5?
+i.  There is a new `revert-all-at-newline' variable.  If enabled, readline will
+    undo all outstanding changes to all history lines when `accept-line' is
+    executed.
 
- * Fixed a bug when matching against an IP address with an associated
-   netmask in the sudoers file.  In certain circumstances, this
-   could allow users to run commands on hosts they are not authorized
-   for.
+j.  If the kernel supports it, readline displays special characters
+    corresponding to a keyboard-generated signal when the signal is received.
 
-What's new in Sudo 1.8.4p4?
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-3.2 since
+the release of bash-3.1.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
 
- * Fixed a bug introduced in Sudo 1.8.4 which prevented "sudo -v"
-   from working.
+1.  New Features in Bash
 
-What's new in Sudo 1.8.4p3?
+a.  Changed the parameter pattern replacement functions to not anchor the
+    pattern at the beginning of the string if doing global replacement - that
+    combination doesn't make any sense.
 
- * Fixed a crash on FreeBSD when no tty is present.
+b.  When running in `word expansion only' mode (--wordexp option), inhibit
+    process substitution.
 
- * Fixed a bug introduced in Sudo 1.8.4 that allowed users to
-   specify environment variables to set on the command line without
-   having sudo "ALL" permissions or the "SETENV" tag.
+c.  Loadable builtins now work on MacOS X 10.[34].
 
- * When visudo is run with the -c (check) option, the sudoers
-   file(s) owner and mode are now also checked unless the -f option
-   was specified.
+d.  Shells running in posix mode no longer set $HOME, as POSIX requires.
 
-What's new in Sudo 1.8.4p2?
+e.  The code that checks for binary files being executed as shell scripts now
+    checks only for NUL rather than any non-printing character.
 
- * Fixed a bug introduced in Sudo 1.8.4 where insufficient space
-   was allocated for group IDs in the LDAP filter.
+f.  Quoting the string argument to the [[ command's  =~ operator now forces
+    string matching, as with the other pattern-matching operators.
 
- * Fixed a bug introduced in Sudo 1.8.4 where the path to sudo.conf
-   was "/sudo.conf" instead of "/etc/sudo.conf".
+2.  New Features in Readline
 
- * Fixed a bug introduced in Sudo 1.8.4 which could cause a hang
-   when I/O logging is enabled and input is from a pipe or file.
+a.  Calling applications can now set the keyboard timeout to 0, allowing
+    poll-like behavior.
 
-What's new in Sudo 1.8.4p1?
+b.  The value of SYS_INPUTRC (configurable at compilation time) is now used as
+    the default last-ditch startup file.
 
- * Fixed a bug introduced in sudo 1.8.4 that broke adding to or
-   deleting from the env_keep, env_check and env_delete lists in
-   sudoers on some platforms.
+c.  The history file reading functions now allow windows-like \r\n line
+    terminators.
 
-What's new in Sudo 1.8.4?
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-3.1 since
+the release of bash-3.0.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
 
- * The -D flag in sudo has been replaced with a more general debugging
-   framework that is configured in sudo.conf.
+1.  New Features in Bash
 
- * Fixed a false positive in visudo strict mode when aliases are
-   in use.
+a.  Bash now understands LC_TIME as a special variable so that time display
+    tracks the current locale.
 
- * Fixed a crash with "sudo -i" when a runas group was specified
-   without a runas user.
+b.  BASH_ARGC, BASH_ARGV, BASH_SOURCE, and BASH_LINENO are no longer created
+    as `invisible' variables and may not be unset.
 
- * The line on which a syntax error is reported in the sudoers file
-   is now more accurate.  Previously it was often off by a line.
+c.  In POSIX mode, if `xpg_echo' option is enabled, the `echo' builtin doesn't
+    try to interpret any options at all, as POSIX requires.
 
- * Fixed a bug where stack garbage could be printed at the end of
-   the lecture when the "lecture_file" option was enabled.
+d.  The `bg' builtin now accepts multiple arguments, as POSIX seems to specify.
 
- * "make install" now honors the LINGUAS environment variable.
+e.  Fixed vi-mode word completion and glob expansion to perform tilde
+    expansion.
 
- * The #include and #includedir directives in sudoers now support
-   relative paths.  If the path is not fully qualified it is expected
-   to be located in the same directory of the sudoers file that is
-   including it.
+f.  The `**' mathematic exponentiation operator is now right-associative.
 
- * Serbian and Spanish translations for sudo from translationproject.org.
+g.  The `ulimit' builtin has new options: -i (max number of pending signals),
+    -q (max size of POSIX message queues), and -x (max number of file locks).
 
- * LDAP-based sudoers may now access by group ID in addition to
-   group name.
+h.  A bare `%' once again expands to the current job when used as a job
+    specifier.
 
- * visudo will now fix the mode on the sudoers file even if no changes
-   are made unless the -f option is specified.
+i.  The `+=' assignment operator (append to the value of a string or array) is
+    now supported for assignment statements and arguments to builtin commands
+    that accept assignment statements.
 
- * The "use_loginclass" sudoers option works properly again.
+j.  BASH_COMMAND now preserves its value when a DEBUG trap is executed.
 
- * On systems that use login.conf, "sudo -i" now sets environment
-   variables based on login.conf.
+k.  The `gnu_errfmt' option is enabled automatically if the shell is running
+    in an emacs terminal window.
 
- * For LDAP-based sudoers, values in the search expression are now
-   escaped as per RFC 4515.
+l.  New configuration option:  --single-help-strings.  Causes long help text
+    to be written as a single string; intended to ease translation.
 
- * The plugin close function is now properly called when a login
-   session is killed (as opposed to the actual command being killed).
-   This can happen when an ssh session is disconnected or the
-   terminal window is closed.
+m.  The COMP_WORDBREAKS variable now causes the list of word break characters
+    to be emptied when the variable is unset.
 
- * The deprecated "noexec_file" sudoers option is no longer supported.
+n.  An unquoted expansion of $* when $IFS is empty now causes the positional
+    parameters to be concatenated if the expansion doesn't undergo word
+    splitting.
 
- * Fixed a race condition when I/O logging is not enabled that could
-   result in tty-generated signals (e.g. control-C) being received
-   by the command twice.
+o.  Bash now inherits $_ from the environment if it appears there at startup.
 
- * If none of the standard input, output or error are connected to
-   a tty device, sudo will now check its parent's standard input,
-   output or error for the tty name on systems with /proc and BSD
-   systems that support the KERN_PROC_PID sysctl.  This allows
-   tty-based tickets to work properly even when, e.g. standard
-   input, output and error are redirected to /dev/null.
+p.  New shell option: nocasematch.  If non-zero, shell pattern matching ignores
+    case when used by `case' and `[[' commands.
 
- * Added the --enable-kerb5-instance configure option to allow
-   people using Kerberos V authentication to specify a custom
-   instance so the principal name can be, e.g. "username/sudo"
-   similar to how ksu uses "username/root".
+q.  The `printf' builtin takes a new option: -v var.  That causes the output
+    to be placed into var instead of on stdout.
 
- * Fixed a bug where a pattern like "/usr/*" included /usr/bin/ in
-   the results, which would be incorrectly be interpreted as if the
-   sudoers file had specified a directory.
+r.  By default, the shell no longer reports processes dying from SIGPIPE.
 
- * "visudo -c" will now list any include files that were checked
-   in addition to the main sudoers file when everything parses OK.
+s.  Bash now sets the extern variable `environ' to the export environment it
+    creates, so C library functions that call getenv() (and can't use the
+    shell-provided replacement) get current values of environment variables.
 
- * Users that only have read-only access to the sudoers file may
-   now run "visudo -c".  Previously, write permissions were required
-   even though no writing is down in check-only mode.
+t.  A new configuration option, `--enable-strict-posix-default', which will
+    build bash to be POSIX conforming by default.
 
- * It is now possible to prevent the disabling of core dumps from
-   within sudo itself by adding a line to the sudo.conf file like
-   "Set disable_coredump false".
+u.  If compiled for strict POSIX conformance, LINES and COLUMNS may now
+    override the true terminal size.
 
-What's new in Sudo 1.8.3p2?
+2.  New Features in Readline
 
- * Fixed a format string vulnerability when the sudo binary (or a
-   symbolic link to the sudo binary) contains printf format escapes
-   and the -D (debugging) flag is used.
+a.  The key sequence sent by the keypad `delete' key is now automatically
+    bound to delete-char.
 
-What's new in Sudo 1.8.3p1?
+b.  A negative argument to menu-complete now cycles backward through the
+    completion list.
 
- * Fixed a crash in the monitor process on Solaris when NOPASSWD
-   was specified or when authentication was disabled.
+c.  A new bindable readline variable:  bind-tty-special-chars.  If non-zero,
+    readline will bind the terminal special characters to their readline
+    equivalents when it's called (on by default).
 
- * Fixed matching of a Runas_Alias in the group section of a
-   Runas_Spec.
+d.  New bindable command: vi-rubout.  Saves deleted text for possible
+    reinsertion, as with any vi-mode `text modification' command; `X' is bound
+    to this in vi command mode.
 
-What's new in Sudo 1.8.3?
+e.  A new external application-controllable variable that allows the LINES
+    and COLUMNS environment variables to set the window size regardless of
+    what the kernel returns: rl_prefer_env_winsize
 
- * Fixed expansion of strftime() escape sequences in the "log_dir"
-   sudoers setting.
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-3.0 since
+the release of bash-2.05b.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
 
- * Esperanto, Italian and Japanese translations from translationproject.org.
+1.  New Features in Bash
 
- * Sudo will now use PAM by default on AIX 6 and higher.
+a.  ANSI string expansion now implements the \x{hexdigits} escape.
 
- * Added --enable-werror configure option for gcc's -Werror flag.
+b.  There is a new loadable `strftime' builtin.
 
- * Visudo no longer assumes all editors support the +linenumber
-   command line argument.  It now uses a whitelist of editors known
-   to support the option.
+c.  New variable, COMP_WORDBREAKS, which controls the readline completer's
+    idea of word break characters.
 
- * Fixed matching of network addresses when a netmask is specified
-   but the address is not the first one in the CIDR block.
+d.  The `type' builtin no longer reports on aliases unless alias expansion
+    will actually be performed.    
 
- * The configure script now check whether or not errno.h declares
-   the errno variable.  Previously, sudo would always declare errno
-   itself for older systems that don't declare it in errno.h.
+e.  HISTCONTROL is now a colon-separated list of values, which permits
+    more extensibility and backwards compatibility.
 
- * The NOPASSWD tag is now honored for denied commands too, which
-   matches historic sudo behavior (prior to sudo 1.7.0).
+f.  HISTCONTROL may now include the `erasedups' option, which causes all lines
+    matching a line being added to be removed from the history list.
 
- * Sudo now honors the "DEREF" setting in ldap.conf which controls
-   how alias dereferencing is done during an LDAP search.
+g.  `configure' has a new `--enable-multibyte' argument that permits multibyte
+    character support to be disabled even on systems that support it.
 
- * A symbol conflict with the pam_ssh_agent_auth PAM module that
-   would cause a crash been resolved.
+h.  New variables to support the bash debugger:  BASH_ARGC, BASH_ARGV,
+    BASH_SOURCE, BASH_LINENO, BASH_SUBSHELL, BASH_EXECUTION_STRING,
+    BASH_COMMAND
 
- * The inability to load a group provider plugin is no longer
-   a fatal error.
+i.  FUNCNAME has been changed to support the debugger: it's now an array
+    variable.
 
- * A potential crash in the utmp handling code has been fixed.
+j.  for, case, select, arithmetic commands now keep line number information
+    for the debugger.
 
- * Two PAM session issues have been resolved.  In previous versions
-   of sudo, the PAM session was opened as one user and closed as
-   another.  Additionally, if no authentication was performed, the
-   PAM session would never be closed.
+k.  There is a new `RETURN' trap executed when a function or sourced script
+    returns (not inherited child processes; inherited by command substitution
+    if function tracing is enabled and the debugger is active).
 
- * Sudo will now work correctly with LDAP-based sudoers using TLS
-   or SSL on Debian systems.
+l.  New invocation option:  --debugger.  Enables debugging and turns on new
+    `extdebug' shell option.
 
- * The LOGNAME, USER and USERNAME environment variables are preserved
-   correctly again in sudoedit mode.
+m.  New `functrace' and `errtrace' options to `set -o' cause DEBUG and ERR
+    traps, respectively, to be inherited by shell functions.  Equivalent to
+    `set -T' and `set -E' respectively.  The `functrace' option also controls
+    whether or not the DEBUG trap is inherited by sourced scripts.
 
-What's new in Sudo 1.8.2?
+n.  The DEBUG trap is run before binding the variable and running the action
+    list in a `for' command, binding the selection variable and running the
+    query in a `select' command, and before attempting a match in a `case'
+    command.
 
- * Sudo, visudo, sudoreplay and the sudoers plug-in now have natural
-   language support (NLS). This can be disabled by passing configure
-   the --disable-nls option.  Sudo will use gettext(), if available,
-   to display translated messages.  All translations are coordinated
-   via The Translation Project, http://translationproject.org/.
+o.  New `--enable-debugger' option to `configure' to compile in the debugger
+    support code.
 
- * Plug-ins are now loaded with the RTLD_GLOBAL flag instead of
-   RTLD_LOCAL.  This fixes missing symbol problems in PAM modules
-   on certain platforms, such as FreeBSD and SuSE Linux Enterprise.
+p.  `declare -F' now prints out extra line number and source file information
+    if the `extdebug' option is set.
 
- * I/O logging is now supported for commands run in background mode
-   (using sudo's -b flag).
+q.  If `extdebug' is enabled, a non-zero return value from a DEBUG trap causes
+    the next command to be skipped, and a return value of 2 while in a
+    function or sourced script forces a `return'.
 
- * Group ownership of the sudoers file is now only enforced when
-   the file mode on sudoers allows group readability or writability.
+r.  New `caller' builtin to provide a call stack for the bash debugger.
 
- * Visudo now checks the contents of an alias and warns about cycles
-   when the alias is expanded.
+s.  The DEBUG trap is run just before the first command in a function body is
+    executed, for the debugger.
 
- * If the user specifies a group via sudo's -g option that matches
-   the target user's group in the password database, it is now
-   allowed even if no groups are present in the Runas_Spec.
+t.  `for', `select', and `case' command heads are printed when `set -x' is
+    enabled.
 
- * The sudo Makefiles now have more complete dependencies which are
-   automatically generated instead of being maintained manually.
+u.  There is a new {x..y} brace expansion, which is shorthand for {x.x+1,
+    x+2,...,y}.  x and y can be integers or single characters; the sequence
+    may ascend or descend; the increment is always 1.
 
- * The "use_pty" sudoers option is now correctly passed back to the
-   sudo front end.  This was missing in previous versions of sudo
-   1.8 which prevented "use_pty" from being honored.
+v.  New ksh93-like ${!array[@]} expansion, expands to all the keys (indices)
+    of array.
 
- * "sudo -i command" now works correctly with the bash version
-   2.0 and higher.  Previously, the .bash_profile would not be
-   sourced prior to running the command unless bash was built with
-   NON_INTERACTIVE_LOGIN_SHELLS defined.
+w.  New `force_fignore' shopt option; if enabled, suffixes specified by
+    FIGNORE cause words to be ignored when performing word completion even
+    if they're the only possibilities.
 
- * When matching groups in the sudoers file, sudo will now match
-   based on the name of the group instead of the group ID. This can
-   substantially reduce the number of group lookups for sudoers
-   files that contain a large number of groups.
+x.  New `gnu_errfmt' shopt option; if enabled, error messages follow the `gnu
+    style' (filename:lineno:message) format.
 
- * Multi-factor authentication is now supported on AIX.
+y.  New `-o bashdefault' option to complete and compgen; if set, causes the
+    whole set of bash completions to be performed if the compspec doesn't
+    result in a match.
 
- * Added support for non-RFC 4517 compliant LDAP servers that require
-   that seconds be present in a timestamp, such as Tivoli Directory Server.
+z.  New `-o plusdirs' option to complete and compgen; if set, causes directory
+    name completion to be performed and the results added to the rest of the
+    possible completions.
 
- * If the group vector is to be preserved, the PATH search for the
-   command is now done with the user's original group vector.
+aa. `kill' is available as a builtin even when the shell is built without
+    job control.
 
- * For LDAP-based sudoers, the "runas_default" sudoOption now works
-   properly in a sudoRole that contains a sudoCommand.
+bb. New HISTTIMEFORMAT variable; value is a format string to pass to
+    strftime(3).  If set and not null, the `history' builtin prints out
+    timestamp information according to the specified format when displaying
+    history entries.  If set, bash tells the history library to write out
+    timestamp information when the history file is written.
 
- * Spaces in command line arguments for "sudo -s" and "sudo -i" are
-   now escaped with a backslash when checking the security policy.
+cc. The [[ ... ]] command has a new binary `=~' operator that performs
+    extended regular expression (egrep-like) matching.
 
-What's new in Sudo 1.8.1p2?
+dd. `configure' has a new `--enable-cond-regexp' option (enabled by default)
+    to enable the =~ operator and regexp matching in [[ ... ]].
 
- * Two-character CIDR-style IPv4 netmasks are now matched correctly
-   in the sudoers file.
+ee. Subexpressions matched by the =~ operator are placed in the new
+    BASH_REMATCH array variable.
 
- * A build error with MIT Kerberos V has been resolved.
+ff. New `failglob' option that causes an expansion error when pathname
+    expansion fails to produce a match.
 
- * A crash on HP-UX in the sudoers plugin when wildcards are
-   present in the sudoers file has been resolved.
+gg. New `set -o pipefail' option that causes a pipeline to return a failure
+    status if any of the processes in the pipeline fail, not just the last
+    one.
 
- * Sudo now works correctly on Tru64 Unix again.
+hh. printf builtin understands two new escape sequences:  \" and \?.
 
-What's new in Sudo 1.8.1p1?
+ii. `echo -e' understands two new escape sequences:  \" and \?.
 
- * Fixed a problem on AIX where sudo was unable to set the final
-   uid if the PAM module modified the effective uid.
+jj. The GNU `gettext' package and libintl have been integrated; the shell's
+    messages can be translated into different languages.
 
- * A non-existent includedir is now treated the same as an empty
-   directory and not reported as an error.
+kk. The `\W' prompt expansion now abbreviates $HOME as `~', like `\w'.
 
- * Removed extraneous parens in LDAP filter when sudoers_search_filter
-   is enabled that can cause an LDAP search error.
+ll. The error message printed when bash cannot open a shell script supplied
+    as argument 1 now includes the name of the shell, to better identify
+    the error as coming from bash.
 
- * Fixed a "make -j" problem for "make install".
+mm. The parameter pattern removal and substitution expansions are now much
+    faster and more efficient when using multibyte characters.
 
-What's new in Sudo 1.8.1?
+nn. The `jobs', `kill', and `wait' builtins now accept job control notation
+    even if job control is not enabled.
 
- * A new LDAP setting, sudoers_search_filter, has been added to
-   ldap.conf.  This setting can be used to restrict the set of
-   records returned by the LDAP query.  Based on changes from Matthew
-   Thomas.
+oo. The historical behavior of `trap' that allows a missing `action' argument
+    to cause each specified signal's handling to be reset to its default is
+    now only supported when `trap' is given a single non-option argument.
 
- * White space is now permitted within a User_List when used in
-   conjunction with a per-user Defaults definition.
+2.  New Features in Readline
 
- * A group ID (%#gid) may now be specified in a User_List or Runas_List.
-   Likewise, for non-Unix groups the syntax is %:#gid.
+a.  History expansion has a new `a' modifier equivalent to the `g' modifier
+    for compatibility with the BSD csh.
 
- * Support for double-quoted words in the sudoers file has been fixed.
-   The change in 1.7.5 for escaping the double quote character
-   caused the double quoting to only be available at the beginning
-   of an entry.
+b.  History expansion has a new `G' modifier equivalent to the BSD csh `g'
+    modifier, which performs a substitution once per word.
 
- * The fix for resuming a suspended shell in 1.7.5 caused problems
-   with resuming non-shells on Linux.  Sudo will now save the process
-   group ID of the program it is running on suspend and restore it
-   when resuming, which fixes both problems.
+c.  All non-incremental search operations may now undo the operation of
+    replacing the current line with the history line.
 
- * A bug that could result in corrupted output in "sudo -l" has been
-   fixed.
+d.  The text inserted by an `a' command in vi mode can be reinserted with
+    `.'.
 
- * Sudo will now create an entry in the utmp (or utmpx) file when
-   allocating a pseudo-tty (e.g. when logging I/O).  The "set_utmp"
-   and "utmp_runas" sudoers file options can be used to control this.
-   Other policy plugins may use the "set_utmp" and "utmp_user"
-   entries in the command_info list.
+e.  New bindable variable, `show-all-if-unmodified'.  If set, the readline
+    completer will list possible completions immediately if there is more
+    than one completion and partial completion cannot be performed.
 
- * The sudoers policy now stores the TSID field in the logs
-   even when the "iolog_file" sudoers option is defined to a value
-   other than %{sessid}.  Previously, the TSID field was only
-   included in the log file when the "iolog_file" option was set
-   to its default value.
+f.  There is a new application-callable `free_history_entry()' function.
 
- * The sudoreplay utility now supports arbitrary session IDs.
-   Previously, it would only work with the base-36 session IDs
-   that the sudoers plugin uses by default.
+g.  History list entries now contain timestamp information; the history file
+    functions know how to read and write timestamp information associated
+    with each entry.
 
- * Sudo now passes "run_shell=true" to the policy plugin in the
-   settings list when sudo's -s command line option is specified.
-   The sudoers policy plugin uses this to implement the "set_home"
-   sudoers option which was missing from sudo 1.8.0.
+h.  Four new key binding functions have been added:
 
- * The "noexec" functionality has been moved out of the sudoers
-   policy plugin and into the sudo front-end, which matches the
-   behavior documented in the plugin writer's guide.  As a result,
-   the path to the noexec file is now specified in the sudo.conf
-   file instead of the sudoers file.
+	rl_bind_key_if_unbound()
+	rl_bind_key_if_unbound_in_map()
+	rl_bind_keyseq_if_unbound()
+	rl_bind_keyseq_if_unbound_in_map()
 
- * On Solaris 10, the PRIV_PROC_EXEC privilege is now used to
-   implement the "noexec" feature.  Previously, this was implemented
-   via the LD_PRELOAD environment variable.
+i.  New application variable, rl_completion_quote_character, set to any
+    quote character readline finds before it calls the application completion
+    function.
 
- * The exit values for "sudo -l", "sudo -v" and "sudo -l command"
-   have been fixed in the sudoers policy plugin.
+j.  New application variable, rl_completion_suppress_quote, settable by an
+    application completion function.  If set to non-zero, readline does not
+    attempt to append a closing quote to a completed word.
 
- * The sudoers policy plugin now passes the login class, if any,
-   back to the sudo front-end.
+k.  New application variable, rl_completion_found_quote, set to a non-zero
+    value if readline determines that the word to be completed is quoted.
+    Set before readline calls any application completion function.
 
- * The sudoers policy plugin was not being linked with requisite
-   libraries in certain configurations.
+l.  New function hook, rl_completion_word_break_hook, called when readline
+    needs to break a line into words when completion is attempted.  Allows
+    the word break characters to vary based on position in the line.
 
- * Sudo now parses command line arguments before loading any plugins.
-   This allows "sudo -V" or "sudo -h" to work even if there is a problem
-   with sudo.conf
+m.  New bindable command: unix-filename-rubout.  Does the same thing as
+    unix-word-rubout, but adds `/' to the set of word delimiters.
 
- * Plugins are now linked with the static version of libgcc to allow
-   the plugin to run on a system where no shared libgcc is installed,
-   or where it is installed in a different location.
+n.  When listing completions, directories have a `/' appended if the
+    `mark-directories' option has been enabled.
 
-What's new in Sudo 1.8.0?
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-2.05b since
+the release of bash-2.05a.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
 
- * Sudo has been refactored to use a modular framework that can
-   support third-party policy and I/O logging plugins.  The default
-   plugin is "sudoers" which provides the traditional sudo functionality.
-   See the sudo_plugin manual for details on the plugin API and the
-   sample in the plugins directory for a simple example.
+1.  New Features in Bash
 
-What's new in Sudo 1.7.5?
+a.  If set, TMOUT is the default timeout for the `read' builtin.
 
- * When using visudo in check mode, a file named "-" may be used to
-   check sudoers data on the standard input.
+b.  `type' has two new options:  `-f' suppresses shell function lookup, and
+    `-P' forces a $PATH search.
 
- * Sudo now only fetches shadow password entries when using the
-   password database directly for authentication.
+c.  New code to handle multibyte characters.
 
- * Password and group entries are now cached using the same key
-   that was used to look them up.  This fixes a problem when looking
-   up entries by name if the name in the retrieved entry does not
-   match the name used to look it up.  This may happen on some systems
-   that do case insensitive lookups or that truncate long names.
+d.  `select' was changed to be more ksh-compatible, in that the menu is
+    reprinted each time through the loop only if REPLY is set to NULL.
+    The previous behavior is available as a compile-time option.
 
- * GCC will no longer display warnings on glibc systems that use
-   the warn_unused_result attribute for write(2) and other system calls.
+e.  `complete -d' and `complete -o dirnames' now force a slash to be
+    appended to names which are symlinks to directories.
 
- * If a PAM account management module denies access, sudo now prints
-   a more useful error message and stops trying to validate the user.
+f.  There is now a bindable edit-and-execute-command readline command,
+    like the vi-mode `v' command, bound to C-xC-e in emacs mode.
 
- * Fixed a potential hang on idle systems when the sudo-run process
-   exits immediately.
+g.  Added support for ksh93-like [:word:] character class in pattern matching.
 
- * Sudo now includes a copy of zlib that will be used on systems
-   that do not have zlib installed.
+h.  The  $'...' quoting construct now expands \cX to Control-X.
 
- * The --with-umask-override configure flag has been added to enable
-   the "umask_override" sudoers Defaults option at build time.
+i.  A new \D{...} prompt expansion; passes the `...' to strftime and inserts
+    the result into the expanded prompt.
 
- * Sudo now unblocks all signals on startup to avoid problems caused
-   by the parent process changing the default signal mask.
+j.  The shell now performs arithmetic in the largest integer size the
+    machine supports (intmax_t), instead of long.
 
- * LDAP Sudoers entries may now specify a time period for which
-   the entry is valid.  This requires an updated sudoers schema
-   that includes the sudoNotBefore and sudoNotAfter attributes.
-   Support for timed entries must be explicitly enabled in the
-   ldap.conf file.  Based on changes from Andreas Mueller.
+k.  If a numeric argument is supplied to one of the bash globbing completion
+    functions, a `*' is appended to the word before expansion is attempted.
 
- * LDAP Sudoers entries may now specify a sudoOrder attribute that
-   determines the order in which matching entries are applied.  The
-   last matching entry is used, just like file-based sudoers.  This
-   requires an updated sudoers schema that includes the sudoOrder
-   attribute.  Based on changes from Andreas Mueller.
+l.  The bash globbing completion functions now allow completions to be listed
+    with double tabs or if `show-all-if-ambiguous' is set.
 
- * When run as sudoedit, or when given the -e flag, sudo now treats
-   command line arguments as pathnames.  This means that slashes
-   in the sudoers file entry must explicitly match slashes in
-   the command line arguments.  As a result, and entry such as:
-	user ALL = sudoedit /etc/*
-   will allow editing of /etc/motd but not /etc/security/default.
+m.  New `-o nospace' option for `complete' and `compgen' builtins; suppresses
+    readline's appending a space to the completed word.
 
- * NETWORK_TIMEOUT is now an alias for BIND_TIMELIMIT in ldap.conf for
-   compatibility with OpenLDAP configuration files.
+n.  New `here-string' redirection operator:  <<< word.
 
- * The LDAP API TIMEOUT parameter is now honored in ldap.conf.
+o.  When displaying variables, function attributes and definitions are shown
+    separately, allowing them to be re-used as input (attempting to re-use
+    the old output would result in syntax errors).
 
- * The I/O log directory may now be specified in the sudoers file.
+p.  There is a new configuration option `--enable-mem-scramble', controls
+    bash malloc behavior of writing garbage characters into memory at
+    allocation and free time.
 
- * Sudo will no longer refuse to run if the sudoers file is writable
-   by root.
+q.  The `complete' and `compgen' builtins now have a new `-s/-A service'
+    option to complete on names from /etc/services.
 
- * Sudo now performs command line escaping for "sudo -s" and "sudo -i"
-   after validating the command so the sudoers entries do not need
-   to include the backslashes.
+r.  `read' has a new `-u fd' option to read from a specified file descriptor.
 
- * Logging and email sending are now done in the locale specified
-   by the "sudoers_locale" setting ("C" by default).  Email send by
-   sudo now includes MIME headers when "sudoers_locale" is not "C".
+s.  Fix the completion code so that expansion errors in a directory name
+    don't cause a longjmp back to the command loop.
 
- * The configure script has a new option, --disable-env-reset, to
-   allow one to change the default for the sudoers Default setting
-   "env_reset" at compile time.
+t.  Fixed word completion inside command substitution to work a little more
+    intuitively.
 
- * When logging "sudo -l command", sudo will now prepend "list "
-   to the command in the log line to distinguish between an
-   actual command invocation in the logs.
+u.  The `printf' %q format specifier now uses $'...' quoting to print the
+    argument if it contains non-printing characters.
 
- * Double-quoted group and user names may now include escaped double
-   quotes as part of the name.  Previously this was a parse error.
+v.  The `declare' and `typeset' builtins have a new `-t' option.  When applied
+    to functions, it causes the DEBUG trap to be inherited by the named
+    function.  Currently has no effect on variables.
 
- * Sudo once again restores the state of the signal handlers it
-   modifies before executing the command.  This allows sudo to be
-   used with the nohup command.
+w.  The DEBUG trap is now run *before* simple commands, ((...)) commands,
+    [[...]] conditional commands, and for ((...)) loops.
 
- * Resuming a suspended shell now works properly when I/O logging
-   is not enabled (the I/O logging case was already correct).
+x.  The expansion of $LINENO inside a shell function is only relative to the
+    function start if the shell is interactive -- if the shell is running a
+    script, $LINENO expands to the line number in the script.  This is as
+    POSIX-2001 requires.
 
-What's new in Sudo 1.7.4p6?
+y.  The bash debugger in examples/bashdb has been modified to work with the
+    new DEBUG trap semantics, the command set has been made more gdb-like,
+    and the changes to $LINENO make debugging functions work better.  Code
+    from Gary Vaughan.
 
- * A bug has been fixed in the I/O logging support that could cause
-   visual artifacts in full-screen programs such as text editors.
+z.  New [n]<&word- and [n]>&word- redirections from ksh93 -- move fds (dup
+    and close).
 
-What's new in Sudo 1.7.4p5?
+aa. There is a new `-l' invocation option, equivalent to `--login'.
 
- * A bug has been fixed that would allow a command to be run without the
-   user entering a password when sudo's -g flag is used without the -u flag.
+bb. The `hash' builtin has a new `-l' option to list contents in a reusable
+    format, and a `-d' option to remove a name from the hash table.
 
- * If user has no supplementary groups, sudo will now fall back on checking
-   the group file explicitly, which restores historic sudo behavior.
+cc. There is now support for placing the long help text into separate files 
+    installed into ${datadir}/bash.  Not enabled by default; can be turned  
+    on with `--enable-separate-helpfiles' option to configure.
+    
+dd. All builtins that take operands accept a `--' pseudo-option, except
+    `echo'.
 
- * A crash has been fixed when sudo's -g flag is used without the -u flag
-   and the sudoers file contains an entry with no runas user or group listed.
+ee. The `echo' builtin now accepts \0xxx (zero to three octal digits following
+    the `0') in addition to \xxx (one to three octal digits) for SUSv3/XPG6/
+    POSIX.1-2001 compliance.
 
- * A crash has been fixed when the Solaris project support is enabled
-   and sudo's -g flag is used without the -u flag.
 
- * Sudo no longer exits with an error when support for auditing is
-   compiled in but auditing is not enabled.
+2.  New Features in Readline
 
- * Fixed a bug introduced in sudo 1.7.3 where the ticket file was not
-   being honored when the "targetpw" sudoers Defaults option was enabled.
+a.  Support for key `subsequences':  allows, e.g., ESC and ESC-a to both
+    be bound to readline functions.  Now the arrow keys may be used in vi
+    insert mode.
 
- * The LOG_INPUT and LOG_OUTPUT tags in sudoers are now parsed correctly.
+b.  When listing completions, and the number of lines displayed is more than
+    the screen length, readline uses an internal pager to display the results.
+    This is controlled by the `page-completions' variable (default on).
 
- * A crash has been fixed in "sudo -l" when sudo is built with auditing
-   support and the user is not allowed to run any commands on the host.
+c.  New code to handle editing and displaying multibyte characters.
 
-What's new in Sudo 1.7.4p4?
+d.  The behavior introduced in bash-2.05a of deciding whether or not to
+    append a slash to a completed name that is a symlink to a directory has
+    been made optional, controlled by the `mark-symlinked-directories'
+    variable (default is the 2.05a behavior).
 
- * A potential security issue has been fixed with respect to the handling
-   of sudo's -g command line option when -u is also specified.  The flaw
-   may allow an attacker to run commands as a user that is not authorized
-   by the sudoers file.
+e.  The `insert-comment' command now acts as a toggle if given a numeric
+    argument:  if the first characters on the line don't specify a
+    comment, insert one; if they do, delete the comment text
 
- * A bug has been fixed where "sudo -l" output was incomplete if multiple
-   sudoers sources were defined in nsswitch.conf and there was an error
-   querying one of the sources.
+f.  New application-settable completion variable:
+    rl_completion_mark_symlink_dirs, allows an application's completion
+    function to temporarily override the user's preference for appending
+    slashes to names which are symlinks to directories.
 
- * The log_input, log_output, and use_pty sudoers options now work correctly
-   on AIX.  Previously, sudo would hang if they were enabled.
+g.  New function available to application completion functions:
+    rl_completion_mode, to tell how the completion function was invoked
+    and decide which argument to supply to rl_complete_internal (to list
+    completions, etc.).
 
- * The "make install" target now works correctly when sudo is built in a
-   directory other than the source directory.
+h.  Readline now has an overwrite mode, toggled by the `overwrite-mode'
+    bindable command, which could be bound to `Insert'.
 
- * The "runas_default" sudoers setting now works properly in a per-command
-   Defaults line.
+i.  New application-settable completion variable:
+    rl_completion_suppress_append, inhibits appending of
+    rl_completion_append_character to completed words.
 
- * Suspending and resuming the bash shell when PAM is in use now works
-   correctly.  The SIGCONT signal was not propagated to the child process.
+j.  New key bindings when reading an incremental search string:  ^W yanks
+    the currently-matched word out of the current line into the search
+    string; ^Y yanks the rest of the current line into the search string,
+    DEL or ^H deletes characters from the search string.
 
-What's new in Sudo 1.7.4p3?
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-2.05a since
+the release of bash-2.05.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
 
- * A bug has been fixed where duplicate HOME environment variables could be
-   present when the env_reset setting was disabled and the always_set_home
-   setting was enabled in sudoers.
+1.  New Features in Bash
 
- * The value of sysconfdir is now substituted into the path to the sudoers.d
-   directory in the installed sudoers file.
+a.  Added support for DESTDIR installation root prefix, so you can do a
+    `make install DESTDIR=bash-root' and do easier binary packaging.
 
- * Compilation problems on IRIX and other platforms have been fixed.
+b.  Added support for builtin printf "'" flag character as per latest POSIX
+    drafts.
 
- * If multiple PAM "auth" actions are specified and the user enters ^C at
-   the password prompt, sudo will no longer prompt for a password for any
-   subsequent "auth" actions.  Previously it was necessary to enter ^C for
-   each "auth" action.
+c.  Support for POSIX.2 printf(1) length specifiers `j', `t', and `z' (from
+    ISO C99).
 
-What's new in Sudo 1.7.4p2?
+d.  New autoconf macro, RL_LIB_READLINE_VERSION, for use by other applications
+    (bash doesn't use very much of what it returns).
 
- * A bug where sudo could spin in a busy loop waiting for the child process
-   has been fixed.
+e.  `set [-+]o nolog' is recognized as required by the latest POSIX drafts,
+    but ignored.
 
-What's new in Sudo 1.7.4p1?
+f.  New read-only `shopt' option:  login_shell.  Set to non-zero value if the
+    shell is a login shell.
 
- * A bug introduced in sudo 1.7.3 that prevented the -k and -K options from
-   functioning when the tty_tickets sudoers option is enabled has been fixed.
+g.  New `\A' prompt string escape sequence; expands to time in 24 HH:MM format.
 
- * Sudo no longer prints a warning when the -k or -K options are specified
-   and the ticket file does not exist.
+h.  New `-A group/-g' option to complete and compgen; does group name
+    completion.
 
- * It is now easier to cross-compile sudo.
+i.  New `-t' option to `hash' to list hash values for each filename argument.
 
-What's new in Sudo 1.7.4?
+j.  New [-+]O invocation option to set and unset `shopt' options at startup.
 
- * Sudoedit will now preserve the file extension in the name of the
-   temporary file being edited.  The extension is used by some
-   editors (such as emacs) to choose the editing mode.
+k.  configure's `--with-installed-readline' option now takes an optional
+    `=PATH' suffix to set the root of the tree where readline is installed
+    to PATH.
 
- * Time stamp files have moved from /var/run/sudo to either /var/db/sudo,
-   /var/lib/sudo or /var/adm/sudo.  The directories are checked for
-   existence in that order.  This prevents users from receiving the
-   sudo lecture every time the system reboots.  Time stamp files older
-   than the boot time are ignored on systems where it is possible to
-   determine this.
+l.  The ksh-like `ERR' trap has been added.  The `ERR' trap will be run
+    whenever the shell would have exited if the -e option were enabled.
+    It is not inherited by shell functions.
 
- * The tty_tickets sudoers option is now enabled by default.
+m.  `readonly', `export', and `declare' now print variables which have been
+    given attributes but not set by assigning a value as just a command and
+    a variable name (like `export foo') when listing, as the latest POSIX
+    drafts require.
 
- * Ancillary documentation (README files, LICENSE, etc) is now installed
-   in a sudo documentation directory.
+n.  `bashbug' now requires that the subject be changed from the default.
 
- * Sudo now recognizes "tls_cacert" as an alias for "tls_cacertfile"
-   in ldap.conf.
+o.  configure has a new `--enable-largefile' option, like other GNU utilities.
 
- * Defaults settings that are tied to a user, host or command may
-   now include the negation operator.  For example:
-	Defaults:!millert lecture
-   will match any user but millert.
+p.  `for' loops now allow empty word lists after `in', like the latest POSIX
+    drafts require.
 
- * The default PATH environment variable, used when no PATH variable
-    exists, now includes /usr/sbin and /sbin.
+q.  The builtin `ulimit' now takes two new non-numeric arguments:  `hard',
+    meaning the current hard limit, and `soft', meaning the current soft  
+    limit, in addition to `unlimited'
+    
+r.  `ulimit' now prints the option letter associated with a particular
+    resource when printing more than one limit.
 
- * Sudo now uses polypkg (http://rc.quest.com/topics/polypkg/)
-   for cross-platform packing.
+s.  `ulimit' prints `hard' or `soft' when a value is not `unlimited' but is
+    one of RLIM_SAVED_MAX or RLIM_SAVED_CUR, respectively.
 
- * On Linux, sudo will now restore the nproc resource limit before
-   executing a command, unless the limit appears to have been modified
-   by pam_limits.  This avoids a problem with bash scripts that open
-   more than 32 descriptors on SuSE Linux, where sysconf(_SC_CHILD_MAX)
-   will return -1 when RLIMIT_NPROC is set to RLIMIT_UNLIMITED (-1).
+t.  The `printf' builtin now handles the %a and %A conversions if they're
+    implemented by printf(3).
 
- * The HOME and MAIL environment variables are now reset based on the
-   target user's password database entry when the env_reset sudoers option
-   is enabled (which is the case in the default configuration).  Users
-   wishing to preserve the original values should use a sudoers entry like:
-	Defaults env_keep += HOME
-   to preserve the old value of HOME and
-	Defaults env_keep += MAIL
-   to preserve the old value of MAIL.
+u.  The `printf' builtin now handles the %F conversion (just about like %f).
 
- * Fixed a problem in the restoration of the AIX authdb registry setting.
+v.  The `printf' builtin now handles the %n conversion like printf(3).  The
+    corresponding argument is the name of a shell variable to which the
+    value is assigned.
 
- * Sudo will now fork(2) and wait until the command has completed before
-   calling pam_close_session().
+2.  New Features in Readline
 
- * The default syslog facility is now "authpriv" if the operating system
-   supports it, else "auth".
+a.  Added extern declaration for rl_get_termcap to readline.h, making it a
+    public function (it was always there, just not in readline.h).
 
-What's new in Sudo 1.7.3?
+b.  New #defines in readline.h:  RL_READLINE_VERSION, currently 0x0402,
+    RL_VERSION_MAJOR, currently 4, and RL_VERSION_MINOR, currently 2.
 
- * Support for logging I/O for the command being run.
-   For more information, see the documentation for the "log_input"
-   and "log_output" Defaults options in the sudoers manual.  Also
-   see the sudoreplay manual for how to replay I/O log sessions.
+c.  New readline variable:  rl_readline_version, mirrors RL_READLINE_VERSION.
 
- * The use_pty sudoers option can be used to force a command to be
-   run in a pseudo-pty, even when I/O logging is not enabled.
+d.  New bindable boolean readline variable:  match-hidden-files.  Controls
+    completion of files beginning with a `.' (on Unix).  Enabled by default.
 
- * On some systems, sudo can now detect when a user has logged out
-   and back in again when tty-based time stamps are in use.  Supported
-   systems include Solaris systems with the devices file system,
-   Mac OS X, and Linux systems with the devpts filesystem (pseudo-ttys
-   only).
+e.  The history expansion code now allows any character to terminate a
+    `:first-' modifier, like csh.
 
- * On AIX systems, the registry setting in /etc/security/user is
-   now taken into account when looking up users and groups.  Sudo
-   now applies the correct the user and group ids when running a
-   command as a user whose account details come from a different
-   source (e.g. LDAP or DCE vs.  local files).
+f.  New bindable variable `history-preserve-point'.  If set, the history
+    code attempts to place the user at the same location on each history
+    line retrived with previous-history or next-history.
 
- * Support for multiple 'sudoers_base' and 'uri' entries in ldap.conf.
-   When multiple entries are listed, sudo will try each one in the
-   order in which they are specified.
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-2.05 since
+the release of bash-2.04.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
 
- * Sudo's SELinux support should now function correctly when running
-   commands as a non-root user and when one of stdin, stdout or stderr
-   is not a terminal.
+1.  New Features in Bash
 
- * Sudo will now use the Linux audit system with configure with
-   the --with-linux-audit flag.
+a.  Added a new `--init-file' invocation argument as a synonym for `--rcfile',
+    per the new GNU coding standards.
 
- * Sudo now uses mbr_check_membership() on systems that support it
-   to determine group membership.  Currently, only Darwin (Mac OS X)
-   supports this.
+b.  The /dev/tcp and /dev/udp redirections now accept service names as well as
+    port numbers.
 
- * When the tty_tickets sudoers option is enabled but there is no
-   terminal device, sudo will no longer use or create a tty-based
-   ticket file.  Previously, sudo would use a tty name of "unknown".
-   As a consequence, if a user has no terminal device, sudo will
-   now always prompt for a password.
+c.  `complete' and `compgen' now take a `-o value' option, which controls some
+    of the aspects of that compspec.  Valid values are:
 
- * The passwd_timeout and timestamp_timeout options may now be
-   specified as floating point numbers for more granular timeout
-   values.
+        default - perform bash default completion if programmable
+                  completion produces no matches
+        dirnames - perform directory name completion if programmable
+                   completion produces no matches
+        filenames - tell readline that the compspec produces filenames,
+                    so it can do things like append slashes to
+                    directory names and suppress trailing spaces
 
- * Negating the fqdn option in sudoers now works correctly when sudo
-   is configured with the --with-fqdn option.  In previous versions
-   of sudo the fqdn was set before sudoers was parsed.
+d.  A new loadable builtin, realpath, which canonicalizes and expands symlinks
+    in pathname arguments.
+    
+e.  When `set' is called without options, it prints function defintions in a
+    way that allows them to be reused as input.  This affects `declare' and 
+    `declare -p' as well.  This only happens when the shell is not in POSIX
+    mode, since POSIX.2 forbids this behavior.
 
-What's new in Sudo 1.7.2?
+f.  Bash-2.05 once again honors the current locale setting when processing
+    ranges within pattern matching bracket expressions (e.g., [A-Z]).
 
- * A new #includedir directive is available in sudoers.  This can be
-   used to implement an /etc/sudo.d directory.  Files in an includedir
-   are not edited by visudo unless they contain a syntax error.
+2.  New Features in Readline
 
- * The -g option did not work properly when only setting the group
-   (and not the user).  Also, in -l mode the wrong user was displayed
-   for sudoers entries where only the group was allowed to be set.
+a.  The blink timeout for paren matching is now settable by applications,
+    via the rl_set_paren_blink_timeout() function.
 
- * Fixed a problem with the alias checking in visudo which
-   could prevent visudo from exiting.
+b.  _rl_executing_macro has been renamed to rl_executing_macro, which means
+    it's now part of the public interface.
 
- * Sudo will now correctly parse the shell-style /etc/environment
-   file format used by pam_env on Linux.
+c.  Readline has a new variable, rl_readline_state, which is a bitmap that
+    encapsulates the current state of the library; intended for use by
+    callbacks and hook functions.
 
- * When doing password and group database lookups, sudo will only
-   cache an entry by name or by id, depending on how the entry was
-   looked up.  Previously, sudo would cache by both name and id
-   from a single lookup, but this breaks sites that have multiple
-   password or group database names that map to the same uid or
-   gid.
+d.  New application-callable function rl_set_prompt(const char *prompt):
+    expands its prompt string argument and sets rl_prompt to the result.
 
- * User and group names in sudoers may now be enclosed in double
-   quotes to avoid having to escape special characters.
+e.  New application-callable function rl_set_screen_size(int rows, int cols):
+    public method for applications to set readline's idea of the screen
+    dimensions.
 
- * BSM audit fixes when changing to a non-root uid.
+f.  New function, rl_get_screen_size (int *rows, int *columns), returns
+    readline's idea of the screen dimensions.
 
- * Experimental non-Unix group support.  Currently only works with
-   Quest Authorization Services and allows Active Directory groups
-   fixes for Minix-3.
+g.  The timeout in rl_gather_tyi (readline keyboard input polling function)
+    is now settable via a function (rl_set_keyboard_input_timeout()).
 
- * For Netscape/Mozilla-derived LDAP SDKs the certificate and key
-   paths may be specified as a directory or a file.  However, version
-   5.0 of the SDK only appears to support using a directory (despite
-   documentation to the contrary).  If SSL client initialization
-   fails and the certificate or key paths look like they could be
-   default file name, strip off the last path element and try again.
+h.  Renamed the max_input_history variable to history_max_entries; the old
+    variable is maintained for backwards compatibility.
 
- * A setenv() compatibility fix for Linux systems, where a NULL
-   value is treated the same as an empty string and the variable
-   name is checked against the NULL pointer.
+i.  The list of characters that separate words for the history tokenizer is
+    now settable with a variable:  history_word_delimiters.  The default
+    value is as before.
 
-What's new in Sudo 1.7.1?
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-2.04 since
+the release of bash-2.03.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
 
- * A new Defaults option "pwfeedback" will cause sudo to provide visual
-   feedback when the user is entering a password.
+1.  New Features in Bash
 
- * A new Defaults option "fast_glob" will cause sudo to use the fnmatch()
-   function for file name globbing instead of glob().  When this option
-   is enabled, sudo will not check the file system when expanding wildcards.
-   This is faster but a side effect is that relative paths with wildcard
-   will no longer work.
+a.  The history builtin has a `-d offset' option to delete the history entry
+    at position `offset'.
 
- * New BSM audit support for systems that support it such as FreeBSD
-   and Mac OS X.
+b.  The prompt expansion code has two new escape sequences: \j, the number of
+    active jobs; and \l, the basename of the shell's tty device name.
 
- * The file name specified with the #include directive may now include
-   a %h escape which is expanded to the short form of hostname.
+c.  The `bind' builtin has a new `-x' option to bind key sequences to shell   
+    commands.
 
- * The -k flag may now be specified along with a command, causing the
-   user's timestamp file to be ignored.
+d.  There is a new shell option, no_empty_command_completion, which, when
+    enabled, disables command completion when TAB is typed on an empty line.
 
- * New support for Tivoli-based LDAP START_TLS, present in AIX.
+e.  The `help' builtin has a `-s' option to just print a builtin's usage
+    synopsis.
 
- * New support for /etc/netsvc.conf on AIX.
+f.  There are several new arithmetic operators:  id++, id-- (variable
+    post-increment/decrement), ++id, --id (variable pre-increment/decrement),
+    expr1 , expr2 (comma operator).
 
- * The unused alias checks in visudo now handle the case of an alias
-   referring to another alias.
+g.  There is a new ksh-93 style arithmetic for command:
+        for ((expr1 ; expr2; expr3 )); do list; done
 
-What's new in Sudo 1.7.0?
+h.  The `read' builtin has a number of new options:
+        -t timeout      only wait timeout seconds for input
+        -n nchars       only read nchars from input instead of a full line
+        -d delim        read until delim rather than newline
+        -s              don't echo input chars as they are read
 
- * Rewritten parser that converts sudoers into a set of data structures.
-   This eliminates a number of ordering issues and makes it possible to
-   apply sudoers Defaults entries before searching for the command.
-   It also adds support for per-command Defaults specifications.
+i.  The redirection code now handles several filenames specially:
+    /dev/fd/N, /dev/stdin, /dev/stdout, and /dev/stderr, whether or
+    not they are present in the file system.
 
- * Sudoers now supports a #include facility to allow the inclusion of other
-   sudoers-format files.
+j.  The redirection code now recognizes pathnames of the form
+    /dev/tcp/host/port and /dev/udp/host/port, and tries to open a socket
+    of the appropriate type to the specified port on the specified host.
 
- * Sudo's -l (list) flag has been enhanced:
-    o applicable Defaults options are now listed
-    o a command argument can be specified for testing whether a user
-      may run a specific command.
-    o a new -U flag can be used in conjunction with "sudo -l" to allow
-      root (or a user with "sudo ALL") list another user's privileges.
+k.  The ksh-93 ${!prefix*} expansion, which expands to the names of all
+    shell variables with prefix PREFIX, has been implemented.
 
- * A new -g flag has been added to allow the user to specify a
-   primary group to run the command as.  The sudoers syntax has been
-   extended to include a group section in the Runas specification.
+l.  There is a new dynamic variable, FUNCNAME, which expands to the name of
+    a currently-executing function.  Assignments to FUNCNAME have no effect.
 
- * A uid may now be used anywhere a username is valid.
+m.  The GROUPS variable is no longer readonly; assignments to it are silently
+    discarded.  This means it can be unset.
 
- * The "secure_path" run-time Defaults option has been restored.
+n.  A new programmable completion facility, with two new builtin commands:
+    complete and compgen.
 
- * Password and group data is now cached for fast lookups.
+o.  configure has a new option, `--enable-progcomp', to compile in the
+    programmable completion features (enabled by default).
 
- * The file descriptor at which sudo starts closing all open files is now
-   configurable via sudoers and, optionally, the command line.
+p.  `shopt' has a new option, `progcomp', to enable and disable programmable
+    completion at runtime.
 
- * Visudo will now warn about aliases that are defined but not used.
+q.  Unsetting HOSTFILE now clears the list of hostnames used for completion.
 
- * The -i and -s command line flags now take an optional command
-   to be run via the shell.  Previously, the argument was passed
-   to the shell as a script to run.
+r.  configure has a new option, `--enable-bash-malloc', replacing the old
+    `--with-gnu-malloc' (which is still present for backwards compatibility).
 
- * Improved LDAP support.  SASL authentication may now be used in
-   conjunction when connecting to an LDAP server.  The krb5_ccname
-   parameter in ldap.conf may be used to enable Kerberos.
+s.  There is a new manual page describing rbash, the restricted shell.
 
- * Support for /etc/nsswitch.conf.  LDAP users may now use nsswitch.conf
-   to specify the sudoers order.  E.g.:
-	sudoers: ldap files
-   to check LDAP, then /etc/sudoers.  The default is "files", even
-   when LDAP support is compiled in.  This differs from sudo 1.6
-   where LDAP was always consulted first.
+t.  `bashbug' has new `--help' and `--version' options.
 
- * Support for /etc/environment on AIX and Linux.  If sudo is run
-   with the -i flag, the contents of /etc/environment are used to
-   populate the new environment that is passed to the command being
-   run.
+u.  `shopt' has a new `xpg_echo' option, which controls the behavior of
+    `echo' with respect to backslash-escaped characters at runtime.
 
- * If no terminal is available or if the new -A flag is specified,
-   sudo will use a helper program to read the password if one is
-   configured.  Typically, this is a graphical password prompter
-   such as ssh-askpass.
+v.  If NON_INTERACTIVE_LOGIN_SHELLS is defined, all login shells read the
+    startup files, even if they are not interactive.
 
- * A new Defaults option, "mailfrom" that sets the value of the
-   "From:" field in the warning/error mail.  If unspecified, the
-   login name of the invoking user is used.
+w.  The LC_NUMERIC variable is now treated specially, and used to set the
+    LC_NUMERIC locale category for number formatting, e.g., when `printf'
+    displays floating-point numbers.
 
- * A new Defaults option, "env_file" that refers to a file containing
-   environment variables to be set in the command being run.
+2.  New features in Readline
 
- * A new flag, -n, may be used to indicate that sudo should not
-   prompt the user for a password and, instead, exit with an error
-   if authentication is required.
+a.  Parentheses matching is now always compiled into readline, and enabled
+    or disabled when the value of the `blink-matching-paren' variable is
+    changed.
 
- * If sudo needs to prompt for a password and it is unable to disable
-   echo (and no askpass program is defined), it will refuse to run
-   unless the "visiblepw" Defaults option has been specified.
+b.  MS-DOS systems now use ~/_inputrc as the last-ditch inputrc filename.
 
- * Prior to version 1.7.0, hitting enter/return at the Password: prompt
-   would exit sudo.  In sudo 1.7.0 and beyond, this is treated as
-   an empty password.  To exit sudo, the user must press ^C or ^D
-   at the prompt.
+c.  MS-DOS systems now use ~/_history as the default history file.
 
- * visudo will now check the sudoers file owner and mode in -c (check)
-   mode when the -s (strict) flag is specified.
+d.  history-search-{forward,backward} now leave the point at the end of the
+    line when the string to search for is empty, like
+    {reverse,forward}-search-history.
 
- * A new Defaults option "umask_override" will cause sudo to set the
-   umask specified in sudoers even if it is more permissive than the
-   invoking user's umask.
+e.  history-search-{forward,backward} now leave the last history line found
+    in the readline buffer if the second or subsequent search fails.
+
+f.  New function for use by applications:  rl_on_new_line_with_prompt, used
+    when an application displays the prompt itself before calling readline().
+
+g.  New variable for use by applications:  rl_already_prompted.  An application
+    that displays the prompt itself before calling readline() must set this to
+    a non-zero value.
+
+h.  A new variable, rl_gnu_readline_p, always 1.  The intent is that an
+    application can verify whether or not it is linked with the `real'
+    readline library or some substitute.
+
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-2.03 since
+the release of bash-2.02.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
+
+1.  New Features in Bash
+
+a.  New `shopt' option, `restricted_shell', indicating whether or not the
+    shell was started in restricted mode, for use in startup files.
+
+b.  Filename generation is now performed on the words between ( and ) in
+    array assignments (which it probably should have done all along).
+
+c.  OLDPWD is now auto-exported, as POSIX.2 seems to require.
+
+d.  ENV and BASH_ENV are read-only variables in a restricted shell.
+
+e.  A change was made to the startup file code so that any shell begun with
+    the `--login' option, even non-interactive shells, will source the login
+    shell startup files.
+
+2.  New Features in Readline
+
+a.  Many changes to the signal handling:
+        o Readline now catches SIGQUIT and cleans up the tty before returning;
+        o A new variable, rl_catch_signals, is available to application writers 
+          to indicate to readline whether or not it should install its own
+          signal handlers for SIGINT, SIGTERM, SIGQUIT, SIGALRM, SIGTSTP,
+          SIGTTIN, and SIGTTOU;
+        o A new variable, rl_catch_sigwinch, is available to application
+          writers to indicate to readline whether or not it should install its
+          own signal handler for SIGWINCH, which will chain to the calling
+          applications's SIGWINCH handler, if one is installed;
+        o There is a new function, rl_free_line_state, for application signal
+          handlers to call to free up the state associated with the current
+          line after receiving a signal;
+        o There is a new function, rl_cleanup_after_signal, to clean up the
+          display and terminal state after receiving a signal;
+        o There is a new function, rl_reset_after_signal, to reinitialize the
+          terminal and display state after an application signal handler
+          returns and readline continues
+
+b.  There is a new function, rl_resize_terminal, to reset readline's idea of
+    the screen size after a SIGWINCH.
+
+c.  New public functions: rl_save_prompt and rl_restore_prompt.  These were
+    previously private functions with a `_' prefix.
+
+d.  New function hook: rl_pre_input_hook, called just before readline starts
+    reading input, after initialization.
+
+e.  New function hook: rl_display_matches_hook, called when readline would
+    display the list of completion matches.  The new function
+    rl_display_match_list is what readline uses internally, and is available
+    for use by application functions called via this hook.
+
+f.  New bindable function, delete-char-or-list, like tcsh.
+
+g.  A new variable, rl_erase_empty_line, which, if set by an application using
+    readline, will cause readline to erase, prompt and all, lines on which the
+    only thing typed was a newline.
+
+h.  New bindable variable: `isearch-terminators'.
+
+i.  New bindable function: `forward-backward-delete-char' (unbound by default).
+
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-2.02 since
+the release of bash-2.01.1.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
+
+1. New Features in Bash
+
+a.  A new version of malloc, based on the older GNU malloc, that has many
+    changes, is more page-based, is more conservative with memory usage,
+    and does not `orphan' large blocks when they are freed.
+
+b.  A new version of gmalloc, based on the old GLIBC malloc, with many
+    changes and range checking included by default.
+
+c.  A new implementation of fnmatch(3) that includes full POSIX.2 Basic
+    Regular Expression matching, including character classes, collating
+    symbols, equivalence classes, and support for case-insensitive pattern
+    matching.
+
+d.  ksh-88 egrep-style extended pattern matching ([@+*?!](patlist)) has been
+    implemented, controlled by a new `shopt' option, `extglob'.  
+    
+e.  There is a new ksh-like `[[' compound command, which implements   
+    extended `test' functionality.
+    
+f.  There is a new `printf' builtin, implemented according to the POSIX.2
+    specification.
+    
+g.  There is a new feature for command substitution: $(< filename) now expands
+    to the contents of `filename', with any trailing newlines removed
+    (equivalent to $(cat filename)).
+
+h.  There are new tilde prefixes which expand to directories from the
+    directory stack.
+
+i.  There is a new `**' arithmetic operator to do exponentiation.
+
+j.  There are new configuration options to control how bash is linked:
+    `--enable-profiling', to allow bash to be profiled with gprof, and
+    `--enable-static-link', to allow bash to be linked statically.
+
+k.  There is a new configuration option, `--enable-cond-command', which
+    controls whether or not the `[[' command is included.  It is on by
+    default. 
+
+l.  There is a new configuration option, `--enable-extended-glob', which
+    controls whether or not the ksh extended globbing feature is included.
+    It is enabled by default.
+
+m.  There is a new configuration #define in config.h.top that, when enabled,
+    will cause all login shells to source /etc/profile and one of the user-
+    specific login shell startup files, whether or not the shell is
+    interactive.  
+    
+n.  There is a new invocation option, `--dump-po-strings', to dump
+    a shell script's translatable strings ($"...") in GNU `po' format. 
+    
+o.  There is a new `shopt' option, `nocaseglob', to enable case-insensitive
+    pattern matching when globbing filenames and using the `case' construct.
+
+p.  There is a new `shopt' option, `huponexit', which, when enabled, causes
+    the shell to send SIGHUP to all jobs when an interactive login shell
+    exits.
+
+q.  `bind' has a new `-u' option, which takes a readline function name as an
+    argument and unbinds all key sequences bound to that function in a
+    specified keymap.
+    
+r.  `disown' now has `-a' and `-r' options, to limit operation to all jobs
+    and running jobs, respectively.
+
+s.  The `shopt' `-p' option now causes output to be displayed in a reusable
+    format.
+    
+t.  `test' has a new `-N' option, which returns true if the filename argument
+    has been modified since it was last accessed.
+
+u.  `umask' now has a `-p' option to print output in a reusable format.
+    
+v.  A new escape sequence, `\xNNN', has been added to the `echo -e' and $'...'
+    translation code.  It expands to the character whose ascii code is NNN
+    in hexadecimal.
+    
+w.  The prompt string expansion code has a new `\r' escape sequence.
+
+x.  The shell may now be cross-compiled for the CYGWIN32 environment on
+    a Unix machine.
+
+2. New Features in Readline
+
+a.  There is now an option for `iterative' yank-last-arg handline, so a user
+    can keep entering `M-.', yanking the last argument of successive history
+    lines.
+
+b.  New variable, `print-completions-horizontally', which causes completion
+    matches to be displayed across the screen (like `ls -x') rather than up
+    and down the screen (like `ls').
+
+c.  New variable, `completion-ignore-case', which causes filename completion
+    and matching to be performed case-insensitively.
+
+d.  There is a new bindable command, `magic-space', which causes history
+    expansion to be performed on the current readline buffer and a space to
+    be inserted into the result.
+
+e.  There is a new bindable command, `menu-complete', which enables tcsh-like
+    menu completion (successive executions of menu-complete insert a single
+    completion match, cycling through the list of possible completions).
+
+f.  There is a new bindable command, `paste-from-clipboard', for use on Win32
+    systems, to insert the text from the Win32 clipboard into the editing
+    buffer.
+
+g.  The key sequence translation code now understands printf-style backslash
+    escape sequences, including \NNN octal escapes.  These escape sequences
+    may be used in key sequence definitions or macro values.
+
+h.  An `$include' inputrc file parser directive has been added.
+
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-2.01 since
+the release of bash-2.0.  As always, the manual page (doc/bash.1) is the
+place to look for complete descriptions.
+
+1. New Features in Bash
+
+a.  There is a new builtin array variable: GROUPS, the set of groups to which
+    the user belongs.  This is used by the test suite.
+
+2.  New Features in Readline
+
+a.  If a key sequence bound to `universal-argument' is read while reading a
+    numeric argument started with `universal-argument', it terminates the
+    argument but is otherwise ignored.  This provides a way to insert multiple
+    instances of a digit string, and is how GNU emacs does it.
+
+-------------------------------------------------------------------------------
+This is a terse description of the new features added to bash-2.0 since
+the release of bash-1.14.7.  As always, the manual page (doc/bash.1) is
+the place to look for complete descriptions.
+
+1.  New Features in Bash
+
+a.  There is a new invocation option, -D, that dumps translatable strings
+    in a script.
+
+b.  The `long' invocation options must now be prefixed with `--'.
+
+c.  New long invocation options:  --dump-strings, --help, --verbose
+
+d.  The `nolineediting' invocation option was renamed to `noediting'.
+
+e.  The `nobraceexpansion' and `quiet' long invocation options were removed.
+
+f.  The `--help' and `--version' long options now work as the GNU coding
+    standards specify.
+
+g.  If invoked as `sh', bash now enters posix mode after reading the
+    startup files, and reads and executes commands from the file named
+    by $ENV if interactive (as POSIX.2 specifies).  A login shell invoked
+    as `sh' reads $ENV after /etc/profile and ~/.profile.
+
+h.  There is a new reserved word, `time', for timing pipelines, builtin
+    commands, and shell functions.  It uses the value of the TIMEFORMAT
+    variable as a format string describing how to print the timing
+    statistics.
+
+i.  The $'...' quoting syntax expands ANSI-C escapes in ... and leaves the
+    result single-quoted.
+
+j.  The $"..." quoting syntax performs locale-specific translation of ...
+    and leaves the result double-quoted.
+
+k.  LINENO now works correctly in functions.
+
+l.  New variables: DIRSTACK, PIPESTATUS, BASH_VERSINFO, HOSTNAME, SHELLOPTS,
+    MACHTYPE.  The first three are array variables.
+
+m.  The BASH_VERSION and BASH_VERSINFO variables now include the shell's
+    `release status' (alpha[N], beta[N], release).
+
+n.  Some variables have been removed:  MAIL_WARNING, notify, history_control,
+    command_oriented_history, glob_dot_filenames, allow_null_glob_expansion,
+    nolinks, hostname_completion_file, noclobber, no_exit_on_failed_exec, and
+    cdable_vars.  Most of them are now implemented with the new `shopt'
+    builtin; others were already implemented by `set'.
+
+o.  Bash now uses some new variables:  LC_ALL, LC_MESSAGES, LC_CTYPE,
+    LC_COLLATE, LANG, GLOBIGNORE, HISTIGNORE.
+
+p.  The shell now supports integer-indexed arrays of unlimited length,
+    with a new compound assignment syntax and changes to the appropriate
+    builtin commands (declare/typeset, read, readonly, etc.).  The array
+    index may be an arithmetic expression.
+
+q.  ${!var}: indirect variable expansion, equivalent to eval \${$var}.
+
+r.  ${paramter:offset[:length]}: variable substring extraction.
+
+s.  ${parameter/pattern[/[/]string]}: variable pattern substitution.
+
+t.  The $[...] arithmetic expansion syntax is no longer supported, in
+    favor of $((...)).
+
+u.  Aliases can now be expanded in shell scripts with a shell option
+    (shopt expand_aliases).
+
+v.  History and history expansion can now be used in scripts with
+    set -o history and set -H.
+
+w.  All builtins now return an exit status of 2 for incorrect usage.
+
+x.  Interactive shells resend SIGHUP to all running or stopped children
+    if (and only if) they exit due to a SIGHUP.
+
+y.  New prompting expansions: \a, \e, \H, \T, \@, \v, \V.
+
+z.  Variable expansion in prompt strings is now controllable via a shell
+    option (shopt promptvars).
+
+aa. Bash now defaults to using command-oriented history.
+
+bb. The history file ($HISTFILE) is now truncated to $HISTFILESIZE after
+    being written.
+
+cc. The POSIX.2 conditional arithmetic evaluation syntax (expr ? expr : expr)
+    has been implemented.
+
+dd. Each builtin now accepts `--' to signify the end of the options, except
+    as documented (echo, etc.).
+
+ee. All builtins use -p to display values in a re-readable format where
+    appropriate, except as documented (echo, type, etc.).
+
+ff. The `alias' builtin has a new -p option.
+
+gg. Changes to the `bind' builtin:
+	o has new options: -psPSVr.
+	o the `-d' option was renamed to `-p'
+	o the `-v' option now dumps variables; the old `-v' is now `-P'
+
+hh. The `bye' synonym for `exit' was removed.
+
+ii. The -L and -P options to `cd' and `pwd' have been documented.
+
+jj. The `cd' builtin now does spelling correction on the directory name
+    by default.  This is settable with a shell option (shopt cdspell).
+
+kk. The `declare' builtin has new options: -a, -F, -p.
+
+ll. The `dirs' builtin has new options: -c, -p, -v.
+
+mm. The new `disown' builtin removes jobs from the shell's jobs table
+    or inhibits the resending of SIGHUP when the shell receives a
+    SIGHUP.
+
+nn. The `echo' builtin has a new escape character: \e.
+
+oo. The `enable' builtin can now load new builtins dynamically from shared
+    objects on systems with the dlopen/dlsym interface.  There are a number
+    of examples in the examples/loadables directory.  There are also
+    new options: -d, -f, -s, -p.
+
+pp. The `-all' option to `enable' was removed in favor of `-a'.
+
+qq. The `exec' builtin has new options: -l, -c, -a.
+
+rr. The `hash' builtin has a new option: -p.
+
+ss. The `history' builtin has new options: -c, -p, -s.
+
+tt. The `jobs' builtin has new options: -r, -s.
+
+uu. The `kill' builtin has new options: -n signum, -l signame.
+
+vv. The `pushd' and `popd' builtins have a new option: -n.
+
+ww. The `read' builtin has new options: -p prompt, -e, -a.
+
+xx. The `readonly' builtin has a new -a option, and the -n option was removed.
+
+yy. Changes to the `set' builtin:
+	o new options: -B, -o keyword, -o onecmd, -o history
+	o options removed: -l, -d, -o nohash
+	o options changed: +o, -h, -o hashall
+	o now displays variables in a format that can be re-read as input
+
+zz. The new `shopt' builtin controls shell optional behavior previously
+    done by setting and unsetting certain shell variables.
+
+aaa. The `test' builtin has new operators: -o option, s1 == s2, s1 < s2,
+     and s1 > s2, where s1 and s2 are strings.
+
+bbb. There is a new trap, DEBUG, executed after every simple command.
+
+ccc. The `trap' builtin has a new -p option.
+
+ddd. The `ulimit' builtin has a new -l option on 4.4BSD-based systems.
+
+eee. The PS1, PS2, PATH, and IFS variables may now be unset.
+
+fff. The restricted shell mode has been expanded and is now documented.
+
+ggg. Security improvements:
+	o functions are not imported from the environment if running setuid
+	  or with -p
+	o no startup files are sourced if running setuid or with -p
+
+hhh. The documentation has been overhauled:  the texinfo manual was
+     expanded, and HTML versions of the man page and texinfo manual
+     are included.
+
+iii. Changes to Posix mode:
+	o Command lookup now finds special builtins before shell functions.
+	o Failure of a special builtin causes a non-interactive shell to
+	  exit.  Failures are defined in the POSIX.2 specification.
+	o If the `cd' builtin finds a directory to change to using $CDPATH,
+	  the value assigned to PWD when `cd' completes does not contain
+	  any symbolic links.
+	o A non-interactive shell exits if a variable assignment error
+	  occurs when no command name follows the assignment statements.
+	o A non-interactive shell exits if the interation variable in a
+	  `for' statement or the selection variable in a `select' statement
+	  is read-only or another variable assignment error occurs.
+	o The `<>' redirection operator now opens a file for both stdin and
+	  stdout by default, not just when in posix mode.
+	o Assignment statements preceding special builtins now persist in
+	  the shell's environment when the builtin completes.
+
+     Posix mode is now completely POSIX.2-compliant (modulo bugs).  When
+     invoked as sh, bash should be completely POSIX.2-compliant.
+
+jjj. The default value of PS1 is now "\s-\v\$ ".
+
+kkk. The ksh-like ((...)) arithmetic command syntax has been implemented.
+     This is exactly equivalent to `let "..."'.
+
+lll. Integer constants have been extended to base 64.
+
+mmm. The `ulimit' builtin now sets both hard and soft limits and reports the
+     soft limit by default.
+
+2.  New Features in Readline
+
+a.  New variables:  enable-keypad, input-meta (new name for meta-flag),
+    mark-directories, visible-stats (now documented), disable-completion,
+    comment-begin.
+
+b.  New bindable commands:  kill-region, copy-region-as-kill,
+    copy-backward-word, copy-forward-word, set-mark, exchange-point-and-mark,
+    character-search, character-search-backward, insert-comment,
+    glob-expand-word, glob-list-expansions, dump-variables, dump-macros.
+
+c.  New emacs keybindings:  delete-horizontal-space (M-\),
+    insert-completions (M-*), possible-completions (M-=).
+
+d.  The history-search-backward and history-search-forward commands were
+    modified to be the same as previous-line and next-line if point is at
+    the start of the line.
+
+e.  More file types are available for the visible-stats mode.
+
+3.  Changes of interest in the Bash implementation
+
+a.  There is a new autoconf-based configuration mechanism.
+
+b.  More things have been moved from Posix mode to standard shell behavior.
+
+c.  The trace output (set -x) now inserts quotes where necessary so it can
+    be reused as input.
+
+d.  There is a compile-time option for a system-wide interactive shell
+    startup file (disabled by default).
+
+e.  The YACC grammar is smaller and tighter, and all 66 shift-reduce
+    conflicts are gone.  Several parsing bugs have been fixed.
+
+f.  Builtin option parsing has been regularized (using internal_getopt()),
+    with the exception of `echo', `type', and `set'.
+
+g.  Builtins now return standard usage messages constructed from the
+    `short doc' used by the help builtin.
+
+h.  Completion now quotes using backslashes by default, but honors
+    user-supplied quotes.
+
+i.  The GNU libc malloc is available as a configure-time option.
+
+j.  There are more internationalization features; bash uses gettext if
+    it is available.  The $"..." translation syntax uses the current
+    locale and gettext.
+
+k.  There is better reporting of job termination when the shell is not
+    interactive.
+
+l.  The shell is somewhat more efficient: it uses a little less memory and
+    makes fewer system calls.
+
+4.  Changes of interest in the Readline implementation
+
+a.  There is now support for readline `callback' functions.
+
+b.  There is now support for user-supplied input, redisplay, and terminal
+    preparation functions.
+
+c.  Most of the shell-specific code in readline has been generalized or
+    removed.
+
+d.  Most of the annoying redisplay bugs have been fixed, notably the problems
+    with incremental search and excessive redrawing when special characters
+    appear in the prompt string.
+
+e.  There are new library functions and variables available to application
+    writers, most having to do with completion and quoting.
+
+f.  The NEWLINE character (^J) is now treated as a search terminator by the
+    incremental search functions.
+-------------------------------------------------------------------------------
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.  This file is offered as-is,
+without any warranty.

@@ -13,8 +13,8 @@ auteapps=
 #
 # libs
 #
-app_libubox=libubox
-auteapps="${auteapps} ${app_libubox}"
+#app_libubox=libubox
+#auteapps="${auteapps} ${app_libubox}"
 
 app_jsonc=json-c
 auteapps="${auteapps} ${app_jsonc}"
@@ -88,8 +88,8 @@ auteapps="${auteapps} ${app_squashfs}"
 app_util_linux_ng=util-linux-ng-2.18
 auteapps="${auteapps} ${app_util_linux_ng}"
 
-app_wifidog=wifidog
-auteapps="${auteapps} ${app_wifidog}"
+#app_wifidog=wifidog
+#auteapps="${auteapps} ${app_wifidog}"
 
 app_xinetd=xinetd-2.3.15
 auteapps="${auteapps} ${app_xinetd}"
