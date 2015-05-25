@@ -6,4 +6,4 @@ mkdir -p objs auto/lib/pcre auto/lib/zlib
 
 package_common "$(pwd)"
 
-
+rm -fr ${auterelease}/usr/html
