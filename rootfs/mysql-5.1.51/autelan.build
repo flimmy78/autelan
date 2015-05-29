@@ -3,3 +3,5 @@
 . ${hisitopdir}/autelan/autelan.in
 
 package_common "$(pwd)"
+
+rm ${auterelease}/mysql-test -rf
