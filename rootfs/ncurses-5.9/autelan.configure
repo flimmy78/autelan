@@ -30,5 +30,8 @@
 	--includedir=${autefake}/usr/include \
 	--infodir=${autefake}/usr/share/info \
 	--mandir=${autefake}/usr/share/man \
+	\
+	--with-shared \
+	--without-static \
 	;
 

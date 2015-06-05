@@ -18,9 +18,9 @@
 ./configure \
 	--host=${hisiprefix} \
 	--prefix=${auterelease} \
-	--bindir=${auterelease}/bin \
-	--sbindir=${auterelease}/sbin \
-	--libexecdir=${auterelease}/libexec \
+	--bindir=${auterelease}/usr/bin \
+	--sbindir=${auterelease}/usr/sbin \
+	--libexecdir=${auterelease}/usr/libexec \
 	--sysconfdir=${auterelease}/etc \
 	--localstatedir=${auterelease}/var \
 	--libdir=${auterelease}/lib \
@@ -38,5 +38,9 @@
 	--psdir=${autefake}/usr/share/doc \
 	\
 	ac_cv_sys_restartable_syscalls='no' \
+	--enable-shared \
+	--disable-static \
+	--without-docs \
+	--without-man \
 	;
 

@@ -59590,40 +59590,43 @@ Note that the MySQL client library is not bundled anymore!" "$LINENO" 5
     PHP_LIBDIR=lib
   fi
 
-  for i in $PHP_LIBDIR $PHP_LIBDIR/mysql; do
+  #AUTELAN
+#  for i in $PHP_LIBDIR $PHP_LIBDIR/mysql; do
+#
+#  str="$MYSQL_DIR/$i/lib$MYSQL_LIBNAME.*"
+#  for j in `echo $str`; do
+#    if test -r $j; then
+#      MYSQL_LIB_DIR=$MYSQL_DIR/$i
+#      break 2
+#    fi
+#  done
+#
+#  done
+#
+#  if test -z "$MYSQL_LIB_DIR"; then
+#
+#  str="$MYSQL_DIR/lib/x86_64-linux-gnu/lib$MYSQL_LIBNAME.*"
+#  for j in `echo $str`; do
+#    if test -r $j; then
+#      MYSQL_LIB_DIR=$MYSQL_DIR/lib/x86_64-linux-gnu
+#      break 2
+#    fi
+#  done
+#
+#  fi
+#  if test -z "$MYSQL_LIB_DIR"; then
+#
+#  str="$MYSQL_DIR/lib/i386-linux-gnu/lib$MYSQL_LIBNAME.*"
+#  for j in `echo $str`; do
+#    if test -r $j; then
+#      MYSQL_LIB_DIR=$MYSQL_DIR/lib/i386-linux-gnu
+#      break 2
+#    fi
+#  done
+#
+#  fi
 
-  str="$MYSQL_DIR/$i/lib$MYSQL_LIBNAME.*"
-  for j in `echo $str`; do
-    if test -r $j; then
-      MYSQL_LIB_DIR=$MYSQL_DIR/$i
-      break 2
-    fi
-  done
-
-  done
-
-  if test -z "$MYSQL_LIB_DIR"; then
-
-  str="$MYSQL_DIR/lib/x86_64-linux-gnu/lib$MYSQL_LIBNAME.*"
-  for j in `echo $str`; do
-    if test -r $j; then
-      MYSQL_LIB_DIR=$MYSQL_DIR/lib/x86_64-linux-gnu
-      break 2
-    fi
-  done
-
-  fi
-  if test -z "$MYSQL_LIB_DIR"; then
-
-  str="$MYSQL_DIR/lib/i386-linux-gnu/lib$MYSQL_LIBNAME.*"
-  for j in `echo $str`; do
-    if test -r $j; then
-      MYSQL_LIB_DIR=$MYSQL_DIR/lib/i386-linux-gnu
-      break 2
-    fi
-  done
-
-  fi
+  MYSQL_LIB_DIR=$MYSQL_DIR/libmysql/.libs
 
   if test -z "$MYSQL_LIB_DIR"; then
     as_fn_error $? "Cannot find lib$MYSQL_LIBNAME under $MYSQL_DIR.

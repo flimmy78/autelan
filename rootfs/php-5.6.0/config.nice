@@ -37,6 +37,7 @@ CXX='arm-hisiv200-linux-g++' \
 '--with-pcre-dir=/home/hisisdk/histb/autelan/release/usr' \
 '--with-libxml-dir=/home/hisisdk/histb/autelan/release/usr' \
 '--with-onig=/home/hisisdk/histb/autelan/release/usr' \
+'--with-mysql=/home/hisisdk/histb/autelan/rootfs/mysql-5.1.51' \
 'host_alias=arm-hisiv200-linux' \
 'CC=arm-hisiv200-linux-gcc' \
 'CFLAGS= \

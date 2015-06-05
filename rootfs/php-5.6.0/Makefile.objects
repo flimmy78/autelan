@@ -292,6 +292,8 @@ ext/json/utf8_decode.lo: /home/hisisdk/histb/autelan/rootfs/php-5.6.0/ext/json/u
 	$(LIBTOOL) --mode=compile $(CC)  -Iext/json/ -I/home/hisisdk/histb/autelan/rootfs/php-5.6.0/ext/json/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /home/hisisdk/histb/autelan/rootfs/php-5.6.0/ext/json/utf8_decode.c -o ext/json/utf8_decode.lo 
 ext/json/JSON_parser.lo: /home/hisisdk/histb/autelan/rootfs/php-5.6.0/ext/json/JSON_parser.c
 	$(LIBTOOL) --mode=compile $(CC)  -Iext/json/ -I/home/hisisdk/histb/autelan/rootfs/php-5.6.0/ext/json/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /home/hisisdk/histb/autelan/rootfs/php-5.6.0/ext/json/JSON_parser.c -o ext/json/JSON_parser.lo 
+ext/mysql/php_mysql.lo: /home/hisisdk/histb/autelan/rootfs/php-5.6.0/ext/mysql/php_mysql.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/mysql/ -I/home/hisisdk/histb/autelan/rootfs/php-5.6.0/ext/mysql/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /home/hisisdk/histb/autelan/rootfs/php-5.6.0/ext/mysql/php_mysql.c -o ext/mysql/php_mysql.lo 
 ext/opcache/ZendAccelerator.lo: /home/hisisdk/histb/autelan/rootfs/php-5.6.0/ext/opcache/ZendAccelerator.c
 	$(LIBTOOL) --mode=compile $(CC)  -Iext/opcache/ -I/home/hisisdk/histb/autelan/rootfs/php-5.6.0/ext/opcache/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -prefer-pic -c /home/hisisdk/histb/autelan/rootfs/php-5.6.0/ext/opcache/ZendAccelerator.c -o ext/opcache/ZendAccelerator.lo 
 ext/opcache/zend_accelerator_blacklist.lo: /home/hisisdk/histb/autelan/rootfs/php-5.6.0/ext/opcache/zend_accelerator_blacklist.c

@@ -49,6 +49,11 @@ cp autelan/configure .
 	--with-pcre-dir=${auterelease}/usr \
 	--with-libxml-dir=${auterelease}/usr \
 	--with-onig=${auterelease}/usr \
+	--with-mysql=${auterootfs}/${app_mysql} \
 	;
 
-
+#
+# after run autelan.configure, should change Makefile
+#	1. -I/usr/include
+#	2. phar.phar
+#

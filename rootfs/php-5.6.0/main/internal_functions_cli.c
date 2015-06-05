@@ -40,6 +40,7 @@
 #include "ext/hash/php_hash.h"
 #include "ext/iconv/php_iconv.h"
 #include "ext/json/php_json.h"
+#include "ext/mysql/php_mysql.h"
 #include "ext/pdo/php_pdo.h"
 #include "ext/pdo_sqlite/php_pdo_sqlite.h"
 #include "ext/phar/php_phar.h"
@@ -70,6 +71,7 @@ static zend_module_entry *php_builtin_extensions[] = {
 	phpext_hash_ptr,
 	phpext_iconv_ptr,
 	phpext_json_ptr,
+	phpext_mysql_ptr,
 	phpext_spl_ptr,
 	phpext_pdo_ptr,
 	phpext_pdo_sqlite_ptr,

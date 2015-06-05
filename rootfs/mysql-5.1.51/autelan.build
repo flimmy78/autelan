@@ -4,4 +4,6 @@
 
 package_common "$(pwd)"
 
-rm ${auterelease}/mysql-test -rf
+rm -fr ${auterelease}/mysql-test
+rm -fr ${auterelease}/sql-bench
+rm -fr ${auterelease}/usr/share/aclocal

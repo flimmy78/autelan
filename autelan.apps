@@ -40,6 +40,9 @@ auteapps="${auteapps} ${app_popt}"
 app_onig=onig-5.9.5
 auteapps="${auteapps} ${app_onig}"
 
+app_ncurses=ncurses-5.9
+auteapps="${auteapps} ${app_ncurses}"
+
 #
 # apps
 #
@@ -60,6 +63,9 @@ auteapps="${auteapps} ${app_dropbear}"
 
 app_jq=jq
 auteapps="${auteapps} ${app_jq}"
+
+app_mysql=mysql-5.1.51
+auteapps="${auteapps} ${app_mysql}"
 
 app_nginx=nginx-1.6.1
 auteapps="${auteapps} ${app_nginx}"

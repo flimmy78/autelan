@@ -1,0 +1,24 @@
+configure: creating ./config.status
+config.status: creating include/MKterm.h.awk
+config.status: creating include/curses.head
+config.status: creating include/ncurses_dll.h
+config.status: creating include/termcap.h
+config.status: creating include/unctrl.h
+config.status: creating man/Makefile
+config.status: creating include/Makefile
+config.status: creating ncurses/Makefile
+config.status: creating progs/Makefile
+config.status: creating panel/Makefile
+config.status: creating menu/Makefile
+config.status: creating form/Makefile
+config.status: creating test/Makefile
+config.status: creating misc/Makefile
+config.status: creating c++/Makefile
+config.status: creating Ada95/gen/adacurses-config
+config.status: creating man/adacurses-config.1
+config.status: creating misc/run_tic.sh
+config.status: creating misc/ncurses-config
+config.status: creating man/ncurses5-config.1
+config.status: creating Makefile
+config.status: creating include/ncurses_cfg.h
+creating headers.sh

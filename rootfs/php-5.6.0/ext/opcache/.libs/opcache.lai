@@ -14,7 +14,7 @@ library_names='opcache.so opcache.so opcache.so'
 old_library='opcache.a'
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/home/hisisdk/histb/autelan/release/usr/lib'
+dependency_libs=' -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/rootfs/mysql-5.1.51/libmysql/.libs'
 
 # Version information for opcache.
 current=0
