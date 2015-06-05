@@ -5,4 +5,4 @@
 package_common "$(pwd)"
 
 rm -f ${auterelease}/bin/ncurses5-config
-rm -f ${auterelease}/lib/libncurses*.a
+rm -f ${auterelease}/lib/*.a

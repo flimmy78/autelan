@@ -7,3 +7,4 @@ package_common "$(pwd)"
 rm -fr ${auterelease}/mysql-test
 rm -fr ${auterelease}/sql-bench
 rm -fr ${auterelease}/usr/share/aclocal
+find ${auterelease} -name "*.la" | xargs rm -f
