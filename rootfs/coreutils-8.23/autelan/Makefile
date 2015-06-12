@@ -3699,7 +3699,7 @@ REPLACE_STRERROR = 1
 REPLACE_STRERROR_R = 1
 REPLACE_STRNCAT = 0
 REPLACE_STRNDUP = 0
-REPLACE_STRNLEN = 0
+REPLACE_STRNLEN = 1
 REPLACE_STRSIGNAL = 0
 REPLACE_STRSTR = 1
 REPLACE_STRTOD = 0
@@ -3801,8 +3801,8 @@ datarootdir = /home/hisisdk/histb/autelan/fakerelease/usr/share
 docdir = /home/hisisdk/histb/autelan/fakerelease/usr/share/doc/bash
 dvidir = /home/hisisdk/histb/autelan/fakerelease/usr/share/doc
 exec_prefix = ${prefix}
-gl_LIBOBJS =  lib/asnprintf.o lib/chdir-long.o lib/dup2.o lib/fchownat.o lib/fclose.o lib/fcntl.o lib/fflush.o lib/fnmatch.o lib/fpurge.o lib/freadahead.o lib/freadptr.o lib/fseek.o lib/fseeko.o lib/fseterr.o lib/fsusage.o lib/fts.o lib/futimens.o lib/getcwd.o lib/getcwd-lgpl.o lib/getopt.o lib/getopt1.o lib/getpass.o lib/isapipe.o lib/linkat.o lib/mbrlen.o lib/mbrtowc.o lib/memchr.o lib/mktime.o lib/mountlist.o lib/nanosleep.o lib/openat-proc.o lib/printf-args.o lib/printf-parse.o lib/readutmp.o lib/regex.o lib/secure_getenv.o lib/selinux-at.o lib/sig2str.o lib/strerror.o lib/strstr.o lib/utimensat.o lib/vasnprintf.o
-gl_LTLIBOBJS =  lib/asnprintf.lo lib/chdir-long.lo lib/dup2.lo lib/fchownat.lo lib/fclose.lo lib/fcntl.lo lib/fflush.lo lib/fnmatch.lo lib/fpurge.lo lib/freadahead.lo lib/freadptr.lo lib/fseek.lo lib/fseeko.lo lib/fseterr.lo lib/fsusage.lo lib/fts.lo lib/futimens.lo lib/getcwd.lo lib/getcwd-lgpl.lo lib/getopt.lo lib/getopt1.lo lib/getpass.lo lib/isapipe.lo lib/linkat.lo lib/mbrlen.lo lib/mbrtowc.lo lib/memchr.lo lib/mktime.lo lib/mountlist.lo lib/nanosleep.lo lib/openat-proc.lo lib/printf-args.lo lib/printf-parse.lo lib/readutmp.lo lib/regex.lo lib/secure_getenv.lo lib/selinux-at.lo lib/sig2str.lo lib/strerror.lo lib/strstr.lo lib/utimensat.lo lib/vasnprintf.lo
+gl_LIBOBJS =  lib/asnprintf.o lib/chdir-long.o lib/dup2.o lib/fchownat.o lib/fclose.o lib/fcntl.o lib/fflush.o lib/fnmatch.o lib/fpurge.o lib/freadahead.o lib/freadptr.o lib/fseek.o lib/fseeko.o lib/fseterr.o lib/fsusage.o lib/fts.o lib/futimens.o lib/getcwd.o lib/getcwd-lgpl.o lib/getopt.o lib/getopt1.o lib/getpass.o lib/isapipe.o lib/linkat.o lib/mbrlen.o lib/mbrtowc.o lib/memchr.o lib/mktime.o lib/mountlist.o lib/nanosleep.o lib/openat-proc.o lib/printf-args.o lib/printf-parse.o lib/readutmp.o lib/regex.o lib/secure_getenv.o lib/selinux-at.o lib/sig2str.o lib/strerror.o lib/strnlen.o lib/strstr.o lib/utimensat.o lib/vasnprintf.o
+gl_LTLIBOBJS =  lib/asnprintf.lo lib/chdir-long.lo lib/dup2.lo lib/fchownat.lo lib/fclose.lo lib/fcntl.lo lib/fflush.lo lib/fnmatch.lo lib/fpurge.lo lib/freadahead.lo lib/freadptr.lo lib/fseek.lo lib/fseeko.lo lib/fseterr.lo lib/fsusage.lo lib/fts.lo lib/futimens.lo lib/getcwd.lo lib/getcwd-lgpl.lo lib/getopt.lo lib/getopt1.lo lib/getpass.lo lib/isapipe.lo lib/linkat.lo lib/mbrlen.lo lib/mbrtowc.lo lib/memchr.lo lib/mktime.lo lib/mountlist.lo lib/nanosleep.lo lib/openat-proc.lo lib/printf-args.lo lib/printf-parse.lo lib/readutmp.lo lib/regex.lo lib/secure_getenv.lo lib/selinux-at.lo lib/sig2str.lo lib/strerror.lo lib/strnlen.lo lib/strstr.lo lib/utimensat.lo lib/vasnprintf.lo
 gltests_LIBOBJS =  ioctl.o perror.o strerror_r.o
 gltests_LTLIBOBJS =  ioctl.lo perror.lo strerror_r.lo
 gltests_WITNESS = IN_COREUTILS_GNULIB_TESTS
@@ -4036,7 +4036,7 @@ gen_single_binary = $(top_srcdir)/build-aux/gen-single-binary.sh
 ACLOCAL_AMFLAGS = -I m4
 
 # Just prior to distribution, ...
-# transform the automake-generated rule that runs 'rm -f rm > /dev/null 2>&1 || /bin/rm -f rm'.
+# transform the automake-generated rule that runs 'rm -f rm'.
 # On some systems, that command would fail with a diagnostic like
 # "rm: cannot unlink 'rm': Text file busy" when '.' appears so early
 # in the shell's search path that running 'rm' would run the 'rm'
@@ -5782,14 +5782,14 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/lib/local.mk $(srcdi
 	  $(AUTOMAKE) --gnu Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
-	#@case '$?' in \
-	#  *config.status*) \
-	#    echo ' $(SHELL) ./config.status'; \
-	#    $(SHELL) ./config.status;; \
-	  #*) \
-	  #  echo ' cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe)'; \
-	  #  cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe);; \
-	#esac;
+	@case '$?' in \
+	  *config.status*) \
+	    echo ' $(SHELL) ./config.status'; \
+	    $(SHELL) ./config.status;; \
+	  *) \
+	    echo ' cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe)'; \
+	    cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe);; \
+	esac;
 $(top_srcdir)/lib/local.mk $(srcdir)/lib/gnulib.mk $(top_srcdir)/src/local.mk $(srcdir)/src/cu-progs.mk $(top_srcdir)/src/single-binary.mk $(top_srcdir)/doc/local.mk $(top_srcdir)/man/local.mk $(top_srcdir)/tests/local.mk:
 
 $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
@@ -7421,7 +7421,7 @@ uninstall-binPROGRAMS:
 	cd "$(DESTDIR)$(bindir)" && rm -f $$files
 
 clean-binPROGRAMS:
-	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS) > /dev/null 2>&1 || /bin/rm -f $(bin_PROGRAMS)
+	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
 
 clean-noinstPROGRAMS:
 	-test -z "$(noinst_PROGRAMS)" || rm -f $(noinst_PROGRAMS)
@@ -14062,30 +14062,29 @@ man/dynamic-deps.mk: Makefile
 include man/dynamic-deps.mk
 
 .x.1:
-#	$(AM_V_GEN)name=`echo $@ | sed 's|.*/||; s|\.1$$||'` || exit 1;	\
-#	case $$name in							\
-#	  install) prog='ginstall'; argv=$$name;;			\
-#	     test) prog='['; argv='[';;					\
-#		*) prog=$$name; argv=$$prog;;				\
-#	esac;								\
-#	rm -f $@ $@-t							\
-#	  && t=$*.td							\
-#	  && rm -rf $$t							\
-#	  && $(MKDIR_P) $$t						\
-#	  && (cd $$t && $(LN_S) '$(abs_top_builddir)/src/'$$prog $$argv) \
-#	  && $(run_help2man)						\
-#		     --source='$(PACKAGE_STRING)'			\
-#		     --include=$(srcdir)/man/$$name.x			\
-#		     --output=$$t/$$name.1 $$t/$$argv			\
-#		     --info-page='coreutils \(aq'$$name' invocation\(aq' \
-#	  && sed \
-#	       -e 's|$*\.td/||g' \
-#	       -e '/For complete documentation/d' \
-#	       $$t/$$name.1 > $@-t			\
-#	  && rm -rf $$t							\
-#	  && chmod a-w $@-t						\
-#	  && mv $@-t $@
-
+	$(AM_V_GEN)name=`echo $@ | sed 's|.*/||; s|\.1$$||'` || exit 1;	\
+	case $$name in							\
+	  install) prog='ginstall'; argv=$$name;;			\
+	     test) prog='['; argv='[';;					\
+		*) prog=$$name; argv=$$prog;;				\
+	esac;								\
+	rm -f $@ $@-t							\
+	  && t=$*.td							\
+	  && rm -rf $$t							\
+	  && $(MKDIR_P) $$t						\
+	  && (cd $$t && $(LN_S) '$(abs_top_builddir)/src/'$$prog $$argv) \
+	  && $(run_help2man)						\
+		     --source='$(PACKAGE_STRING)'			\
+		     --include=$(srcdir)/man/$$name.x			\
+		     --output=$$t/$$name.1 $$t/$$argv			\
+		     --info-page='coreutils \(aq'$$name' invocation\(aq' \
+	  && sed \
+	       -e 's|$*\.td/||g' \
+	       -e '/For complete documentation/d' \
+	       $$t/$$name.1 > $@-t			\
+	  && rm -rf $$t							\
+	  && chmod a-w $@-t						\
+	  && mv $@-t $@
 .PHONY: check-root
 check-root:
 	$(MAKE) check TESTS='$(root_tests)' SUBDIRS=.

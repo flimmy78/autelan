@@ -36,13 +36,13 @@ INSTALL_DATA = ${INSTALL} -m 644
 # In automake <= 1.9.x, $(mkdir_p) is defined either as "mkdir -p --" or as
 # "$(mkinstalldirs)" or as "$(install_sh) -d". For these automake versions,
 # ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/install-sh does not start with $(SHELL), so we add it.
-# In automake >= 1.10, $(MKDIR_P) is derived from ${MKDIR_P}, which is defined
+# In automake >= 1.10, /bin/mkdir -p is derived from ${MKDIR_P}, which is defined
 # either as "/path/to/mkdir -p" or ".../install-sh -c -d". For these automake
 # versions, $(mkinstalldirs) and $(install_sh) are unused.
 mkinstalldirs = $(SHELL) ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/install-sh -d
 install_sh = $(SHELL) ${SHELL} /home/hisisdk/histb/autelan/rootfs/coreutils-8.23/build-aux/install-sh
 MKDIR_P = /bin/mkdir -p
-mkdir_p = $(MKDIR_P)
+mkdir_p = /bin/mkdir -p
 
 GMSGFMT_ = /usr/bin/msgfmt
 GMSGFMT_no = /usr/bin/msgfmt
@@ -338,7 +338,7 @@ stamp-po: $(srcdir)/$(DOMAIN).pot
 # This target rebuilds $(DOMAIN).pot; it is an expensive operation.
 # Note that $(DOMAIN).pot is not touched if it doesn't need to be changed.
 $(DOMAIN).pot-update: $(POTFILES) $(srcdir)/POTFILES.in remove-potcdate.sed
-	if true; then \
+	if LC_ALL=C grep 'GNU coreutils' $(top_srcdir)/* 2>/dev/null | grep -v 'libtool:' >/dev/null; then \
 	  package_gnu='GNU '; \
 	else \
 	  package_gnu=''; \
