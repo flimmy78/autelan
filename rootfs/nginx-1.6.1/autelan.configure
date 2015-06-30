@@ -14,11 +14,12 @@
 		-L${hisitools}/lib -L${hisitools}/usr/lib \
 		-L${auterelease}/lib -L${auterelease}/usr/lib -L${auterelease}/usr/local/lib \
 		" \
+CP autelan/auto/install auto/install
 ./configure \
 	--prefix=${auterelease}/usr \
 	--sbin-path=${auterelease}/usr/sbin/ \
 	--conf-path=${auterelease}/usr/local/nginx/conf/ \
-	--error-log-path=${auterelease}/usr/local/nginx/logs/ \
+	--error-log-path=/opt/log/nginx/error/nginx.log \
 	--http-log-path=${auterelease}/usr/local/nginx/logs/ \
 	\
 	--with-poll_module \
