@@ -15,15 +15,22 @@
 		-L${auterelease}/lib -L${auterelease}/usr/lib -L${auterelease}/usr/local/lib \
 		" \
 ./configure \
-	--prefix=${auterelease}/usr \
 	--host=${hisiprefix} \
-        --bindir=${auterelease}/usr/bin \
-        --sbindir=${auterelease}/usr/sbin \
-        --libexecdir=${auterelease}/usr/libexec \
-        --sysconfdir=${auterelease}/etc \
-        --localstatedir=${auterelease}/var \
-        --libdir=${auterelease}/lib \
-        --datarootdir=${auterelease}/usr/share \
-        --datadir=${auterelease}/usr/share \
+	--prefix=${auterelease}/usr \
+	--bindir=${auterelease}/usr/bin \
+	--sbindir=${auterelease}/usr/sbin \
+	--libexecdir=${auterelease}/libexec \
+	--sysconfdir=${auterelease}/etc \
+	--localstatedir=${auterelease}/var \
+	--libdir=${auterelease}/usr/lib \
+	\
+	--includedir=${autefake}/usr/include \
+	--datadir=${autefake}/usr/share \
+	--infodir=${autefake}/usr/share/info \
+	--mandir=${autefake}/usr/share/man \
+	\
+	--disable-static \
 	;
+
+#	--with-zlib=${auterootfs}/${app_zlib} \
 
