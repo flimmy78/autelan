@@ -5,7 +5,7 @@ prefix='/home/hisisdk/histb/autelan/release/usr'
 datarootdir='/home/hisisdk/histb/autelan/release/usr/php'
 exec_prefix="`eval echo /home/hisisdk/histb/autelan/release/usr`"
 phpdir="`eval echo /home/hisisdk/histb/autelan/release/usr/lib`/build"
-includedir="`eval echo /home/hisisdk/histb/autelan/fakerelease/usr/include`/php"
+includedir="`eval echo /home/hisisdk/histb/autelan/fakerelease/usr`/php"
 builddir="`pwd`"
 SED="/bin/sed"
 

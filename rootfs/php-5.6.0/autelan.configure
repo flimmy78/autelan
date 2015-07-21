@@ -26,7 +26,7 @@ cp autelan/configure .
 	--localstatedir=${auterelease}/var \
 	--libdir=${auterelease}/usr/lib \
 	\
-	--includedir=${autefake}/usr/include \
+	--includedir=${autefake}/usr \
 	--datarootdir=${autefake}/usr/share \
 	--datadir=${autefake}/usr/share \
 	--infodir=${autefake}/usr/share/info \
@@ -49,9 +49,10 @@ cp autelan/configure .
 	--with-pcre-dir=${auterelease}/usr \
 	--with-libxml-dir=${auterelease}/usr \
 	--with-onig=${auterelease}/usr \
-	--with-mysql=${auterootfs}/${app_mysql} \
+	--with-mcrypt=${auterelease}/usr \
 	;
 
+#	--with-mysql=${auterootfs}/${app_mysql} \
 #
 # after run autelan.configure, should change Makefile
 #	1. -I/usr/include

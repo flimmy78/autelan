@@ -58001,7 +58001,8 @@ $as_echo "$ext_output" >&6; }
 
 
 if test "$PHP_MCRYPT" != "no"; then
-  for i in $PHP_MCRYPT /usr/local /usr; do
+#AUTELAN
+  for i in $PHP_MCRYPT ${includedir} /usr/local /usr; do
     test -f $i/include/mcrypt.h && MCRYPT_DIR=$i && break
   done
 
@@ -58011,7 +58012,9 @@ if test "$PHP_MCRYPT" != "no"; then
 
 
   old_CPPFLAGS=$CPPFLAGS
-  CPPFLAGS=-I$MCRYPT_DIR/include
+#AUTELAN
+#  CPPFLAGS=-I$MCRYPT_DIR/include
+  CPPFLAGS=-I${includedir}/include
   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libmcrypt version" >&5
 $as_echo_n "checking for libmcrypt version... " >&6; }
   cat confdefs.h - <<_ACEOF >conftest.$ac_ext

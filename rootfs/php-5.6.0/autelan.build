@@ -20,7 +20,7 @@ package_compile "$(pwd)"
 
 cp -f modules/opcache.so ${auterelease}/usr/lib/
 cp -f sapi/fpm/php-fpm.conf ${auterelease}/etc/php-fpm.conf.default
-cp -f sapi/fpm/.libs/php-fpm ${auterelease}/usr/sbin/php-fpm
-cp -f sapi/cli/.libs/php ${auterelease}/usr/bin/php
+cp -f sapi/fpm/php-fpm ${auterelease}/usr/sbin/php-fpm
+cp -f sapi/cli/php ${auterelease}/usr/bin/php
 
 

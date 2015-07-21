@@ -1042,7 +1042,7 @@
 #define HAVE_LIBM 1
 
 /* */
-/* #undef HAVE_LIBMCRYPT */
+#define HAVE_LIBMCRYPT 1
 
 /* Whether you have libmm */
 /* #undef HAVE_LIBMM */
@@ -1185,7 +1185,7 @@
 /* #undef HAVE_MSSQL */
 
 /* Whether you have MySQL */
-#define HAVE_MYSQL 1
+/* #undef HAVE_MYSQL */
 
 /* */
 /* #undef HAVE_MYSQLILIB */
@@ -2201,7 +2201,7 @@
 #define PHP_BLOWFISH_CRYPT 1
 
 /* PHP build date */
-#define PHP_BUILD_DATE "2015-06-04"
+#define PHP_BUILD_DATE "2015-07-21"
 
 /* Define if your system has fork/vfork/CreateProcess */
 #define PHP_CAN_SUPPORT_PROC_OPEN 1
@@ -2279,7 +2279,7 @@
 #define PHP_STD_DES_CRYPT 1
 
 /* uname -a output */
-#define PHP_UNAME "Linux debian6 2.6.32-5-686 #1 SMP Sun May 6 04:01:19 UTC 2012 i686 GNU/Linux"
+#define PHP_UNAME "Linux debian 2.6.32-5-686 #1 SMP Mon Sep 23 23:00:18 UTC 2013 i686 GNU/Linux"
 
 /* Whether PHP has to use its own crypt_r for blowfish, des and ext des */
 #define PHP_USE_PHP_CRYPT_R 1
