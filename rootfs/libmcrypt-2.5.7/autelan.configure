@@ -24,6 +24,7 @@
 	--localstatedir=${auterelease}/var \
 	--libdir=${auterelease}/usr/lib \
 	\
+	--includedir=${autefake}/usr/include \
 	--datadir=${autefake}/usr/share \
 	--infodir=${autefake}/usr/share/info \
 	--mandir=${autefake}/usr/share/man \
