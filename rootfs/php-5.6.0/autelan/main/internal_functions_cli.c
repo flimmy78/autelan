@@ -30,6 +30,7 @@
 #include "ext/date/php_date.h"
 #include "ext/ereg/php_ereg.h"
 #include "ext/libxml/php_libxml.h"
+#include "ext/openssl/php_openssl.h"
 #include "ext/pcre/php_pcre.h"
 #include "ext/sqlite3/php_sqlite3.h"
 #include "ext/zlib/php_zlib.h"
@@ -61,6 +62,7 @@ static zend_module_entry *php_builtin_extensions[] = {
 	phpext_date_ptr,
 	phpext_ereg_ptr,
 	phpext_libxml_ptr,
+	phpext_openssl_ptr,
 	phpext_pcre_ptr,
 	phpext_sqlite3_ptr,
 	phpext_zlib_ptr,

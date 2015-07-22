@@ -1273,7 +1273,7 @@
 /* #undef HAVE_OPENSSL_CRYPTO_H */
 
 /* */
-/* #undef HAVE_OPENSSL_EXT */
+#define HAVE_OPENSSL_EXT 1
 
 /* */
 /* #undef HAVE_ORALDAP */
@@ -2237,7 +2237,7 @@
 #define PHP_MD5_CRYPT 1
 
 /* */
-/* #undef PHP_MHASH_BC */
+#define PHP_MHASH_BC 1
 
 /* */
 /* #undef PHP_MYSQL_UNIX_SOCK_ADDR */
