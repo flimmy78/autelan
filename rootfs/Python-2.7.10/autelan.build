@@ -1,0 +1,8 @@
+#!/bin/bash
+hisitopdir=/home/hisisdk/histb
+. ${hisitopdir}/autelan/autelan.in
+
+package_common "$(pwd)"
+
+rm -fr ${auterelease}/usr/share/man
+rm -fr ${auterelease}/lib/pkgconfig

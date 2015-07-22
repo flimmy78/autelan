@@ -1,0 +1,9 @@
+configure: creating ./config.status
+config.status: creating Makefile.pre
+config.status: creating Modules/Setup.config
+config.status: creating Misc/python.pc
+config.status: creating Modules/ld_so_aix
+config.status: creating pyconfig.h
+creating Modules/Setup
+creating Modules/Setup.local
+creating Makefile
