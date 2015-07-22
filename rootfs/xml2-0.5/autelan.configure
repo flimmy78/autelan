@@ -1,0 +1,29 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+	CC=${hisiprefix}-gcc \
+	GCC=${hisiprefix}-gcc \
+	CXX=${hisiprefix}-g++ \
+	CFLAGS=" \
+		-O2 \
+		-I${hisitools}/usr/include \
+		-I${autefake}/usr/include -I${autefake}/usr/local/include \
+		" \
+	LDFLAGS=" \
+		-L${hisitools}/lib -L${hisitools}/usr/lib \
+		-L${auterelease}/lib -L${auterelease}/usr/lib -L${auterelease}/usr/local/lib \
+		" \
+./configure \
+	--prefix=${auterelease}/usr \
+	--host=${hisiprefix} \
+        --bindir=${auterelease}/usr/bin \
+        --sbindir=${auterelease}/usr/sbin \
+        --libexecdir=${auterelease}/usr/libexec \
+        --sysconfdir=${auterelease}/etc \
+        --localstatedir=${auterelease}/var \
+        --libdir=${auterelease}/lib \
+        --datarootdir=${auterelease}/usr/share \
+        --datadir=${auterelease}/usr/share \
+	;
+

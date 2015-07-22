@@ -48172,14 +48172,13 @@ $as_echo "$as_me: error: unknown endianness
 $as_echo_n "checking whether GCC atomic builtins are available... " >&6; }
   # either define HAVE_IB_GCC_ATOMIC_BUILTINS or not
   if test "$cross_compiling" = yes; then
-	echo "skip ...! 48175"
-#  { { $as_echo "$as_me:$LINENO: error: in \`$ac_pwd':" >&5
-#$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
-#{ { $as_echo "$as_me:$LINENO: error: cannot run test program while cross compiling
-#See \`config.log' for more details." >&5
-#$as_echo "$as_me: error: cannot run test program while cross compiling
-#See \`config.log' for more details." >&2;}
-#   { (exit 1); exit 1; }; }; }
+  { { $as_echo "$as_me:$LINENO: error: in \`$ac_pwd':" >&5
+$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+{ { $as_echo "$as_me:$LINENO: error: cannot run test program while cross compiling
+See \`config.log' for more details." >&5
+$as_echo "$as_me: error: cannot run test program while cross compiling
+See \`config.log' for more details." >&2;}
+   { (exit 1); exit 1; }; }; }
 else
   cat >conftest.$ac_ext <<_ACEOF
 /* confdefs.h.  */
@@ -48279,14 +48278,13 @@ fi
 $as_echo_n "checking whether pthread_t can be used by GCC atomic builtins... " >&6; }
   # either define HAVE_IB_ATOMIC_PTHREAD_T_GCC or not
   if test "$cross_compiling" = yes; then
-	echo "skip ...!48282"
-#  { { $as_echo "$as_me:$LINENO: error: in \`$ac_pwd':" >&5
-#$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
-#{ { $as_echo "$as_me:$LINENO: error: cannot run test program while cross compiling
-#See \`config.log' for more details." >&5
-#$as_echo "$as_me: error: cannot run test program while cross compiling
-#See \`config.log' for more details." >&2;}
-#   { (exit 1); exit 1; }; }; }
+  { { $as_echo "$as_me:$LINENO: error: in \`$ac_pwd':" >&5
+$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+{ { $as_echo "$as_me:$LINENO: error: cannot run test program while cross compiling
+See \`config.log' for more details." >&5
+$as_echo "$as_me: error: cannot run test program while cross compiling
+See \`config.log' for more details." >&2;}
+   { (exit 1); exit 1; }; }; }
 else
   cat >conftest.$ac_ext <<_ACEOF
 /* confdefs.h.  */
@@ -48482,14 +48480,13 @@ done
 $as_echo_n "checking whether pthread_t can be used by Solaris libc atomic functions... " >&6; }
   # either define HAVE_IB_ATOMIC_PTHREAD_T_SOLARIS or not
   if test "$cross_compiling" = yes; then
-	echo "skip ...! 48485"
-#  { { $as_echo "$as_me:$LINENO: error: in \`$ac_pwd':" >&5
-#$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
-#{ { $as_echo "$as_me:$LINENO: error: cannot run test program while cross compiling
-#See \`config.log' for more details." >&5
-#$as_echo "$as_me: error: cannot run test program while cross compiling
-#See \`config.log' for more details." >&2;}
-#   { (exit 1); exit 1; }; }; }
+  { { $as_echo "$as_me:$LINENO: error: in \`$ac_pwd':" >&5
+$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+{ { $as_echo "$as_me:$LINENO: error: cannot run test program while cross compiling
+See \`config.log' for more details." >&5
+$as_echo "$as_me: error: cannot run test program while cross compiling
+See \`config.log' for more details." >&2;}
+   { (exit 1); exit 1; }; }; }
 else
   cat >conftest.$ac_ext <<_ACEOF
 /* confdefs.h.  */

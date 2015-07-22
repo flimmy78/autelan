@@ -1,0 +1,39 @@
+#!/bin/bash
+
+. ${hisitopdir}/autelan/autelan.in
+
+	CC=${hisiprefix}-gcc \
+	GCC=${hisiprefix}-gcc \
+	CXX=${hisiprefix}-g++ \
+	CFLAGS=" \
+		-O2 \
+		-I${hisitools}/usr/include \
+		-I${autefake}/usr/include -I${autefake}/usr/local/include \
+		" \
+	LDFLAGS=" \
+		-L${hisitools}/lib -L${hisitools}/usr/lib \
+		-L${auterelease}/lib -L${auterelease}/usr/lib -L${auterelease}/usr/local/lib \
+		" \
+./configure \
+	--host=${hisiprefix} \
+	--prefix=${auterelease}/usr \
+	--bindir=${auterelease}/usr/bin \
+	--sbindir=${auterelease}/usr/sbin \
+	--libexecdir=${auterelease}/libexec \
+	--sysconfdir=${auterelease}/etc \
+	--localstatedir=${auterelease}/var \
+	--libdir=${auterelease}/usr/lib \
+	\
+	--includedir=${autefake}/usr/include \
+	--datadir=${autefake}/usr/share \
+	--infodir=${autefake}/usr/share/info \
+	--mandir=${autefake}/usr/share/man \
+	--without-zlib \
+	--with-lzma \
+	\
+	--disable-static \
+	--without-python \
+	;
+
+#	--with-zlib=${auterootfs}/${app_zlib} \
+

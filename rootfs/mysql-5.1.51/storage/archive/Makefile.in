@@ -458,7 +458,6 @@ MYSQLBASEdir = $(prefix)
 MYSQLLIBdir = $(pkglibdir)
 pkgplugindir = $(pkglibdir)/plugin
 INCLUDES = -I$(top_srcdir)/include -I$(top_builddir)/include \
-			-I../../zlib \
 			-I$(top_srcdir)/regex \
 			-I$(top_srcdir)/sql \
                         -I$(srcdir) @ZLIB_INCLUDES@

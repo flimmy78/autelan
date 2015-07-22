@@ -524,7 +524,7 @@ MYSQLBASEdir = $(prefix)
 MYSQLLIBdir = $(pkglibdir)
 pkgplugindir = $(pkglibdir)/plugin
 INCLUDES = @ZLIB_INCLUDES@ \
-			-I$(top_builddir)/include -I ../zlib -I$(top_srcdir)/include \
+			-I$(top_builddir)/include -I$(top_srcdir)/include \
 			-I$(top_srcdir)/regex -I$(srcdir) $(openssl_includes)
 
 SUBDIRS = share
@@ -755,9 +755,8 @@ clean-libexecPROGRAMS:
 	  rm -f $$p $$f ; \
 	done
 gen_lex_hash$(EXEEXT): $(gen_lex_hash_OBJECTS) $(gen_lex_hash_DEPENDENCIES) 
-	echo "skip gen_lex_hash...!"
-	#@rm -f gen_lex_hash$(EXEEXT)
-	#$(gen_lex_hash_LINK) $(gen_lex_hash_OBJECTS) $(gen_lex_hash_LDADD) $(LIBS)
+	@rm -f gen_lex_hash$(EXEEXT)
+	$(gen_lex_hash_LINK) $(gen_lex_hash_OBJECTS) $(gen_lex_hash_LDADD) $(LIBS)
 mysql_tzinfo_to_sql$(EXEEXT): $(mysql_tzinfo_to_sql_OBJECTS) $(mysql_tzinfo_to_sql_DEPENDENCIES) 
 	@rm -f mysql_tzinfo_to_sql$(EXEEXT)
 	$(mysql_tzinfo_to_sql_LINK) $(mysql_tzinfo_to_sql_OBJECTS) $(mysql_tzinfo_to_sql_LDADD) $(LIBS)

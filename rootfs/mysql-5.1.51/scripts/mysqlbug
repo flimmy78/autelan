@@ -23,9 +23,9 @@ VERSION="5.1.51"
 COMPILATION_COMMENT="Source distribution"
 BUGmysql="mysql@lists.mysql.com"
 # This is set by configure
-COMP_CALL_INFO="CC='arm-hisiv200-linux-gcc'  CFLAGS=' 		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		'  CXX='arm-hisiv200-linux-g++'  CXXFLAGS=''  LDFLAGS=' 		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		'  ASFLAGS=''"
-COMP_RUN_INFO="CC='arm-hisiv200-linux-gcc'  CFLAGS='  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		   -DUNIV_LINUX -DUNIV_LINUX'  CXX='arm-hisiv200-linux-g++'  CXXFLAGS='-O3    -fno-implicit-templates -fno-exceptions -fno-rtti'  LDFLAGS=' 		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		 -rdynamic '  ASFLAGS=''"
-CONFIGURE_LINE="./configure  '--host=arm-hisiv200-linux' '--prefix=/home/hisisdk/histb/autelan/release' '--bindir=/home/hisisdk/histb/autelan/release/usr/bin' '--sbindir=/home/hisisdk/histb/autelan/release/usr/sbin' '--libexecdir=/home/hisisdk/histb/autelan/release/usr/libexec' '--sysconfdir=/home/hisisdk/histb/autelan/release/etc' '--localstatedir=/home/hisisdk/histb/autelan/release/var' '--libdir=/home/hisisdk/histb/autelan/release/lib' '--datarootdir=/home/hisisdk/histb/autelan/release/usr/share' '--datadir=/home/hisisdk/histb/autelan/release/usr/share' '--includedir=/home/hisisdk/histb/autelan/fakerelease/usr/include' '--infodir=/home/hisisdk/histb/autelan/fakerelease/usr/share/info' '--localedir=/home/hisisdk/histb/autelan/fakerelease/usr/share/local' '--mandir=/home/hisisdk/histb/autelan/fakerelease/usr/share/man' '--docdir=/home/hisisdk/histb/autelan/fakerelease/usr/share/doc/bash' '--htmldir=/home/hisisdk/histb/autelan/fakerelease/usr/share/doc' '--dvidir=/home/hisisdk/histb/autelan/fakerelease/usr/share/doc' '--pdfdir=/home/hisisdk/histb/autelan/fakerelease/usr/share/doc' '--psdir=/home/hisisdk/histb/autelan/fakerelease/usr/share/doc' 'ac_cv_sys_restartable_syscalls=no' '--enable-shared' '--disable-static' '--without-docs' '--without-man' 'host_alias=arm-hisiv200-linux' 'CC=arm-hisiv200-linux-gcc' 'CFLAGS= 		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		' 'LDFLAGS= 		-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib 		-L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib 		' 'CXX=arm-hisiv200-linux-g++'"
+COMP_CALL_INFO="CC='ccache /opt/studio12/SUNWspro/bin/cc'  CFLAGS='-g'  CXX='ccache /opt/studio12/SUNWspro/bin/CC'  CXXFLAGS=''  LDFLAGS=''  ASFLAGS=''"
+COMP_RUN_INFO="CC='ccache /opt/studio12/SUNWspro/bin/cc'  CFLAGS=' -g   -DHAVE_RWLOCK_T -DUNIV_SOLARIS -DUNIV_SOLARIS'  CXX='ccache /opt/studio12/SUNWspro/bin/CC'  CXXFLAGS='-O1    -DHAVE_RWLOCK_T'  LDFLAGS=' '  ASFLAGS=''"
+CONFIGURE_LINE="./configure  '--with-embedded-server' '--with-ndbcluster' 'CC=ccache /opt/studio12/SUNWspro/bin/cc' 'CXX=ccache /opt/studio12/SUNWspro/bin/CC'"
 
 LIBC_INFO=""
 for pat in /lib/libc.* /lib/libc-* /usr/lib/libc.* /usr/lib/libc-*
@@ -253,8 +253,8 @@ ${ORGANIZATION- $ORGANIZATION_C}
 >Class:		$CLASS_C
 >Release:	mysql-${VERSION} ($COMPILATION_COMMENT)
 `test -n "$MYSQL_SERVER" && echo ">Server: $MYSQL_SERVER"`
->C compiler:    arm-hisiv200-linux-gcc (Hisilicon_v200(gcc4.4-290+glibc-2.11+eabi+nptl)) 4.4.1
->C++ compiler:  arm-hisiv200-linux-g++ (Hisilicon_v200(gcc4.4-290+glibc-2.11+eabi+nptl)) 4.4.1
+>C compiler:    
+>C++ compiler:  CC: Sun C++ 5.9 SunOS_sparc Patch 124863-25 2010/08/24
 >Environment:
 	$ENVIRONMENT_C
 `test -n "$SYSTEM"  && echo "System: $SYSTEM"`

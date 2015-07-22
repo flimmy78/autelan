@@ -528,9 +528,8 @@ $(top_srcdir)/configure:  $(am__configure_deps)
 $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 comp_sql$(EXEEXT): $(comp_sql_OBJECTS) $(comp_sql_DEPENDENCIES) 
-	echo "skip comp_sql...!"
-	#@rm -f comp_sql$(EXEEXT)
-	#$(LINK) $(comp_sql_OBJECTS) $(comp_sql_LDADD) $(LIBS)
+	@rm -f comp_sql$(EXEEXT)
+	$(LINK) $(comp_sql_OBJECTS) $(comp_sql_LDADD) $(LIBS)
 install-binSCRIPTS: $(bin_SCRIPTS)
 	@$(NORMAL_INSTALL)
 	test -z "$(bindir)" || $(MKDIR_P) "$(DESTDIR)$(bindir)"

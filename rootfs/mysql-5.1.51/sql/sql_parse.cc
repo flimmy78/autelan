@@ -5642,7 +5642,6 @@ bool check_global_access(THD *thd, ulong want_access)
 	Check stack size; Send error if there isn't enough stack to continue
 ****************************************************************************/
 
-#define STACK_DIRECTION 1
 #ifndef EMBEDDED_LIBRARY
 
 #if STACK_DIRECTION < 0
