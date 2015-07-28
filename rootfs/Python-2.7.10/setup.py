@@ -18,6 +18,12 @@ from distutils.command.install_lib import install_lib
 from distutils.spawn import find_executable
 
 cross_compiling = "_PYTHON_HOST_PLATFORM" in os.environ
+if not cross_compiling:
+    my_include = []
+    my_lib = []
+if cross_compiling:
+    my_include = "/home/hisisdk/histb/autelan/fakerelease"
+    my_lib = "/home/hisisdk/histb/autelan/release"
 
 def get_platform():
     # cross build
@@ -442,8 +448,9 @@ class PyBuildExt(build_ext):
         if not cross_compiling:
             add_dir_to_list(self.compiler.library_dirs, '/usr/local/lib')
             add_dir_to_list(self.compiler.include_dirs, '/usr/local/include')
-        if cross_compiling:
+	if cross_compiling:
             self.add_gcc_paths()
+
         self.add_multiarch_paths()
 
         # Add paths specified in the environment variables LDFLAGS and
@@ -801,7 +808,7 @@ class PyBuildExt(build_ext):
             if krb5_h:
                 ssl_incs += krb5_h
         ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
-                                     ['/usr/local/ssl/lib',
+                                     [my_lib + '/usr/local/ssl/lib',
                                       '/usr/contrib/ssl/lib/'
                                      ] )
 
