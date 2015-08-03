@@ -1,0 +1,23 @@
+#!/bin/bash
+hisitopdir=/home/hisisdk/histb
+. ${hisitopdir}/autelan/autelan.in
+
+	CC=${hisiprefix}-gcc \
+	GCC=${hisiprefix}-gcc \
+	CPP=${hisiprefix}-g++ \
+	HOSTCXX=g++ \
+	UWSGI_INCLUDES=" \
+		-O2 \
+		-I${hisitools}/usr/include \
+		-I${autefake}/usr/include -I${autefake}/usr/local/include \
+		" \
+	CFLAGS=" \
+		-O2 \
+                -I${hisitools}/usr/include \
+                -I${autefake}/usr/include -I${autefake}/usr/local/include \
+		" \
+	LDFLAGS=" \
+		-L${hisitools}/lib -L${hisitools}/usr/lib \
+		-L${auterelease}/lib -L${auterelease}/usr/lib -L${auterelease}/usr/local/lib -L${auterelease}/usr/local/ssl/lib \
+		" \
+python2.7 uwsgiconfig.py --plugin plugins/python core python

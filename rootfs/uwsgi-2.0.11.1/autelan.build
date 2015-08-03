@@ -1,0 +1,6 @@
+#!/bin/bash
+hisitopdir=/home/hisisdk/histb
+. ${hisitopdir}/autelan/autelan.in
+
+ ${hisitopdir}/autelan/rootfs/uwsgi-2.0.11.1/autelan.plugin
+ ${hisitopdir}/autelan/rootfs/uwsgi-2.0.11.1/autelan.uwsgi

@@ -1,0 +1,175 @@
+hisitopdir=/home/hisisdk/histb
+hisiprefix=arm-hisiv200-linux
+hisitools=/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target
+hisirootfs=/home/hisisdk/histb/pub/rootfs
+auterootfs=/home/hisisdk/histb/autelan/rootfs
+autepackage=/home/hisisdk/histb/autelan/package
+auterelease=/home/hisisdk/histb/autelan/release
+autefake=/home/hisisdk/histb/autelan/fakerelease
+autecustom=/home/hisisdk/histb/autelan/custom
+hisitopdir=/home/hisisdk/histb
+auteapps=nginx-1.6.1
+using profile: buildconf/default.ini
+detected include path: [' \t\t-O2 \t\t-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include \t\t-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include \t\t']
+detected CPU cores: 4
+configured CFLAGS: -O2 -I. -Wall -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fno-strict-aliasing -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wno-format -Wno-format-security -DUWSGI_LOCK_USE_MUTEX -DUWSGI_EVENT_USE_EPOLL -DUWSGI_EVENT_TIMER_USE_TIMERFD -DUWSGI_EVENT_TIMER_USE_TIMERFD_NOINC -DUWSGI_EVENT_FILEMONITOR_USE_INOTIFY -DUWSGI_VERSION="\"2.0.11.1\"" -DUWSGI_VERSION_BASE="2" -DUWSGI_VERSION_MAJOR="0" -DUWSGI_VERSION_MINOR="11" -DUWSGI_VERSION_REVISION="1" -DUWSGI_VERSION_CUSTOM="\"\"" -DUWSGI_YAML -DUWSGI_PLUGIN_DIR="\".\"" -DUWSGI_DECLARE_EMBEDDED_PLUGINS="UDEP(python);UDEP(gevent);UDEP(ping);UDEP(cache);UDEP(nagios);UDEP(rrdtool);UDEP(carbon);UDEP(rpc);UDEP(corerouter);UDEP(fastrouter);UDEP(http);UDEP(ugreen);UDEP(signal);UDEP(syslog);UDEP(rsyslog);UDEP(logsocket);UDEP(router_uwsgi);UDEP(router_redirect);UDEP(router_basicauth);UDEP(zergpool);UDEP(redislog);UDEP(mongodblog);UDEP(router_rewrite);UDEP(router_http);UDEP(logfile);UDEP(router_cache);UDEP(rawrouter);UDEP(router_static);UDEP(sslrouter);UDEP(spooler);UDEP(cheaper_busyness);UDEP(symcall);UDEP(transformation_tofile);UDEP(transformation_gzip);UDEP(transformation_chunked);UDEP(transformation_offload);UDEP(router_memcached);UDEP(router_redis);UDEP(router_hash);UDEP(router_expires);UDEP(router_metrics);UDEP(transformation_template);UDEP(stats_pusher_socket);" -DUWSGI_LOAD_EMBEDDED_PLUGINS="ULEP(python);ULEP(gevent);ULEP(ping);ULEP(cache);ULEP(nagios);ULEP(rrdtool);ULEP(carbon);ULEP(rpc);ULEP(corerouter);ULEP(fastrouter);ULEP(http);ULEP(ugreen);ULEP(signal);ULEP(syslog);ULEP(rsyslog);ULEP(logsocket);ULEP(router_uwsgi);ULEP(router_redirect);ULEP(router_basicauth);ULEP(zergpool);ULEP(redislog);ULEP(mongodblog);ULEP(router_rewrite);ULEP(router_http);ULEP(logfile);ULEP(router_cache);ULEP(rawrouter);ULEP(router_static);ULEP(sslrouter);ULEP(spooler);ULEP(cheaper_busyness);ULEP(symcall);ULEP(transformation_tofile);ULEP(transformation_gzip);ULEP(transformation_chunked);ULEP(transformation_offload);ULEP(router_memcached);ULEP(router_redis);ULEP(router_hash);ULEP(router_expires);ULEP(router_metrics);ULEP(transformation_template);ULEP(stats_pusher_socket);"
+*** uWSGI compiling server core ***
+[thread 0][arm-hisiv200-linux-gcc] core/utils.o
+[thread 2][arm-hisiv200-linux-gcc] core/protocol.o
+[thread 3][arm-hisiv200-linux-gcc] core/socket.o
+[thread 1][arm-hisiv200-linux-gcc] core/logging.o
+[thread 2][arm-hisiv200-linux-gcc] core/master.o
+[thread 1][arm-hisiv200-linux-gcc] core/master_utils.o
+[thread 3][arm-hisiv200-linux-gcc] core/emperor.o
+[thread 2][arm-hisiv200-linux-gcc] core/notify.o
+[thread 2][arm-hisiv200-linux-gcc] core/mule.o
+[thread 2][arm-hisiv200-linux-gcc] core/subscription.o
+[thread 1][arm-hisiv200-linux-gcc] core/stats.o
+[thread 0][arm-hisiv200-linux-gcc] core/sendfile.o
+[thread 0][arm-hisiv200-linux-gcc] core/async.o
+[thread 3][arm-hisiv200-linux-gcc] core/master_checks.o
+[thread 1][arm-hisiv200-linux-gcc] core/fifo.o
+[thread 2][arm-hisiv200-linux-gcc] core/offload.o
+[thread 1][arm-hisiv200-linux-gcc] core/io.o
+[thread 0][arm-hisiv200-linux-gcc] core/static.o
+[thread 3][arm-hisiv200-linux-gcc] core/websockets.o
+[thread 2][arm-hisiv200-linux-gcc] core/spooler.o
+[thread 0][arm-hisiv200-linux-gcc] core/snmp.o
+[thread 3][arm-hisiv200-linux-gcc] core/exceptions.o
+[thread 2][arm-hisiv200-linux-gcc] core/config.o
+[thread 0][arm-hisiv200-linux-gcc] core/setup_utils.o
+[thread 3][arm-hisiv200-linux-gcc] core/clock.o
+[thread 1][arm-hisiv200-linux-gcc] core/init.o
+[thread 0][arm-hisiv200-linux-gcc] core/buffer.o
+[thread 3][arm-hisiv200-linux-gcc] core/reader.o
+[thread 1][arm-hisiv200-linux-gcc] core/writer.o
+[thread 2][arm-hisiv200-linux-gcc] core/alarm.o
+[thread 0][arm-hisiv200-linux-gcc] core/cron.o
+[thread 3][arm-hisiv200-linux-gcc] core/hooks.o
+[thread 0][arm-hisiv200-linux-gcc] core/plugins.o
+[thread 2][arm-hisiv200-linux-gcc] core/lock.o
+[thread 1][arm-hisiv200-linux-gcc] core/cache.o
+[thread 0][arm-hisiv200-linux-gcc] core/daemons.o
+[thread 2][arm-hisiv200-linux-gcc] core/errors.o
+[thread 3][arm-hisiv200-linux-gcc] core/hash.o
+[thread 2][arm-hisiv200-linux-gcc] core/master_events.o
+[thread 3][arm-hisiv200-linux-gcc] core/chunked.o
+[thread 0][arm-hisiv200-linux-gcc] core/queue.o
+[thread 2][arm-hisiv200-linux-gcc] core/event.o
+[thread 3][arm-hisiv200-linux-gcc] core/signal.o
+[thread 0][arm-hisiv200-linux-gcc] core/strings.o
+[thread 2][arm-hisiv200-linux-gcc] core/progress.o
+[thread 0][arm-hisiv200-linux-gcc] core/timebomb.o
+[thread 3][arm-hisiv200-linux-gcc] core/ini.o
+[thread 2][arm-hisiv200-linux-gcc] core/fsmon.o
+[thread 0][arm-hisiv200-linux-gcc] core/mount.o
+[thread 3][arm-hisiv200-linux-gcc] core/metrics.o
+[thread 2][arm-hisiv200-linux-gcc] core/plugins_builder.o
+[thread 0][arm-hisiv200-linux-gcc] core/sharedarea.o
+[thread 2][arm-hisiv200-linux-gcc] core/rpc.o
+[thread 1][arm-hisiv200-linux-gcc] core/gateway.o
+[thread 2][arm-hisiv200-linux-gcc] core/loop.o
+[thread 1][arm-hisiv200-linux-gcc] core/cookie.o
+[thread 0][arm-hisiv200-linux-gcc] core/querystring.o
+[thread 2][arm-hisiv200-linux-gcc] core/rb_timers.o
+[thread 1][arm-hisiv200-linux-gcc] core/transformations.o
+[thread 0][arm-hisiv200-linux-gcc] core/uwsgi.o
+[thread 1][arm-hisiv200-linux-gcc] proto/base.o
+[thread 2][arm-hisiv200-linux-gcc] proto/uwsgi.o
+[thread 3][arm-hisiv200-linux-gcc] proto/http.o
+[thread 2][arm-hisiv200-linux-gcc] proto/fastcgi.o
+[thread 1][arm-hisiv200-linux-gcc] proto/scgi.o
+[thread 2][arm-hisiv200-linux-gcc] proto/puwsgi.o
+[thread 1][arm-hisiv200-linux-gcc] lib/linux_ns.o
+[thread 3][arm-hisiv200-linux-gcc] core/yaml.o
+[thread 2][arm-hisiv200-linux-gcc] core/dot_h.o
+[thread 2][arm-hisiv200-linux-gcc] core/config_py.o
+*** uWSGI compiling embedded plugins ***
+[thread 2][arm-hisiv200-linux-gcc] plugins/python/python_plugin.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/python/pyutils.o
+[thread 3][arm-hisiv200-linux-gcc] plugins/python/pyloader.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/python/wsgi_handlers.o
+[thread 3][arm-hisiv200-linux-gcc] plugins/python/wsgi_headers.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/python/wsgi_subhandler.o
+[thread 3][arm-hisiv200-linux-gcc] plugins/python/web3_subhandler.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/python/pump_subhandler.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/python/gil.o
+[thread 3][arm-hisiv200-linux-gcc] plugins/python/uwsgi_pymodule.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/python/profiler.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/python/symimporter.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/python/tracebacker.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/python/raw.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/gevent/gevent.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/gevent/hooks.o
+[thread 0][arm-hisiv200-linux-gcc] plugins/ping/ping_plugin.o
+[thread 0][arm-hisiv200-linux-gcc] plugins/cache/cache.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/nagios/nagios.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/rrdtool/rrdtool.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/carbon/carbon.o
+[thread 0][arm-hisiv200-linux-gcc] plugins/rpc/rpc_plugin.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/corerouter/cr_common.o
+[thread 0][arm-hisiv200-linux-gcc] plugins/corerouter/cr_map.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/corerouter/corerouter.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/fastrouter/fastrouter.o
+[thread 0][arm-hisiv200-linux-gcc] plugins/http/http.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/http/keepalive.o
+[thread 3][arm-hisiv200-linux-gcc] plugins/http/https.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/http/spdy3.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/ugreen/ugreen.o
+[thread 3][arm-hisiv200-linux-gcc] plugins/signal/signal_plugin.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/syslog/syslog_plugin.o
+[thread 0][arm-hisiv200-linux-gcc] plugins/rsyslog/rsyslog_plugin.o
+[thread 3][arm-hisiv200-linux-gcc] plugins/logsocket/logsocket_plugin.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/router_uwsgi/router_uwsgi.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/router_redirect/router_redirect.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/router_basicauth/router_basicauth.o
+[thread 3][arm-hisiv200-linux-gcc] plugins/zergpool/zergpool.o
+[thread 0][arm-hisiv200-linux-gcc] plugins/redislog/redislog_plugin.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/mongodblog/mongodblog_plugin.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/router_rewrite/router_rewrite.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/router_http/router_http.o
+[thread 0][arm-hisiv200-linux-gcc] plugins/logfile/logfile.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/router_cache/router_cache.o
+[thread 3][arm-hisiv200-linux-gcc] plugins/rawrouter/rawrouter.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/router_static/router_static.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/sslrouter/sslrouter.o
+[thread 0][arm-hisiv200-linux-gcc] plugins/spooler/spooler_plugin.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/cheaper_busyness/cheaper_busyness.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/symcall/symcall_plugin.o
+[thread 0][arm-hisiv200-linux-gcc] plugins/transformation_tofile/tofile.o
+[thread 3][arm-hisiv200-linux-gcc] plugins/transformation_gzip/gzip.o
+[thread 0][arm-hisiv200-linux-gcc] plugins/transformation_chunked/chunked.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/transformation_offload/offload.o
+[thread 3][arm-hisiv200-linux-gcc] plugins/router_memcached/router_memcached.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/router_redis/router_redis.o
+[thread 0][arm-hisiv200-linux-gcc] plugins/router_hash/router_hash.o
+[thread 2][arm-hisiv200-linux-gcc] plugins/router_expires/expires.o
+[thread 3][arm-hisiv200-linux-gcc] plugins/router_metrics/plugin.o
+[thread 1][arm-hisiv200-linux-gcc] plugins/transformation_template/tt.o
+[thread 0][arm-hisiv200-linux-gcc] plugins/stats_pusher_socket/plugin.o
+*** uWSGI linking ***
+arm-hisiv200-linux-gcc -o uwsgi -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/lib -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -L/home/hisisdk/histb/autelan/release/lib -L/home/hisisdk/histb/autelan/release/usr/lib -L/home/hisisdk/histb/autelan/release/usr/local/lib -L/home/hisisdk/histb/autelan/release/usr/local/ssl/lib core/utils.o core/protocol.o core/socket.o core/logging.o core/master.o core/master_utils.o core/emperor.o core/notify.o core/mule.o core/subscription.o core/stats.o core/sendfile.o core/async.o core/master_checks.o core/fifo.o core/offload.o core/io.o core/static.o core/websockets.o core/spooler.o core/snmp.o core/exceptions.o core/config.o core/setup_utils.o core/clock.o core/init.o core/buffer.o core/reader.o core/writer.o core/alarm.o core/cron.o core/hooks.o core/plugins.o core/lock.o core/cache.o core/daemons.o core/errors.o core/hash.o core/master_events.o core/chunked.o core/queue.o core/event.o core/signal.o core/strings.o core/progress.o core/timebomb.o core/ini.o core/fsmon.o core/mount.o core/metrics.o core/plugins_builder.o core/sharedarea.o core/rpc.o core/gateway.o core/loop.o core/cookie.o core/querystring.o core/rb_timers.o core/transformations.o core/uwsgi.o proto/base.o proto/uwsgi.o proto/http.o proto/fastcgi.o proto/scgi.o proto/puwsgi.o lib/linux_ns.o core/yaml.o core/dot_h.o core/config_py.o plugins/python/python_plugin.o plugins/python/pyutils.o plugins/python/pyloader.o plugins/python/wsgi_handlers.o plugins/python/wsgi_headers.o plugins/python/wsgi_subhandler.o plugins/python/web3_subhandler.o plugins/python/pump_subhandler.o plugins/python/gil.o plugins/python/uwsgi_pymodule.o plugins/python/profiler.o plugins/python/symimporter.o plugins/python/tracebacker.o plugins/python/raw.o plugins/gevent/gevent.o plugins/gevent/hooks.o plugins/ping/ping_plugin.o plugins/cache/cache.o plugins/nagios/nagios.o plugins/rrdtool/rrdtool.o plugins/carbon/carbon.o plugins/rpc/rpc_plugin.o plugins/corerouter/cr_common.o plugins/corerouter/cr_map.o plugins/corerouter/corerouter.o plugins/fastrouter/fastrouter.o plugins/http/http.o plugins/http/keepalive.o plugins/http/https.o plugins/http/spdy3.o plugins/ugreen/ugreen.o plugins/signal/signal_plugin.o plugins/syslog/syslog_plugin.o plugins/rsyslog/rsyslog_plugin.o plugins/logsocket/logsocket_plugin.o plugins/router_uwsgi/router_uwsgi.o plugins/router_redirect/router_redirect.o plugins/router_basicauth/router_basicauth.o plugins/zergpool/zergpool.o plugins/redislog/redislog_plugin.o plugins/mongodblog/mongodblog_plugin.o plugins/router_rewrite/router_rewrite.o plugins/router_http/router_http.o plugins/logfile/logfile.o plugins/router_cache/router_cache.o plugins/rawrouter/rawrouter.o plugins/router_static/router_static.o plugins/sslrouter/sslrouter.o plugins/spooler/spooler_plugin.o plugins/cheaper_busyness/cheaper_busyness.o plugins/symcall/symcall_plugin.o plugins/transformation_tofile/tofile.o plugins/transformation_gzip/gzip.o plugins/transformation_chunked/chunked.o plugins/transformation_offload/offload.o plugins/router_memcached/router_memcached.o plugins/router_redis/router_redis.o plugins/router_hash/router_hash.o plugins/router_expires/expires.o plugins/router_metrics/plugin.o plugins/transformation_template/tt.o plugins/stats_pusher_socket/plugin.o -lpthread -lm -rdynamic -ldl -lpthread -ldl -lutil -lm /home/hisisdk/histb/autelan/release/lib/python2.7/config/libpython2.7.a -lutil -lcrypt
+################# uWSGI configuration #################
+
+pcre = False
+kernel = Linux
+malloc = libc
+execinfo = False
+ifaddrs = False
+ssl = False
+zlib = False
+locking = pthread_mutex
+plugin_dir = .
+timer = timerfd
+yaml = embedded
+json = False
+filemonitor = inotify
+routing = False
+debug = False
+capabilities = False
+xml = False
+event = epoll
+
+############## end of uWSGI configuration #############
+total build time: 9 seconds
+*** uWSGI is ready, launch it with ./uwsgi ***
