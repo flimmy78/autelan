@@ -1,7 +1,7 @@
 
 CC =	arm-hisiv200-linux-gcc
-CFLAGS =  		-O2 		-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include 		-I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include 		 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2
-CPP =	
+CFLAGS =  -pipe  -O -W -Wall -Wpointer-arith -Wno-unused-parameter -Werror -g -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2
+CPP =	arm-hisiv200-linux-gcc -E
 LINK =	$(CC)
 
 
@@ -1156,7 +1156,7 @@ objs/nginx.8:	man/nginx.8 objs/ngx_auto_config.h
 	sed -e "s|%%PREFIX%%|/home/hisisdk/histb/autelan/release/usr|" \
 		-e "s|%%PID_PATH%%|/home/hisisdk/histb/autelan/release/usr/logs/nginx.pid|" \
 		-e "s|%%CONF_PATH%%|/home/hisisdk/histb/autelan/release/usr/local/nginx/conf/|" \
-		-e "s|%%ERROR_LOG_PATH%%|/home/hisisdk/histb/autelan/release/usr/local/nginx/logs/|" \
+		-e "s|%%ERROR_LOG_PATH%%|/opt/log/nginx/error/nginx.log|" \
 		< man/nginx.8 > $@
 
 install:	objs/nginx 		
@@ -1196,4 +1196,5 @@ install:	objs/nginx
 
 	test -d '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/html' 		|| cp -R html '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr'
 
-	test -d '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx' || 		mkdir -p '$(DESTDIR)/home/hisisdk/histb/autelan/release/usr/local/nginx'
+	test -d '$(DESTDIR)/opt/log/nginx/error' || 	echo "'$(DESTDIR)/opt/log/nginx/error'"
+	#	mkdir -p '$(DESTDIR)/opt/log/nginx/error'

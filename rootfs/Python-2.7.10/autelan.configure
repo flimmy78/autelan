@@ -13,7 +13,7 @@ hisitopdir=/home/hisisdk/histb
 		" \
 	LDFLAGS=" \
 		-L${hisitools}/lib -L${hisitools}/usr/lib \
-		-L${auterelease}/lib -L${auterelease}/usr/lib -L${auterelease}/usr/local/lib \
+		-L${auterelease}/lib -L${auterelease}/usr/lib -L${auterelease}/usr/local/lib -L${auterelease}/usr/local/ssl/lib \
 		" \
 ./configure \
 	--host=${hisiprefix} \

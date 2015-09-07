@@ -5,6 +5,10 @@ checking for C compiler
 
 
 ----------------------------------------
+checking for gcc -pipe switch
+
+
+----------------------------------------
 checking for --with-ld-opt="-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib"
 
 
@@ -98,7 +102,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
@@ -159,7 +163,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
@@ -179,13 +183,13 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
 checking for crypt()
 
-/tmp/cceklmIZ.o: In function `main':
+/tmp/ccSvD1tl.o: In function `main':
 autotest.c:(.text+0xc): undefined reference to `crypt'
 collect2: ld returned 1 exit status
 ----------
@@ -200,7 +204,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
@@ -226,7 +230,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
@@ -256,7 +260,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
@@ -279,7 +283,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
@@ -293,7 +297,7 @@ checking for statvfs()
 ----------------------------------------
 checking for dlopen()
 
-/tmp/ccASke5t.o: In function `main':
+/tmp/cceazc0O.o: In function `main':
 autotest.c:(.text+0xc): undefined reference to `dlopen'
 collect2: ld returned 1 exit status
 ----------
@@ -308,7 +312,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
@@ -338,7 +342,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
@@ -360,7 +364,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
@@ -392,7 +396,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
@@ -402,7 +406,7 @@ checking for TCP_INFO
 ----------------------------------------
 checking for accept4()
 
-/tmp/ccEvgb41.o: In function `main':
+/tmp/ccI0PZvi.o: In function `main':
 autotest.c:(.text+0x18): warning: warning: accept4 is not implemented and will always fail
 
 ----------------------------------------
@@ -484,7 +488,7 @@ checking for time_t size
 ----------------------------------------
 checking for setproctitle()
 
-/tmp/ccCO7AoU.o: In function `main':
+/tmp/ccuuWVth.o: In function `main':
 autotest.c:(.text+0x8): undefined reference to `setproctitle'
 collect2: ld returned 1 exit status
 ----------
@@ -499,7 +503,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
@@ -513,7 +517,7 @@ checking for pwrite()
 ----------------------------------------
 checking for sys_nerr
 
-/tmp/ccOhrsP6.o: In function `main':
+/tmp/ccKYjnpr.o: In function `main':
 autotest.c:(.text+0x1c): warning: `sys_nerr' is deprecated; use `strerror' or `strerror_r' instead
 /bin/sh: objs/autotest: cannot execute binary file
 
@@ -557,7 +561,7 @@ checking for System V shared memory
 ----------------------------------------
 checking for POSIX semaphores
 
-/tmp/ccY3uX8L.o: In function `main':
+/tmp/cc2Vdut4.o: In function `main':
 autotest.c:(.text+0x14): undefined reference to `sem_init'
 autotest.c:(.text+0x2c): undefined reference to `sem_destroy'
 collect2: ld returned 1 exit status
@@ -575,7 +579,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
@@ -620,7 +624,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib
 ----------
 
 ----------------------------------------
@@ -656,7 +660,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -lmd
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -lmd
 ----------
 
 ----------------------------------------
@@ -676,7 +680,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -lmd5
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -lmd5
 ----------
 
 ----------------------------------------
@@ -696,7 +700,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -lcrypto
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -lcrypto
 ----------
 
 ----------------------------------------
@@ -716,7 +720,7 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -lmd
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -lmd
 ----------
 
 ----------------------------------------
@@ -736,5 +740,5 @@ int main() {
 }
 
 ----------
-arm-hisiv200-linux-gcc -O2 -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/include -I/home/hisisdk/histb/autelan/fakerelease/usr/local/include -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -lcrypto
+arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib -lcrypto
 ----------

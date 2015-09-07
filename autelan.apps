@@ -82,6 +82,8 @@ auteapps="${auteapps} ${app_php}"
 app_rsync=rsync-3.1.1
 auteapps="${auteapps} ${app_rsync}"
 
+app_python=Python-2.7.10
+auteapps="${auteapps} ${app_python}"
 #app_sudo=sudo-1.8.10p3
 #auteapps="${auteapps} ${app_sudo}"
 
