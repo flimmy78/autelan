@@ -106,7 +106,7 @@ app_xmlstarlet=xmlstarlet-1.6.1
 auteapps="${auteapps} ${app_xmlstarlet}"
 
 app_nginx=nginx-1.6.1
-auteapps="${app_nginx}"
+auteapps="${app_zlib} ${app_pcre} ${app_nginx}"
 
 export auteapps
 echo "auteapps=${auteapps}"

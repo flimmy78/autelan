@@ -33,6 +33,7 @@ CP autelan/auto/install auto/install
 	--with-zlib=${auterootfs}/${app_zlib} \
 	--with-cc-opt="-I${hisitools}/usr/include -O2" \
 	--with-ld-opt="-L${hisitools}/usr/lib" \
+	--with-http_sub_module \
 	;
 
 mkdir -p autelan/auto/lib/pcre \

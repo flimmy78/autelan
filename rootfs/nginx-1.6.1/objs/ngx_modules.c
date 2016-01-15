@@ -48,6 +48,7 @@ extern ngx_module_t  ngx_http_gzip_filter_module;
 extern ngx_module_t  ngx_http_postpone_filter_module;
 extern ngx_module_t  ngx_http_ssi_filter_module;
 extern ngx_module_t  ngx_http_charset_filter_module;
+extern ngx_module_t  ngx_http_sub_filter_module;
 extern ngx_module_t  ngx_http_addition_filter_module;
 extern ngx_module_t  ngx_http_userid_filter_module;
 extern ngx_module_t  ngx_http_footer_filter_module;
@@ -101,6 +102,7 @@ ngx_module_t *ngx_modules[] = {
     &ngx_http_postpone_filter_module,
     &ngx_http_ssi_filter_module,
     &ngx_http_charset_filter_module,
+    &ngx_http_sub_filter_module,
     &ngx_http_addition_filter_module,
     &ngx_http_userid_filter_module,
     &ngx_http_footer_filter_module,

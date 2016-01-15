@@ -189,7 +189,7 @@ arm-hisiv200-linux-gcc -I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/i
 ----------------------------------------
 checking for crypt()
 
-/tmp/ccSvD1tl.o: In function `main':
+/tmp/ccywECRm.o: In function `main':
 autotest.c:(.text+0xc): undefined reference to `crypt'
 collect2: ld returned 1 exit status
 ----------
@@ -297,7 +297,7 @@ checking for statvfs()
 ----------------------------------------
 checking for dlopen()
 
-/tmp/cceazc0O.o: In function `main':
+/tmp/cc0WkKZy.o: In function `main':
 autotest.c:(.text+0xc): undefined reference to `dlopen'
 collect2: ld returned 1 exit status
 ----------
@@ -404,12 +404,6 @@ checking for TCP_INFO
 
 
 ----------------------------------------
-checking for accept4()
-
-/tmp/ccI0PZvi.o: In function `main':
-autotest.c:(.text+0x18): warning: warning: accept4 is not implemented and will always fail
-
-----------------------------------------
 checking for int size
 
 /usr/bin/ld: skipping incompatible /opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib/libc.so when searching for -lc
@@ -488,7 +482,7 @@ checking for time_t size
 ----------------------------------------
 checking for setproctitle()
 
-/tmp/ccuuWVth.o: In function `main':
+/tmp/ccwXEv6e.o: In function `main':
 autotest.c:(.text+0x8): undefined reference to `setproctitle'
 collect2: ld returned 1 exit status
 ----------
@@ -517,7 +511,7 @@ checking for pwrite()
 ----------------------------------------
 checking for sys_nerr
 
-/tmp/ccKYjnpr.o: In function `main':
+/tmp/ccijvRir.o: In function `main':
 autotest.c:(.text+0x1c): warning: `sys_nerr' is deprecated; use `strerror' or `strerror_r' instead
 /bin/sh: objs/autotest: cannot execute binary file
 
@@ -561,7 +555,7 @@ checking for System V shared memory
 ----------------------------------------
 checking for POSIX semaphores
 
-/tmp/cc2Vdut4.o: In function `main':
+/tmp/cci319jO.o: In function `main':
 autotest.c:(.text+0x14): undefined reference to `sem_init'
 autotest.c:(.text+0x2c): undefined reference to `sem_destroy'
 collect2: ld returned 1 exit status

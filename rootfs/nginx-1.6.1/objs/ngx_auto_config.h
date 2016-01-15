@@ -1,4 +1,4 @@
-#define NGX_CONFIGURE " --prefix=/home/hisisdk/histb/autelan/release/usr --sbin-path=/home/hisisdk/histb/autelan/release/usr/sbin/ --conf-path=/home/hisisdk/histb/autelan/release/usr/local/nginx/conf/ --error-log-path=/opt/log/nginx/error/nginx.log --http-log-path=/home/hisisdk/histb/autelan/release/usr/local/nginx/logs/ --with-poll_module --with-http_realip_module --with-http_addition_module --with-http_stub_status_module --add-module=/home/hisisdk/histb/autelan/rootfs/nginx-module/nginx-http-footer-filter --with-cc=arm-hisiv200-linux-gcc --with-pcre=/home/hisisdk/histb/autelan/rootfs/pcre-8.35 --with-zlib=/home/hisisdk/histb/autelan/rootfs/zlib-1.2.8 --with-cc-opt='-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2' --with-ld-opt=-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib"
+#define NGX_CONFIGURE " --prefix=/home/hisisdk/histb/autelan/release/usr --sbin-path=/home/hisisdk/histb/autelan/release/usr/sbin/ --conf-path=/home/hisisdk/histb/autelan/release/usr/local/nginx/conf/ --error-log-path=/opt/log/nginx/error/nginx.log --http-log-path=/home/hisisdk/histb/autelan/release/usr/local/nginx/logs/ --with-poll_module --with-http_realip_module --with-http_addition_module --with-http_stub_status_module --add-module=/home/hisisdk/histb/autelan/rootfs/nginx-module/nginx-http-footer-filter --with-cc=arm-hisiv200-linux-gcc --with-pcre=/home/hisisdk/histb/autelan/rootfs/pcre-8.35 --with-zlib=/home/hisisdk/histb/autelan/rootfs/zlib-1.2.8 --with-cc-opt='-I/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/include -O2' --with-ld-opt=-L/opt/hisi-linux/x86-arm/arm-hisiv200-linux/target/usr/lib --with-http_sub_module"
 
 #ifndef NGX_COMPILER
 #define NGX_COMPILER  "gcc 4.4.1 (Hisilicon_v200(gcc4.4-290+glibc-2.11+eabi+nptl)) "
@@ -72,11 +72,6 @@
 #define NGX_HAVE_TCP_INFO  1
 #endif
 
-
-#ifndef NGX_HAVE_ACCEPT4
-#define NGX_HAVE_ACCEPT4  1
-#endif
-#undef NGX_HAVE_ACCEPT4
 
 #ifndef NGX_HAVE_UNIX_DOMAIN
 #define NGX_HAVE_UNIX_DOMAIN  1
